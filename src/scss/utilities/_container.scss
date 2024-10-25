@@ -1,0 +1,50 @@
+.container {
+  #{$prefix}-gutter-x: 1.5rem;
+  #{$prefix}-gutter-y: 0;
+  max-width: 100%;
+  width: 100%;
+  padding-right: calc(var(#{$prefix}-gutter-x) * 0.5);
+  padding-left: calc(var(#{$prefix}-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 720px) {
+    max-width: calc(43.75rem + var(#{$prefix}-gutter-x));
+  }
+  @media (min-width: 1200px) {
+    max-width: calc(70rem + var(#{$prefix}-gutter-x));
+  }
+  @media (min-width: 1400px) {
+    max-width: calc(80rem + var(#{$prefix}-gutter-x));
+  }
+  @media (min-width: 1600px) {
+    max-width: calc(100rem + var(#{$prefix}-gutter-x));
+  }
+  &-fluid {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-right: calc(var(#{$prefix}-gutter-x) * 0.5);
+    padding-left: calc(var(#{$prefix}-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &-fill {
+    min-width: calc(100% + (var(#{$prefix}-gutter-y) * 2));
+    padding-left: unset;
+    padding-right: unset;
+    margin-left: calc(var(#{$prefix}-gutter-y) * -1);
+    margin-right: calc(var(#{$prefix}-gutter-y) * -1);
+  }
+}
+
+.container-full {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: calc(85svh - (var(--header-height) + var(--footer-height)) - 1.5rem);
+  padding-right: calc(var(#{$prefix}-gutter-x) * 0.5);
+  padding-left: calc(var(#{$prefix}-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}

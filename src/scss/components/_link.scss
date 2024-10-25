@@ -1,0 +1,24 @@
+:root {
+  --link-gap: 0.625rem;
+  --link-size: 1.75rem;
+}
+
+.link {
+  &-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: var(--link-gap);
+    column-gap: var(--link-gap);
+    & > svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: var(--link-size);
+      height: var(--link-size);
+      min-width: var(--link-size);
+      min-height: var(--link-size);
+      object-fit: contain;
+    }
+  }
+}

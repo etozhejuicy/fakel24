@@ -1,0 +1,80 @@
+// add normalize
+@import '../../node_modules/normalize.css/normalize.css';
+
+// vars
+@import './variables';
+
+// utilities
+@import './utilities/vars';
+@import './utilities/colors';
+@import './utilities/container';
+@import './utilities/fonts';
+@import './utilities/stretched-link';
+
+// layouts
+@import './layouts/header';
+@import './layouts/nav';
+
+// components
+@import './components/buttons';
+@import './components/link';
+
+// sections
+@import './sections/head';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: rgba(var(--body-text-color), 1);
+  background-color: rgba(var(--body-bg-color), 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  padding: calc(var(--header-height) + (var(--header-padding-y) * 2)) 0;
+}
+
+.section {
+  contain: layout;
+}
+
+.wow {
+  visibility: hidden;
+}
+
+#mysprite {
+  display: none;
+}

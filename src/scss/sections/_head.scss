@@ -1,0 +1,11 @@
+.section-head {
+  position: relative;
+  z-index: 1;
+  &-content {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-contacts {
+    display: flex;
+  }
+}
