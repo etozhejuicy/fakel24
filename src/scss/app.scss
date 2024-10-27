@@ -1,26 +1,43 @@
 // add normalize
-@import '../../node_modules/normalize.css/normalize.css';
+@import "../../node_modules/normalize.css/normalize.css";
 
 // vars
-@import './variables';
+@import "./variables";
 
 // utilities
-@import './utilities/vars';
-@import './utilities/colors';
-@import './utilities/container';
-@import './utilities/fonts';
-@import './utilities/stretched-link';
+@import "./utilities/functions";
+@import "./utilities/variables";
+@import "./utilities/colors";
+@import "./utilities/align";
+@import "./utilities/border";
+@import "./utilities/cols";
+@import "./utilities/container";
+@import "./utilities/dimension";
+@import "./utilities/display";
+@import "./utilities/filter";
+@import "./utilities/flex";
+@import "./utilities/fonts";
+@import "./utilities/object";
+@import "./utilities/opacity";
+@import "./utilities/order";
+@import "./utilities/overflow";
+@import "./utilities/pointer-events";
+@import "./utilities/position";
+@import "./utilities/ratio";
+@import "./utilities/rounded";
+@import "./utilities/stretched-link";
+@import "./utilities/zindex";
 
 // layouts
-@import './layouts/header';
-@import './layouts/nav';
+@import "./layouts/header";
+@import "./layouts/nav";
 
 // components
-@import './components/buttons';
-@import './components/link';
+@import "./components/buttons";
+@import "./components/link";
 
 // sections
-@import './sections/head';
+@import "./sections/head";
 
 *,
 *::before,
@@ -38,7 +55,7 @@ body {
   position: relative;
   z-index: 1;
   height: 100%;
-  font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: var(--font-family);
   font-size: 1rem;
   font-style: normal;
@@ -65,6 +82,7 @@ body {
   width: 100%;
   flex: 1;
   padding: calc(var(--header-height) + (var(--header-padding-y) * 2)) 0;
+  margin-top: calc(-1 * (var(--header-height) * 2));
 }
 
 .section {

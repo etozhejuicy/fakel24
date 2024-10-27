@@ -1,11 +1,11 @@
 // vendor libs
-import Swiper from 'swiper/bundle';
+import Swiper from "swiper/bundle";
 // vendor styles
-import '../../../node_modules/swiper/swiper-bundle.css';
+import "../../node_modules/swiper/swiper-bundle.css";
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (document.getElementsByClassName('section-hero-swiper').length) {
-    var swiperHero = new Swiper('.swiper-hero', {
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementsByClassName("section-hero-swiper").length) {
+    var swiperHero = new Swiper(".swiper-hero", {
       slidesPerView: 1,
       spaceBetween: 20,
       scrollbar: {
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       pagination: {
         enabled: true,
-        el: '.swiper-hero [swiper-pagination]',
-        type: 'fraction',
+        el: ".swiper-hero [swiper-pagination]",
+        type: "fraction",
       },
       navigation: {
         enabled: disabled,

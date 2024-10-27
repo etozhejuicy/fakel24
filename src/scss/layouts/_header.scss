@@ -4,7 +4,6 @@
   --header-padding-y: 1.813rem;
   --header-padding-x: 0;
   --header-background-color: var(--white-rgb);
-  --header-box-shadow: 0 0 0.744rem 0 rgba(var(--dark-cyan-rgb), 63%);
   --header-border-radius: 0.625rem;
   --header-logo-icon-width: 1.875rem;
   --header-logo-icon-height: 5.313rem;
@@ -37,18 +36,13 @@
     height: 100%;
     padding: var(--header-padding-y) var(--header-padding-x);
     background-color: rgba(var(--header-background-color), 1);
-    backdrop-filter: var(--header-backdrop-filter);
-    box-shadow: var(--header-box-shadow);
     border-radius: var(--header-border-radius);
+    @media (min-width: 1200px) {
+      justify-content: center;
+    }
   }
   & .nav-items {
     justify-content: space-between;
-    & > * {
-      &:nth-child(1) {
-        border-top-left-radius: var(--header-border-radius);
-        border-bottom-left-radius: var(--header-border-radius);
-      }
-    }
   }
   & .nav {
     display: none;
@@ -63,6 +57,7 @@
     width: var(--header-logo-size);
     height: var(--header-logo-size);
     color: var(--primary);
+    background-color: black;
     transform: none;
     transform-origin: center;
     transition: transform 0.4s;

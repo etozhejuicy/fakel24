@@ -1,4 +1,4 @@
-@import './vars';
+@import "./variables";
 
 @mixin row {
   #{$prefix}-gutter-x: 1.5rem;

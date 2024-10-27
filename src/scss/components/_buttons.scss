@@ -1,14 +1,14 @@
 .btn {
-  #{$prefix}-btn-padding-x: 1rem;
+  #{$prefix}-btn-padding-x: 2.5rem;
   #{$prefix}-btn-padding-y: 1rem;
   #{$prefix}-btn-font-size: 1rem;
-  #{$prefix}-btn-font-weight: 600;
+  #{$prefix}-btn-font-weight: normal;
   #{$prefix}-btn-line-height: 120%;
   #{$prefix}-btn-color: var(--black);
   #{$prefix}-btn-bg: var(--white);
   #{$prefix}-btn-border-width: 0;
   #{$prefix}-btn-border-color: var(--white);
-  #{$prefix}-border-radius: 1rem;
+  #{$prefix}-border-radius: 0.313rem;
   #{$prefix}-btn-hover-border-color: transparent;
   #{$prefix}-btn-filter: unset;
   #{$prefix}-btn-box-shadow: unset;
@@ -18,7 +18,7 @@
   #{$prefix}-btn-letter-spacing: -0.02rem;
   display: inline-block;
   padding: var(#{$prefix}-btn-padding-y) var(#{$prefix}-btn-padding-x);
-  font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: var(#{$prefix}-btn-font-family);
   font-size: var(#{$prefix}-btn-font-size);
   font-weight: var(#{$prefix}-btn-font-weight);
@@ -50,7 +50,7 @@
     }
   }
   & * {
-    &[class^='spinner-'] {
+    &[class^="spinner-"] {
       #{$prefix}-spinner-width: var(#{$prefix}-btn-font-size);
       #{$prefix}-spinner-height: var(#{$prefix}-btn-font-size);
     }
@@ -221,12 +221,12 @@
     #{$prefix}-btn-disabled-color: rgba(var(--black-rgb), 0.3);
     #{$prefix}-btn-disabled-bg: var(--gre-100);
     #{$prefix}-btn-disabled-border-color: var(--grey-100);
-    @if $value == 'danger' {
+    @if $value == "danger" {
       #{$prefix}-btn-color: darken($color, 90%);
       #{$prefix}-btn-hover-color: darken($color, 50%);
       #{$prefix}-btn-active-color: darken($color, 90%);
     }
-    @if $value == 'white' {
+    @if $value == "white" {
       #{$prefix}-btn-color: darken($color, 90%);
       #{$prefix}-btn-hover-color: darken($color, 50%);
       #{$prefix}-btn-active-color: darken($color, 75%);
@@ -263,7 +263,7 @@
     #{$prefix}-btn-focus-shadow-rgb: unset;
     #{$prefix}-btn-active-bg: darken($color, 15%);
     #{$prefix}-btn-active-border-color: darken($color, 15%);
-    @if $value == 'white' {
+    @if $value == "white" {
       #{$prefix}-btn-color: darken($color, 50%);
       #{$prefix}-btn-border-color: darken($color, 5%);
       #{$prefix}-btn-hover-bg: darken($color, 2.5%);
@@ -278,7 +278,7 @@
     &:is(.btn-#{$value}),
     &:is(.btn-outline-#{$value}) {
       #{$prefix}-btn-color: var(--#{$value});
-      @if $value == 'white' {
+      @if $value == "white" {
         #{$prefix}-btn-color: darken($color, 50%);
         #{$prefix}-btn-border-color: darken($color, 5%);
         #{$prefix}-btn-hover-bg: darken($color, 2.5%);
@@ -297,7 +297,7 @@
     &:is(.btn-outline-#{$value}) {
       #{$prefix}-btn-bg: rgba(var(--#{$value}-rgb), 0.1);
       #{$prefix}-btn-hover-bg: rgba(var(--#{$value}-rgb), 1);
-      @if $value == 'white' {
+      @if $value == "white" {
         #{$prefix}-btn-color: darken($color, 50%);
         #{$prefix}-btn-border-color: darken($color, 5%);
         #{$prefix}-btn-hover-bg: darken($color, 2.5%);
@@ -334,7 +334,7 @@
             transparent 0
           );
       }
-      @if $value == 'secondary' {
+      @if $value == "secondary" {
         & .btn-progress-round {
           background: radial-gradient(
               closest-side,
@@ -362,7 +362,7 @@
     #{$prefix}-btn-active-color: var(--white);
     #{$prefix}-btn-active-bg: var(--#{$value});
     #{$prefix}-btn-active-border-color: var(--#{$value});
-    @if $value == 'primary' {
+    @if $value == "primary" {
       #{$prefix}-btn-color: var(--grey);
       #{$prefix}-btn-bg: var(--dark-grey);
       #{$prefix}-btn-border-color: var(--dark-grey);
@@ -370,16 +370,16 @@
       #{$prefix}-btn-hover-border-color: #{lighten($color, 20%)};
       #{$prefix}-btn-active-border-color: #{lighten($color, 20%)};
     }
-    @if $value == 'secondary' {
+    @if $value == "secondary" {
       #{$prefix}-btn-color: var(--grey);
       #{$prefix}-btn-active-color: var(--white);
       #{$prefix}-btn-hover-border-color: #{lighten($color, 50%)};
       #{$prefix}-btn-active-border-color: #{lighten($color, 50%)};
     }
-    @if $value == 'danger' {
+    @if $value == "danger" {
       #{$prefix}-btn-active-color: var(--black);
     }
-    @if $value == 'white' {
+    @if $value == "white" {
       #{$prefix}-btn-active-color: var(--black);
     }
   }
@@ -393,10 +393,10 @@
     #{$prefix}-btn-active-color: var(--#{$value});
     #{$prefix}-btn-active-bg: var(--dark-grey);
     #{$prefix}-btn-active-border-color: var(--#{$value});
-    @if $value == 'primary' {
+    @if $value == "primary" {
       #{$prefix}-btn-active-border-color: #{darken($color, 25%)};
     }
-    @if $value == 'secondary' {
+    @if $value == "secondary" {
       #{$prefix}-btn-hover-border-color: #{lighten($color, 20%)};
       #{$prefix}-btn-hover-color: var(--white);
       #{$prefix}-btn-active-bg: var(--dark-grey);
@@ -413,7 +413,7 @@
       #{$prefix}-btn-active-bg: var(#{$prefix}-btn-bg);
       #{$prefix}-btn-active-color: var(#{$prefix}-btn-color);
       #{$prefix}-btn-active-border-color: var(#{$prefix}-btn-border-color);
-      @if $value == 'secondary' {
+      @if $value == "secondary" {
         #{$prefix}-btn-color: #{lighten($color, 50%)};
         #{$prefix}-btn-bg: rgba(var(--#{$value}-rgb), 0.45);
       }

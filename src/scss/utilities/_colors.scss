@@ -20,8 +20,8 @@
   --danger-rgb: 252, 207, 25;
   --orange: #ffa629;
   --orange-rgb: 255, 166, 41;
-  --blue: #02a6e6;
-  --blue-rgb: 2, 166, 230;
+  --blue: #267cdf;
+  --blue-rgb: 38, 124, 223;
   --purple: #9747ff;
   --purple-rgb: 151, 71, 255;
   --vk: #0077ff;
@@ -40,8 +40,8 @@
   --grey-400-rgb: 159, 166, 173;
   --grey-500: #6e7881;
   --grey-500-rgb: 110, 120, 129;
-  --grey-600: #51585f;
-  --grey-600-rgb: 81, 88, 95;
+  --grey-600: #585a60;
+  --grey-600-rgb: 88, 90, 96;
   --grey-700: #3f4449;
   --grey-700-rgb: 63, 68, 73;
   --grey-800: #2a2d2f;
@@ -63,14 +63,14 @@ $normal-grey: #737373;
 $green: #65cb82;
 $dark-green: #092f39;
 $cyan: #44fff4 !default;
-$primary: #5144dd !default;
+$primary: #1176ea !default;
 $secondary: #808080 !default;
 $success: #3eaf2e !default;
 $warning: #f24822 !default;
 $danger: #fccf19 !default;
 $orange: #ffa629 !default;
 $purple: #9747ff !default;
-$blue: #02a6e6 !default;
+$blue: #267cdf !default;
 $error: #ec7a7a;
 $red: #ec7a7a;
 $black: #000000;
@@ -91,44 +91,44 @@ $grey-200: #e7e9eb;
 $grey-300: #d2d6da;
 $grey-400: #9fa6ad;
 $grey-500: #6e7881;
-$grey-600: #51585f;
+$grey-600: #585a60;
 $grey-700: #3f4449;
 $grey-800: #2a2d2f;
 $grey-900: #222222;
 
 // exp
 $colors: (
-  $primary: 'primary',
-  $secondary: 'secondary',
-  $success: 'success',
-  $danger: 'danger',
-  $warning: 'warning',
-  $white: 'white',
-  $black: 'black',
-  $orange: 'orange',
-  $purple: 'purple',
-  $blue: 'blue',
-  $vk: 'vk',
-  $grey: 'grey',
-  $green: 'green',
-  $transparent: 'transparent',
+  $primary: "primary",
+  $secondary: "secondary",
+  $success: "success",
+  $danger: "danger",
+  $warning: "warning",
+  $white: "white",
+  $black: "black",
+  $orange: "orange",
+  $purple: "purple",
+  $blue: "blue",
+  $vk: "vk",
+  $grey: "grey",
+  $green: "green",
+  $transparent: "transparent",
 
-  $grey-100: 'grey-100',
-  $grey-200: 'grey-200',
-  $grey-300: 'grey-300',
-  $grey-400: 'grey-400',
-  $grey-500: 'grey-500',
-  $grey-600: 'grey-600',
-  $grey-700: 'grey-700',
-  $grey-800: 'grey-800',
-  $grey-900: 'grey-900',
+  $grey-100: "grey-100",
+  $grey-200: "grey-200",
+  $grey-300: "grey-300",
+  $grey-400: "grey-400",
+  $grey-500: "grey-500",
+  $grey-600: "grey-600",
+  $grey-700: "grey-700",
+  $grey-800: "grey-800",
+  $grey-900: "grey-900",
 
-  $blue-100: 'blue-100',
-  $blue-200: 'blue-200',
-  $blue-300: 'blue-300',
-  $blue-400: 'blue-400',
-  $blue-500: 'blue-500',
-  $blue-600: 'blue-600',
+  $blue-100: "blue-100",
+  $blue-200: "blue-200",
+  $blue-300: "blue-300",
+  $blue-400: "blue-400",
+  $blue-500: "blue-500",
+  $blue-600: "blue-600",
 );
 
 @each $color, $value in $colors {
