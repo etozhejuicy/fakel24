@@ -22,6 +22,12 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 40px;
+    &-btn {
+      display: none;
+      @media (min-width: 1200px) {
+        display: block;
+      }
+    }
   }
   &-address {
     display: flex;
@@ -48,6 +54,7 @@
     align-items: center;
     color: var(--white);
     font-size: 32px;
+    font-weight: bold;
     column-gap: 9px;
     text-decoration: none;
     & i {
@@ -66,13 +73,19 @@
     }
   }
   &-logo {
+    position: relative;
     display: block;
     width: max-content;
-    font-size: 17px;
-    margin-left: 103px;
-    position: relative;
+    background-color: unset;
+    margin-left: 73px;
     color: var(--white);
+    font-size: 17px;
     text-decoration: none;
+    transform: translate(0, 0);
+    transition: 0.4s ease;
+    @media (min-width: 1200px) {
+      margin-left: 103px;
+    }
     & div {
       &:last-of-type {
         display: block;
@@ -86,26 +99,33 @@
       }
     }
     & img {
-      width: 55px;
-      height: 154px;
       position: absolute;
       top: -11px;
       left: -75px;
+      @media (min-width: 720px) {
+        width: 41px;
+        height: 115px;
+      }
+      @media (min-width: 1200px) {
+        width: 55px;
+        height: 154px;
+      }
     }
     &.scroll {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5;
       width: 63px;
       height: 63px;
       background: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: 0.4s ease-in-out;
-      border-radius: 0 10px 10px 0;
-      position: sticky;
-      top: 21px;
-      left: 0;
       margin-left: 0;
-      z-index: 5;
+      border-radius: 0 10px 10px 0;
+      transform: translate(0, 28px);
+      transition: all 0.4s ease, 0.2s background 0.2s ease;
       & div {
         display: none;
       }
@@ -117,25 +137,36 @@
     }
   }
   &-modal-btn {
-    border-radius: 10px 0 0 10px;
-    width: 63px;
-    height: 63px;
-    background: var(--black);
-    border: none;
     position: fixed;
-    top: 21px;
+    top: 28px;
     right: 0;
+    z-index: 5;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    width: 63px;
+    height: 63px;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: var(--blue);
+    border: none;
+    border-radius: 10px 0 0 10px;
+    transform: translate(100%, 0);
+    transition: 0.4s ease;
     cursor: pointer;
-    display: none;
-    z-index: 5;
     &:hover {
-      background-color: var(--grey);
+      background-color: var(--white);
+      & i {
+        color: var(--blue);
+      }
     }
     &.scroll {
       display: flex;
+      transform: translate(0, 0);
+    }
+    & i {
+      color: var(--white);
     }
   }
 }

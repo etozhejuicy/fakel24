@@ -107,77 +107,13 @@
 .icon-location:before {
   content: '\65';
 }
+.icon-list-1:before {
+  content: '\67';
+}
 
 // layouts
 @import './layouts/header';
 @import './layouts/nav';
-
-// components
-.btn {
-  --btn-padding-x: 40px;
-  --btn-padding-y: 15px;
-  --btn-font-size: 20px;
-  --btn-font-weight: normal;
-  --btn-line-height: 120%;
-  --btn-color: var(--black);
-  --btn-bg: var(--white);
-  --btn-border-width: 0;
-  --btn-border-color: var(--white);
-  --border-radius: 0.313rem;
-  --btn-hover-border-color: transparent;
-  --btn-filter: unset;
-  --btn-box-shadow: unset;
-  --btn-disabled-opacity: 0.65;
-  --btn-letter-spacing: -0.02rem;
-  display: inline-block;
-  padding: var(--btn-padding-y) var(--btn-padding-x);
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: var(--btn-font-family);
-  font-size: var(--btn-font-size);
-  font-weight: var(--btn-font-weight);
-  line-height: var(--btn-line-height);
-  color: var(--btn-color);
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: var(--btn-letter-spacing);
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  text-transform: none;
-  border: var(--btn-border-width) solid var(--btn-border-color);
-  border-radius: var(--border-radius);
-  background-color: var(--btn-bg);
-  filter: var(--btn-filter);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-  &-white {
-    --btn-bg: var(--white);
-    &:hover {
-      --btn-bg: #1176ea;
-      --btn-color: var(--white);
-    }
-    &:focus:active {
-      --btn-bg: var(--blue-dark);
-      --btn-color: var(--white);
-    }
-  }
-  &-blue {
-    --btn-bg: var(--blue);
-    &:hover {
-      --btn-bg: var(--black);
-      --btn-color: var(--white);
-    }
-    &:focus:active {
-      --btn-bg: var(--blue-dark);
-      --btn-color: var(--white);
-    }
-  }
-}
 
 *,
 *::before,

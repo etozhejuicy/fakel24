@@ -29,7 +29,7 @@
             <img src="./assets/images/logo.svg" alt="Стоматология Факел" title="Стоматологическая клиника в Воронеже">
           </a>
           <div class="header-contacts">
-            <button class="btn btn-white">Запись на прием</button>
+            <button class="btn btn-white header-contacts-btn">Запись на прием</button>
             <a class="link header-address" href="#map" title="Посмотреть карту">
               <i class="icon-location"></i>
               <span>г. Воронеж, ул. Маршака, д. 8</span>
@@ -40,6 +40,7 @@
             </a>
           </div>
         </div>
+        <!-- При прокрутке схлопывается эта навигация -->
         <nav class="menu">
           <div class="menu-dropdown">
             <a href="#" class="menu-link">
@@ -66,8 +67,9 @@
           <a href="#" class="menu-link">Отзывы</a>
           <a href="#" class="menu-link">Контакты</a>
         </nav>
+        <!-- При прокрутке появляется кнопка: записаться на прием -->
         <button class="header-modal-btn scroll">
-          <img src="./img/icons/modal-btn.svg" alt="Записаться на прием">
+          <i class="icon-list-1"></i>
         </button>
       </div>
     </header>
@@ -154,14 +156,16 @@
           const headerModalBtn = document.querySelector(".header-modal-btn");
 
           window.addEventListener("scroll", () => {
-            if (window.scrollY >= header.offsetHeight) {
-              logo.classList.add("scroll");
-              mainMenu.classList.add("scroll");
-              headerModalBtn.classList.add("scroll");
-            } else {
-              logo.classList.remove("scroll");
-              mainMenu.classList.remove("scroll");
-              headerModalBtn.classList.remove("scroll");
+            if(window.innerWidth >= 1200) {
+              if (window.scrollY >= 1) {
+                logo.classList.add("scroll");
+                mainMenu.classList.add("scroll");
+                headerModalBtn.classList.add("scroll");
+              } else {
+                logo.classList.remove("scroll");
+                mainMenu.classList.remove("scroll");
+                headerModalBtn.classList.remove("scroll");
+              }
             }
           });
     </script>
