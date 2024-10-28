@@ -1,83 +1,141 @@
-:root {
-  --header-height: 5.813rem;
-  --header-top: 1.75rem;
-  --header-padding-y: 1.813rem;
-  --header-padding-x: 0;
-  --header-background-color: var(--white-rgb);
-  --header-border-radius: 0.625rem;
-  --header-logo-icon-width: 1.875rem;
-  --header-logo-icon-height: 5.313rem;
-  --header-logo-size: 3.125rem;
-  --header-elems-gap: 0.875rem;
-  @media (min-width: 720px) {
-    --header-top: 1.563rem;
-    --header-padding-y: 1.563rem;
-  }
-  @media (min-width: 1200px) {
-    --header-top: 1.75rem;
-    --header-padding-y: 0;
-    --header-logo-size: 3.125rem;
-  }
-}
-
 .header {
-  position: sticky;
-  top: var(--header-top);
-  left: 0;
+  background: linear-gradient(180deg, #267cdf 0%, rgba(44, 53, 109, 0) 100%);
+  position: relative;
   z-index: 10;
-  display: block;
-  width: 100%;
-  height: var(--header-height);
-  transition: all 0.6s ease-in-out;
-  &-inner {
+  & .container {
     display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &-top {
+    padding: 14px 0 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: var(--header-padding-y) var(--header-padding-x);
-    background-color: rgba(var(--header-background-color), 1);
-    border-radius: var(--header-border-radius);
-    @media (min-width: 1200px) {
-      justify-content: center;
+    column-gap: 16px;
+    & .btn-black {
+      padding: 15px 60px;
     }
   }
-  & .nav-items {
+  &-contacts {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    column-gap: 40px;
   }
-  & .nav {
-    display: none;
-    @media (min-width: 1200px) {
-      display: flex;
+  &-address {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    column-gap: 9px;
+    text-decoration: none !important;
+    & i {
+      font-size: 28px;
+    }
+    & span {
+      border-bottom: 1px dashed var(--white);
+      white-space: nowrap;
+      text-decoration: none !important;
+    }
+    &:hover {
+      & span {
+        border-bottom: unset;
+      }
+    }
+  }
+  &-phone {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 32px;
+    column-gap: 9px;
+    text-decoration: none;
+    & i {
+      font-size: 28px;
+    }
+    & span {
+      line-height: 1.25;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
     }
   }
   &-logo {
+    display: block;
+    width: max-content;
+    font-size: 17px;
+    margin-left: 103px;
     position: relative;
-    z-index: 1;
-    display: flex;
-    width: var(--header-logo-size);
-    height: var(--header-logo-size);
-    color: var(--primary);
-    background-color: black;
-    transform: none;
-    transform-origin: center;
-    transition: transform 0.4s;
-    & > svg,
-    & > img {
-      width: var(--header-logo-icon-width);
-      height: var(--header-logo-icon-height);
-      fill: currentColor;
-      object-fit: contain;
+    color: var(--white);
+    text-decoration: none;
+    & div {
+      &:last-of-type {
+        display: block;
+        text-transform: uppercase;
+        @media (min-width: 720px) {
+          font-size: 40px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 48px;
+        }
+      }
+    }
+    & img {
+      width: 55px;
+      height: 154px;
+      position: absolute;
+      top: -11px;
+      left: -75px;
+    }
+    &.scroll {
+      width: 63px;
+      height: 63px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s ease-in-out;
+      border-radius: 0 10px 10px 0;
+      position: sticky;
+      top: 21px;
+      left: 0;
+      margin-left: 0;
+      z-index: 5;
+      & div {
+        display: none;
+      }
+      & img {
+        position: static;
+        width: 34px;
+        height: 97px;
+      }
     }
   }
-  &-elems {
-    display: flex;
-    flex-direction: row;
+  &-modal-btn {
+    border-radius: 10px 0 0 10px;
+    width: 63px;
+    height: 63px;
+    background: var(--black);
+    border: none;
+    position: fixed;
+    top: 21px;
+    right: 0;
     align-items: center;
-    justify-content: flex-end;
-    row-gap: var(--header-elems-gap);
-    column-gap: var(--header-elems-gap);
-    @media (min-width: 1200px) {
-      display: none;
+    justify-content: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+    &:hover {
+      background-color: var(--grey);
+    }
+    &.scroll {
+      display: flex;
     }
   }
 }

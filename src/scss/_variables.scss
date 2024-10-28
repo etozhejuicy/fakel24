@@ -1,6 +1,15 @@
 :root {
-  --font-family: "Geologica";
-  --footer-padding-y: 0;
-  --footer-padding-x: 0;
-  --footer-bg-color: linear-gradient(261.39deg, #267cdf 32.19%, #1b66bd 67.81%);
+  --font-family: 'Geologica';
+  --blue: #267cdf;
+  --blue-rgb: 38, 124, 223;
+  --blue-light: #0073fa;
+  --blue-dark: #2c356d;
+  --blue-sky: #eef5fe;
+  --bullets: #1176ea;
+  --white: #ffffff;
+  --grey: #e2dede;
+  --grey-dark: #7f8186;
+  --black: #585a60;
+
+  --container-padding: 10px;
 }
