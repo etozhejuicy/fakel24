@@ -18,10 +18,13 @@
     }
   }
   &-contacts {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     column-gap: 40px;
+    @media (min-width: 1200px) {
+      display: flex;
+    }
     &-btn {
       display: none;
       @media (min-width: 1200px) {
@@ -167,6 +170,9 @@
     }
     & i {
       color: var(--white);
+    }
+    @media screen and (max-width: 1199.98px) {
+      display: none !important;
     }
   }
 }
