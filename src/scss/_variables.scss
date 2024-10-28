@@ -1,11 +1,6 @@
 :root {
-  --font-family: 'Geologica';
   --blue: #267cdf;
   --blue-rgb: 38, 124, 223;
-  --blue-light: #0073fa;
-  --blue-dark: #2c356d;
-  --blue-sky: #eef5fe;
-  --bullets: #1176ea;
   --white: #ffffff;
   --grey: #e2dede;
   --grey-dark: #7f8186;
@@ -14,69 +9,72 @@
   --container-padding: 10px;
 }
 
+// container options
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding-right: calc(var(--container-padding) / 2);
+  padding-left: calc(var(--container-padding) / 2);
+  margin: 0 auto;
+  @media (min-width: 720px) {
+    max-width: calc(43.75rem + var(--container-padding));
+  }
+  @media (min-width: 992px) {
+    max-width: calc(57rem + var(--container-padding));
+  }
+  @media (min-width: 1200px) {
+    max-width: calc(70rem + var(--container-padding));
+  }
+  @media (min-width: 1400px) {
+    max-width: calc(80rem + var(--container-padding));
+  }
+  @media (min-width: 1600px) {
+    max-width: calc(100rem + var(--container-padding));
+  }
+}
+
 // components
 .btn {
-  --btn-padding-x: 40px;
-  --btn-padding-y: 15px;
-  --btn-font-size: 20px;
-  --btn-font-weight: normal;
-  --btn-line-height: 120%;
-  --btn-color: var(--black);
-  --btn-bg: var(--white);
-  --btn-border-width: 0;
-  --btn-border-color: var(--white);
-  --border-radius: 0.313rem;
-  --btn-hover-border-color: transparent;
-  --btn-filter: unset;
-  --btn-box-shadow: unset;
-  --btn-disabled-opacity: 0.65;
-  --btn-letter-spacing: -0.02rem;
   display: inline-block;
-  padding: var(--btn-padding-y) var(--btn-padding-x);
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: var(--btn-font-family);
-  font-size: var(--btn-font-size);
-  font-weight: var(--btn-font-weight);
-  line-height: var(--btn-line-height);
-  color: var(--btn-color);
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 120%;
+  color: var(--black);
   text-align: center;
   text-decoration: none;
-  letter-spacing: var(--btn-letter-spacing);
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   text-transform: none;
-  border: var(--btn-border-width) solid var(--btn-border-color);
-  border-radius: var(--border-radius);
-  background-color: var(--btn-bg);
-  filter: var(--btn-filter);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transition: 0.4s ease;
   &-white {
-    --btn-bg: var(--white);
+    background-color: var(--white);
     &:hover {
-      --btn-bg: #1176ea;
-      --btn-color: var(--white);
+      background-color: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
     }
     &:focus:active {
-      --btn-bg: var(--blue-dark);
-      --btn-color: var(--white);
+      background-color: rgba(var(--blue-rgb), 0.4);
+      border-color: rgba(var(--blue-rgb), 0.4);
+      color: rgba(255, 255, 255, 0.85);
     }
   }
   &-blue {
-    --btn-bg: var(--blue);
+    background-color: var(--blue);
     &:hover {
-      --btn-bg: var(--black);
-      --btn-color: var(--white);
+      background-color: var(--black);
+      border-color: var(--black);
+      color: var(--white);
     }
     &:focus:active {
-      --btn-bg: var(--blue-dark);
-      --btn-color: var(--white);
+      background-color: rgba(var(--blue-rgb), 0.4);
+      border-color: rgba(var(--blue-rgb), 0.4);
+      color: rgba(255, 255, 255, 0.85);
     }
   }
 }

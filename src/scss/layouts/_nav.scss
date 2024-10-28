@@ -93,21 +93,3 @@
     margin: auto;
   }
 }
-
-.menu__dropdown::after {
-  content: '';
-  background: url('data:image/svg+xml,<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.330314 3.13825L3.21591 0.318397C3.31898 0.217466 3.44141 0.137392 3.57619 0.0827571C3.71097 0.0281223 3.85546 -1.68527e-07 4.00137 -1.74906e-07C4.14729 -1.81284e-07 4.29177 0.0281223 4.42655 0.0827571C4.56133 0.137392 4.68376 0.217466 4.78684 0.318397L7.67243 3.13825C8.37434 3.82416 7.87298 5 6.8814 5L1.11021 5C0.11863 5 -0.371588 3.82416 0.330314 3.13825Z" fill="%23585A60" /></svg>')
-    no-repeat center/100%;
-  width: 5px;
-  height: 8px;
-  display: block;
-  transform: rotate(180deg);
-  position: absolute;
-  right: 0;
-  top: 22px;
-  transition: all 0.3s;
-}
-
-.menu__dropdown:hover::after {
-  transform: rotate(0);
-}

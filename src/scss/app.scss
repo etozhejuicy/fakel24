@@ -1,73 +1,73 @@
 // vendor
-@import '../../src/scss/vendor/swiper-bundle.min.css';
-@import '../../src/scss/vendor/normalize.css';
+@import "../../src/scss/vendor/swiper-bundle.min.css";
+@import "../../src/scss/vendor/normalize.css";
 
 // vars
-@import './variables';
+@import "./variables";
 
 // fonts
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Light.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Regular.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Medium.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-SemiBold.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Bold.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-ExtraBold.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'stomatfakel2024';
-  src: url('../../assets/fonts/stomatfakel2024.eot');
-  src: url('../../assets/fonts/stomatfakel2024.eot?#iefix')
-      format('embedded-opentype'),
-    url('../../assets/fonts/stomatfakel2024.woff') format('woff'),
-    url('../../assets/fonts/stomatfakel2024.ttf') format('truetype'),
-    url('../../assets/fonts/stomatfakel2024.svg#stomatfakel2024') format('svg');
+  font-family: "stomatfakel2024";
+  src: url("../../assets/fonts/stomatfakel2024.eot");
+  src: url("../../assets/fonts/stomatfakel2024.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/stomatfakel2024.woff") format("woff"),
+    url("../../assets/fonts/stomatfakel2024.ttf") format("truetype"),
+    url("../../assets/fonts/stomatfakel2024.svg#stomatfakel2024") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 [data-icon]:before {
-  font-family: 'stomatfakel2024' !important;
+  font-family: "stomatfakel2024" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -79,9 +79,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^='icon-']:before,
-[class*=' icon-']:before {
-  font-family: 'stomatfakel2024' !important;
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "stomatfakel2024" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -93,27 +93,27 @@
 }
 
 .icon-arrow-down:before {
-  content: '\61';
+  content: "\61";
 }
 .icon-arrow-up:before {
-  content: '\62';
+  content: "\62";
 }
 .icon-phone:before {
-  content: '\63';
+  content: "\63";
 }
 .icon-success:before {
-  content: '\64';
+  content: "\64";
 }
 .icon-location:before {
-  content: '\65';
+  content: "\65";
 }
 .icon-list-1:before {
-  content: '\67';
+  content: "\67";
 }
 
 // layouts
-@import './layouts/header';
-@import './layouts/nav';
+@import "./layouts/header";
+@import "./layouts/nav";
 
 *,
 *::before,
@@ -128,19 +128,13 @@ html {
 }
 
 body {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: var(--font-family);
+  font-family: "Geologica";
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  color: var(--black);
+  color: #585a60;
   background-color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
@@ -171,28 +165,4 @@ body {
 
 #mysprite {
   display: none;
-}
-
-// container options
-.container {
-  max-width: 100%;
-  width: 100%;
-  padding-right: calc(var(--container-padding) / 2);
-  padding-left: calc(var(--container-padding) / 2);
-  margin: 0 auto;
-  @media (min-width: 720px) {
-    max-width: calc(43.75rem + var(--container-padding));
-  }
-  @media (min-width: 992px) {
-    max-width: calc(57rem + var(--container-padding));
-  }
-  @media (min-width: 1200px) {
-    max-width: calc(70rem + var(--container-padding));
-  }
-  @media (min-width: 1400px) {
-    max-width: calc(80rem + var(--container-padding));
-  }
-  @media (min-width: 1600px) {
-    max-width: calc(100rem + var(--container-padding));
-  }
 }

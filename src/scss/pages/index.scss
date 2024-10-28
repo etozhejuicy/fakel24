@@ -3,8 +3,9 @@
   z-index: 1;
   display: block;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  // min-height: 100vh;
+  // min-height: 100svh;
+  margin-top: -140px;
   &-swiper {
     position: relative;
     z-index: 0;
@@ -19,29 +20,86 @@
       }
     }
   }
-  &-advantages {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
+  &-content {
+    position: relative;
     z-index: 1;
     width: 100%;
-    & .card-advantages {
-      @media (min-width: 1200px) {
-        width: 46.5rem;
-      }
+    height: 100%;
+    @media (min-width: 1200px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    & > .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-items: flex-start;
+      justify-content: flex-end;
     }
   }
-  &-excellence {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    display: none;
-    @media (min-width: 1200px) {
+
+  .card {
+    &-advantages {
+      position: relative;
+      z-index: 1;
       display: block;
+      max-width: 700px;
+      width: 100%;
+      height: auto;
+      padding: 24px;
+      background-color: rgba(var(--blue-rgb), 0.4);
+      border-radius: 5px;
+      border-width: 1px solid #ffffff;
+      @media (min-width: 1200px) {
+        // position: absolute;
+        // top: 50%;
+        // left: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        max-width: 744px;
+      }
+      & .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 8px;
+        @media (min-width: 720px) {
+          align-items: flex-start;
+          justify-content: flex-start;
+          row-gap: 10px;
+          column-gap: 10px;
+        }
+      }
+      & .card-header {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        color: var(--blue);
+        @media (min-width: 720px) {
+          font-size: 46px;
+          line-height: 53px;
+          text-align: left;
+        }
+      }
+      & .card-body {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: var(--black);
+        @media (min-width: 720px) {
+          font-size: 27px;
+          line-height: 34px;
+          text-align: left;
+        }
+      }
     }
   }
 }
