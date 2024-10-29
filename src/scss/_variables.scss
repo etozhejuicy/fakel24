@@ -77,4 +77,21 @@
       color: rgba(255, 255, 255, 0.85);
     }
   }
+  &-outline {
+    &-primary {
+      background-color: transparent;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      &:hover {
+        background-color: var(--blue);
+        border-color: var(--blue);
+        color: var(--white);
+      }
+      &:focus:active {
+        background-color: rgba(var(--blue-rgb), 0.4);
+        border-color: rgba(var(--blue-rgb), 0.4);
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
 }
