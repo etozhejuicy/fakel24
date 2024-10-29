@@ -1,12 +1,24 @@
 :root {
   --blue: #267cdf;
   --blue-rgb: 38, 124, 223;
-  --white: #ffffff;
   --grey: #e2dede;
   --grey-dark: #7f8186;
   --black: #585a60;
 
   --container-padding: 10px;
+}
+
+// stretched-link
+.stretched-link {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
 }
 
 // container options
@@ -52,11 +64,11 @@
   background-color: #ffffff;
   transition: 0.4s ease;
   &-white {
-    background-color: var(--white);
+    background-color: #ffffff;
     &:hover {
       background-color: var(--blue);
       border-color: var(--blue);
-      color: var(--white);
+      color: #ffffff;
     }
     &:focus:active {
       background-color: rgba(var(--blue-rgb), 0.4);
@@ -69,7 +81,7 @@
     &:hover {
       background-color: var(--black);
       border-color: var(--black);
-      color: var(--white);
+      color: #ffffff;
     }
     &:focus:active {
       background-color: rgba(var(--blue-rgb), 0.4);
@@ -85,7 +97,7 @@
       &:hover {
         background-color: var(--blue);
         border-color: var(--blue);
-        color: var(--white);
+        color: #ffffff;
       }
       &:focus:active {
         background-color: rgba(var(--blue-rgb), 0.4);

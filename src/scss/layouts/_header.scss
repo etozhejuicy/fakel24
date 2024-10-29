@@ -35,14 +35,14 @@
   &-address {
     display: flex;
     align-items: center;
-    color: var(--white);
+    color: #ffffff;
     column-gap: 9px;
     text-decoration: none !important;
     & i {
       font-size: 28px;
     }
     & span {
-      border-bottom: 1px dashed var(--white);
+      border-bottom: 1px dashed #ffffff;
       white-space: nowrap;
       text-decoration: none !important;
     }
@@ -55,7 +55,7 @@
   &-phone {
     display: flex;
     align-items: center;
-    color: var(--white);
+    color: #ffffff;
     font-size: 32px;
     font-weight: bold;
     column-gap: 9px;
@@ -81,7 +81,7 @@
     width: max-content;
     background-color: unset;
     margin-left: 73px;
-    color: var(--white);
+    color: #ffffff;
     font-size: 17px;
     text-decoration: none;
     transform: translate(0, 0);
@@ -121,7 +121,7 @@
       z-index: 5;
       width: 63px;
       height: 63px;
-      background: var(--white);
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -159,7 +159,7 @@
     transition: 0.4s ease;
     cursor: pointer;
     &:hover {
-      background-color: var(--white);
+      background-color: #ffffff;
       & i {
         color: var(--blue);
       }
@@ -169,7 +169,7 @@
       transform: translate(0, 0);
     }
     & i {
-      color: var(--white);
+      color: #ffffff;
     }
     @media screen and (max-width: 1199.98px) {
       display: none !important;
