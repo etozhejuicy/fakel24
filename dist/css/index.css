@@ -247,19 +247,29 @@
   position: relative;
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  row-gap: 14px;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
   border: 2px solid rgba(44, 53, 109, 0.3);
   border-radius: 10px;
-  padding: 23px 28px;
+  padding: 18px 28px;
   transition: 0.4s ease;
+}
+@media (min-width: 1400px) {
+  .card-service {
+    padding: 23px 28px;
+    row-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
 }
 .card-service .card-body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  flex: 1 0 auto;
+  width: 100%;
+  height: 100%;
 }
 .card-service .card-title {
   grid-area: 1/1/3/4;
@@ -293,11 +303,27 @@
 }
 .card-service i {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: 1/4/3/5;
+  align-items: flex-start;
+  justify-content: flex-end;
+  grid-area: 1/4/4/5;
   flex: 0 1 auto;
-  font-size: 56px;
+  font-size: 80px;
+}
+@media (min-width: 720px) {
+  .card-service i {
+    font-size: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-service i {
+    grid-area: 1/4/3/5;
+    font-size: 56px;
+  }
+}
+@media (min-width: 1400px) {
+  .card-service i {
+    font-size: 99px;
+  }
 }
 .card-service .card-footer {
   grid-area: 3/1/5/5;
@@ -328,9 +354,13 @@
   position: relative;
   z-index: 2;
   display: none;
+  padding: 11px 48.5px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
   pointer-events: all;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .card-service .card-footer .btn {
     display: inline-block;
     opacity: 0;
