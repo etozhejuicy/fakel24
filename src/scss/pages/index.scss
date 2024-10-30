@@ -461,6 +461,31 @@
     padding: 68px 0 73px;
   }
   &-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--blue);
+    @media (min-width: 720px) {
+      font-size: 32px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 42px;
+    }
   }
+  & .swiper-doctors {
+    margin-top: 18px;
+    @media (min-width: 720px) {
+      margin-top: 31px;
+    }
+    @media (min-width: 1200px) {
+      margin-top: 22px;
+    }
+  }
+}
+
+.card-doctor {
+  // styles here...
 }
 // section doctors part end

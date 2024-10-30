@@ -61,9 +61,6 @@
     }
   }
   &-list {
-    width: max-content;
-    position: absolute;
-    top: 50px;
     flex-direction: column;
     row-gap: 6px;
     border-radius: 5px;
@@ -72,6 +69,11 @@
     background: #fff;
     transition: all 0.3s;
     display: none;
+    @media (min-width: 1200px) {
+      width: max-content;
+      position: absolute;
+      top: 50px;
+    }
     & a {
       padding: 4px 10px;
       border-radius: 5px;
@@ -124,6 +126,7 @@
     transform: translate(0, 0);
   }
   &-btn {
+    border-radius: 10px;
     &:nth-child(1),
     &:nth-child(2) {
       background-color: var(--blue);

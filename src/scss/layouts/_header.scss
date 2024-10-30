@@ -172,19 +172,33 @@
     position: relative;
     display: block;
     width: max-content;
-    background-color: unset;
-    margin-left: 73px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding-left: 52px;
+    padding-right: 28px;
+    padding-bottom: 3px;
     color: #ffffff;
     font-size: 17px;
     text-decoration: none;
     transform: translate(0, 0);
     transition: 0.4s ease;
+    @media (min-width: 720px) {
+      background-color: unset;
+      padding: unset;
+      margin-left: 54px;
+    }
     @media (min-width: 1200px) {
       margin-left: 103px;
     }
     & div {
+      line-height: 1;
+      color: var(--blue);
+      @media (min-width: 720px) {
+        color: #ffffff;
+      }
       &:last-of-type {
         display: block;
+        font-size: 30px;
         text-transform: uppercase;
         @media (min-width: 720px) {
           font-size: 40px;
@@ -197,12 +211,18 @@
     & img {
       position: absolute;
       top: -11px;
-      left: -75px;
+      left: 12.41px;
+      width: 30.59px;
+      height: 85.86px;
       @media (min-width: 720px) {
+        top: -11px;
+        left: -54px;
         width: 41px;
         height: 115px;
       }
       @media (min-width: 1200px) {
+        top: -11px;
+        left: -75px;
         width: 55px;
         height: 154px;
       }
