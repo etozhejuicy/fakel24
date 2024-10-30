@@ -147,6 +147,13 @@ body {
   background-color: #ffffff;
 }
 
+.menu-open {
+  position: static;
+  pointer-events: fill;
+  touch-action: none;
+  overflow: hidden;
+}
+
 .wrapper {
   position: relative;
   display: flex;

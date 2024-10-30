@@ -34,7 +34,7 @@
             />
           </a>
           <div class="header-contacts">
-            <button class="btn btn-white header-contacts-btn">
+            <button class="btn btn-white header-contacts-btn" data-modal-id="appointment">
               Запись на прием
             </button>
             <a class="link header-address" href="#map" title="Посмотреть карту">
@@ -49,7 +49,7 @@
               <i class="icon-phone"></i>
               <span>+7 (473) 201-63-64</span>
             </a>
-            <button class="header-burger" mobile-menu="">
+            <button class="header-burger" data-menu-open="">
               <i class="icon-burger"></i>
             </button>
           </div>
@@ -57,6 +57,19 @@
 
         <!-- При прокрутке схлопывается эта навигация -->
         <nav class="menu">
+          <!-- В мобильном меню отображаются элементы управления меню -->
+           <div class="menu-nav">
+            <a href="tel:+7 (473) 201-63-64" class="btn menu-btn">
+              <i class="icon-phone"></i>
+            </a>
+            <button type="button" class="btn menu-btn" data-modal-open="appointment">
+              Записаться на прием
+            </button>
+            <button type="button" class="btn menu-btn" data-menu-close>
+              x
+            </button>
+           </div>
+           <!-- Выпадающий список -->
           <div class="menu-dropdown">
             <a href="#" class="menu-link">
               Услуги
@@ -84,7 +97,7 @@
         </nav>
 
         <!-- При прокрутке появляется кнопка: записаться на прием -->
-        <button class="header-modal-btn scroll">
+        <button class="header-modal-btn scroll" data-modal-open="appointment">
           <i class="icon-list-1"></i>
           <span>Записаться на прием</span>
         </button>
@@ -115,6 +128,11 @@
             <!-- content into swiper-hero -->
             <div class="section-hero-content">
               <div class="container">
+                <!-- Кнопка появляется, когда просматриваем сайт с планшета или мобилы -->
+                <button class="btn btn-white" data-modal-open="appointment">
+                  Запись на прием
+                </button>
+                
                 <div class="card-advantage">
                   <div class="card-content">
                     <div class="card-header">
@@ -333,6 +351,7 @@
       </section>
 
       <!-- section doctors -->
+       <!-- в процессе разработки -->
       <section class="section-doctors">
         <div class="container">
           <div class="section-doctors-title">
@@ -359,6 +378,7 @@
       </section>
 
       <!-- section consulatation -->
+       <!-- в процессе разработки -->
       <section class="section-consult">
         <div class="container">
           <h2 class="section-consult-title">Получить консультацию</h2>
@@ -408,6 +428,7 @@
       </section>
 
       <!-- section map -->
+       <!-- в процессе разработки -->
       <section class="section-map" id="map">
         <script
           type="text/javascript"
@@ -453,7 +474,7 @@
 
       if(document.querySelector('.section-doctors').length) {
         var swiperDoctors = new Swiper(".swiper-doctors", {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 20,
           speed: 400,
           autoplay: true,
@@ -505,6 +526,30 @@
         mainMenu.classList.remove("scroll");
         headerModalBtn.classList.remove("scroll");
       });
+
+      // mobile-menu
+      const menuOpenElem = document.querySelector("[data-menu-open]");
+      const menuCloseElem = document.querySelector("[data-menu-close]");
+
+      if (window.innerWidth <= 1200) {
+        menuOpenElem.addEventListener("click", () => {
+          openMenu();
+        });
+
+        menuCloseElem.addEventListener("click", () => {
+          closeMenu();
+        });
+      }
+
+      function openMenu() {
+        mainMenu.classList.add("menu-show");
+        document.documentElement.classList.add("menu-open");
+      }
+
+      function closeMenu() {
+        mainMenu.classList.remove("menu-show");
+        document.documentElement.classList.remove("menu-open");
+      }
     </script>
   </body>
 </html>
