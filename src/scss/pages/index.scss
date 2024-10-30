@@ -4,7 +4,7 @@
   z-index: 1;
   display: block;
   width: 100%;
-  margin-top: -60px;
+  margin-top: -70px;
   @media (min-width: 1200px) {
     margin-top: -150px;
   }
@@ -14,8 +14,14 @@
   &-swiper {
     position: relative;
     z-index: 0;
-    display: block;
     width: 100%;
+    @media (min-width: 720px) and (max-width: 1199.98px) {
+      order: 0;
+    }
+    & .swiper-hero {
+      display: flex;
+      flex-direction: column;
+    }
     & .swiper-slide {
       display: flex;
       width: 100%;
@@ -29,12 +35,26 @@
     & .swiper-pagination {
       position: relative;
       z-index: 1;
+      top: 0px;
+      margin-top: -24px;
+      background-color: rgba(255, 255, 255, 0.6);
+      @media (min-width: 720px) and (max-width: 1199.98px) {
+        order: 2;
+        margin-top: 0;
+      }
+      @media (min-width: 1200px) {
+        margin-top: 0;
+      }
     }
     & .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
       border-radius: 20px;
+      background-color: #ffffff;
       transition: 0.4s ease;
+      @media (min-width: 720px) {
+        background-color: #e2dede;
+      }
     }
     & .swiper-pagination-bullet-active {
       width: 49.2px;
@@ -48,6 +68,10 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+    @media (min-width: 720px) and (max-width: 1199.98px) {
+      order: 1;
+      margin-top: -16px;
+    }
     @media (min-width: 1200px) {
       position: absolute;
       top: 0;
@@ -85,6 +109,8 @@
   @media (min-width: 1200px) {
     background-color: rgba(255, 255, 255, 0.7);
     max-width: 744px;
+  }
+  @media (min-width: 1400px) {
     padding: 50px 40px;
   }
   & .card-content {

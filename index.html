@@ -49,6 +49,9 @@
               <i class="icon-phone"></i>
               <span>+7 (473) 201-63-64</span>
             </a>
+            <button class="header-burger" mobile-menu="">
+              <i class="icon-burger"></i>
+            </button>
           </div>
         </div>
 
@@ -83,6 +86,7 @@
         <!-- При прокрутке появляется кнопка: записаться на прием -->
         <button class="header-modal-btn scroll">
           <i class="icon-list-1"></i>
+          <span>Записаться на прием</span>
         </button>
       </div>
     </header>
@@ -328,6 +332,32 @@
         </div>
       </section>
 
+      <!-- section doctors -->
+      <section class="section-doctors">
+        <div class="container">
+          <div class="section-doctors-title">
+            Ведущие врачи клиники
+          </div>
+            <div class="swiper-container swiper-doctors">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/doctor-1.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/doctor-2.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/doctor-3.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/images/doctor-4.png" />
+                </div>
+              </div>
+              <div class="swiper-pagination" swiper-pagination></div>
+            </div>
+        </div>
+      </section>
+
       <!-- section consulatation -->
       <section class="section-consult">
         <div class="container">
@@ -417,6 +447,33 @@
         setTimeout(function () {
           if (swiperHero.update) {
             swiperHero.update();
+          }
+        }, 500);
+      }
+
+      if(document.querySelector('.section-doctors').length) {
+        var swiperDoctors = new Swiper(".swiper-doctors", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          speed: 400,
+          autoplay: true,
+          rewind: true,
+          scrollbar: {
+            enabled: false,
+          },
+          pagination: {
+            el: ".swiper-doctors [swiper-pagination]",
+          },
+          navigation: {
+            enabled: false,
+          },
+          allowTouchMove: true,
+          grabCursor: true,
+        });
+
+        setTimeout(function () {
+          if (swiperDoctors.update) {
+            swiperDoctors.update();
           }
         }, 500);
       }
