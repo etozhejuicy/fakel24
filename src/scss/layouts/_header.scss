@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 13px;
+    margin-right: 65px;
     @media (min-width: 720px) and (max-width: 1199.98px) {
       & .header-phone {
         order: 0;
@@ -39,6 +40,7 @@
     }
     @media (min-width: 1200px) {
       column-gap: 16px;
+      margin-right: unset;
     }
     &-btn {
       display: none;
@@ -129,7 +131,7 @@
     position: fixed;
     z-index: 1;
     top: 14px;
-    right: 12px;
+    // right: 12px;
     appearance: none;
     display: inline;
     background-color: #ffffff;
