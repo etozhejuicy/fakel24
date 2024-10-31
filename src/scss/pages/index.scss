@@ -448,6 +448,7 @@
 
 // section doctors part start
 .section-doctors {
+  position: relative;
   padding: 40px 0;
   background-color: rgba(17, 118, 234, 0.07);
   overflow: hidden;
@@ -472,6 +473,8 @@
     }
   }
   & .swiper-doctors {
+    position: relative;
+    z-index: 1;
     margin-top: 18px;
     @media (min-width: 720px) {
       margin-top: 31px;
@@ -481,8 +484,47 @@
     }
     & .swiper-container {
       position: relative;
+      z-index: 1;
+      @media screen and (max-width: 1199.98px) {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 10;
+          border: 0;
+          width: 20%;
+          height: 100%;
+          border-radius: 0;
+          background: linear-gradient(
+            90deg,
+            rgba(var(--blue-rgb), 0.35) 0%,
+            rgba(255, 255, 255, 0.35) 100%
+          );
+          backface-visibility: hidden;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 10;
+          border: 0;
+          width: 20%;
+          height: 100%;
+          border-radius: 0;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(var(--blue-rgb), 0.35) 100%
+          );
+          backface-visibility: hidden;
+        }
+      }
     }
     & .swiper-slide {
+      position: relative;
+      z-index: 1;
       width: fit-content !important;
     }
     & .swiper-pagination {
@@ -508,7 +550,13 @@
   flex-direction: column;
   width: 340px;
   height: 100%;
+  background-color: #ffffff;
   border-radius: 10px;
+  padding-bottom: 25px;
+  overflow: hidden;
+  @media (min-width: 720px) {
+    padding-bottom: 17px;
+  }
   &-image {
     position: relative;
     z-index: 1;
@@ -522,6 +570,24 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+  &-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--blue);
+    padding: 20px 25px 0 20px;
+    @media (min-width: 720px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &-meo {
+    padding: 20px 4px 0 20px;
+  }
+  &-experience {
+    padding: 20px 18px 0 20px;
   }
 }
 // section doctors part end

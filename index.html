@@ -72,9 +72,11 @@
               Записаться на прием
             </button>
             <button type="button" class="btn menu-btn" data-menu-close>
-              x
+              <i class="icon-close"></i>
             </button>
           </div>
+          <!-- Ссылка скрывается в десктоп-версии -->
+          <a href="#" class="menu-link hidden">Главная</a>
           <!-- Выпадающий список -->
           <div class="menu-dropdown">
             <a href="#" class="menu-link">
@@ -100,11 +102,17 @@
           <a href="#" class="menu-link">Наши работы</a>
           <a href="#" class="menu-link">Отзывы</a>
           <a href="#" class="menu-link">Контакты</a>
+
+          <!-- Ссылка скрывается в десктоп-версии -->
+          <a class="menu-link hidden" href="#map" title="Посмотреть на карте" data-menu-close>
+            <i class="icon-location"></i>
+            <span>г. Воронеж, ул. Маршака, д. 8</span>
+          </a>
         </nav>
 
         <!-- При прокрутке появляется кнопка: записаться на прием -->
         <button class="header-modal-btn btn scroll" data-modal-open="appointment">
-          <i class="icon-list-1"></i>
+          <i class="icon-list"></i>
           <span>Записаться на прием</span>
         </button>
       </div>
@@ -203,7 +211,7 @@
         <div class="container">
           <div class="section-services-inner">
             <h1>Стоматологическая клиника Факел</h1>
-            <h2>Стоматология для взрослых в Юго-западном районе Воронежа</h2>
+            <h2>Семейная стоматология в Юго-западном районе Воронежа</h2>
             <!-- Список карточек -->
             <div class="services-list">
               <div class="card-service">
@@ -506,6 +514,7 @@
     <script src="./src/js/vendor/swiper-bundle.min.js"></script>
 
     <script async>
+      // heroCard init
       const heroCard = document.querySelector('[data-card-hero]');
 
       // swiper hero init
@@ -627,16 +636,20 @@
       });
 
       // mobile-menu
-      const menuOpenElem = document.querySelector("[data-menu-open]");
-      const menuCloseElem = document.querySelector("[data-menu-close]");
+      const menuOpenElems = document.querySelectorAll("[data-menu-open]");
+      const menuCloseElems = document.querySelectorAll("[data-menu-close]");
 
       if (window.innerWidth <= 1200) {
-        menuOpenElem.addEventListener("click", () => {
-          openMenu();
+        menuOpenElems.forEach((menuOpenElem) => {
+          menuOpenElem.addEventListener("click", () => {
+            openMenu();
+          });
         });
 
-        menuCloseElem.addEventListener("click", () => {
-          closeMenu();
+        menuCloseElems.forEach((menuCloseElem) => {
+          menuCloseElem.addEventListener("click", () => {
+            closeMenu();
+          });
         });
       }
 
