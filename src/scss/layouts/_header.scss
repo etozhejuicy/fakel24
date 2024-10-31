@@ -46,12 +46,6 @@
       @media (min-width: 720px) {
         display: inline-block;
       }
-      @media (min-width: 1200px) {
-        font-size: 14px;
-      }
-      @media (min-width: 1400px) {
-        font-size: 20px;
-      }
     }
   }
   &-address {
@@ -188,6 +182,9 @@
       margin-left: 54px;
     }
     @media (min-width: 1200px) {
+      margin-left: 55px;
+    }
+    @media (min-width: 1400px) {
       margin-left: 103px;
     }
     & div {
@@ -222,9 +219,12 @@
       }
       @media (min-width: 1200px) {
         top: -11px;
-        left: -75px;
+        left: -60px;
         width: 55px;
         height: 154px;
+      }
+      @media (min-width: 1400px) {
+        left: -75px;
       }
     }
     &.scroll {
