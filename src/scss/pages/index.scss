@@ -554,6 +554,7 @@
   border-radius: 10px;
   padding-bottom: 25px;
   overflow: hidden;
+  transition: 0.4s ease;
   @media (min-width: 720px) {
     padding-bottom: 17px;
   }
@@ -572,22 +573,66 @@
     }
   }
   &-name {
+    content: '';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: var(--blue);
-    padding: 20px 25px 0 20px;
+    padding: 25px 20px 0 20px;
     @media (min-width: 720px) {
       font-size: 18px;
       line-height: 22px;
     }
+    @media (min-width: 1200px) {
+      font-size: 22px;
+      line-height: 27.5px;
+      padding: 30px 20px 0 20px;
+    }
+    &::after {
+      content: '\A';
+      white-space: pre;
+    }
   }
   &-meo {
-    padding: 20px 4px 0 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #585a60;
+    padding: 4px 20px 0 20px;
+    @media (min-width: 720px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   &-experience {
-    padding: 20px 18px 0 20px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--blue);
+    padding: 18px 20px 0 20px;
+    @media (min-width: 720px) {
+      font-size: 18px;
+      line-height: 22.5px;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
   }
 }
 // section doctors part end
+
+// section technologies part start
+.section-technologies {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  padding: 38px 0;
+  @media (min-width: 720px) {
+    padding: 58px 0;
+  }
+}
+// section technologies part end

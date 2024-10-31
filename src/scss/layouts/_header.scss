@@ -191,6 +191,9 @@
     @media (min-width: 1400px) {
       margin-left: 103px;
     }
+    &:hover {
+      opacity: 0.5;
+    }
     & div {
       line-height: 1;
       color: var(--blue);
@@ -291,6 +294,7 @@
       }
     }
     & i {
+      display: flex;
       font-size: 38px;
     }
     @media screen and (max-width: 1199.98px) {

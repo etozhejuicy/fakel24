@@ -396,7 +396,7 @@
                     <img src="./assets/images/doctor-1.png" />
                   </div>
                   <div class="card-doctor-name">
-                    Алабовский <br />
+                    Алабовский
                     Дмитрий Владимирович
                   </div>
                   <div class="card-doctor-meo">стоматолог-ортопед</div>
@@ -409,7 +409,7 @@
                     <img src="./assets/images/doctor-2.png" />
                   </div>
                   <div class="card-doctor-name">
-                    Алабовский <br />
+                    Алабовский
                     Дмитрий Владимирович
                   </div>
                   <div class="card-doctor-meo">стоматолог-ортопед</div>
@@ -422,7 +422,7 @@
                     <img src="./assets/images/doctor-3.png" />
                   </div>
                   <div class="card-doctor-name">
-                    Алабовский <br />
+                    Алабовский
                     Дмитрий Владимирович
                   </div>
                   <div class="card-doctor-meo">стоматолог-ортопед</div>
@@ -435,7 +435,7 @@
                     <img src="./assets/images/doctor-4.png" />
                   </div>
                   <div class="card-doctor-name">
-                    Алабовский <br />
+                    Алабовский
                     Дмитрий Владимирович
                   </div>
                   <div class="card-doctor-meo">стоматолог-ортопед</div>
@@ -444,6 +444,44 @@
               </div>
             </div>
             <div class="swiper-pagination" swiper-pagination></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section techologies -->
+      <section class="section-technologies">
+        <div class="section-technologies-title">
+      
+        </div>
+        <div class="swiper-container swiper-technologies">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/t-slide_1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/t-slide_2.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/t-slide_1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/t-slide_2.jpg" />
+            </div>
+          </div>
+          <div class="swiper-pagination" swiper-pagination></div>
+      
+          <div class="tech-card" data-card-tech>
+            <div class="tech-card-title">
+              ФИЗИОДИСПЕНСЕР
+            </div>
+            <div class="tech-card-body">
+              В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции
+              с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов
+              зубов
+              проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что
+              значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности
+              результата.
+            </div>
           </div>
         </div>
       </section>
@@ -512,10 +550,12 @@
 
     <!-- js part -->
     <script src="./src/js/vendor/swiper-bundle.min.js"></script>
+    <script type="module" src="./src/js/vendor/scroller.js"></script>
 
     <script async>
       // heroCard init
       const heroCard = document.querySelector('[data-card-hero]');
+      const techCard = document.querySelector('[data-card-tech]');
 
       // swiper hero init
       if (document.getElementsByClassName("section-hero-swiper").length) {
@@ -567,8 +607,6 @@
         }, 500);
       }
 
-      
-
       // swiper doctor init
       if (document.getElementsByClassName("section-doctors").length) {
         var swiperDoctors = new Swiper(".swiper-doctors", {
@@ -606,6 +644,56 @@
           }
         }, 500);
       }
+
+      // swiper technologies
+      if (document.getElementsByClassName("section-technologies").length) {
+          var swiperTechnologies = new Swiper(".swiper-technologies", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 400,
+            autoplay: true,
+            rewind: true,
+            scrollbar: {
+              enabled: false,
+            },
+            pagination: {
+              el: ".swiper-technologies [swiper-pagination]",
+              clickable: true,
+            },
+            navigation: {
+              enabled: false,
+            },
+            allowTouchMove: true,
+            grabCursor: true,
+            on: {
+              slideChange: function () {
+                let activeSlide = swiperHero.activeIndex;
+
+                activeSlide = activeSlide + 1;
+
+                if (activeSlide == 1) {
+                  heroCard.querySelector('.card-title').innerText = 'Профессиональная гигиена всей полости рта';
+                  heroCard.querySelector('.card-body p').innerHTML = 'Скидка первичным пациентам 900 руб!';
+                } else if (activeSlide == 2) {
+                  heroCard.querySelector('.card-title').innerText = 'Имплантация ';
+                  heroCard.querySelector('.card-body p').innerHTML = 'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
+                } else if (activeSlide == 3) {
+                  heroCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
+                  heroCard.querySelector('.card-body p').innerHTML = 'Здоровые дёсна - залог красивой улыбки';
+                } else if (activeSlide == 4) {
+                  heroCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
+                  heroCard.querySelector('.card-body p').innerHTML = 'Изготовление безметалловых коронок по цене от 16500 руб!';
+                }
+              }
+            }
+          });
+
+          setTimeout(function () {
+            if (swiperTechnologies.update) {
+              swiperTechnologies.update();
+            }
+          }, 500);
+        }
 
       // header script
       const logo = document.querySelector(".header-logo");
