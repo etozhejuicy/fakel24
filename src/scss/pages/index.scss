@@ -54,6 +54,12 @@
         margin-top: 0;
       }
     }
+    & .swiper-pagination-bullet {
+      background-color: #ffffff;
+      @media (min-width: 1200px) {
+        background-color: #e2dede;
+      }
+    }
   }
   &-content {
     position: relative;
