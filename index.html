@@ -507,7 +507,9 @@
     <script src="./src/js/vendor/swiper-bundle.min.js"></script>
 
     <script async>
-      // swiper init
+      const heroCard = document.querySelector('[data-card-hero]');
+
+      // swiper hero init
       if (document.getElementsByClassName("section-hero-swiper").length) {
         var swiperHero = new Swiper(".swiper-hero", {
           slidesPerView: 1,
@@ -515,18 +517,39 @@
           speed: 400,
           autoplay: true,
           rewind: true,
-          effect: "fade",
           scrollbar: {
             enabled: false,
           },
           pagination: {
             el: ".swiper-hero [swiper-pagination]",
+            clickable: true,
           },
           navigation: {
             enabled: false,
           },
           allowTouchMove: true,
           grabCursor: true,
+          on: {
+            slideChange: function() {
+              let activeSlide = swiperHero.activeIndex;
+
+              activeSlide = activeSlide + 1;
+
+              if(activeSlide == 1) {
+                heroCard.querySelector('.card-title').innerText = 'Профессиональная гигиена всей полости рта';
+                heroCard.querySelector('.card-body p').innerHTML = 'Скидка первичным пациентам 900 руб!';
+              } else if(activeSlide == 2) {
+                heroCard.querySelector('.card-title').innerText = 'Имплантация ';
+                heroCard.querySelector('.card-body p').innerHTML = 'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
+              } else if(activeSlide == 3) {
+                heroCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
+                heroCard.querySelector('.card-body p').innerHTML = 'Здоровые дёсна - залог красивой улыбки';
+              } else if (activeSlide == 4) {
+                heroCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
+                heroCard.querySelector('.card-body p').innerHTML = 'Изготовление безметалловых коронок по цене от 16500 руб!';
+              }
+            }
+          }
         });
 
         setTimeout(function () {
@@ -536,18 +559,31 @@
         }, 500);
       }
 
+      
+
+      // swiper doctor init
       if (document.getElementsByClassName("section-doctors").length) {
         var swiperDoctors = new Swiper(".swiper-doctors", {
           slidesPerView: "auto",
           spaceBetween: 20,
-          // centeredSlides: true,
           speed: 400,
-          rewind: true,
+          breakpoints: {
+            0: {
+              centeredSlides: true,
+              loop: true,
+              loopedSlides: 2,
+            },
+            1200: {
+              centeredSlides: false,
+              loop: false,
+            }
+          },
           scrollbar: {
             enabled: false,
           },
           pagination: {
             el: ".swiper-doctors [swiper-pagination]",
+            clickable: true,
           },
           navigation: {
             enabled: false,
