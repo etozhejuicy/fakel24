@@ -51,6 +51,23 @@ p {
   }
 }
 
+.section-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--blue);
+  text-align: center;
+  @media (min-width: 720px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 42px;
+    line-height: 52.5px;
+  }
+}
+
 // container options
 .container {
   max-width: 100%;
@@ -107,6 +124,8 @@ p {
   }
   &-blue {
     background-color: var(--blue);
+    border-color: var(--blue);
+    color: #ffffff;
     &:hover {
       background-color: var(--black);
       border-color: var(--black);
@@ -115,6 +134,21 @@ p {
     &:focus:active {
       background-color: rgba(var(--blue-rgb), 0.4);
       border-color: rgba(var(--blue-rgb), 0.4);
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+  &-grey {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #585a60;
+    &:hover {
+      background-color: var(--black);
+      border-color: var(--black);
+      color: #ffffff;
+    }
+    &:focus:active {
+      background-color: rgba(88, 90, 96, 0.4);
+      border-color: rgba(88, 90, 96, 0.4);
       color: rgba(255, 255, 255, 0.85);
     }
   }

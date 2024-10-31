@@ -458,22 +458,6 @@
   @media (min-width: 1200px) {
     padding: 68px 0 73px;
   }
-  &-title {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: var(--blue);
-    @media (min-width: 720px) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-    @media (min-width: 1200px) {
-      font-size: 42px;
-      line-height: 52.5px;
-    }
-  }
   & .swiper-doctors {
     position: relative;
     z-index: 1;
@@ -522,6 +506,11 @@
           );
           backface-visibility: hidden;
         }
+      }
+    }
+    & .swiper-wrapper {
+      @media (min-width: 1200px) and (max-width: 1599.98px) {
+        justify-content: center;
       }
     }
     & .swiper-slide {
@@ -633,22 +622,6 @@
   }
   @media (min-width: 1200px) {
     padding: 82px 0;
-  }
-  &-title {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: var(--blue);
-    text-align: center;
-    @media (min-width: 720px) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-    @media (min-width: 1200px) {
-      font-size: 42px;
-      line-height: 52.5px;
-    }
   }
   & .swiper-technologies {
     position: relative;
@@ -765,3 +738,43 @@
   }
 }
 // section technologies part end
+
+// section smile part start
+.section-smile {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  & .swiper-smiles {
+    & .swiper-slide {
+      position: relative;
+      z-index: 1;
+      width: fit-content !important;
+    }
+    & .swiper-pagination {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      left: unset;
+      margin-top: 26px;
+      @media (min-width: 720px) {
+        margin-top: 36px;
+      }
+      @media (min-width: 1200px) {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.smile-card {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  @media (min-width: 720px) {
+    width: 517px;
+  }
+}
+// section smile part end
