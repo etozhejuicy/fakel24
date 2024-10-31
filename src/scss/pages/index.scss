@@ -323,6 +323,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    row-gap: 16px;
+    column-gap: 16px;
     flex: 1 0 auto;
     width: 100%;
     height: 100%;
@@ -355,21 +357,29 @@
       }
     }
   }
-  & i {
+  & i,
+  & svg {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     grid-area: 1 / 4 / 4 / 5;
+    width: 80px;
+    height: 80px;
     flex: 0 1 auto;
     font-size: 80px;
+    object-fit: contain;
     @media (min-width: 720px) {
       font-size: 80px;
     }
     @media (min-width: 1200px) {
       grid-area: 1 / 4 / 3 / 5;
+      width: 56px;
+      height: 56px;
       font-size: 56px;
     }
     @media (min-width: 1400px) {
+      width: 99px;
+      height: 99px;
       font-size: 99px;
     }
   }
@@ -454,6 +464,7 @@
 .section-doctors {
   padding: 40px 0;
   background-color: rgba(17, 118, 234, 0.07);
+  overflow: hidden;
   @media (min-width: 720px) {
     padding: 63px 0 42px;
   }
@@ -482,10 +493,33 @@
     @media (min-width: 1200px) {
       margin-top: 22px;
     }
+    & .swiper-slide {
+      width: fit-content !important;
+    }
   }
 }
 
 .card-doctor {
-  // styles here...
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 100%;
+  border-radius: 10px;
+  &-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1.25;
+    border-radius: 10px;
+    overflow: hidden;
+    & > * {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 // section doctors part end

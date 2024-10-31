@@ -213,7 +213,10 @@
                     <div>Терапия</div>
                     <div>Лечение зубов без боли</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <!-- Иконка из спрайта имеет порядковый номер -->
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_1"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 4500 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -230,7 +233,9 @@
                     <div>Ортопедия</div>
                     <div>Протезирование зубов</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_2"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 4300 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -246,7 +251,9 @@
                     <div>Хирургия</div>
                     <div>Удаление больных зубов</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_3"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 1800 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -262,7 +269,9 @@
                     <div>Имплантация</div>
                     <div>Восстановление зубов</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_4"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 21000 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -278,7 +287,9 @@
                     <div>Отбеливание</div>
                     <div>Белоснежные зубы</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_5"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 13500 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -294,7 +305,9 @@
                     <div>Гигиена</div>
                     <div>Профилактика здоровья зубов</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_6"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 3500 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -310,7 +323,9 @@
                     <div>Парадонтология</div>
                     <div>Лечение десён</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_7"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 2200 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -326,7 +341,9 @@
                     <div>Ортодонтия </div>
                     <div>Установка брекетов</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_8"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 10000 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -342,7 +359,9 @@
                     <div>Скайсы на зубы</div>
                     <div>Миниатюрное украшение</div>
                   </div>
-                  <i class="icon-arrow-down"></i>
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <use xlink:href="./assets/sprite.svg#service_icon_9"></use>
+                  </svg>
                   <div class="card-footer">
                     <div>от 5500 ₽</div>
                     <button type="button" class="btn btn-white">
@@ -521,6 +540,7 @@
         var swiperDoctors = new Swiper(".swiper-doctors", {
           slidesPerView: "auto",
           spaceBetween: 20,
+          // centeredSlides: true,
           speed: 400,
           rewind: true,
           scrollbar: {
