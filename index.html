@@ -96,8 +96,9 @@
               <a href="#">Отбеливание зубов</a>
               <a href="#">Гигиена зубов</a>
               <a href="#">Лечение зубов</a>
-              <a href="#">Ортодонтическое лечение</a>
-              <a href="#">Другие услуги</a>
+              <a href="#">Ортодонтия</a>
+              <a href="#">Скайсы на зубы</a>
+              <a href="#">Детская стоматология</a>
             </div>
           </div>
           <a href="#" class="menu-link">Прайс</a>
@@ -1191,20 +1192,6 @@
       // mobile-menu
       const menuOpenElems = document.querySelectorAll("[data-menu-open]");
       const menuCloseElems = document.querySelectorAll("[data-menu-close]");
-      const container = document.querySelector(".container");
-      const burgerBtn = document.querySelector(".header-burger");
-
-      function positionFixedElement() {
-        const containerRect = container.getBoundingClientRect();
-
-        burgerBtn.style.left = `${
-          containerRect.right - burgerBtn.offsetWidth - 12
-        }px`;
-      }
-
-      window.addEventListener("load", positionFixedElement);
-      window.addEventListener("resize", positionFixedElement);
-      window.addEventListener("scroll", positionFixedElement);
 
       // mobile-menu
       function mobileMenu() {

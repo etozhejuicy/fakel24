@@ -67,9 +67,11 @@
       white-space: nowrap;
       text-decoration: none !important;
     }
-    &:hover {
-      & span {
-        border-bottom: unset;
+    @media (min-width: 1200px) {
+      &:hover {
+        & span {
+          border-color: transparent;
+        }
       }
     }
   }
@@ -80,7 +82,7 @@
     font-size: 32px;
     font-weight: bold;
     column-gap: 9px;
-    padding: 10px;
+    padding: 11px 12px;
     text-decoration: none;
     transition: 0.4s ease;
     // mobile adaptation
@@ -98,15 +100,12 @@
         color: rgba(255, 255, 255, 0.85);
       }
     }
-    @media (min-width: 720px) {
-      padding: 13px;
-    }
     @media (min-width: 1200px) {
       padding: unset;
       color: #ffffff;
     }
     & i {
-      font-size: 30px;
+      font-size: 24px;
       @media (min-width: 720px) {
         font-size: 28px;
       }
@@ -130,16 +129,16 @@
   &-burger {
     position: fixed;
     z-index: 1;
-    top: 14px;
-    // right: 12px;
+    top: 16px;
+    right: 12px;
     appearance: none;
     display: inline;
     background-color: #ffffff;
     color: #585a60;
-    font-size: 26.1px;
+    font-size: 21px;
     font-weight: bold;
     line-height: 1;
-    padding: 12.45px 12px 12.45px;
+    padding: 14px;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -147,8 +146,7 @@
     cursor: pointer;
     transition: 0.4s ease;
     @media (min-width: 720px) {
-      padding: 12.7px 11px 11.7px;
-      font-size: 30.6px;
+      padding: 15px;
     }
     &:hover {
       background-color: #585a60;
@@ -172,7 +170,6 @@
     z-index: 1;
     display: block;
     width: max-content;
-    background-color: #ffffff;
     border-radius: 10px;
     padding-left: 52px;
     padding-right: 28px;
@@ -194,13 +191,24 @@
       margin-left: 103px;
     }
     &:hover {
-      opacity: 0.5;
+      & div {
+        opacity: 0.5;
+      }
+      & img {
+        opacity: 0.8;
+      }
     }
     & div {
       line-height: 1;
-      color: var(--blue);
-      @media (min-width: 720px) {
-        color: #ffffff;
+      transition: 0.4s ease;
+      &:first-of-type {
+        font-size: 14px;
+        @media (min-width: 720px) {
+          font-size: 17px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 18px;
+        }
       }
       &:last-of-type {
         display: block;
@@ -220,6 +228,7 @@
       left: 12.41px;
       width: 30.59px;
       height: 85.86px;
+      transition: 0.4s ease;
       @media (min-width: 720px) {
         top: -11px;
         left: -54px;

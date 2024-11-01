@@ -183,7 +183,7 @@
   width: 100%;
   height: auto;
   padding: 16px;
-  background-color: rgba(var(--blue-rgb), 0.4);
+  background-color: rgba(17, 118, 234, 0.4);
   border-radius: 5px;
   border: 1px solid #ffffff;
   backdrop-filter: blur(7.95px);
@@ -484,7 +484,7 @@
           border-radius: 0;
           background: linear-gradient(
             90deg,
-            rgba(var(--blue-rgb), 0.35) 0%,
+            rgba(17, 118, 234, 0.35) 0%,
             rgba(255, 255, 255, 0.35) 100%
           );
           backface-visibility: hidden;
@@ -502,7 +502,7 @@
           background: linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(var(--blue-rgb), 0.35) 100%
+            rgba(17, 118, 234, 0.35) 100%
           );
           backface-visibility: hidden;
         }
@@ -1019,8 +1019,8 @@
       padding: 3px 40px;
     }
     &:hover {
-      background-color: rgba(var(--blue-rgb), 0.4);
-      border-color: rgba(var(--blue-rgb), 0.4);
+      background-color: rgba(17, 118, 234, 0.4);
+      border-color: rgba(17, 118, 234, 0.4);
       color: var(--blue);
     }
     &:focus:active {
@@ -1028,7 +1028,7 @@
     }
     &.active {
       background-color: transparent;
-      border-color: rgba(var(--blue-rgb), 0.4);
+      border-color: rgba(17, 118, 234, 0.4);
       color: var(--blue);
     }
     & img {
