@@ -178,7 +178,13 @@
 .card-excellence {
   position: relative;
   z-index: 1;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  row-gap: 20px;
+  column-gap: 20px;
   max-width: 700px;
   width: 100%;
   height: auto;
@@ -190,15 +196,6 @@
   overflow: hidden;
   @media (min-width: 1600px) {
     padding: 24px;
-  }
-  & .card-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    row-gap: 20px;
-    column-gap: 20px;
   }
   & .card-icon {
     font-size: 32px;
@@ -709,16 +706,19 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 496px;
   padding: 30px 18px;
   background-color: #ffffff;
   overflow: hidden;
   @media (min-width: 720px) {
     border-radius: 10px;
+    height: 275px;
     background-color: #eef5fe;
     padding: 36px 50px;
   }
   @media (min-width: 1200px) {
     max-width: 560px;
+    height: 490px;
     padding: 85px 50px;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(11.9px);
