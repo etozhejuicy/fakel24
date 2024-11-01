@@ -51,6 +51,20 @@ p {
   }
 }
 
+p.small {
+  font-size: 13px;
+  @media (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+p.smaller {
+  font-size: 12px;
+  @media (min-width: 1200px) {
+    font-size: 13px;
+  }
+}
+
 .section-title {
   font-style: normal;
   font-weight: 400;

@@ -692,7 +692,7 @@
           </div>
 
           <!-- Кнопка: смотреть все -->
-          <a href="#" class="btn btn-blue"> Смотреть все </a>
+          <a href="#" class="btn btn-blue" target="_blank"> Смотреть все </a>
         </div>
       </section>
 
@@ -1289,7 +1289,7 @@
       </section>
 
       <!-- section about -->
-      <section class="section-about container-big">
+      <section class="section-about">
         <div class="about__image">
           <img
             src="./img/front.jpg"
@@ -1331,7 +1331,7 @@
       </section>
 
       <!-- section consalt -->
-      <section class="consult">
+      <section class="section-consultconsult">
         <h2 class="section-title">Получить консультацию</h2>
         <form class="consult-form" action=" ">
           <select class="consult-form__select" name="consult-doctor" id="">
@@ -1553,12 +1553,15 @@
         var swiperDoctors = new Swiper(".swiper-smiles", {
           slidesPerView: "auto",
           spaceBetween: 20,
+          noSwipingSelector: '.swiper-smiles .smile-images',
           breakpoints: {
             0: {
               centeredSlides: true,
+              centerInsufficientSlides: false,
             },
             1200: {
               centeredSlides: false,
+              centerInsufficientSlides: true,
               loop: false,
             },
           },
@@ -1590,7 +1593,11 @@
       const header = document.querySelector("header");
       const headerModalBtn = document.querySelector(".header-modal-btn");
 
-      window.addEventListener("scroll", () => {
+      window.addEventListener("scroll", setFixedHeader);
+        window.addEventListener("resize", setFixedHeader);
+        window.addEventListener("DOMContentLoaded", setFixedHeader);
+
+      function setFixedHeader() {
         if (window.innerWidth >= 1200) {
           if (window.scrollY >= 1) {
             logo.classList.add("scroll");
@@ -1601,8 +1608,12 @@
             mainMenu.classList.remove("scroll");
             headerModalBtn.classList.remove("scroll");
           }
+        } else {
+          logo.classList.remove("scroll");
+          mainMenu.classList.remove("scroll");
+          headerModalBtn.classList.remove("scroll");
         }
-      });
+      }
 
       // fix header script classList before load
       window.addEventListener("DOMContentLoaded", () => {
