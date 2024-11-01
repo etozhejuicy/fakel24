@@ -84,11 +84,11 @@
       }
       & > .btn {
         position: absolute;
-        bottom: 230px;
+        top: -170px;
         left: 50%;
         white-space: nowrap;
         pointer-events: all;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, 100%);
         @media (min-width: 720px) {
           display: none;
         }
@@ -100,7 +100,13 @@
 .card-advantage {
   position: relative;
   z-index: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 8px;
   // max-width: 700px;
   width: 100%;
   height: auto;
@@ -110,6 +116,12 @@
   backdrop-filter: blur(7.95px);
   border: 1px solid #ffffff;
   pointer-events: all;
+  @media (min-width: 720px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
   @media (min-width: 1200px) {
     background-color: rgba(255, 255, 255, 0.7);
     max-width: 744px;
@@ -117,22 +129,7 @@
   @media (min-width: 1400px) {
     padding: 50px 40px;
   }
-  & .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 8px;
-    column-gap: 8px;
-    @media (min-width: 720px) {
-      align-items: flex-start;
-      justify-content: flex-start;
-      row-gap: 10px;
-      column-gap: 10px;
-    }
-  }
-  & .card-header {
+  & .card-title {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
