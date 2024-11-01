@@ -111,11 +111,13 @@
   width: 100%;
   height: auto;
   padding: 24px;
+  opacity: 1;
   background-color: #eef5fe;
   border-radius: 5px;
   backdrop-filter: blur(7.95px);
   border: 1px solid #ffffff;
   pointer-events: all;
+  transition: 0.05s opacity 0.4s ease-in-out;
   @media (min-width: 720px) {
     align-items: flex-start;
     justify-content: flex-start;
@@ -290,7 +292,7 @@
   display: flex;
   row-gap: 14px;
   column-gap: 14px;
-  border: 2px solid rgba(44, 53, 109, 0.3);
+  border: 1px solid rgba(44, 53, 109, 0.3);
   border-radius: 10px;
   padding: 18px 28px;
   transition: 0.4s ease;
@@ -560,12 +562,13 @@
       object-fit: cover;
     }
   }
-  &-name {
+  & p {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: var(--blue);
+    margin: 0;
     padding: 25px 20px 0 20px;
     @media (min-width: 720px) {
       font-size: 18px;
@@ -702,11 +705,13 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
+  opacity: 1;
   width: 100%;
   height: 496px;
   padding: 30px 18px;
   background-color: #ffffff;
   overflow: hidden;
+  transition: 0.05s opacity 0.4s ease-in-out;
   @media (min-width: 720px) {
     border-radius: 10px;
     height: 275px;
@@ -749,7 +754,11 @@
     flex-direction: column;
     align-items: center;
     & .btn {
+      width: 100%;
       margin-top: 50px;
+      @media (min-width: 576px) {
+        width: 390px;
+      }
       @media (min-width: 720px) {
         margin-top: 55px;
       }
@@ -941,7 +950,11 @@
       width: fit-content !important;
     }
     & ~ .btn {
+      width: 100%;
       margin-top: 50px;
+      @media (min-width: 576px) {
+        width: 340px;
+      }
       @media (min-width: 720px) {
         margin-top: 55px;
       }
@@ -1094,6 +1107,22 @@
 
 // section consult part start
 .section-consult {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0;
+  background-color: var(--blue);
+  @media (min-width: 720px) {
+    padding: 60px 0;
+  }
+  @media (min-width: 1200px) {
+    padding: 50px 0;
+  }
+  & h2 {
+    color: #ffffff;
+  }
+  & .consult-form {
+    margin-top: 16px;
+  }
 }
 // section consult part end
 

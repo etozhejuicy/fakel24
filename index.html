@@ -448,9 +448,10 @@
                     />
                   </div>
                   <div class="card-content">
-                    <div class="card-doctor-name">
-                      Алабовский Дмитрий Владимирович
-                    </div>
+                    <p>
+                      Алабовский <br />
+                      Дмитрий Владимирович
+                    </p>
                     <div class="card-doctor-meo">стоматолог-ортопед</div>
                     <div class="card-doctor-experience">Стаж: 25 лет</div>
                   </div>
@@ -473,9 +474,10 @@
                     />
                   </div>
                   <div class="card-content">
-                    <div class="card-doctor-name">
-                      Алабовская Наталья Ивановна
-                    </div>
+                    <p>
+                      Алабовская <br />
+                      Наталья Ивановна
+                    </p>
                     <div class="card-doctor-meo">стоматолог-терапевт</div>
                     <div class="card-doctor-experience">Стаж: 25 лет</div>
                   </div>
@@ -499,9 +501,10 @@
                     />
                   </div>
                   <div class="card-content">
-                    <div class="card-doctor-name">
-                      Алабовская Светлана Дмитриевна
-                    </div>
+                    <p>
+                      Алабовская <br /> 
+                      Светлана Дмитриевна
+                    </p>
                     <div class="card-doctor-meo">стоматолог общей практики</div>
                     <div class="card-doctor-experience">Стаж: 5 лет</div>
                   </div>
@@ -524,9 +527,10 @@
                     />
                   </div>
                   <div class="card-content">
-                    <div class="card-doctor-name">
-                      Казаченко Светлана Владимировна
-                    </div>
+                    <p>
+                      Казаченко <br />
+                      Светлана Владимировна
+                    </p>
                     <div class="card-doctor-meo">стоматолог-терапевт</div>
                     <div class="card-doctor-experience">Стаж: 5 лет</div>
                   </div>
@@ -593,7 +597,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="smile-card">
-                  <div class="smile-title">Установка керамических виниров</div>
+                  <p>Установка керамических виниров</p>
                   <div class="smile-images">
                     <img-comparison-slider>
                       <img
@@ -622,7 +626,7 @@
 
               <div class="swiper-slide">
                 <div class="smile-card">
-                  <div class="smile-title">Установка керамических виниров</div>
+                  <p>Установка керамических виниров</p>
                   <div class="smile-images">
                     <img-comparison-slider>
                       <img
@@ -651,7 +655,7 @@
 
               <div class="swiper-slide">
                 <div class="smile-card">
-                  <div class="smile-title">Установка керамических виниров</div>
+                  <p>Установка керамических виниров</p>
                   <div class="smile-images">
                     <img-comparison-slider>
                       <img
@@ -945,6 +949,12 @@
 
               activeSlide = activeSlide + 1;
 
+              heroCard.classList.add('fadeEffect');
+              
+              setTimeout(() => {
+                heroCard.classList.remove('fadeEffect');
+              }, 500);
+
               if (activeSlide == 1) {
                 heroCard.querySelector(".card-title").innerText =
                   "Профессиональная гигиена всей полости рта";
@@ -1040,6 +1050,12 @@
               let activeSlide = swiperTechnologies.activeIndex;
 
               activeSlide = activeSlide + 1;
+
+              techCard.classList.add('fadeEffect');
+
+              setTimeout(() => {
+                techCard.classList.remove('fadeEffect');
+              }, 500);
 
               if (activeSlide == 1) {
                 techCard.querySelector(".card-title").innerText =
