@@ -1110,7 +1110,7 @@
   position: relative;
   z-index: 1;
   padding: 40px 0;
-  background-color: var(--blue);
+  background-image: linear-gradient(195deg, var(--blue) 0%, #1b66bd 100%);
   @media (min-width: 720px) {
     padding: 60px 0;
   }
