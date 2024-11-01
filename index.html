@@ -559,14 +559,14 @@
         <div class="section-title">Технологии и оснащение</div>
         <div class="swiper-container swiper-technologies">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/images/t-slide_1.jpg" />
+            <div class="swiper-slide" title="ФИЗИОДИСПЕНСЕР. В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.">
+              <img src="./assets/images/t-slide_1.jpg" alt="ФИЗИОДИСПЕНСЕР" />
             </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/t-slide_2.jpg" />
+            <div class="swiper-slide" title="Оборудованный кабинет. Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.">
+              <img src="./assets/images/t-slide_2.jpg" alt="Оборудованный кабинет" />
             </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/t-slide_1.jpg" />
+            <div class="swiper-slide" title="СИСТЕМА AIR FLOW. Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).">
+              <img src="./assets/images/t-slide_1.jpg" alt="СИСТЕМА AIR FLOW" />
             </div>
           </div>
           <div class="swiper-pagination" swiper-pagination></div>
@@ -693,56 +693,6 @@
 
           <!-- Кнопка: смотреть все -->
           <a href="#" class="btn btn-blue" target="_blank"> Смотреть все </a>
-        </div>
-      </section>
-
-      <!-- section consulatation -->
-      <!-- в процессе разработки -->
-      <section class="section-consult">
-        <div class="container">
-          <h2 class="section-consult-title">Получить консультацию</h2>
-          <form class="consult-form" action="?">
-            <select class="consult-form-select" name="consult-doctor" id="">
-              <option disabled selected>Выберите врача</option>
-              <option value="1">врач 1</option>
-              <option value="2">врач 2</option>
-            </select>
-            <input
-              class="consult-form-input"
-              type="text"
-              name="consult-patient"
-              placeholder="Имя"
-            />
-            <textarea
-              class="consult-form-comment"
-              name="consult-comment"
-              placeholder="Комментарий"
-            ></textarea>
-            <input
-              class="consult-form-input consult-form-input--date"
-              onfocus="(this.type='date')"
-              onblur="(this.type='text')"
-              placeholder="Дата"
-              name="consult-date"
-            />
-            <input
-              class="consult-form-input"
-              type="text"
-              placeholder="Телефон"
-              name="consult-phone"
-            />
-            <div class="consult-form-agree">
-              <input
-                type="checkbox"
-                name="consult-agree"
-                id="consult-agree"
-                checked
-              />
-              <label for="consult-agree">Согласен на обработку</label>
-              <a href="#" target="_blank">персональных данных</a>
-            </div>
-            <button class="btn btn-white" type="submit">Записаться</button>
-          </form>
         </div>
       </section>
 
@@ -1330,51 +1280,30 @@
         </div>
       </section>
 
-      <!-- section consalt -->
-      <section class="section-consultconsult">
-        <h2 class="section-title">Получить консультацию</h2>
-        <form class="consult-form" action=" ">
-          <select class="consult-form__select" name="consult-doctor" id="">
-            <option disabled selected>Выберите врача</option>
-            <option value="1">врач 1</option>
-            <option value="2">врач 2</option>
-          </select>
-          <input
-            class="consult-form__input"
-            type="text"
-            name="consult-patient"
-            placeholder="Имя"
-          />
-          <textarea
-            class="consult-form__comment"
-            name="consult-comment"
-            placeholder="Комментарий"
-          ></textarea>
-          <input
-            class="consult-form__input consult-form__input--date"
-            onfocus="(this.type='date')"
-            onblur="(this.type='text')"
-            placeholder="Дата"
-            name="consult-date"
-          />
-          <input
-            class="consult-form__input"
-            type="text"
-            placeholder="Телефон"
-            name="consult-phone"
-          />
-          <div class="consult-form__agree">
-            <input
-              type="checkbox"
-              name="consult-agree"
-              id="consult-agree"
-              checked
-            />
-            <label for="consult-agree">Согласен на обработку</label>
-            <a href="#">персональных данных</a>
-          </div>
-          <button class="consult-form__btn" type="submit">Записаться</button>
-        </form>
+      <!-- section consulatation -->
+      <!-- в процессе разработки -->
+      <section class="section-consult">
+        <div class="container">
+          <h2 class="section-consult-title">Получить консультацию</h2>
+          <form class="consult-form" action="?">
+            <select class="consult-form-select" name="consult-doctor" id="">
+              <option disabled selected>Выберите врача</option>
+              <option value="1">врач 1</option>
+              <option value="2">врач 2</option>
+            </select>
+            <input class="consult-form-input" type="text" name="consult-patient" placeholder="Имя" />
+            <textarea class="consult-form-comment" name="consult-comment" placeholder="Комментарий"></textarea>
+            <input class="consult-form-input consult-form-input--date" onfocus="(this.type='date')"
+              onblur="(this.type='text')" placeholder="Дата" name="consult-date" />
+            <input class="consult-form-input" type="text" placeholder="Телефон" name="consult-phone" />
+            <div class="consult-form-agree">
+              <input type="checkbox" name="consult-agree" id="consult-agree" checked />
+              <label for="consult-agree">Согласен на обработку</label>
+              <a href="#" target="_blank">персональных данных</a>
+            </div>
+            <button class="btn btn-white" type="submit">Записаться</button>
+          </form>
+        </div>
       </section>
 
       <!-- section map -->
