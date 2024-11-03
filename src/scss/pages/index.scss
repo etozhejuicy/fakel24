@@ -1328,6 +1328,12 @@
     color: #ffffff;
   }
   & .consult-form {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 71px);
+    column-gap: 10px;
+    row-gap: 10px;
     margin-top: 16px;
   }
 }

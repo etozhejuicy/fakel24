@@ -754,16 +754,16 @@
       <div class="container">
         <h2 class="section-title">Получить консультацию</h2>
         <form class="consult-form" action="?">
-          <select class="consult-form-select" name="consult-doctor" id="">
+          <select class="input input-select" name="consult-doctor" id="">
             <option disabled selected>Выберите врача</option>
             <option value="1">врач 1</option>
             <option value="2">врач 2</option>
           </select>
-          <input class="consult-form-input" type="text" name="consult-patient" placeholder="Имя" />
-          <textarea class="consult-form-comment" name="consult-comment" placeholder="Комментарий"></textarea>
-          <input class="consult-form-input consult-form-input--date" onfocus="(this.type='date')"
-            onblur="(this.type='text')" placeholder="Дата" name="consult-date" />
-          <input class="consult-form-input" type="text" placeholder="Телефон" name="consult-phone" />
+          <input class="input" type="text" name="consult-patient" placeholder="Имя" />
+          <textarea class="input input-textarea" name="consult-comment" placeholder="Комментарий"></textarea>
+          <input class="input input-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Дата"
+            name="consult-date" />
+          <input class="input" type="text" placeholder="Телефон" name="consult-phone" />
           <div class="consult-form-agree">
             <input type="checkbox" name="consult-agree" id="consult-agree" checked />
             <label for="consult-agree">Согласен на обработку</label>
