@@ -11,7 +11,7 @@
 // stretched-link
 .stretched-link {
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -104,6 +104,9 @@ p.smaller {
   @media (min-width: 1600px) {
     max-width: 1600px;
   }
+  // @media (min-width: 1200px) {
+  //   max-width: 96%;
+  // }
 }
 
 // components
