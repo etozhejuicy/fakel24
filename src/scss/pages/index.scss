@@ -273,14 +273,21 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  row-gap: 20px;
-  column-gap: 20px;
+  row-gap: 7px;
+  column-gap: 5px;
   margin-top: 18px;
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   @media (min-width: 720px) {
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 12px;
+    column-gap: 12px;
     margin-top: 25px;
   }
   @media (min-width: 1200px) {
+    row-gap: 20px;
+    column-gap: 20px;
     margin-top: 45px;
   }
 }
@@ -293,12 +300,13 @@
   flex-wrap: wrap;
   row-gap: 14px;
   column-gap: 14px;
+  min-width: 48%;
   border: 1px solid rgba(44, 53, 109, 0.3);
   border-radius: 10px;
-  padding: 7px 10px;
+  padding: 6px 7px;
   transition: 0.4s ease;
   @media (min-width: 720px) {
-    padding: 18px 28px;
+    padding: 23px 28px;
   }
   @media (min-width: 1400px) {
     padding: 23px 28px;
@@ -317,9 +325,12 @@
     order: 0;
     flex: 1 0 auto;
     width: 100%;
+    @media screen and (max-width: 719.98px) {
+      word-break: break-word;
+      word-wrap: break-word;
+    }
     @media (min-width: 1200px) {
       flex: 1;
-      width: auto;
     }
     & div {
       &:first-of-type {
@@ -362,7 +373,7 @@
     align-self: flex-end;
     object-fit: contain;
     @media (min-width: 720px) {
-      font-size: 80px;
+      align-self: flex-start;
     }
     @media (min-width: 1200px) {
       order: 1;
@@ -370,8 +381,8 @@
       height: 56px;
     }
     @media (min-width: 1400px) {
-      width: 99px;
-      height: 99px;
+      width: 90px;
+      height: 90px;
     }
   }
   & .card-footer {
@@ -474,11 +485,7 @@
           width: 20%;
           height: 100%;
           border-radius: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(17, 118, 234, 0.35) 0%,
-            rgba(255, 255, 255, 0.35) 100%
-          );
+          background: linear-gradient(90deg, rgba(17, 118, 234, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%);
           backface-visibility: hidden;
         }
         &::after {
@@ -491,11 +498,7 @@
           width: 20%;
           height: 100%;
           border-radius: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(17, 118, 234, 0.35) 100%
-          );
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(17, 118, 234, 0.35) 100%);
           backface-visibility: hidden;
         }
       }
