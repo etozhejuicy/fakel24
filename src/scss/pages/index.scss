@@ -153,6 +153,7 @@
     line-height: 18px;
     text-align: center;
     color: var(--black);
+    flex: 1;
     @media (min-width: 720px) {
       font-size: 27px;
       line-height: 34px;
@@ -487,7 +488,11 @@
           width: 20%;
           height: 100%;
           border-radius: 0;
-          background: linear-gradient(90deg, rgba(17, 118, 234, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%);
+          background: linear-gradient(
+            90deg,
+            rgba(17, 118, 234, 0.35) 0%,
+            rgba(255, 255, 255, 0.35) 100%
+          );
           backface-visibility: hidden;
         }
         &::after {
@@ -500,7 +505,11 @@
           width: 20%;
           height: 100%;
           border-radius: 0;
-          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(17, 118, 234, 0.35) 100%);
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(17, 118, 234, 0.35) 100%
+          );
           backface-visibility: hidden;
         }
       }

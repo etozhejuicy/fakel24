@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  background-color: rgba(88, 90, 96, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: all;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
+  &.show {
+    z-index: 1200;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &-open {
+    position: static;
+    touch-action: none;
+    overflow: hidden;
+  }
+  &-dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 814px;
+    height: 100%;
+    margin: auto;
+    padding: 20px 12px;
+    background-color: var(--blue);
+    border: 2px solid #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @media (min-width: 720px) {
+      padding: 40px;
+      height: auto;
+    }
+    @media (min-width: 1200px) {
+      padding: 105px 130px;
+    }
+  }
+  &-consult {
+    & > .container {
+      display: flex;
+      flex-direction: column;
+    }
+    & h2 {
+      color: #ffffff;
+    }
+    & .consult-form {
+      @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        &-submit {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
