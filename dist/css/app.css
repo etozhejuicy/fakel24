@@ -198,6 +198,47 @@ p.smaller {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.input {
+  display: inline;
+  padding: 16px 22px;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #585a60;
+  border: none;
+  background-color: #ffffff;
+  outline: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+@media (min-width: 720px) {
+  .input {
+    padding: 19px 22px;
+    font-size: 18px;
+    line-height: 22.5px;
+  }
+}
+.input::-webkit-input-placeholder {
+  color: rgba(88, 90, 96, 0.5);
+}
+.input::-moz-placeholder {
+  color: rgba(88, 90, 96, 0.5);
+}
+.input:-ms-input-placeholder {
+  color: rgba(88, 90, 96, 0.5);
+}
+.input::-ms-input-placeholder {
+  color: rgba(88, 90, 96, 0.5);
+}
+.input::placeholder {
+  color: rgba(88, 90, 96, 0.5);
+}
+.input:hover, .input:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #585a60;
+          box-shadow: 0px 0px 0px 2px #585a60;
+}
+
 @font-face {
   font-family: "Geologica";
   src: url("../../assets/fonts/Geologica-Light.woff2") format("woff2");

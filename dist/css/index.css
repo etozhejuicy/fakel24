@@ -1806,14 +1806,23 @@
 .section-consult h2 {
   color: #ffffff;
 }
-.section-consult .consult-form {
-  margin: 0 auto;
+
+.consult-form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 71px);
+  grid-template-rows: repeat(3, auto);
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
   row-gap: 10px;
-  margin-top: 16px;
+  margin-top: 24px;
+}
+@media (min-width: 720px) {
+  .consult-form {
+    margin-top: 40px;
+  }
+}
+.consult-form .input-textarea {
+  resize: none;
+  rows: 1;
 }/*# sourceMappingURL=index.css.map */
