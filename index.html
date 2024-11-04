@@ -1,172 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Платная стоматология Факел – стоматологическая клиника для взрослых в Воронеже. У нас всегда доступные цены на все услуги: удаление зубов, лечение кариеса, отбеливание, протезирование, имплантация. Наша миссия сформировать в сознание людей, что посещение стоматологического кабинета больше не связно со страхом и болью."
+    />
+    <!-- primary styles -->
+    <link rel="stylesheet" href="./dist/css/app.min.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <meta name="description"
-    content="Платная стоматология Факел – стоматологическая клиника для взрослых в Воронеже. У нас всегда доступные цены на все услуги: удаление зубов, лечение кариеса, отбеливание, протезирование, имплантация. Наша миссия сформировать в сознание людей, что посещение стоматологического кабинета больше не связно со страхом и болью." />
-  <!-- primary styles -->
-  <link rel="stylesheet" href="./dist/css/app.min.css" />
+    <!-- pages styles -->
+    <link rel="stylesheet" href="./dist/css/index.min.css" />
 
-  <!-- pages styles -->
-  <link rel="stylesheet" href="./dist/css/index.min.css" />
+    <title>Стоматология в Воронеже – стоматологическая клиника Факел</title>
+  </head>
 
-  <title>Стоматология в Воронеже – стоматологическая клиника Факел</title>
-</head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <a
+            class="header-logo"
+            href="/"
+            title="Стоматологическая клиника в Воронеже"
+          >
+            <div>стоматология</div>
+            <div>Факел</div>
+            <img src="./assets/images/logo.svg" alt="Стоматология Факел" />
+          </a>
+          <div class="header-contacts">
+            <button
+              class="btn btn-grey header-contacts-btn"
+              data-modal-id="appointment"
+            >
+              Запись на прием
+            </button>
+            <a
+              class="link header-address"
+              href="#map"
+              title="Посмотреть на карте"
+            >
+              <i class="icon-location"></i>
+              <span>г. Воронеж, ул. Маршака, д. 8</span>
+            </a>
+            <a
+              class="link header-phone"
+              href="tel:+7 (473) 201-63-64"
+              title="Позвонить по номеру"
+            >
+              <i class="icon-phone"></i>
+              <span>+7 (473) 201-63-64</span>
+            </a>
+            <button class="header-burger" data-menu-open="">
+              <i class="icon-burger"></i>
+            </button>
+          </div>
+        </div>
 
-<body>
-  <!-- header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-top">
-        <a class="header-logo" href="/" title="Стоматологическая клиника в Воронеже">
-          <div>стоматология</div>
-          <div>Факел</div>
-          <img src="./assets/images/logo.svg" alt="Стоматология Факел" />
-        </a>
-        <div class="header-contacts">
-          <button class="btn btn-grey header-contacts-btn" data-modal-id="appointment">
-            Запись на прием
-          </button>
-          <a class="link header-address" href="#map" title="Посмотреть на карте">
+        <!-- При прокрутке схлопывается эта навигация -->
+        <nav class="menu">
+          <!-- В мобильном меню отображаются элементы управления меню -->
+          <div class="menu-nav">
+            <a href="tel:+7 (473) 201-63-64" class="btn menu-btn">
+              <i class="icon-phone"></i>
+            </a>
+            <button
+              type="button"
+              class="btn menu-btn"
+              data-modal-open="appointment"
+            >
+              Записаться на прием
+            </button>
+            <button type="button" class="btn menu-btn" data-menu-close>
+              <i class="icon-close"></i>
+            </button>
+          </div>
+          <!-- Ссылка скрывается в десктоп-версии -->
+          <a href="/" class="menu-link hidden">Главная</a>
+          <!-- Выпадающий список -->
+          <div class="menu-dropdown">
+            <a href="/stomatologiceskie-uslugi" class="menu-link">
+              Услуги
+              <i class="icon-arrow-down"></i>
+            </a>
+            <div class="menu-list">
+              <a href="/lecenie-zubov">Лечение зубов</a>
+              <a href="/ortopedia-ili-protezirovanie-zubov"
+                >Протезирование зубов</a
+              >
+              <a href="/hirurgiceskaa-stomatologia">Удаление зубов</a>
+              <a href="/implantacia-zubov">Имплантация зубов</a>
+              <a href="/otbelivanie-zubov">Отбеливание зубов</a>
+              <a href="/gigiena-zubov">Гигиена зубов</a>
+              <a href="/lecenie-desen">Лечение зубов</a>
+              <a href="/ortodontia">Ортодонтия</a>
+              <a href="#">Скайсы на зубы</a>
+              <a href="#">Детская стоматология</a>
+            </div>
+          </div>
+          <a href="/ceny-na-stomatologiceskie-uslugi" class="menu-link"
+            >Прайс</a
+          >
+          <a href="/akcii" class="menu-link">Акции</a>
+          <a href="/specialisty" class="menu-link">Стоматологи</a>
+          <a href="/vopros-otvet" class="menu-link">Пациентам</a>
+          <a href="/our-work" class="menu-link">Наши работы</a>
+          <a href="/reviews" class="menu-link">Отзывы</a>
+          <a href="/kontakty" class="menu-link">Контакты</a>
+
+          <!-- Ссылка скрывается в десктоп-версии -->
+          <a
+            class="menu-link hidden"
+            href="#map"
+            title="Посмотреть на карте"
+            data-menu-close
+          >
             <i class="icon-location"></i>
             <span>г. Воронеж, ул. Маршака, д. 8</span>
           </a>
-          <a class="link header-phone" href="tel:+7 (473) 201-63-64" title="Позвонить по номеру">
-            <i class="icon-phone"></i>
-            <span>+7 (473) 201-63-64</span>
-          </a>
-          <button class="header-burger" data-menu-open="">
-            <i class="icon-burger"></i>
-          </button>
-        </div>
+        </nav>
+
+        <!-- При прокрутке появляется кнопка: записаться на прием -->
+        <button
+          class="header-modal-btn btn scroll"
+          data-modal-open="appointment"
+        >
+          <i class="icon-list"></i>
+          <span>Записаться на прием</span>
+        </button>
       </div>
+    </header>
 
-      <!-- При прокрутке схлопывается эта навигация -->
-      <nav class="menu">
-        <!-- В мобильном меню отображаются элементы управления меню -->
-        <div class="menu-nav">
-          <a href="tel:+7 (473) 201-63-64" class="btn menu-btn">
-            <i class="icon-phone"></i>
-          </a>
-          <button type="button" class="btn menu-btn" data-modal-open="appointment">
-            Записаться на прием
-          </button>
-          <button type="button" class="btn menu-btn" data-menu-close>
-            <i class="icon-close"></i>
-          </button>
-        </div>
-        <!-- Ссылка скрывается в десктоп-версии -->
-        <a href="/" class="menu-link hidden">Главная</a>
-        <!-- Выпадающий список -->
-        <div class="menu-dropdown">
-          <a href="/stomatologiceskie-uslugi" class="menu-link">
-            Услуги
-            <i class="icon-arrow-down"></i>
-          </a>
-          <div class="menu-list">
-            <a href="/lecenie-zubov">Лечение зубов</a>
-            <a href="/ortopedia-ili-protezirovanie-zubov">Протезирование зубов</a>
-            <a href="/hirurgiceskaa-stomatologia">Удаление зубов</a>
-            <a href="/implantacia-zubov">Имплантация зубов</a>
-            <a href="/otbelivanie-zubov">Отбеливание зубов</a>
-            <a href="/gigiena-zubov">Гигиена зубов</a>
-            <a href="/lecenie-desen">Лечение зубов</a>
-            <a href="/ortodontia">Ортодонтия</a>
-            <a href="#">Скайсы на зубы</a>
-            <a href="#">Детская стоматология</a>
-          </div>
-        </div>
-        <a href="/ceny-na-stomatologiceskie-uslugi" class="menu-link">Прайс</a>
-        <a href="/akcii" class="menu-link">Акции</a>
-        <a href="/specialisty" class="menu-link">Стоматологи</a>
-        <a href="/vopros-otvet" class="menu-link">Пациентам</a>
-        <a href="/our-work" class="menu-link">Наши работы</a>
-        <a href="/reviews" class="menu-link">Отзывы</a>
-        <a href="/kontakty" class="menu-link">Контакты</a>
-
-        <!-- Ссылка скрывается в десктоп-версии -->
-        <a class="menu-link hidden" href="#map" title="Посмотреть на карте" data-menu-close>
-          <i class="icon-location"></i>
-          <span>г. Воронеж, ул. Маршака, д. 8</span>
-        </a>
-      </nav>
-
-      <!-- При прокрутке появляется кнопка: записаться на прием -->
-      <button class="header-modal-btn btn scroll" data-modal-open="appointment">
-        <i class="icon-list"></i>
-        <span>Записаться на прием</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- hero section -->
-  <section class="section-hero">
-    <div class="section-hero-inner">
-      <div class="section-hero-swiper">
-        <div class="swiper-container swiper-hero">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/images/h-slide_1.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/h-slide_2.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/h-slide_1.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/h-slide_2.jpg" />
-            </div>
-          </div>
-          <div class="swiper-pagination" swiper-pagination></div>
-
-          <!-- content into swiper-hero -->
-          <div class="section-hero-content">
-            <div class="container">
-              <!-- Кнопка появляется, когда просматриваем сайт с планшета или мобилы -->
-              <button class="btn btn-white" data-modal-open="appointment">
-                Запись на прием
-              </button>
-
-              <div class="card-advantage" data-card-hero="1">
-                <div class="card-title">
-                  Профессиональная гигиена всей полости рта
-                </div>
-                <div class="card-body">
-                  <p>Скидка первичным пациентам 900 руб!</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn btn-outline-primary">
-                    Подробнее
-                  </a>
-                </div>
+    <!-- hero section -->
+    <section class="section-hero">
+      <div class="section-hero-inner">
+        <div class="section-hero-swiper">
+          <div class="swiper-container swiper-hero">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/h-slide_1.jpg" />
               </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/h-slide_2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/h-slide_1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/h-slide_2.jpg" />
+              </div>
+            </div>
+            <div class="swiper-pagination" swiper-pagination></div>
 
-              <div class="excellence-list">
-                <div class="card-excellence">
-                  <div class="card-icon">
-                    <i class="icon icon-success"></i>
+            <!-- content into swiper-hero -->
+            <div class="section-hero-content">
+              <div class="container">
+                <!-- Кнопка появляется, когда просматриваем сайт с планшета или мобилы -->
+                <button class="btn btn-white" data-modal-open="appointment">
+                  Запись на прием
+                </button>
+
+                <div class="card-advantage" data-card-hero="1">
+                  <div class="card-title">
+                    Профессиональная гигиена всей полости рта
                   </div>
                   <div class="card-body">
-                    <p>Профессиональные стоматологи</p>
+                    <p>Скидка первичным пациентам 900 руб!</p>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="btn btn-outline-primary"> Подробнее </a>
                   </div>
                 </div>
-                <div class="card-excellence">
-                  <div class="card-icon">
-                    <i class="icon icon-success"></i>
+
+                <div class="excellence-list">
+                  <div class="card-excellence">
+                    <div class="card-icon">
+                      <i class="icon icon-success"></i>
+                    </div>
+                    <div class="card-body">
+                      <p>Профессиональные стоматологи</p>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <p>Безболезненное лечение</p>
+                  <div class="card-excellence">
+                    <div class="card-icon">
+                      <i class="icon icon-success"></i>
+                    </div>
+                    <div class="card-body">
+                      <p>Безболезненное лечение</p>
+                    </div>
                   </div>
-                </div>
-                <div class="card-excellence">
-                  <div class="card-icon">
-                    <i class="icon icon-success"></i>
-                  </div>
-                  <div class="card-body">
-                    <p>Доступные цены</p>
+                  <div class="card-excellence">
+                    <div class="card-icon">
+                      <i class="icon icon-success"></i>
+                    </div>
+                    <div class="card-body">
+                      <p>Доступные цены</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -174,979 +208,1144 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- main part -->
-  <main class="content">
-    <!-- services section -->
-    <section class="section-services">
-      <div class="container">
-        <div class="section-services-inner">
-          <h1>Стоматологическая клиника Факел</h1>
-          <h2>Семейная стоматология в Юго-западном районе Воронежа</h2>
-          <!-- Список карточек -->
-          <div class="services-list">
-            <div class="card-service">
-              <div class="card-body">
+    <!-- main part -->
+    <main class="content">
+      <!-- services section -->
+      <section class="section-services">
+        <div class="container">
+          <div class="section-services-inner">
+            <h1>Стоматологическая клиника Факел</h1>
+            <h2>Семейная стоматология в Юго-западном районе Воронежа</h2>
+            <!-- Список карточек -->
+            <div class="services-list">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Терапия</div>
                   <div>Лечение зубов без боли</div>
                 </div>
                 <!-- Иконка из спрайта имеет порядковый номер -->
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_1"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 4500 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <!-- Это ссылка необходима для клика по всей области карточки -->
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <!-- Это ссылка необходима для клика по всей области карточки -->
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Ортопедия</div>
                   <div>Протезирование зубов</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_2"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 4300 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Хирургия</div>
                   <div>Удаление больных зубов</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_3"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 1800 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Имплантация</div>
                   <div>Восстановление зубов</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_4"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 21000 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Отбеливание</div>
                   <div>Белоснежные зубы</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_5"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 13500 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Гигиена</div>
                   <div>Профилактика здоровья зубов</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_6"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 3500 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Парадонтология</div>
                   <div>Лечение десён</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_7"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 2200 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Ортодонтия </div>
                   <div>Установка брекетов</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_8"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 10000 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
-            </div>
-            <div class="card-service">
-              <div class="card-body">
+              <div class="card-service">
                 <div class="card-title">
                   <div>Скайсы на зубы</div>
                   <div>Миниатюрное украшение</div>
                 </div>
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
                   <use xlink:href="./assets/sprite.svg#service_icon_9"></use>
                 </svg>
                 <div class="card-footer">
                   <div>от 5500 ₽</div>
-                  <button type="button" class="btn btn-grey">
-                    Записаться
-                  </button>
+                  <button type="button" class="btn btn-grey">Записаться</button>
                 </div>
+                <a href="#link" class="stretched-link" target="_blank"></a>
               </div>
-              <a href="#link" class="stretched-link" target="_blank"></a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- section doctors -->
-    <!-- в процессе разработки -->
-    <section class="section-doctors">
-      <div class="container">
-        <h2 class="section-title">Ведущие врачи клиники</h2>
-        <div class="swiper-container swiper-doctors">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card-doctor">
-                <div class="card-doctor-image">
-                  <img src="./assets/images/doctor-1.png" alt="Стоматолог Алабовский Дмитрий Владимирович" />
-                </div>
-                <div class="card-content">
-                  <p>
-                    Алабовский <br />
-                    Дмитрий Владимирович
-                  </p>
-                  <div class="card-doctor-meo">стоматолог-ортопед</div>
-                  <div class="card-doctor-experience">Стаж: 25 лет</div>
-                </div>
-                <!-- Ссылка переводит на страницу врача-стоматолога -->
-                <a href="#" class="stretched-link" target="_blank"
-                  title="Стоматолог-ортопед Алабовский Дмитрий Владимирович"></a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-doctor">
-                <div class="card-doctor-image">
-                  <img src="./assets/images/doctor-2.png" alt="Стоматолог Алабовская 
-Наталья Ивановна" />
-                </div>
-                <div class="card-content">
-                  <p>
-                    Алабовская <br />
-                    Наталья Ивановна
-                  </p>
-                  <div class="card-doctor-meo">стоматолог-терапевт</div>
-                  <div class="card-doctor-experience">Стаж: 25 лет</div>
-                </div>
-                <!-- Ссылка переводит на страницу врача-стоматолога -->
-                <a href="#" class="stretched-link" target="_blank" title="Стоматолог-терапевт Алабовская 
-Наталья Ивановна"></a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-doctor">
-                <div class="card-doctor-image">
-                  <img src="./assets/images/doctor-3.png" alt="Стоматолог Алабовская 
-Светлана Дмитриевна" />
-                </div>
-                <div class="card-content">
-                  <p>
-                    Алабовская <br />
-                    Светлана Дмитриевна
-                  </p>
-                  <div class="card-doctor-meo">стоматолог общей практики</div>
-                  <div class="card-doctor-experience">Стаж: 5 лет</div>
-                </div>
-                <!-- Ссылка переводит на страницу врача-стоматолога -->
-                <a href="#" class="stretched-link" target="_blank"
-                  title="Стоматолог общей практики Алабовская Светлана Дмитриевна"></a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-doctor">
-                <div class="card-doctor-image">
-                  <img src="./assets/images/doctor-4.png" alt="Стоматолог Казаченко 
-Светлана Владимировна" />
-                </div>
-                <div class="card-content">
-                  <p>
-                    Казаченко <br />
-                    Светлана Владимировна
-                  </p>
-                  <div class="card-doctor-meo">стоматолог-терапевт</div>
-                  <div class="card-doctor-experience">Стаж: 5 лет</div>
-                </div>
-                <!-- Ссылка переводит на страницу врача-стоматолога -->
-                <a href="#" class="stretched-link" target="_blank"
-                  title="Стоматолог-терапевт Казаченко Светлана Владимировна"></a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination" swiper-pagination></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- section techologies -->
-    <section class="section-technologies">
-      <h2 class="section-title">Технологии и оснащение</h2>
-      <div class="swiper-container swiper-technologies">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"
-            title="ФИЗИОДИСПЕНСЕР. В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.">
-            <img src="./assets/images/t-slide_1.jpg" alt="ФИЗИОДИСПЕНСЕР" />
-          </div>
-          <div class="swiper-slide"
-            title="Оборудованный кабинет. Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.">
-            <img src="./assets/images/t-slide_2.jpg" alt="Оборудованный кабинет" />
-          </div>
-          <div class="swiper-slide"
-            title="СИСТЕМА AIR FLOW. Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).">
-            <img src="./assets/images/t-slide_1.jpg" alt="СИСТЕМА AIR FLOW" />
-          </div>
-        </div>
-        <div class="swiper-pagination" swiper-pagination></div>
-
-        <div class="section-technologies-content">
-          <div class="container">
-            <div class="card-tech" data-card-tech>
-              <div class="card-title">ФИЗИОДИСПЕНСЕР</div>
-              <p>
-                В клинике проводятся имплантация зубов с последующим
-                протезированием и сложные зубо-сохраняющие операции
-                с использованием проверенного и качественного оборудования
-                фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов
-                проводится при помощи машинных, а не ручных инструментов под
-                контролем апекслокаторов и рентгендиагностики, что значительно
-                сокращает время проведения необходимых процедур, повышает
-                качество и способствует долгосрочности результата.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- section smile -->
-    <section class="section-smile">
-      <div class="container">
-        <h2 class="section-title">
-          Посмотрите как преображаются улыбки пациенты после процедур
-        </h2>
-        <!-- Список сравнения до/после -->
-        <div class="swiper-container swiper-smiles">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="smile-card">
-                <p>Установка керамических виниров</p>
-                <div class="smile-images">
-                  <img-comparison-slider>
-                    <img slot="first" src="./assets/images/slide-before.jpg"
-                      alt="Установка керамических виниров стоматологическая клиника Факел" />
-                    <img slot="second" src="./assets/images/slide-after.jpg"
-                      alt="Установка керамических виниров стоматологическая клиника Факел" />
-                  </img-comparison-slider>
-                </div>
-                <div class="smile-doctor">Лечащий врач:</div>
-                <a href="#" target="_blank"
-                  title="Лечащий врач Кучеренко Николай Владимирович. Установка керамических виниров"
-                  class="smile-name">
-                  Кучеренко Николай Владимирович
-                </a>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="smile-card">
-                <p>Установка керамических виниров</p>
-                <div class="smile-images">
-                  <img-comparison-slider>
-                    <img slot="first" src="./assets/images/slide-before.jpg"
-                      alt="Установка керамических виниров стоматологическая клиника Факел" />
-                    <img slot="second" src="./assets/images/slide-after.jpg"
-                      alt="Установка керамических виниров стоматологическая клиника Факел" />
-                  </img-comparison-slider>
-                </div>
-                <div class="smile-doctor">Лечащий врач:</div>
-                <a href="#" target="_blank"
-                  title="Лечащий врач Вербицкая Екатерина Олеговна. Установка керамических виниров" class="smile-name">
-                  Вербицкая Екатерина Олеговна
-                </a>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="smile-card">
-                <p>Установка керамических виниров</p>
-                <div class="smile-images">
-                  <img-comparison-slider>
-                    <img slot="first" src="./assets/images/slide-before.jpg"
-                      alt="Установка керамических виниров стоматологическая клиника Факел" />
-                    <img slot="second" src="./assets/images/slide-after.jpg"
-                      alt="Установка керамических виниров стоматологическая клиника Факел" />
-                  </img-comparison-slider>
-                </div>
-                <div class="smile-doctor">Лечащий врач:</div>
-                <a href="#" target="_blank" title="Лечащий врач Мероян Левон Артурович. Установка керамических виниров"
-                  class="smile-name">
-                  Мероян Левон Артурович
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-pagination" swiper-pagination></div>
-        </div>
-
-        <!-- Кнопка: смотреть все -->
-        <a href="#" class="btn btn-blue" target="_blank"> Смотреть все </a>
-      </div>
-    </section>
-
-    <!-- section-reviews -->
-    <section class="section-reviews">
-      <div class="container">
-        <h2 class="section-title">Отзывы пациентов</h2>
-        <div class="reviews-filters">
-          <div class="reviews-info">
-            <p class="reviews-total">4.7 из 5</p>
-            <div class="review-rating">
-              <i class="icon-star"></i>
-              <i class="icon-star"></i>
-              <i class="icon-star"></i>
-              <i class="icon-star"></i>
-              <i class="icon-star"></i>
-            </div>
-            <p class="reviews-grade">на основе 15 оценок</p>
-          </div>
-          <button class="reviews-btn">Все отзывы</button>
-          <button class="reviews-btn">
-            <img src="./assets/images/icons/review_prodoctorov.svg" alt="Отзывы продокторов" />
-            4,7
-          </button>
-          <button class="reviews-btn">
-            <img src="./assets/images/icons/review_2gis.svg" alt="Отзывы 2гис" />4,5
-          </button>
-          <button class="reviews-btn">
-            <img src="./assets/images/icons/review_yandex.svg" alt="Отзывы яндекс карты" />4,9
-          </button>
-          <button class="reviews-btn">
-            <img src="./assets/images/icons/review_google.svg" alt="Отзывы google maps" />4,7
-          </button>
-          <button class="reviews-btn">
-            <img src="./assets/images/icons/review_doctu.svg" alt="Отзывы докту" />4,7
-          </button>
-        </div>
-        <div class="swiper-container swiper-reviews">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="reviews-card">
-                <div class="review-name">Ульшин Борис</div>
-                <div class="review-rating">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <p class="reviews-date">20.03.2023</p>
-                <p class="reviews-description">
-                  Больше 10 лет пользуюсь услугами этой клиники.Это
-                  терапевтыКазанцеваО. А., Мероян Л. А. Ортопед Алабовский Д. В.
-                  Отношение исключительно уважительное, лечение и консультации
-                  проводятся на высочайшем уровне. Рекомендации звучат
-                  исключительно с наибольшей пользой, это и улучшение качества
-                  жизни и экономическая целесообразность.По моей рекомендации
-                  лечатся и мои коллеги. Также очень довольны. Рекомендую.
-                </p>
-                <a class="reviews-doctor" href="#">Лечащий врач: Алабовский Д.В.</a>
-                <a class="reviews-source" href="#" target="_blank" rel="noopener noreferrer">Отзыв ПроДокторов</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination" swiper-pagination></div>
-        </div>
-        <a href="/reviews" class="btn btn-blue" target="_blank"> Смотреть все </a>
-      </div>
-    </section>
-
-    <!-- section result -->
-    <section class="section-result">
-      <div class="container">
-        <h2 class="section-title">
-          Работаем на результат, чтобы вы не стеснялись улыбаться!
-        </h2>
-        <div class="section-result-content">
-          <div class="swiper-container swiper-result">
+      <!-- section doctors -->
+      <!-- в процессе разработки -->
+      <section class="section-doctors">
+        <div class="container">
+          <h2 class="section-title">Ведущие врачи клиники</h2>
+          <div class="swiper-container swiper-doctors">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="result-card">
-                  <!-- Иконка для спрайта имеет порядковый номер -->
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="./assets/sprite.svg#result-icon-1"></use>
-                  </svg>
-                  <p>Все виды стоматологических услуг для взрослых</p>
+                <div class="card-doctor">
+                  <div class="card-doctor-image">
+                    <img
+                      src="./assets/images/doctor-1.png"
+                      alt="Стоматолог Алабовский Дмитрий Владимирович"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <p>
+                      Алабовский <br />
+                      Дмитрий Владимирович
+                    </p>
+                    <div class="card-doctor-meo">стоматолог-ортопед</div>
+                    <div class="card-doctor-experience">Стаж: 25 лет</div>
+                  </div>
+                  <!-- Ссылка переводит на страницу врача-стоматолога -->
+                  <a
+                    href="#"
+                    class="stretched-link"
+                    target="_blank"
+                    title="Стоматолог-ортопед Алабовский Дмитрий Владимирович"
+                  ></a>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="result-card">
-                  <!-- Иконка для спрайта имеет порядковый номер -->
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="./assets/sprite.svg#result-icon-2"></use>
-                  </svg>
-                  <p>
-                    Качественные сертифицированные материалы от проверенных
-                    поставщиков
-                  </p>
+                <div class="card-doctor">
+                  <div class="card-doctor-image">
+                    <img
+                      src="./assets/images/doctor-2.png"
+                      alt="Стоматолог Алабовская 
+Наталья Ивановна"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <p>
+                      Алабовская <br />
+                      Наталья Ивановна
+                    </p>
+                    <div class="card-doctor-meo">стоматолог-терапевт</div>
+                    <div class="card-doctor-experience">Стаж: 25 лет</div>
+                  </div>
+                  <!-- Ссылка переводит на страницу врача-стоматолога -->
+                  <a
+                    href="#"
+                    class="stretched-link"
+                    target="_blank"
+                    title="Стоматолог-терапевт Алабовская 
+Наталья Ивановна"
+                  ></a>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="result-card">
-                  <!-- Иконка для спрайта имеет порядковый номер -->
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="./assets/sprite.svg#result-icon-3"></use>
-                  </svg>
-                  <p>Доброжелательное и внимательное отношение к пациентам</p>
+                <div class="card-doctor">
+                  <div class="card-doctor-image">
+                    <img
+                      src="./assets/images/doctor-3.png"
+                      alt="Стоматолог Алабовская 
+Светлана Дмитриевна"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <p>
+                      Алабовская <br />
+                      Светлана Дмитриевна
+                    </p>
+                    <div class="card-doctor-meo">стоматолог общей практики</div>
+                    <div class="card-doctor-experience">Стаж: 5 лет</div>
+                  </div>
+                  <!-- Ссылка переводит на страницу врача-стоматолога -->
+                  <a
+                    href="#"
+                    class="stretched-link"
+                    target="_blank"
+                    title="Стоматолог общей практики Алабовская Светлана Дмитриевна"
+                  ></a>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="result-card">
-                  <!-- Иконка для спрайта имеет порядковый номер -->
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="./assets/sprite.svg#result-icon-4"></use>
-                  </svg>
-                  <p>
-                    Инновационные технологии в диагностике и лечении зубов –
-                    гарантии ХХ лет
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="result-card">
-                  <!-- Иконка для спрайта имеет порядковый номер -->
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="./assets/sprite.svg#result-icon-5"></use>
-                  </svg>
-                  <p>Профессиональный опыт и стаж работы стоматологов – 20 лет</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="result-card">
-                  <!-- Иконка для спрайта имеет порядковый номер -->
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="./assets/sprite.svg#result-icon-6"></use>
-                  </svg>
-                  <p>
-                    Бесплатные осмотры и профилактика – залог здоровья зубов и десен
-                  </p>
+                <div class="card-doctor">
+                  <div class="card-doctor-image">
+                    <img
+                      src="./assets/images/doctor-4.png"
+                      alt="Стоматолог Казаченко 
+Светлана Владимировна"
+                    />
+                  </div>
+                  <div class="card-content">
+                    <p>
+                      Казаченко <br />
+                      Светлана Владимировна
+                    </p>
+                    <div class="card-doctor-meo">стоматолог-терапевт</div>
+                    <div class="card-doctor-experience">Стаж: 5 лет</div>
+                  </div>
+                  <!-- Ссылка переводит на страницу врача-стоматолога -->
+                  <a
+                    href="#"
+                    class="stretched-link"
+                    target="_blank"
+                    title="Стоматолог-терапевт Казаченко Светлана Владимировна"
+                  ></a>
                 </div>
               </div>
             </div>
             <div class="swiper-pagination" swiper-pagination></div>
           </div>
-          <div class="results-image">
-            <img src="./assets/images/about-1.jpg" alt="Стоматология Факел официальный сайт"
-              title="Адрес стоматологии Факел в Воронеже на Маршака" />
+        </div>
+      </section>
+
+      <!-- section techologies -->
+      <section class="section-technologies">
+        <h2 class="section-title">Технологии и оснащение</h2>
+        <div class="swiper-container swiper-technologies">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              title="ФИЗИОДИСПЕНСЕР. В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата."
+            >
+              <img src="./assets/images/t-slide_1.jpg" alt="ФИЗИОДИСПЕНСЕР" />
+            </div>
+            <div
+              class="swiper-slide"
+              title="Оборудованный кабинет. Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения."
+            >
+              <img
+                src="./assets/images/t-slide_2.jpg"
+                alt="Оборудованный кабинет"
+              />
+            </div>
+            <div
+              class="swiper-slide"
+              title="СИСТЕМА AIR FLOW. Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока)."
+            >
+              <img src="./assets/images/t-slide_1.jpg" alt="СИСТЕМА AIR FLOW" />
+            </div>
+          </div>
+          <div class="swiper-pagination" swiper-pagination></div>
+
+          <div class="section-technologies-content">
+            <div class="container">
+              <div class="card-tech" data-card-tech>
+                <div class="card-title">ФИЗИОДИСПЕНСЕР</div>
+                <p>
+                  В клинике проводятся имплантация зубов с последующим
+                  протезированием и сложные зубо-сохраняющие операции
+                  с использованием проверенного и качественного оборудования
+                  фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов
+                  проводится при помощи машинных, а не ручных инструментов под
+                  контролем апекслокаторов и рентгендиагностики, что значительно
+                  сокращает время проведения необходимых процедур, повышает
+                  качество и способствует долгосрочности результата.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- section about -->
-    <section class="section-about">
-      <div class="section-about-image">
-        <img src="./assets/images/front.jpg" alt="Стоматологическая клиника Факел"
-          title="Взрослая стоматология Факел в юга западном районе" />
-      </div>
-      <h2 class="section-title">
-        Стоматологическая клиника в Воронеже
-      </h2>
-      <div class="section-about-content">
-        <p>
-          Вот уже более 15 лет стоматология Факел — гарантия здоровых зубов и
-          лучезарной улыбки. Мы читаем теплые благодарственные отзывы наших
-          пациентов и уверены, что работаем не зря. Мы гарантируем решения
-          стоматологических проблем для всех возрастов, для каждого человека.
-          Сотни довольных клиентов рекомендуют нас своим близким и знакомым.
-        </p>
-        <ul class="about-list">
-          <li>Мы максимально честны с пациентом.</li>
-          <li>Составляем индивидуальный план лечения.</li>
-          <li>Не проводим ненужных процедур.</li>
-          <li>Уверены, что всегда лучше сохранить природные зубы.</li>
-        </ul>
-        <p>
-          Стоматология Факел — это европейский уровень, государственная
-          сертификация лечебной стоматологической деятельности и дипломы,
-          подтверждающие качество.
-        </p>
-        <p>
-          Наши врачи — это сертифицированные специалисты высшей категории. Они
-          проходят курсы повышения квалификации ,участвуют в
-          научно-практических конференциях, занимаются исследовательской
-          деятельностью. -Обратитесь за стоматологической помощью в Факел.
-          Здесь работают опытные врачи, с многолетним стажем. Кандидат
-          медицинских наук, врач высшей категории.
-        </p>
-      </div>
-    </section>
+      <!-- section smile -->
+      <section class="section-smile">
+        <div class="container">
+          <h2 class="section-title">
+            Посмотрите как преображаются улыбки пациенты после процедур
+          </h2>
+          <!-- Список сравнения до/после -->
+          <div class="swiper-container swiper-smiles">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="smile-card">
+                  <p>Установка керамических виниров</p>
+                  <div class="smile-images">
+                    <img-comparison-slider>
+                      <img
+                        slot="first"
+                        src="./assets/images/slide-before.jpg"
+                        alt="Установка керамических виниров стоматологическая клиника Факел"
+                      />
+                      <img
+                        slot="second"
+                        src="./assets/images/slide-after.jpg"
+                        alt="Установка керамических виниров стоматологическая клиника Факел"
+                      />
+                    </img-comparison-slider>
+                  </div>
+                  <div class="smile-doctor">Лечащий врач:</div>
+                  <a
+                    href="#"
+                    target="_blank"
+                    title="Лечащий врач Кучеренко Николай Владимирович. Установка керамических виниров"
+                    class="smile-name"
+                  >
+                    Кучеренко Николай Владимирович
+                  </a>
+                </div>
+              </div>
 
-    <!-- section consulatation -->
-    <!-- в процессе разработки -->
-    <section class="section-consult">
-      <div class="container">
-        <h2 class="section-title">Получить консультацию</h2>
-        <form class="consult-form" action="?">
-          <select class="input input-select" name="consult-doctor" id="">
-            <option disabled selected>Выберите врача</option>
-            <option value="1">врач 1</option>
-            <option value="2">врач 2</option>
-          </select>
-          <input class="input" type="text" name="consult-patient" placeholder="Имя" />
-          <textarea class="input input-textarea" name="consult-comment" placeholder="Комментарий"></textarea>
-          <input class="input input-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Дата"
-            name="consult-date" />
-          <input class="input" type="text" placeholder="Телефон" name="consult-phone" />
-          <div class="consult-form-agree">
-            <input type="checkbox" name="consult-agree" id="consult-agree" checked />
-            <label for="consult-agree">Согласен на обработку</label>
-            <a href="#" target="_blank">персональных данных</a>
+              <div class="swiper-slide">
+                <div class="smile-card">
+                  <p>Установка керамических виниров</p>
+                  <div class="smile-images">
+                    <img-comparison-slider>
+                      <img
+                        slot="first"
+                        src="./assets/images/slide-before.jpg"
+                        alt="Установка керамических виниров стоматологическая клиника Факел"
+                      />
+                      <img
+                        slot="second"
+                        src="./assets/images/slide-after.jpg"
+                        alt="Установка керамических виниров стоматологическая клиника Факел"
+                      />
+                    </img-comparison-slider>
+                  </div>
+                  <div class="smile-doctor">Лечащий врач:</div>
+                  <a
+                    href="#"
+                    target="_blank"
+                    title="Лечащий врач Вербицкая Екатерина Олеговна. Установка керамических виниров"
+                    class="smile-name"
+                  >
+                    Вербицкая Екатерина Олеговна
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="smile-card">
+                  <p>Установка керамических виниров</p>
+                  <div class="smile-images">
+                    <img-comparison-slider>
+                      <img
+                        slot="first"
+                        src="./assets/images/slide-before.jpg"
+                        alt="Установка керамических виниров стоматологическая клиника Факел"
+                      />
+                      <img
+                        slot="second"
+                        src="./assets/images/slide-after.jpg"
+                        alt="Установка керамических виниров стоматологическая клиника Факел"
+                      />
+                    </img-comparison-slider>
+                  </div>
+                  <div class="smile-doctor">Лечащий врач:</div>
+                  <a
+                    href="#"
+                    target="_blank"
+                    title="Лечащий врач Мероян Левон Артурович. Установка керамических виниров"
+                    class="smile-name"
+                  >
+                    Мероян Левон Артурович
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination" swiper-pagination></div>
           </div>
-          <button class="btn btn-grey" type="submit">Записаться</button>
-        </form>
-      </div>
-    </section>
 
-    <!-- section map -->
-    <!-- в процессе разработки -->
-    <section class="section-map" id="map">
-      <script type="text/javascript" charset="utf-8" async
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac96fd1d6812b0862b53f34e6337afe3a3353a9c02a4a2d3592090f83a5e4040d&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=disable"></script>
-    </section>
-  </main>
+          <!-- Кнопка: смотреть все -->
+          <a href="#" class="btn btn-blue" target="_blank"> Смотреть все </a>
+        </div>
+      </section>
 
-  <!-- js part -->
-  <script src="./src/js/vendor/swiper-bundle.min.js"></script>
-  <script type="module" src="./src/js/vendor/scroller.js"></script>
-  <script defer src="./src/js/vendor/before&after.js"></script>
+      <!-- section-reviews -->
+      <section class="section-reviews">
+        <div class="container">
+          <h2 class="section-title">Отзывы пациентов</h2>
+          <div class="reviews-filters">
+            <div class="reviews-info">
+              <p class="reviews-total">4.7 из 5</p>
+              <div class="review-rating">
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+              </div>
+              <p class="reviews-grade">на основе 15 оценок</p>
+            </div>
+            <button class="reviews-btn">Все отзывы</button>
+            <button class="reviews-btn">
+              <img
+                src="./assets/images/icons/review_prodoctorov.svg"
+                alt="Отзывы продокторов"
+              />
+              4,7
+            </button>
+            <button class="reviews-btn">
+              <img
+                src="./assets/images/icons/review_2gis.svg"
+                alt="Отзывы 2гис"
+              />4,5
+            </button>
+            <button class="reviews-btn">
+              <img
+                src="./assets/images/icons/review_yandex.svg"
+                alt="Отзывы яндекс карты"
+              />4,9
+            </button>
+            <button class="reviews-btn">
+              <img
+                src="./assets/images/icons/review_google.svg"
+                alt="Отзывы google maps"
+              />4,7
+            </button>
+            <button class="reviews-btn">
+              <img
+                src="./assets/images/icons/review_doctu.svg"
+                alt="Отзывы докту"
+              />4,7
+            </button>
+          </div>
+          <div class="swiper-container swiper-reviews">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="reviews-card">
+                  <div class="review-name">Ульшин Борис</div>
+                  <div class="review-rating">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                  <p class="reviews-date">20.03.2023</p>
+                  <p class="reviews-description">
+                    Больше 10 лет пользуюсь услугами этой клиники.Это
+                    терапевтыКазанцеваО. А., Мероян Л. А. Ортопед Алабовский Д.
+                    В. Отношение исключительно уважительное, лечение и
+                    консультации проводятся на высочайшем уровне. Рекомендации
+                    звучат исключительно с наибольшей пользой, это и улучшение
+                    качества жизни и экономическая целесообразность.По моей
+                    рекомендации лечатся и мои коллеги. Также очень довольны.
+                    Рекомендую.
+                  </p>
+                  <a class="reviews-doctor" href="#"
+                    >Лечащий врач: Алабовский Д.В.</a
+                  >
+                  <a
+                    class="reviews-source"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Отзыв ПроДокторов</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination" swiper-pagination></div>
+          </div>
+          <a href="/reviews" class="btn btn-blue" target="_blank">
+            Смотреть все
+          </a>
+        </div>
+      </section>
 
-  <script async>
-    // heroCard init
-    const heroCard = document.querySelector("[data-card-hero]");
-    const techCard = document.querySelector("[data-card-tech]");
+      <!-- section result -->
+      <section class="section-result">
+        <div class="container">
+          <h2 class="section-title">
+            Работаем на результат, чтобы вы не стеснялись улыбаться!
+          </h2>
+          <div class="section-result-content">
+            <div class="swiper-container swiper-result">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="result-card">
+                    <!-- Иконка для спрайта имеет порядковый номер -->
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#result-icon-1"></use>
+                    </svg>
+                    <p>Все виды стоматологических услуг для взрослых</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="result-card">
+                    <!-- Иконка для спрайта имеет порядковый номер -->
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#result-icon-2"></use>
+                    </svg>
+                    <p>
+                      Качественные сертифицированные материалы от проверенных
+                      поставщиков
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="result-card">
+                    <!-- Иконка для спрайта имеет порядковый номер -->
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#result-icon-3"></use>
+                    </svg>
+                    <p>Доброжелательное и внимательное отношение к пациентам</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="result-card">
+                    <!-- Иконка для спрайта имеет порядковый номер -->
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#result-icon-4"></use>
+                    </svg>
+                    <p>
+                      Инновационные технологии в диагностике и лечении зубов –
+                      гарантии ХХ лет
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="result-card">
+                    <!-- Иконка для спрайта имеет порядковый номер -->
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#result-icon-5"></use>
+                    </svg>
+                    <p>
+                      Профессиональный опыт и стаж работы стоматологов – 20 лет
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="result-card">
+                    <!-- Иконка для спрайта имеет порядковый номер -->
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use xlink:href="./assets/sprite.svg#result-icon-6"></use>
+                    </svg>
+                    <p>
+                      Бесплатные осмотры и профилактика – залог здоровья зубов и
+                      десен
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination" swiper-pagination></div>
+            </div>
+            <div class="results-image">
+              <img
+                src="./assets/images/about-1.jpg"
+                alt="Стоматология Факел официальный сайт"
+                title="Адрес стоматологии Факел в Воронеже на Маршака"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-    // swiper hero init
-    if (document.getElementsByClassName("section-hero-swiper").length) {
-      var swiperHero = new Swiper(".swiper-hero", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        speed: 400,
-        autoplay: true,
-        rewind: true,
-        scrollbar: {
-          enabled: false,
-        },
-        pagination: {
-          el: ".swiper-hero [swiper-pagination]",
-          clickable: true,
-        },
-        navigation: {
-          enabled: false,
-        },
-        allowTouchMove: true,
-        grabCursor: true,
-        on: {
-          slideChange: function () {
-            let activeSlide = swiperHero.activeIndex;
+      <!-- section about -->
+      <section class="section-about">
+        <div class="section-about-image">
+          <img
+            src="./assets/images/front.jpg"
+            alt="Стоматологическая клиника Факел"
+            title="Взрослая стоматология Факел в юга западном районе"
+          />
+        </div>
+        <h2 class="section-title">Стоматологическая клиника в Воронеже</h2>
+        <div class="section-about-content">
+          <p>
+            Вот уже более 15 лет стоматология Факел — гарантия здоровых зубов и
+            лучезарной улыбки. Мы читаем теплые благодарственные отзывы наших
+            пациентов и уверены, что работаем не зря. Мы гарантируем решения
+            стоматологических проблем для всех возрастов, для каждого человека.
+            Сотни довольных клиентов рекомендуют нас своим близким и знакомым.
+          </p>
+          <ul class="about-list">
+            <li>Мы максимально честны с пациентом.</li>
+            <li>Составляем индивидуальный план лечения.</li>
+            <li>Не проводим ненужных процедур.</li>
+            <li>Уверены, что всегда лучше сохранить природные зубы.</li>
+          </ul>
+          <p>
+            Стоматология Факел — это европейский уровень, государственная
+            сертификация лечебной стоматологической деятельности и дипломы,
+            подтверждающие качество.
+          </p>
+          <p>
+            Наши врачи — это сертифицированные специалисты высшей категории. Они
+            проходят курсы повышения квалификации ,участвуют в
+            научно-практических конференциях, занимаются исследовательской
+            деятельностью. -Обратитесь за стоматологической помощью в Факел.
+            Здесь работают опытные врачи, с многолетним стажем. Кандидат
+            медицинских наук, врач высшей категории.
+          </p>
+        </div>
+      </section>
 
-            activeSlide = activeSlide + 1;
+      <!-- section consulatation -->
+      <!-- в процессе разработки -->
+      <section class="section-consult">
+        <div class="container">
+          <h2 class="section-title">Получить консультацию</h2>
+          <form class="consult-form" action="?">
+            <select class="input input-select" name="consult-doctor" id="">
+              <option disabled selected>Выберите врача</option>
+              <option value="1">врач 1</option>
+              <option value="2">врач 2</option>
+            </select>
+            <input
+              class="input"
+              type="text"
+              name="consult-patient"
+              placeholder="Имя"
+            />
+            <textarea
+              class="input input-textarea"
+              name="consult-comment"
+              placeholder="Комментарий"
+            ></textarea>
+            <input
+              class="input input-date"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')"
+              placeholder="Дата"
+              name="consult-date"
+            />
+            <input
+              class="input"
+              type="text"
+              placeholder="Телефон"
+              name="consult-phone"
+            />
+            <div class="consult-form-agree">
+              <input
+                type="checkbox"
+                name="consult-agree"
+                id="consult-agree"
+                checked
+              />
+              <label for="consult-agree">Согласен на обработку</label>
+              <a href="#" target="_blank">персональных данных</a>
+            </div>
+            <button class="btn btn-grey" type="submit">Записаться</button>
+          </form>
+        </div>
+      </section>
 
-            heroCard.classList.add('fadeEffect');
+      <!-- section map -->
+      <!-- в процессе разработки -->
+      <section class="section-map" id="map">
+        <script
+          type="text/javascript"
+          charset="utf-8"
+          async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac96fd1d6812b0862b53f34e6337afe3a3353a9c02a4a2d3592090f83a5e4040d&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=disable"
+        ></script>
+      </section>
+    </main>
 
-            setTimeout(() => {
-              heroCard.classList.remove('fadeEffect');
-            }, 500);
+    <!-- js part -->
+    <script src="./src/js/vendor/swiper-bundle.min.js"></script>
+    <script type="module" src="./src/js/vendor/scroller.js"></script>
+    <script defer src="./src/js/vendor/before&after.js"></script>
 
-            if (activeSlide == 1) {
-              heroCard.querySelector(".card-title").innerText =
-                "Профессиональная гигиена всей полости рта";
-              heroCard.querySelector(".card-body p").innerHTML =
-                "Скидка первичным пациентам 900 руб!";
-            } else if (activeSlide == 2) {
-              heroCard.querySelector(".card-title").innerText =
-                "Имплантация ";
-              heroCard.querySelector(".card-body p").innerHTML =
-                "Установка Имплантатов SuperLine по выгодной цене за 24000 руб!";
-            } else if (activeSlide == 3) {
-              heroCard.querySelector(".card-title").innerText =
-                "Плазмолифтинг";
-              heroCard.querySelector(".card-body p").innerHTML =
-                "Здоровые дёсна - залог красивой улыбки";
-            } else if (activeSlide == 4) {
-              heroCard.querySelector(".card-title").innerText =
-                "ПРОТЕЗИРОВАНИЕ";
-              heroCard.querySelector(".card-body p").innerHTML =
-                "Изготовление безметалловых коронок по цене от 16500 руб!";
-            }
+    <script async>
+      // heroCard init
+      const heroCard = document.querySelector("[data-card-hero]");
+      const techCard = document.querySelector("[data-card-tech]");
+
+      // swiper hero init
+      if (document.getElementsByClassName("section-hero-swiper").length) {
+        var swiperHero = new Swiper(".swiper-hero", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          speed: 400,
+          autoplay: true,
+          rewind: true,
+          scrollbar: {
+            enabled: false,
           },
-        },
-      });
-
-      setTimeout(function () {
-        if (swiperHero.update) {
-          swiperHero.update();
-        }
-      }, 500);
-    }
-
-    // swiper doctor init
-    if (document.getElementsByClassName("section-doctors").length) {
-      var swiperDoctors = new Swiper(".swiper-doctors", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        speed: 400,
-        breakpoints: {
-          0: {
-            centeredSlides: true,
-            loop: true,
-            loopedSlides: 2,
+          pagination: {
+            el: ".swiper-hero [swiper-pagination]",
+            clickable: true,
           },
-          1200: {
-            centeredSlides: false,
-            loop: false,
+          navigation: {
+            enabled: false,
           },
-        },
-        scrollbar: {
-          enabled: false,
-        },
-        pagination: {
-          el: ".swiper-doctors [swiper-pagination]",
-          clickable: true,
-        },
-        navigation: {
-          enabled: false,
-        },
-        allowTouchMove: true,
-        grabCursor: true,
-      });
+          allowTouchMove: true,
+          grabCursor: true,
+          on: {
+            slideChange: function () {
+              let activeSlide = swiperHero.activeIndex;
 
-      setTimeout(function () {
-        if (swiperDoctors.update) {
-          swiperDoctors.update();
-        }
-      }, 500);
-    }
+              activeSlide = activeSlide + 1;
 
-    // swiper technologies
-    if (document.getElementsByClassName("section-technologies").length) {
-      var swiperTechnologies = new Swiper(".swiper-technologies", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        speed: 400,
-        autoplay: true,
-        rewind: true,
-        scrollbar: {
-          enabled: false,
-        },
-        pagination: {
-          el: ".swiper-technologies [swiper-pagination]",
-          clickable: true,
-        },
-        navigation: {
-          enabled: false,
-        },
-        allowTouchMove: true,
-        grabCursor: true,
-        on: {
-          slideChange: function () {
-            let activeSlide = swiperTechnologies.activeIndex;
+              heroCard.classList.add("fadeEffect");
 
-            activeSlide = activeSlide + 1;
+              setTimeout(() => {
+                heroCard.classList.remove("fadeEffect");
+              }, 500);
 
-            techCard.classList.add('fadeEffect');
-
-            setTimeout(() => {
-              techCard.classList.remove('fadeEffect');
-            }, 500);
-
-            if (activeSlide == 1) {
-              techCard.querySelector(".card-title").innerText =
-                "ФИЗИОДИСПЕНСЕР";
-              techCard.querySelector("p").innerText =
-                "В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.";
-            } else if (activeSlide == 2) {
-              techCard.querySelector(".card-title").innerText =
-                "Оборудованный кабинет ";
-              techCard.querySelector("p").innerText =
-                "Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.";
-            } else if (activeSlide == 3) {
-              techCard.querySelector(".card-title").innerText =
-                "СИСТЕМА AIR FLOW";
-              techCard.querySelector("p").innerText =
-                "Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).";
-            }
-          },
-        },
-      });
-
-      setTimeout(function () {
-        if (swiperTechnologies.update) {
-          swiperTechnologies.update();
-        }
-      }, 500);
-    }
-
-    // swiper smiles init
-    if (document.getElementsByClassName("section-smile").length) {
-      var swiperSmiles = new Swiper(".swiper-smiles", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        noSwipingSelector: '.swiper-smiles .smile-images',
-        breakpoints: {
-          0: {
-            centeredSlides: true,
-            centerInsufficientSlides: false,
-          },
-          1200: {
-            centeredSlides: false,
-            centerInsufficientSlides: true,
-            loop: false,
-          },
-        },
-        scrollbar: {
-          enabled: false,
-        },
-        pagination: {
-          el: ".swiper-smiles [swiper-pagination]",
-          clickable: true,
-        },
-        navigation: {
-          enabled: false,
-        },
-        allowTouchMove: true,
-        grabCursor: true,
-      });
-
-      setTimeout(function () {
-        if (swiperSmiles.update) {
-          swiperSmiles.update();
-        }
-      }, 500);
-    }
-
-    // swiper reviews init
-    if (document.getElementsByClassName("section-reviews").length) {
-      var swiperReviews = new Swiper(".swiper-reviews", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        breakpoints: {
-          0: {
-            centeredSlides: true,
-            centerInsufficientSlides: false,
-          },
-          1200: {
-            centeredSlides: false,
-            centerInsufficientSlides: true,
-            loop: false,
-          },
-        },
-        scrollbar: {
-          enabled: false,
-        },
-        pagination: {
-          el: ".swiper-reviews [swiper-pagination]",
-          clickable: true,
-        },
-        navigation: {
-          enabled: false,
-        },
-        allowTouchMove: true,
-        grabCursor: true,
-      });
-
-      setTimeout(function () {
-        if (swiperReviews.update) {
-          swiperReviews.update();
-        }
-      }, 500);
-    }
-
-    // swiper result init
-    if (document.getElementsByClassName("section-result").length) {
-      var swiperResult = new Swiper(".swiper-result", {
-        spaceBetween: 20,
-        breakpoints: {
-          0: {
-            slidesPerView: 2,
-            grid: {
-              rows: 1,
-              fill: 'row',
+              if (activeSlide == 1) {
+                heroCard.querySelector(".card-title").innerText =
+                  "Профессиональная гигиена всей полости рта";
+                heroCard.querySelector(".card-body p").innerHTML =
+                  "Скидка первичным пациентам 900 руб!";
+              } else if (activeSlide == 2) {
+                heroCard.querySelector(".card-title").innerText =
+                  "Имплантация ";
+                heroCard.querySelector(".card-body p").innerHTML =
+                  "Установка Имплантатов SuperLine по выгодной цене за 24000 руб!";
+              } else if (activeSlide == 3) {
+                heroCard.querySelector(".card-title").innerText =
+                  "Плазмолифтинг";
+                heroCard.querySelector(".card-body p").innerHTML =
+                  "Здоровые дёсна - залог красивой улыбки";
+              } else if (activeSlide == 4) {
+                heroCard.querySelector(".card-title").innerText =
+                  "ПРОТЕЗИРОВАНИЕ";
+                heroCard.querySelector(".card-body p").innerHTML =
+                  "Изготовление безметалловых коронок по цене от 16500 руб!";
+              }
             },
           },
-          720: {
-            slidesPerView: 2,
-            grid: {
-              rows: 3,
-              fill: 'row',
+        });
+
+        setTimeout(function () {
+          if (swiperHero.update) {
+            swiperHero.update();
+          }
+        }, 500);
+      }
+
+      // swiper doctor init
+      if (document.getElementsByClassName("section-doctors").length) {
+        var swiperDoctors = new Swiper(".swiper-doctors", {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          speed: 400,
+          breakpoints: {
+            0: {
+              centeredSlides: true,
+              loop: true,
+              loopedSlides: 2,
+            },
+            1200: {
+              centeredSlides: false,
+              loop: false,
             },
           },
-          992: {
-            slidesPerView: 3,
-            grid: {
-              rows: 2,
-              fill: 'row',
+          scrollbar: {
+            enabled: false,
+          },
+          pagination: {
+            el: ".swiper-doctors [swiper-pagination]",
+            clickable: true,
+          },
+          navigation: {
+            enabled: false,
+          },
+          allowTouchMove: true,
+          grabCursor: true,
+        });
+
+        setTimeout(function () {
+          if (swiperDoctors.update) {
+            swiperDoctors.update();
+          }
+        }, 500);
+      }
+
+      // swiper technologies
+      if (document.getElementsByClassName("section-technologies").length) {
+        var swiperTechnologies = new Swiper(".swiper-technologies", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          speed: 400,
+          autoplay: true,
+          rewind: true,
+          scrollbar: {
+            enabled: false,
+          },
+          pagination: {
+            el: ".swiper-technologies [swiper-pagination]",
+            clickable: true,
+          },
+          navigation: {
+            enabled: false,
+          },
+          allowTouchMove: true,
+          grabCursor: true,
+          on: {
+            slideChange: function () {
+              let activeSlide = swiperTechnologies.activeIndex;
+
+              activeSlide = activeSlide + 1;
+
+              techCard.classList.add("fadeEffect");
+
+              setTimeout(() => {
+                techCard.classList.remove("fadeEffect");
+              }, 500);
+
+              if (activeSlide == 1) {
+                techCard.querySelector(".card-title").innerText =
+                  "ФИЗИОДИСПЕНСЕР";
+                techCard.querySelector("p").innerText =
+                  "В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.";
+              } else if (activeSlide == 2) {
+                techCard.querySelector(".card-title").innerText =
+                  "Оборудованный кабинет ";
+                techCard.querySelector("p").innerText =
+                  "Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.";
+              } else if (activeSlide == 3) {
+                techCard.querySelector(".card-title").innerText =
+                  "СИСТЕМА AIR FLOW";
+                techCard.querySelector("p").innerText =
+                  "Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).";
+              }
             },
           },
-        },
-        scrollbar: {
-          enabled: false,
-        },
-        pagination: {
-          el: ".swiper-result [swiper-pagination]",
-          clickable: true,
-        },
-        navigation: {
-          enabled: false,
-        },
-        allowTouchMove: true,
-        grabCursor: true,
-      });
+        });
 
-      setTimeout(function () {
-        if (swiperResult.update) {
-          swiperResult.update();
-        }
-      }, 500);
-    }
+        setTimeout(function () {
+          if (swiperTechnologies.update) {
+            swiperTechnologies.update();
+          }
+        }, 500);
+      }
 
-    // header script
-    const logo = document.querySelector(".header-logo");
-    const mainMenu = document.querySelector(".menu");
-    const headerTop = document.querySelector(".header-top");
-    const header = document.querySelector("header");
-    const headerModalBtn = document.querySelector(".header-modal-btn");
+      // swiper smiles init
+      if (document.getElementsByClassName("section-smile").length) {
+        var swiperSmiles = new Swiper(".swiper-smiles", {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          noSwipingSelector: ".swiper-smiles .smile-images",
+          breakpoints: {
+            0: {
+              centeredSlides: true,
+              centerInsufficientSlides: false,
+            },
+            1200: {
+              centeredSlides: false,
+              centerInsufficientSlides: true,
+              loop: false,
+            },
+          },
+          scrollbar: {
+            enabled: false,
+          },
+          pagination: {
+            el: ".swiper-smiles [swiper-pagination]",
+            clickable: true,
+          },
+          navigation: {
+            enabled: false,
+          },
+          allowTouchMove: true,
+          grabCursor: true,
+        });
 
-    window.addEventListener("scroll", setFixedHeader);
-    window.addEventListener("resize", setFixedHeader);
-    window.addEventListener("DOMContentLoaded", setFixedHeader);
+        setTimeout(function () {
+          if (swiperSmiles.update) {
+            swiperSmiles.update();
+          }
+        }, 500);
+      }
 
-    function setFixedHeader() {
-      if (window.innerWidth >= 1200) {
-        if (window.scrollY >= 1) {
-          logo.classList.add("scroll");
-          mainMenu.classList.add("scroll");
-          headerModalBtn.classList.add("scroll");
+      // swiper reviews init
+      if (document.getElementsByClassName("section-reviews").length) {
+        var swiperReviews = new Swiper(".swiper-reviews", {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          breakpoints: {
+            0: {
+              centeredSlides: true,
+              centerInsufficientSlides: false,
+            },
+            1200: {
+              centeredSlides: false,
+              centerInsufficientSlides: true,
+              loop: false,
+            },
+          },
+          scrollbar: {
+            enabled: false,
+          },
+          pagination: {
+            el: ".swiper-reviews [swiper-pagination]",
+            clickable: true,
+          },
+          navigation: {
+            enabled: false,
+          },
+          allowTouchMove: true,
+          grabCursor: true,
+        });
+
+        setTimeout(function () {
+          if (swiperReviews.update) {
+            swiperReviews.update();
+          }
+        }, 500);
+      }
+
+      // swiper result init
+      if (document.getElementsByClassName("section-result").length) {
+        var swiperResult = new Swiper(".swiper-result", {
+          spaceBetween: 20,
+          breakpoints: {
+            0: {
+              slidesPerView: 2,
+              grid: {
+                rows: 1,
+                fill: "row",
+              },
+            },
+            720: {
+              slidesPerView: 2,
+              grid: {
+                rows: 3,
+                fill: "row",
+              },
+            },
+            992: {
+              slidesPerView: 3,
+              grid: {
+                rows: 2,
+                fill: "row",
+              },
+            },
+          },
+          scrollbar: {
+            enabled: false,
+          },
+          pagination: {
+            el: ".swiper-result [swiper-pagination]",
+            clickable: true,
+          },
+          navigation: {
+            enabled: false,
+          },
+          allowTouchMove: true,
+          grabCursor: true,
+        });
+
+        setTimeout(function () {
+          if (swiperResult.update) {
+            swiperResult.update();
+          }
+        }, 500);
+      }
+
+      // header script
+      const logo = document.querySelector(".header-logo");
+      const mainMenu = document.querySelector(".menu");
+      const headerTop = document.querySelector(".header-top");
+      const header = document.querySelector("header");
+      const headerModalBtn = document.querySelector(".header-modal-btn");
+
+      window.addEventListener("scroll", setFixedHeader);
+      window.addEventListener("resize", setFixedHeader);
+      window.addEventListener("DOMContentLoaded", setFixedHeader);
+
+      function setFixedHeader() {
+        if (window.innerWidth >= 1200) {
+          if (window.scrollY >= 1) {
+            logo.classList.add("scroll");
+            mainMenu.classList.add("scroll");
+            headerModalBtn.classList.add("scroll");
+          } else {
+            logo.classList.remove("scroll");
+            mainMenu.classList.remove("scroll");
+            headerModalBtn.classList.remove("scroll");
+          }
         } else {
           logo.classList.remove("scroll");
           mainMenu.classList.remove("scroll");
           headerModalBtn.classList.remove("scroll");
         }
-      } else {
+      }
+
+      // fix header script classList before load
+      window.addEventListener("DOMContentLoaded", () => {
         logo.classList.remove("scroll");
         mainMenu.classList.remove("scroll");
         headerModalBtn.classList.remove("scroll");
-      }
-    }
+      });
 
-    // fix header script classList before load
-    window.addEventListener("DOMContentLoaded", () => {
-      logo.classList.remove("scroll");
-      mainMenu.classList.remove("scroll");
-      headerModalBtn.classList.remove("scroll");
-    });
+      // mobile-menu
+      const menuOpenElems = document.querySelectorAll("[data-menu-open]");
+      const menuCloseElems = document.querySelectorAll("[data-menu-close]");
 
-    // mobile-menu
-    const menuOpenElems = document.querySelectorAll("[data-menu-open]");
-    const menuCloseElems = document.querySelectorAll("[data-menu-close]");
-
-    // mobile-menu
-    function mobileMenu() {
-      if (window.innerWidth <= 1200) {
-        menuOpenElems.forEach((menuOpenElem) => {
-          menuOpenElem.addEventListener("click", () => {
-            openMenu();
+      // mobile-menu
+      function mobileMenu() {
+        if (window.innerWidth <= 1200) {
+          menuOpenElems.forEach((menuOpenElem) => {
+            menuOpenElem.addEventListener("click", () => {
+              openMenu();
+            });
           });
-        });
 
-        menuCloseElems.forEach((menuCloseElem) => {
-          menuCloseElem.addEventListener("click", () => {
-            closeMenu();
+          menuCloseElems.forEach((menuCloseElem) => {
+            menuCloseElem.addEventListener("click", () => {
+              closeMenu();
+            });
           });
-        });
+        }
       }
-    }
 
-    function openMenu() {
-      mainMenu.classList.add("menu-show");
-      document.documentElement.classList.add("menu-open");
-    }
+      function openMenu() {
+        mainMenu.classList.add("menu-show");
+        document.documentElement.classList.add("menu-open");
+      }
 
-    function closeMenu() {
-      mainMenu.classList.remove("menu-show");
-      document.documentElement.classList.remove("menu-open");
-    }
+      function closeMenu() {
+        mainMenu.classList.remove("menu-show");
+        document.documentElement.classList.remove("menu-open");
+      }
 
-    window.addEventListener("DOMContentLoaded", mobileMenu);
-    window.addEventListener("scroll", mobileMenu);
-    window.addEventListener("resize", mobileMenu);
-  </script>
-</body>
-
+      window.addEventListener("DOMContentLoaded", mobileMenu);
+      window.addEventListener("scroll", mobileMenu);
+      window.addEventListener("resize", mobileMenu);
+    </script>
+  </body>
 </html>
