@@ -110,6 +110,7 @@
   // max-width: 700px;
   width: 100%;
   height: auto;
+  min-height: 200px;
   padding: 24px;
   opacity: 1;
   background-color: #eef5fe;
@@ -117,12 +118,13 @@
   backdrop-filter: blur(7.95px);
   border: 1px solid #ffffff;
   pointer-events: all;
-  transition: 0.05s opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease;
   @media (min-width: 720px) {
     align-items: flex-start;
     justify-content: flex-start;
     row-gap: 10px;
     column-gap: 10px;
+    min-height: 265px;
   }
   @media (min-width: 1200px) {
     background-color: rgba(255, 255, 255, 0.7);
@@ -1319,16 +1321,16 @@
     @media screen and (max-width: 1199.98px) {
       & > * {
         &:nth-child(1) {
-          order: 0;
+          order: -1;
         }
         &:nth-child(2) {
           order: 1;
         }
         &:nth-child(3) {
-          order: 4;
+          order: 5;
         }
         &:nth-child(4) {
-          order: 3;
+          order: 0;
         }
         &:nth-child(5) {
           order: 4;
@@ -1408,10 +1410,10 @@
   }
   & .btn {
     width: fit-content;
-    padding: 16px 47px;
+    padding: 16px 23%;
     margin: auto;
     @media (min-width: 720px) {
-      padding: 20px 67px;
+      padding: 20px 20%;
     }
     @media (min-width: 1200px) {
       margin: unset;

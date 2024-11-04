@@ -1230,6 +1230,24 @@ p.smaller {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.footer {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding: 50px 0;
+  color: #ffffff;
+  background: linear-gradient(261.39deg, #267cdf 32.19%, #1b66bd 67.81%);
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding: 43px 0;
+  }
+}
+.footer a {
+  color: #ffffff;
+}
+
 *,
 *::before,
 *::after {
