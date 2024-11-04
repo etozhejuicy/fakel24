@@ -61,7 +61,7 @@
         <a href="/" class="menu-link hidden">Главная</a>
         <!-- Выпадающий список -->
         <div class="menu-dropdown">
-          <a href="/stomatologiceskie-uslugi" class="menu-link">
+          <a href="/stomatologiceskie-uslugi" class="menu-link" dropdown>
             Услуги
             <i class="icon-arrow-down"></i>
           </a>
@@ -734,22 +734,24 @@
       <div class="container">
         <h2 class="section-title">Получить консультацию</h2>
         <form class="consult-form" action="?">
-          <select class="input input-select" name="consult-doctor" id="">
+          <select class="input input-select" name="doctor" id="">
             <option disabled selected>Выберите врача</option>
             <option value="1">врач 1</option>
             <option value="2">врач 2</option>
           </select>
-          <input class="input" type="text" name="consult-patient" placeholder="Имя" />
-          <textarea class="input input-textarea" rows="3" name="consult-comment" placeholder="Комментарий"></textarea>
-          <input class="input input-date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Дата"
-            name="consult-date" />
-          <input class="input" type="text" placeholder="Телефон" name="consult-phone" />
-          <div class="consult-form-agree">
-            <input type="checkbox" name="consult-agree" id="consult-agree" checked />
-            <label for="consult-agree">Согласен на обработку</label>
-            <a href="#" target="_blank">персональных данных</a>
+          <input class="input" type="text" name="patient" placeholder="Имя" />
+          <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+          <input class="input input-date" type="date" placeholder="Дата" name="date" />
+          <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
+            placeholder="Телефон" />
+          <div class="consult-form-submit">
+            <div class="consult-form-agree">
+              <input class="input-checkbox" type="checkbox" name="agreement" id="agree" checked />
+              <label for="agree">Согласен на обработку <a class="consult-form-link"
+                  href="https://stomatfakel.ru/files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+            </div>
+            <button class="btn btn-consult" type="submit">Записаться</button>
           </div>
-          <button class="btn btn-grey" type="submit">Записаться</button>
         </form>
       </div>
     </section>
@@ -1092,6 +1094,26 @@
       logo.classList.remove("scroll");
       mainMenu.classList.remove("scroll");
       headerModalBtn.classList.remove("scroll");
+    });
+
+    // for dropdown menu icon
+    const dropdownItem = document.querySelectorAll(".menu-dropdown");
+
+    dropdownItem.forEach((item) => {
+      item.addEventListener('mouseenter', () => {
+        if (item.classList.contains('opened')) {
+          item.classList.remove('opened');
+        } else {
+          item.classList.add('opened');
+        }
+      });
+      item.addEventListener('mouseleave', () => {
+        if (item.classList.contains('opened')) {
+          item.classList.remove('opened');
+        } else {
+          item.classList.add('opened');
+        }
+      });
     });
 
     // mobile-menu

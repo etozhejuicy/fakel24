@@ -105,10 +105,20 @@
     & > .menu-link {
       & i {
         display: flex;
-        padding-left: 8px;
+        padding: 0 0 0 8px;
+        transform-origin: center;
+        transform: rotate(0deg);
         &::before {
           font-size: 100%;
           line-height: 1.25;
+        }
+      }
+    }
+    &.opened {
+      & > .menu-link {
+        & i {
+          transform: rotate(180deg);
+          padding: 0 8px 0 0;
         }
       }
     }
