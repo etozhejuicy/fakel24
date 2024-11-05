@@ -515,6 +515,7 @@ p.smaller {
   -webkit-appearance: none;
   appearance: none;
   outline: none;
+  cursor: pointer;
 }
 .input-select:not([multiple]) {
   padding-right: 22px;
@@ -525,14 +526,15 @@ p.smaller {
     background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50002 7.49995C4.69183 7.49995 4.88383 7.57326 5.03027 7.7197L12 14.6895L18.9698 7.7197C19.2628 7.42664 19.7374 7.42664 20.0303 7.7197C20.3231 8.01277 20.3233 8.48733 20.0303 8.7802L12.5303 16.2802C12.2372 16.5733 11.7626 16.5733 11.4698 16.2802L3.96977 8.7802C3.67671 8.48714 3.67671 8.01258 3.96977 7.7197C4.11621 7.57326 4.30821 7.49995 4.50002 7.49995Z' fill='%232C356D'/%3E%3C/svg%3E%0A") calc(100% - 24px) 50%/24px no-repeat, #fff;
   }
 }
-.input-select option {
+.input-select > option {
+  font-family: inherit;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: #585a60;
 }
 @media (min-width: 720px) {
-  .input-select option {
+  .input-select > option {
     font-size: 18px;
     line-height: 22.5px;
   }
@@ -559,6 +561,9 @@ p.smaller {
     width: 24px;
     height: 24px;
   }
+}
+.datepicker input {
+  cursor: pointer;
 }
 .datepicker__wrapper {
   width: 100%;

@@ -482,6 +482,7 @@ p.smaller {
     -webkit-appearance: none;
     appearance: none;
     outline: none;
+    cursor: pointer;
     &:not([multiple]) {
       padding-right: 22px;
       background:
@@ -495,7 +496,8 @@ p.smaller {
           #fff;
       }
     }
-    & option {
+    & > option {
+      font-family: inherit;
       font-weight: 400;
       font-size: 12px;
       line-height: 15px;
@@ -528,6 +530,9 @@ p.smaller {
       width: 24px;
       height: 24px;
     }
+  }
+  & input {
+    cursor: pointer;
   }
   &__wrapper {
     width: 100%;
