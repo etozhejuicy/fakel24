@@ -405,8 +405,10 @@ p.smaller {
   }
   &-date {
     position: relative;
-    min-width: 100%;
-    appearance: textfield;
+    min-width: 95%;
+    border: none;
+    outline: none;
+    appearance: none;
     &[type='date'] {
       &::-webkit-calendar-picker-indicator {
         color: rgba(0, 0, 0, 0);
