@@ -357,9 +357,9 @@ p.smaller {
         color: #585a60;
       }
       &:focus:active {
-        background-color: rgba(88, 90, 96, 0.4);
-        border-color: rgba(88, 90, 96, 0.4);
-        color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.4);
+        border-color: rgba(255, 255, 255, 0.4);
+        color: rgba(88, 90, 96, 0.85);
       }
     }
   }

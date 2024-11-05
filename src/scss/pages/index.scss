@@ -1021,7 +1021,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 18px;
-    max-width: 20%;
+    @media (min-width: 1200px) {
+      max-width: 15%;
+    }
+    @media (min-width: 1600px) {
+      max-width: 20%;
+    }
     & p {
       margin: unset;
     }
@@ -1070,33 +1075,40 @@
     @media (min-width: 1400px) {
       padding: 3px 15px;
     }
-    @media (min-width: 1600px) {
-      padding: 3px 40px;
-    }
     &:hover {
-      background-color: rgba(17, 118, 234, 0.4);
-      border-color: rgba(17, 118, 234, 0.4);
       color: var(--blue);
     }
     &:focus:active {
       opacity: 0.5;
     }
     &.active {
-      background-color: transparent;
-      border-color: rgba(17, 118, 234, 0.4);
       color: var(--blue);
     }
     & img {
+      max-width: 112px;
       max-height: 13px;
       object-fit: contain;
       @media (min-width: 1200px) {
-        max-height: 45px;
+        max-height: 20px;
       }
       @media (min-width: 1400px) {
-        max-height: 43px;
+        max-height: 24px;
       }
       @media (min-width: 1600px) {
         max-height: 53px;
+      }
+    }
+    &:nth-child(6) {
+      & img {
+        @media (min-width: 1200px) {
+          max-height: 45px;
+        }
+        @media (min-width: 1400px) {
+          max-height: 43px;
+        }
+        @media (min-width: 1600px) {
+          max-height: 53px;
+        }
       }
     }
     &:first-of-type {
@@ -1132,7 +1144,7 @@
       width: 403px;
     }
     @media (min-width: 1600px) {
-      width: 520px;
+      width: 517px;
     }
     & .review-rating {
       margin-bottom: 8px;
@@ -1164,6 +1176,10 @@
   }
   &-description {
     flex: 1;
+    -webkit-line-clamp: 7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
