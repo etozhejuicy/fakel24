@@ -10,48 +10,48 @@
 
 // fonts
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Light.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Regular.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Medium.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-SemiBold.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-Bold.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geologica';
-  src: url('../../assets/fonts/Geologica-ExtraBold.woff2') format('woff2');
+  font-family: "Geologica";
+  src: url("../../assets/fonts/Geologica-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -59,20 +59,20 @@
 
 // icon font
 @font-face {
-  font-family: 'stomatfakel2024';
-  src: url('../../assets/fonts/stomatfakel2024.eot');
-  src: url('../../assets/fonts/stomatfakel2024.eot?#iefix')
-      format('embedded-opentype'),
-    url('../../assets/fonts/stomatfakel2024.woff') format('woff'),
-    url('../../assets/fonts/stomatfakel2024.ttf') format('truetype'),
-    url('../../assets/fonts/stomatfakel2024.svg#stomatfakel2024') format('svg');
+  font-family: "stomatfakel2024";
+  src: url("../../assets/fonts/stomatfakel2024.eot");
+  src:
+    url("../../assets/fonts/stomatfakel2024.eot?#iefix") format("embedded-opentype"),
+    url("../../assets/fonts/stomatfakel2024.woff") format("woff"),
+    url("../../assets/fonts/stomatfakel2024.ttf") format("truetype"),
+    url("../../assets/fonts/stomatfakel2024.svg#stomatfakel2024") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 // icon font config
 [data-icon]:before {
-  font-family: 'stomatfakel2024' !important;
+  font-family: "stomatfakel2024" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -84,9 +84,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^='icon-']:before,
-[class*=' icon-']:before {
-  font-family: 'stomatfakel2024' !important;
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "stomatfakel2024" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -99,34 +99,34 @@
 
 // icon font vars
 .icon-arrow-down:before {
-  content: '\61';
+  content: "\61";
 }
 .icon-arrow-up:before {
-  content: '\62';
+  content: "\62";
 }
 .icon-burger:before {
-  content: '\63';
+  content: "\63";
 }
 .icon-list:before {
-  content: '\64';
+  content: "\64";
 }
 .icon-location:before {
-  content: '\65';
+  content: "\65";
 }
 .icon-phone:before {
-  content: '\66';
+  content: "\66";
 }
 .icon-success:before {
-  content: '\67';
+  content: "\67";
 }
 .icon-close:before {
-  content: '\68';
+  content: "\68";
 }
 .icon-rating-icon:before {
-  content: '\69';
+  content: "\69";
 }
 .icon-rating-icon-filled:before {
-  content: '\6a';
+  content: "\6a";
 }
 
 // animation
@@ -171,7 +171,7 @@
 // stretched-link
 .stretched-link {
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -407,18 +407,18 @@ p.smaller {
     position: relative;
     width: 100%;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 22px;
       width: 24px;
       height: 24px;
-      background-image: url('../assets/images/icons/calendar.svg');
+      background-image: url("../assets/images/icons/calendar.svg");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
     }
-    &[type='date'] {
+    &[type="date"] {
       &::-webkit-calendar-picker-indicator {
         color: rgba(0, 0, 0, 0);
         opacity: 1;
@@ -450,7 +450,7 @@ p.smaller {
         line-height: 22px;
       }
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 20px;
         height: 20px;
@@ -484,14 +484,21 @@ p.smaller {
     outline: none;
     &:not([multiple]) {
       padding-right: 22px;
-      background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50002 7.49995C4.69183 7.49995 4.88383 7.57326 5.03027 7.7197L12 14.6895L18.9698 7.7197C19.2628 7.42664 19.7374 7.42664 20.0303 7.7197C20.3231 8.01277 20.3233 8.48733 20.0303 8.7802L12.5303 16.2802C12.2372 16.5733 11.7626 16.5733 11.4698 16.2802L3.96977 8.7802C3.67671 8.48714 3.67671 8.01258 3.96977 7.7197C4.11621 7.57326 4.30821 7.49995 4.50002 7.49995Z' fill='%232C356D'/%3E%3C/svg%3E%0A")
+      background:
+        url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50002 7.49995C4.69183 7.49995 4.88383 7.57326 5.03027 7.7197L12 14.6895L18.9698 7.7197C19.2628 7.42664 19.7374 7.42664 20.0303 7.7197C20.3231 8.01277 20.3233 8.48733 20.0303 8.7802L12.5303 16.2802C12.2372 16.5733 11.7626 16.5733 11.4698 16.2802L3.96977 8.7802C3.67671 8.48714 3.67671 8.01258 3.96977 7.7197C4.11621 7.57326 4.30821 7.49995 4.50002 7.49995Z' fill='%232C356D'/%3E%3C/svg%3E%0A")
           calc(100% - 16px * 1.5) 50% / 16px no-repeat,
         #fff;
       @media (min-width: 720px) {
-        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50002 7.49995C4.69183 7.49995 4.88383 7.57326 5.03027 7.7197L12 14.6895L18.9698 7.7197C19.2628 7.42664 19.7374 7.42664 20.0303 7.7197C20.3231 8.01277 20.3233 8.48733 20.0303 8.7802L12.5303 16.2802C12.2372 16.5733 11.7626 16.5733 11.4698 16.2802L3.96977 8.7802C3.67671 8.48714 3.67671 8.01258 3.96977 7.7197C4.11621 7.57326 4.30821 7.49995 4.50002 7.49995Z' fill='%232C356D'/%3E%3C/svg%3E%0A")
+        background:
+          url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50002 7.49995C4.69183 7.49995 4.88383 7.57326 5.03027 7.7197L12 14.6895L18.9698 7.7197C19.2628 7.42664 19.7374 7.42664 20.0303 7.7197C20.3231 8.01277 20.3233 8.48733 20.0303 8.7802L12.5303 16.2802C12.2372 16.5733 11.7626 16.5733 11.4698 16.2802L3.96977 8.7802C3.67671 8.48714 3.67671 8.01258 3.96977 7.7197C4.11621 7.57326 4.30821 7.49995 4.50002 7.49995Z' fill='%232C356D'/%3E%3C/svg%3E%0A")
             calc(100% - 24px) 50% / 24px no-repeat,
           #fff;
       }
     }
   }
+}
+
+// datepicker
+.datepicker__wrapper {
+  width: 100%;
 }

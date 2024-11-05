@@ -304,7 +304,7 @@
   row-gap: 14px;
   column-gap: 14px;
   min-width: 48%;
-  min-height: 130px;
+  min-height: 135px;
   border: 1px solid rgba(44, 53, 109, 0.3);
   border-radius: 10px;
   padding: 6px 7px;
@@ -481,7 +481,7 @@
       z-index: 1;
       @media screen and (max-width: 1199.98px) {
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -490,15 +490,11 @@
           width: 20%;
           height: 100%;
           border-radius: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(17, 118, 234, 0.35) 0%,
-            rgba(255, 255, 255, 0.35) 100%
-          );
+          background: linear-gradient(90deg, rgba(17, 118, 234, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%);
           backface-visibility: hidden;
         }
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           right: 0;
@@ -507,11 +503,7 @@
           width: 20%;
           height: 100%;
           border-radius: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(17, 118, 234, 0.35) 100%
-          );
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(17, 118, 234, 0.35) 100%);
           backface-visibility: hidden;
         }
       }
@@ -831,7 +823,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 85vw;
+  max-width: 94vw;
   @media (min-width: 1200px) {
     width: 368px;
   }
@@ -872,20 +864,20 @@
       visibility: hidden;
       outline: none;
       border: 0;
-      & [slot='second'] {
+      & [slot="second"] {
         display: none;
       }
       &.rendered {
         visibility: inherit;
         width: 100%;
         height: 100%;
-        & [slot='first'],
-        & [slot='second'] {
+        & [slot="first"],
+        & [slot="second"] {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        & [slot='second'] {
+        & [slot="second"] {
           display: unset;
         }
       }
@@ -1127,7 +1119,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    max-width: 85vw;
+    max-width: 94vw;
     width: 100%;
     height: 100%;
     background-color: #ffffff;

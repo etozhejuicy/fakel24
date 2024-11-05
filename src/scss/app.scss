@@ -1,17 +1,16 @@
 // vendor
-@import '../../src/scss/vendor/swiper-bundle.min.css';
-@import '../../src/scss/vendor/normalize.css';
-
-@import './vendor/datepicker.minimal.css';
+@import "../../src/scss/vendor/swiper-bundle.min.css";
+@import "../../src/scss/vendor/normalize.css";
+@import "../../src/scss/vendor/datepicker.minimal.css";
 
 // vars
-@import './variables';
+@import "./variables";
 
 // layouts
-@import './layouts/header';
-@import './layouts/nav';
-@import './layouts/footer';
-@import './layouts/modal';
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/footer";
+@import "./layouts/modal";
 
 *,
 *::before,
@@ -26,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Geologica';
+  font-family: "Geologica";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
