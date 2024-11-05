@@ -479,7 +479,7 @@
       z-index: 1;
       @media screen and (max-width: 1199.98px) {
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
@@ -496,7 +496,7 @@
           backface-visibility: hidden;
         }
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           right: 0;
@@ -868,20 +868,20 @@
     }
     & img-comparison-slider {
       visibility: hidden;
-      & [slot="second"] {
+      & [slot='second'] {
         display: none;
       }
       &.rendered {
         visibility: inherit;
         width: 100%;
         height: 100%;
-        & [slot="first"],
-        & [slot="second"] {
+        & [slot='first'],
+        & [slot='second'] {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        & [slot="second"] {
+        & [slot='second'] {
           display: unset;
         }
       }
@@ -954,11 +954,26 @@
     }
     & .swiper-wrapper {
       min-width: 1000vw;
+      align-items: stretch;
     }
     & .swiper-slide {
       position: relative;
       z-index: 1;
       width: fit-content !important;
+      height: auto;
+    }
+    & .swiper-pagination {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      left: unset;
+      margin-top: 26px;
+      @media (min-width: 720px) {
+        margin-top: 36px;
+      }
+      @media (min-width: 1200px) {
+        margin-top: 40px;
+      }
     }
     & ~ .btn {
       width: 100%;
@@ -1002,6 +1017,25 @@
   }
   &-info {
     flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    max-width: 20%;
+    & p {
+      margin: unset;
+    }
+    & .review-rating {
+      align-self: center;
+    }
+  }
+  &-grade {
+    flex: 1 0 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #585a60;
   }
   &-total {
     font-style: normal;
@@ -1056,7 +1090,7 @@
       max-height: 13px;
       object-fit: contain;
       @media (min-width: 1200px) {
-        max-height: 28px;
+        max-height: 45px;
       }
       @media (min-width: 1400px) {
         max-height: 43px;
@@ -1065,42 +1099,123 @@
         max-height: 53px;
       }
     }
+    &:first-of-type {
+      margin-left: auto;
+    }
   }
+}
+
+.review {
   &-card {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    max-width: 340px;
+    max-width: 85vw;
     width: 100%;
     height: 100%;
     background-color: #ffffff;
     color: #585a60;
-    padding: 35px 21px;
+    padding: 35px 20px;
     border-radius: 10px;
     overflow: hidden;
+    @media (min-width: 720px) {
+      max-width: unset;
+      width: 520px;
+      padding: 35px 30px;
+    }
     @media (min-width: 1200px) {
       width: 368px;
+      padding: 30px;
     }
     @media (min-width: 1400px) {
       width: 403px;
     }
     @media (min-width: 1600px) {
-      width: 510px;
+      width: 520px;
     }
-    @media (min-width: 1900px) {
-      width: 517px;
+    & .review-rating {
+      margin-bottom: 8px;
+    }
+    &:hover {
+      & .review-source {
+        color: var(--blue);
+      }
+    }
+  }
+  &-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #585a60;
+    margin-bottom: 10px;
+    @media (min-width: 720px) {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 5px;
     }
   }
   &-date {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
+    margin: unset;
   }
   &-description {
+    flex: 1;
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
+    margin: 14px auto 18px;
+  }
+  &-rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    & i {
+      display: flex;
+      font-size: 15px;
+    }
+  }
+  &-doctor {
+    width: fit-content;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #585a60;
+    & a {
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      &:hover {
+        border-color: transparent;
+      }
+    }
+    @media (min-width: 720px) {
+      font-size: 18px;
+      line-height: 22.5px;
+    }
+  }
+  &-source {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7f8186;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.4s ease;
+    @media (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 17.5px;
+      margin-top: 7px;
+    }
+    &:hover {
+      color: var(--blue);
+    }
   }
 }
 

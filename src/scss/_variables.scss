@@ -122,6 +122,12 @@
 .icon-close:before {
   content: '\68';
 }
+.icon-rating-icon:before {
+  content: '\69';
+}
+.icon-rating-icon-filled:before {
+  content: '\6a';
+}
 
 // animation
 @keyframes fadeIn {
@@ -341,8 +347,23 @@ p.smaller {
         color: rgba(255, 255, 255, 0.85);
       }
     }
+    &-light {
+      background-color: transparent;
+      border-color: #eef5fe;
+      color: #eef5fe;
+      &:hover {
+        background-color: #eef5fe;
+        border-color: #eef5fe;
+        color: #585a60;
+      }
+      &:focus:active {
+        background-color: rgba(88, 90, 96, 0.4);
+        border-color: rgba(88, 90, 96, 0.4);
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
   }
-  &-consult {
+  &-light {
     background-color: #eef5fe;
     border-color: #eef5fe;
     color: #585a60;
