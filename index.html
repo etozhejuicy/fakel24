@@ -990,9 +990,7 @@
               name="comment"
               placeholder="Комментарий"
             ></textarea>
-            <div class="input input-date">
-              <input type="date" placeholder="Дата" name="date" />
-            </div>
+            <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" />
             <input
               class="input"
               name="phone"
@@ -1116,9 +1114,7 @@
                 <option value="1">врач 1</option>
                 <option value="2">врач 2</option>
               </select>
-              <div class="input input-date">
-                <input type="date" placeholder="Дата" name="modal-date" />
-              </div>
+              <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" />
               <input class="input" type="text" name="patient" placeholder="Имя" />
               <input
                 class="input"
@@ -1162,8 +1158,12 @@
 
     <!-- js part -->
     <script src="./src/js/vendor/swiper-bundle.min.js"></script>
+    <script src="./src/js/vendor/datepicker.js"></script>
     <script type="module" src="./src/js/vendor/scroller.js"></script>
     <script defer src="./src/js/vendor/before&after.js"></script>
     <script src="./src/js/custom.js"></script>
+    <script>
+        var datepicker = new Datepicker('[data-input-type="datepicker"]');
+    </script>
   </body>
 </html>
