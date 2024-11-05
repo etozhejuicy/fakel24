@@ -920,20 +920,22 @@
   <script defer src="./src/js/vendor/before&after.js"></script>
   <script src="./src/js/custom.js"></script>
   <script>
-    var today = new Date().toLocaleTimeString();;
+    const datepickers = document.querySelectorAll('[data-input-type="datepicker"]')
 
-    var datepicker = new Datepicker('[data-input-type="datepicker"]', {
-      i18n: {
-        months: [
-          'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-          'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
-        ],
-        weekdays: [
-          'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'
-        ]
-      },
-      weekStart: 1,
-      minDate: today
+    datepickers.forEach((picker) => {
+      new Datepicker(picker, {
+        i18n: {
+          months: [
+            'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+          ],
+          weekdays: [
+            'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'
+          ]
+        },
+        weekStart: 1,
+        minDate: new Date().toLocaleDateString('ru-RU')
+      });
     });
   </script>
 </body>

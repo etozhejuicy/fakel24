@@ -435,6 +435,7 @@
   &:hover {
     background-color: var(--blue);
     border-color: var(--blue);
+    box-shadow: 3px 3px 11.8px 2px rgba(81, 81, 81, 0.48);
     & svg {
       color: #ffffff;
     }

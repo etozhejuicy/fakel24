@@ -495,10 +495,41 @@ p.smaller {
           #fff;
       }
     }
+    & option {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #585a60;
+      @media (min-width: 720px) {
+        font-size: 18px;
+        line-height: 22.5px;
+      }
+    }
   }
 }
 
 // datepicker
-.datepicker__wrapper {
-  width: 100%;
+.datepicker {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/calendar.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(0, -50%);
+    pointer-events: none;
+    @media (min-width: 720px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+  }
 }
