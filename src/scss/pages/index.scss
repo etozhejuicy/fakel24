@@ -80,7 +80,6 @@
       justify-content: flex-end;
       row-gap: 30px;
       @media (min-width: 1200px) {
-        // padding: 30px 12px;
         padding: 30px 0;
       }
       & > .btn {
@@ -108,7 +107,6 @@
   flex-wrap: wrap;
   row-gap: 8px;
   column-gap: 8px;
-  // max-width: 700px;
   width: 100%;
   height: auto;
   min-height: 200px;
@@ -520,9 +518,6 @@
     & .swiper-wrapper {
       width: fit-content;
       margin: 0 auto;
-      // @media (min-width: 1600px) {
-      //   justify-content: center;
-      // }
     }
     & .swiper-slide {
       position: relative;
@@ -778,25 +773,14 @@
         margin-top: 55px;
       }
       @media (min-width: 1200px) {
-        width: 368px;
+        width: 31vw;
       }
-      @media (min-width: 1400px) {
-        width: 403px;
-      }
-      @media (min-width: 1600px) {
-        width: 510px;
-      }
-      @media (min-width: 1900px) {
+      @media (min-width: 1680px) {
         width: 517px;
       }
     }
   }
   & .swiper-smiles {
-    // @media (min-width: 1200px) {
-    //   & .swiper-wrapper {
-    //     justify-content: space-between;
-    //   }
-    // }
     margin-top: 16px;
     @media (min-width: 720px) {
       margin-top: 34px;
@@ -805,7 +789,8 @@
       margin-top: 40px;
     }
     & .swiper-wrapper {
-      min-width: 1000vw;
+      width: fit-content;
+      margin: 0 auto;
     }
     & .swiper-slide {
       position: relative;
@@ -836,15 +821,9 @@
   height: 100%;
   max-width: 94vw;
   @media (min-width: 1200px) {
-    width: 368px;
+    width: 31vw;
   }
-  @media (min-width: 1400px) {
-    width: 403px;
-  }
-  @media (min-width: 1600px) {
-    width: 510px;
-  }
-  @media (min-width: 1900px) {
+  @media (min-width: 1680px) {
     width: 517px;
   }
   & .smile-title {
@@ -991,15 +970,9 @@
         margin-top: 55px;
       }
       @media (min-width: 1200px) {
-        width: 368px;
+        width: 31vw;
       }
-      @media (min-width: 1400px) {
-        width: 403px;
-      }
-      @media (min-width: 1600px) {
-        width: 510px;
-      }
-      @media (min-width: 1900px) {
+      @media (min-width: 1680px) {
         width: 517px;
       }
     }
@@ -1590,8 +1563,3 @@
   }
 }
 // section consult part end
-
-// section map part start
-.section-map {
-}
-// section map part end
