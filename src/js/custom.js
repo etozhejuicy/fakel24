@@ -421,4 +421,25 @@ window.addEventListener('click', function (event) {
   });
 });
 
+// datepicker
+const currentDate = new Date();
+currentDate.setHours(0, 0, 0, 0);
+
+const datepickers = document.querySelectorAll('[data-input-type="datepicker"]')
+
+datepickers.forEach((picker) => {
+  new Datepicker(picker, {
+    i18n: {
+      months: [
+        'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+      ],
+      weekdays: [
+        'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'
+      ]
+    },
+    weekStart: 1,
+    min: currentDate,
+  });
+});
 
