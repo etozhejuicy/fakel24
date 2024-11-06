@@ -1299,7 +1299,6 @@
   }
 }
 .section-reviews .swiper-reviews .swiper-wrapper {
-  min-width: 1000vw;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
