@@ -386,6 +386,18 @@ window.addEventListener('DOMContentLoaded', mobileMenu);
 window.addEventListener('scroll', mobileMenu);
 window.addEventListener('resize', mobileMenu);
 
+// service button fix
+const serviceButton = document.querySelectorAll('[data-appointment-type]');
+
+// предотвращает переход по ссылке для всех сервисных карточек с кнопкой
+serviceButton.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation(); // предотвращает всплытие события
+    e.preventDefault(); // предотвращает переход по ссылке
+    console.log('Кнопка нажата, переход по ссылке предотвращен.');
+  });
+});
+
 // modals logic
 const openModalButtons = document.querySelectorAll('[data-modal-open]');
 const closeButtons = document.querySelectorAll('[btn-close-modal]');
@@ -397,6 +409,17 @@ openModalButtons.forEach((button) => {
     if (modal) {
       modal.classList.add('show');
       document.documentElement.classList.add('modal-open');
+
+      // Из кнопки приходит ключ услуги
+      if (e.currentTarget.getAttribute('data-appointment-type')) {
+        let selectItems = modal.querySelectorAll('select option');
+
+        selectItems.forEach((item) => {
+          if (e.currentTarget.getAttribute('data-appointment-type') == item.getAttribute('value')) {
+            item.setAttribute('selected', true);
+          }
+        });
+      }
     }
   });
 });

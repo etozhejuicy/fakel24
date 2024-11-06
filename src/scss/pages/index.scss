@@ -384,6 +384,8 @@
     }
   }
   & .card-footer {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -394,6 +396,7 @@
     width: 100%;
     flex: 1;
     align-self: flex-end;
+    pointer-events: all;
     & div {
       font-style: normal;
       font-weight: 400;
