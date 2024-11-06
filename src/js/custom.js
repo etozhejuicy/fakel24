@@ -39,18 +39,22 @@ if (document.getElementsByClassName('section-hero-swiper').length) {
             'Профессиональная гигиена всей полости рта';
           heroCard.querySelector('.card-body p').innerHTML =
             'Скидка первичным пациентам 900 руб!';
+          heroCard.querySelector('.card-footer a').setAttribute('href', '/gigiena-zubov');
         } else if (activeSlide == 2) {
           heroCard.querySelector('.card-title').innerText = 'Имплантация ';
           heroCard.querySelector('.card-body p').innerHTML =
             'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
+          heroCard.querySelector('.card-footer a').setAttribute('href', '/implantacia-zubov');
         } else if (activeSlide == 3) {
           heroCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
           heroCard.querySelector('.card-body p').innerHTML =
             'Здоровые дёсна - залог красивой улыбки';
+          heroCard.querySelector('.card-footer a').setAttribute('href', '/lecenie-desen');
         } else if (activeSlide == 4) {
           heroCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
           heroCard.querySelector('.card-body p').innerHTML =
             'Изготовление безметалловых коронок по цене от 16500 руб!';
+          heroCard.querySelector('.card-footer a').setAttribute('href', '/ortopedia-ili-protezirovanie-zubov');
         }
       },
     },
@@ -78,6 +82,7 @@ if (document.getElementsByClassName('section-doctors').length) {
       1200: {
         centeredSlides: false,
         loop: false,
+        loopedSlides: 0,
       },
     },
     scrollbar: {

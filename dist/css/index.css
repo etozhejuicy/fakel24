@@ -126,7 +126,7 @@
 }
 @media (min-width: 1200px) {
   .section-hero-content > .container {
-    padding: 30px 12px;
+    padding: 30px 0;
   }
 }
 .section-hero-content > .container > .btn {
@@ -722,12 +722,11 @@
             backface-visibility: hidden;
   }
 }
-@media (min-width: 1600px) {
-  .section-doctors .swiper-doctors .swiper-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.section-doctors .swiper-doctors .swiper-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .section-doctors .swiper-doctors .swiper-slide {
   position: relative;
@@ -982,7 +981,7 @@
 }
 @media (min-width: 1200px) {
   .section-technologies-content > .container {
-    padding: 20px 12px;
+    padding: 20px 0;
   }
 }
 
@@ -1388,6 +1387,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 1600px;
   }
 }
 .reviews-info {
@@ -1560,18 +1560,13 @@
 }
 @media (min-width: 1200px) {
   .review-card {
-    width: 368px;
+    width: 31vw;
     padding: 30px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1680px) {
   .review-card {
-    width: 403px;
-  }
-}
-@media (min-width: 1600px) {
-  .review-card {
-    width: 517px;
+    width: 520px;
   }
 }
 .review-card .review-rating {

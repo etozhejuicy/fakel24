@@ -273,15 +273,11 @@ p.smaller {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1176px;
+    width: 96%;
+    padding: 0;
   }
 }
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1380px;
-  }
-}
-@media (min-width: 1600px) {
+@media (min-width: 1680px) {
   .container {
     max-width: 1600px;
   }
@@ -1049,7 +1045,7 @@ p.smaller {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: inherit;
+    width: 100%;
     height: unset;
     max-width: 1600px;
     color: #585a60;
@@ -1066,7 +1062,6 @@ p.smaller {
     left: 80px;
     right: 80px;
     z-index: 15;
-    max-width: 1600px;
     width: auto;
     margin: auto;
     -webkit-box-shadow: 0px 0px 11.9px rgba(34, 68, 105, 0.63);
@@ -2003,7 +1998,7 @@ html {
 }
 
 body {
-  font-family: "Geologica";
+  font-family: "Geologica", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

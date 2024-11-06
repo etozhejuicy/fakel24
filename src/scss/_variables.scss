@@ -248,26 +248,13 @@ p.smaller {
   width: 100%;
   padding: 0 12px;
   margin: 0 auto;
-  // remove old values for container
-  // @media (min-width: 720px) {
-  //   max-width: 700px;
-  // }
-  // @media (min-width: 992px) {
-  //   max-width: 968px;
-  // }
   @media (min-width: 1200px) {
-    max-width: 1176px;
+    width: 96%;
+    padding: 0;
   }
-  @media (min-width: 1400px) {
-    // max-width: 1280px;
-    max-width: 1380px;
-  }
-  @media (min-width: 1600px) {
+  @media (min-width: 1680px) {
     max-width: 1600px;
   }
-  // @media (min-width: 1200px) {
-  //   max-width: 96%;
-  // }
 }
 
 // components
