@@ -1131,7 +1131,7 @@
     color: #585a60;
     padding: 35px 20px;
     border-radius: 10px;
-    overflow: hidden;
+    transition: 0.4s ease;
     @media (min-width: 720px) {
       max-width: unset;
       width: 520px;
@@ -1144,16 +1144,11 @@
     @media (min-width: 1680px) {
       width: 520px;
     }
-    // @media (min-width: 1400px) {
-    //   width: 403px;
-    // }
-    // @media (min-width: 1600px) {
-    //   width: 520px;
-    // }
     & .review-rating {
       margin-bottom: 8px;
     }
     &:hover {
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
       & .review-source {
         color: var(--blue);
       }
