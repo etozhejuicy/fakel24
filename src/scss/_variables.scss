@@ -232,6 +232,7 @@ p.smaller {
   line-height: 1.25;
   color: var(--blue);
   text-align: center;
+  margin: 0;
   @media (min-width: 1200px) {
     font-size: 36px;
     line-height: 1;
