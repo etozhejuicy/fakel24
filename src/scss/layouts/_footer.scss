@@ -162,7 +162,7 @@
       row-gap: 15px;
       column-gap: 0;
       flex: 1 0 auto;
-      max-height: 145px;
+      max-height: 195px;
       max-width: max-content;
       margin-top: 38px;
     }
@@ -183,13 +183,13 @@
         line-height: 25px;
       }
       @media (min-width: 1200px) {
-        padding: 0px 24px;
+        padding: 4px 24px;
       }
       @media (min-width: 1400px) {
-        padding: 0px 48px;
+        padding: 4px 48px;
       }
       @media (min-width: 1600px) {
-        padding: 0 92px;
+        padding: 4px 92px;
       }
       &:hover {
         background-color: #585a60;
