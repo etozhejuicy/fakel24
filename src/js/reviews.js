@@ -56,6 +56,8 @@ function goToFirstSlide(category) {
       firstSlideIndex = i;
 
       break;
+    } else {
+      swiperReviews.slideTo(firstSlideIndex);
     }
   }
 
