@@ -363,8 +363,8 @@ const serviceButton = document.querySelectorAll("[data-appointment-type]");
 // предотвращает переход по ссылке для всех сервисных карточек с кнопкой
 serviceButton.forEach((button) => {
   button.addEventListener("click", (e) => {
-    e.stopPropagation(); // предотвращает всплытие события
-    e.preventDefault(); // предотвращает переход по ссылке
+    e.stopPropagation();
+    e.preventDefault();
     console.log("Кнопка нажата, переход по ссылке предотвращен.");
   });
 });

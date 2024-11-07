@@ -6,20 +6,6 @@ const itemsModel = [reviews];
 // flat array of items
 const items = itemsModel.flat();
 
-function createTabs(items) {
-  const categories = [...new Set(items.map((item) => item.type))];
-
-  const categoryItems = categories.map((category) =>
-    items.find((item) => item.type === category)
-  );
-
-  categoryItems.forEach((item) => {
-    console.log(item.type);
-  });
-}
-
-createTabs(items);
-
 const tabs = document.querySelectorAll("[tabs-list] [swiper-item-type]");
 
 // go to first slide on tab
