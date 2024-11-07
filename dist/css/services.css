@@ -23,6 +23,8 @@
   z-index: 1;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   pointer-events: none;
 }
 @media (min-width: 720px) and (max-width: 1199.98px) {
@@ -103,7 +105,6 @@
   padding: 24px;
   opacity: 1;
   background-color: #eef5fe;
-  border-radius: 10px;
   backdrop-filter: blur(7.95px);
   border: 1px solid #eef5fe;
   pointer-events: all;
@@ -124,6 +125,7 @@
     border: 1px solid rgba(255, 255, 255, 0.7);
     max-width: 40%;
     min-height: 235px;
+    border-radius: 10px;
   }
 }
 @media (min-width: 1400px) {
@@ -191,6 +193,9 @@
 .section-prices table tr:hover {
   background-color: #dadcdf;
 }
+.section-prices table tr:hover a {
+  text-decoration: none;
+}
 .section-prices table tr td {
   color: #585a60;
   padding: 17px 20px;
@@ -207,9 +212,6 @@
 }
 .section-prices table tr td a {
   color: inherit;
-}
-.section-prices table tr td a:hover {
-  text-decoration: none;
 }
 .section-prices table tr td:last-of-type {
   text-align: right;
@@ -263,7 +265,7 @@
   overflow: hidden;
 }
 .section-recovery ol {
-  padding: 0 25px;
+  padding: 0 30px;
   margin-top: 25px;
 }
 @media (min-width: 1200px) {
@@ -592,17 +594,17 @@
 .section-smile {
   position: relative;
   z-index: 1;
-  padding: 50px 0;
+  padding: 25px 0 50px;
   overflow: hidden;
 }
 @media (min-width: 720px) {
   .section-smile {
-    padding: 80px 0;
+    padding: 40px 0 80px;
   }
 }
 @media (min-width: 1200px) {
   .section-smile {
-    padding: 100px 0;
+    padding: 50px 0 100px;
   }
 }
 .section-smile .container {
@@ -787,12 +789,12 @@
   position: relative;
   z-index: 1;
   display: block;
-  padding: 67px 0 37px;
+  padding: 37px 0;
   overflow: hidden;
 }
 @media (min-width: 720px) {
   .section-result {
-    padding: 70px 0 60px;
+    padding: 60px 0;
   }
 }
 @media (min-width: 1200px) {

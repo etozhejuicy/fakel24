@@ -137,7 +137,6 @@
   padding: 24px;
   opacity: 1;
   background-color: #eef5fe;
-  border-radius: 10px;
   backdrop-filter: blur(7.95px);
   border: 1px solid #eef5fe;
   pointer-events: all;
@@ -158,6 +157,7 @@
     border: 1px solid rgba(255, 255, 255, 0.7);
     max-width: 50%;
     min-height: 235px;
+    border-radius: 10px;
   }
 }
 @media (min-width: 1400px) {
