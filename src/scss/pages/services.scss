@@ -172,6 +172,9 @@
             &:nth-child(odd) {
                 background-color: #eef5fe;
             }
+            &:nth-child(even) {
+                background-color: #ffffff;
+            }
             & td {
                 color: #585a60;
                 padding: 17px 20px;

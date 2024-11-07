@@ -186,6 +186,9 @@
 .section-prices table tr:nth-child(odd) {
   background-color: #eef5fe;
 }
+.section-prices table tr:nth-child(even) {
+  background-color: #ffffff;
+}
 .section-prices table tr td {
   color: #585a60;
   padding: 17px 20px;
