@@ -522,3 +522,27 @@ p.smaller {
     width: 100%;
   }
 }
+
+// breadcrumbs
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  row-gap: 3px;
+  column-gap: 3px;
+  pointer-events: all;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  & > a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
