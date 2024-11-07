@@ -41,8 +41,7 @@
   flex: 1;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 1200px) {
   .section-hero-content > img {
@@ -97,8 +96,7 @@
   justify-content: center;
   flex-wrap: wrap;
   row-gap: 8px;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   width: 100%;
   height: auto;
   min-height: 200px;
@@ -106,8 +104,7 @@
   opacity: 1;
   background-color: #eef5fe;
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(7.95px);
-          backdrop-filter: blur(7.95px);
+  backdrop-filter: blur(7.95px);
   border: 1px solid #eef5fe;
   pointer-events: all;
   transition: opacity 0.4s ease;
@@ -117,8 +114,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     row-gap: 10px;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     min-height: 265px;
   }
 }
@@ -244,8 +240,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 20px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 @media (min-width: 992px) {
   .section-recovery > .container {
@@ -256,15 +251,13 @@
 @media (min-width: 1200px) {
   .section-recovery > .container {
     grid-template-columns: 60% auto;
-    -moz-column-gap: 60px;
-         column-gap: 60px;
+    column-gap: 60px;
   }
 }
 .section-recovery > .container > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 14px;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -337,8 +330,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 20px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 @media (min-width: 992px) {
   .section-contra > .container {
@@ -349,15 +341,13 @@
 @media (min-width: 1200px) {
   .section-contra > .container {
     grid-template-columns: auto 60%;
-    -moz-column-gap: 70px;
-         column-gap: 70px;
+    column-gap: 70px;
   }
 }
 .section-contra > .container > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 14px;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -483,14 +473,12 @@
   }
 }
 .section-doctors .swiper-doctors .swiper-wrapper {
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 .section-doctors .swiper-doctors .swiper-slide {
   position: relative;
   z-index: 1;
-  width: -moz-fit-content !important;
   width: fit-content !important;
 }
 .section-doctors .swiper-doctors .swiper-pagination {
@@ -545,8 +533,7 @@
 .card-doctor-image > * {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card-doctor p {
   font-style: normal;
@@ -661,14 +648,12 @@
   }
 }
 .section-smile .swiper-smiles .swiper-wrapper {
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 .section-smile .swiper-smiles .swiper-slide {
   position: relative;
   z-index: 1;
-  width: -moz-fit-content !important;
   width: fit-content !important;
 }
 .section-smile .swiper-smiles .swiper-pagination {
@@ -738,8 +723,7 @@
   }
 }
 .smile-card .smile-images img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .smile-card .smile-images img-comparison-slider {
   visibility: hidden;
@@ -757,8 +741,7 @@
 .smile-card .smile-images img-comparison-slider.rendered [slot=first], .smile-card .smile-images img-comparison-slider.rendered [slot=second] {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .smile-card .smile-images img-comparison-slider.rendered [slot=second] {
   display: unset;
@@ -823,14 +806,12 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 8px;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 @media (min-width: 720px) {
   .result-list {
     row-gap: 20px;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -862,8 +843,7 @@
 .results-image > * {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .result-card {
@@ -892,11 +872,9 @@
   }
 }
 .result-card svg {
-  width: -moz-fit-content;
   width: fit-content;
   height: 53px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-bottom: 13px;
 }
 @media (min-width: 720px) {
@@ -977,15 +955,13 @@
 .consult-form {
   display: flex;
   flex-direction: column;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
   row-gap: 5px;
   margin-top: 24px;
 }
 @media (min-width: 720px) {
   .consult-form {
-    -moz-column-gap: 12px;
-         column-gap: 12px;
+    column-gap: 12px;
     row-gap: 12px;
     margin-top: 40px;
   }
@@ -995,8 +971,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    -moz-column-gap: 8px;
-         column-gap: 8px;
+    column-gap: 8px;
     row-gap: 8px;
   }
   .consult-form > *:nth-child(1) {
@@ -1031,14 +1006,12 @@
 }
 .consult-form-link {
   text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 .consult-form-link:hover {
   text-decoration: none;
 }
 .consult-form .btn {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 16px 23%;
   margin: auto;
@@ -1058,15 +1031,13 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
   row-gap: 15px;
   margin-top: 15px;
 }
 @media (min-width: 720px) {
   .consult-form-submit {
-    -moz-column-gap: 35px;
-         column-gap: 35px;
+    column-gap: 35px;
     row-gap: 35px;
     margin-top: 7px;
   }
@@ -1076,8 +1047,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    -moz-column-gap: 24px;
-         column-gap: 24px;
+    column-gap: 24px;
     row-gap: 24px;
     margin-top: 16px;
   }
