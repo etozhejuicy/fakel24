@@ -169,11 +169,15 @@
         width: 100%;
         border-collapse: collapse;
         & tr {
+            transition: 0.4s ease;
             &:nth-child(odd) {
                 background-color: #eef5fe;
             }
             &:nth-child(even) {
                 background-color: #ffffff;
+            }
+            &:hover {
+                background-color: #dadcdf;
             }
             & td {
                 color: #585a60;
@@ -199,6 +203,169 @@
     }
 }
 // section prices part end
+
+// section recovery part start
+.section-recovery {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 50px 0 0 0;
+    @media (min-width: 720px) {
+        padding: 80px 0 0 0;
+    }
+    @media (min-width: 1200px) {
+        padding: 120px 0 0 0;
+    }
+    & .section-title {
+        text-align: left;
+        margin-bottom: 26px;
+    }
+    & > .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+        @media (min-width: 992px) {
+            grid-template-columns: 50% auto;
+            grid-template-rows: 1fr;
+        }
+        @media (min-width: 1200px) {
+            grid-template-columns: 60% auto;
+            column-gap: 60px;
+        }
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+    }
+    & ol {
+        padding: 0 25px;
+        margin-top: 25px;
+        @media (min-width: 1200px) {
+            margin-top: 45px;
+        }
+        & li {
+            padding-left: 10px;
+            &:not(:first-of-type) {
+                margin-top: 20px;
+                @media (min-width: 1200px) {
+                    margin-top: 38px;
+                }
+            }
+            &::marker {
+                padding-top: 10px;
+                font-weight: 800;
+                font-size: 22px;
+                color: var(--blue);
+                @media (min-width: 1200px) {
+                    font-size: 28px;
+                }
+            }
+            & div {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.25;
+                margin-bottom: 10px;
+                @media (min-width: 1200px) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+// section recovery part end
+
+// section contra part start
+.section-contra {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 50px 0;
+    @media (min-width: 720px) {
+        padding: 80px 0;
+    }
+    @media (min-width: 1200px) {
+        padding: 120px 0;
+    }
+    & .section-title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    & > .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+        @media (min-width: 992px) {
+            grid-template-columns: auto 50%;
+            grid-template-rows: 1fr;
+        }
+        @media (min-width: 1200px) {
+            grid-template-columns: auto 60%;
+            column-gap: 70px;
+        }
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            @media (min-width: 992px) {
+                order: -1;
+            }
+        }
+    }
+    & ul {
+        padding: 0;
+        margin: 25px 0;
+        list-style-type: none;
+        @media (min-width: 1200px) {
+            margin-top: 45px;
+        }
+        & li {
+            position: relative;
+            padding: 0 46px;
+            @media (min-width: 1200px) {
+                padding: 0 60px;
+            }
+            &:not(:first-of-type) {
+                margin-top: 20px;
+                @media (min-width: 1200px) {
+                    margin-top: 27px;
+                }
+            }
+            &:first-of-type {
+                background-image: url("data:image/svg+xml,%3Csvg width='25' height='30' viewBox='0 0 25 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 0.918213C10.8756 0.918213 9.55882 2.40237 9.55882 4.2331V11.6916H2.94118C1.31684 11.6916 0 13.1757 0 15.0065C0 16.8373 1.31684 18.3214 2.94118 18.3214H9.55882V25.7799C9.55882 27.6106 10.8756 29.0948 12.5 29.0948C14.1244 29.0948 15.4412 27.6106 15.4412 25.7799V18.3214H22.0588C23.6832 18.3214 25 16.8373 25 15.0065C25 13.1757 23.6832 11.6916 22.0588 11.6916H15.4412V4.2331C15.4412 2.40237 14.1244 0.918213 12.5 0.918213Z' fill='%233981F1'/%3E%3C/svg%3E%0A");
+                background-position: 1% top;
+                background-repeat: no-repeat;
+                background-size: 28px;
+            }
+            &:last-of-type {
+                background-image: url("data:image/svg+xml,%3Csvg width='38' height='43' viewBox='0 0 38 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2229_19336)'%3E%3Cpath d='M19 35.4414C17.1554 35.4414 15.6602 37.1334 15.6602 39.2207C15.6602 41.308 17.1554 43 19 43C20.8446 43 22.3398 41.308 22.3398 39.2207C22.3398 37.1334 20.8446 35.4414 19 35.4414Z' fill='%23267CDF'/%3E%3Cpath d='M19 8.68799C17.1554 8.68799 15.6602 10.38 15.6602 12.4673V28.8917C15.6602 30.979 17.1554 32.671 19 32.671C20.8446 32.671 22.3398 30.979 22.3398 28.8917V12.4673C22.3398 10.38 20.8446 8.68799 19 8.68799Z' fill='%23267CDF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2229_19336'%3E%3Crect width='38' height='43' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                background-position: left top;
+                background-repeat: no-repeat;
+                background-size: 38px 43px;
+            }
+            & div {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.25;
+                margin-bottom: 10px;
+                @media (min-width: 1200px) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+// section contra part end
 
 // section doctors part start
 .section-doctors {
