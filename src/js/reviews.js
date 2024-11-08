@@ -66,7 +66,7 @@ if (document.getElementsByClassName("section-reviews").length) {
         centeredSlides: true,
       },
       1200: {
-        slidesPerView: 3,
+        slidesPerView: "auto",
         centeredSlides: false,
       },
     },
