@@ -598,6 +598,7 @@ p.smaller {
   .header-contacts {
     column-gap: 16px;
     margin-right: unset;
+    margin-left: auto;
   }
 }
 .header-contacts-btn {
