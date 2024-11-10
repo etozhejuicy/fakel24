@@ -180,12 +180,10 @@ if (document.getElementsByClassName("section-smile").length) {
     breakpoints: {
       0: {
         centeredSlides: true,
-        centerInsufficientSlides: false,
       },
       1200: {
+        slidesPerView: "auto",
         centeredSlides: false,
-        centerInsufficientSlides: true,
-        loop: false,
       },
     },
     scrollbar: {

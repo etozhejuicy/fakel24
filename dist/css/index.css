@@ -914,11 +914,12 @@
 }
 @media (min-width: 1200px) {
   .section-smile .swiper-smiles {
+    max-width: 100%;
     margin-top: 40px;
   }
 }
 .section-smile .swiper-smiles .swiper-wrapper {
-  width: fit-content;
+  align-items: stretch;
   margin: 0 auto;
 }
 .section-smile .swiper-smiles .swiper-slide {
@@ -963,7 +964,7 @@
 }
 @media (min-width: 1680px) {
   .smile-card {
-    width: 517px;
+    width: 520px;
   }
 }
 .smile-card .smile-title {
