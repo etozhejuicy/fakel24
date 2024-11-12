@@ -134,51 +134,18 @@
 
   <!-- main part -->
   <main class="content">
-    <!-- section-result -->
-    <section class="section-result">
-      <div class="container">
-        <div class="result-list">
-          <div class="result-card">
-            <!-- Иконка для спрайта имеет порядковый номер -->
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/sprite.svg#result-icon-1"></use>
-            </svg>
-            <p>Все виды стоматологических услуг для взрослых</p>
-          </div>
-          <div class="result-card">
-            <!-- Иконка для спрайта имеет порядковый номер -->
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/sprite.svg#result-icon-2"></use>
-            </svg>
-            <p>
-              Качественные сертифицированные материалы от проверенных
-              поставщиков
-            </p>
-          </div>
-          <div class="result-card">
-            <!-- Иконка для спрайта имеет порядковый номер -->
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/sprite.svg#result-icon-3"></use>
-            </svg>
-            <p>Доброжелательное и внимательное отношение к пациентам</p>
-          </div>
-          <div class="result-card">
-            <!-- Иконка для спрайта имеет порядковый номер -->
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="./assets/sprite.svg#result-icon-4"></use>
-            </svg>
-            <p>
-              Инновационные технологии в диагностике и лечении зубов –
-              гарантии ХХ лет
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- section prices -->
-    <section class="section-prices">
+    <!-- results and prices for the new connected section -->
+    <section class="section-connection">
       <div class="container">
+        <div>
+          <h1 class="section-title">Лечение зубов</h1>
+          <p>
+            Лечение зубов в Воронеже предлагает стоматологическая клиника «Факел». У нас вы получите помощь квалифицированных
+            специалистов, сможете избавиться от зубной боли, убрать воспалительный процесс в тканях зуба, вылечить зубные каналы,
+            периодонтит и пульпит.
+          </p>
+        </div>
         <table>
           <tr>
             <td><a href="#" title="Подробнее о лечении кариеса">Лечение кариеса</a></td>
@@ -201,6 +168,71 @@
             <td>8000 Р</td>
           </tr>
         </table>
+        <div class="result-list">
+          <div class="result-card">
+            <!-- Иконка для спрайта имеет порядковый номер -->
+            <img src="./assets/images/icons/result-icon-1.svg" alt="Стоматология Факел: г. Воронеж, ул. Маршака, д. 8" />
+            <p>Все виды стоматологических услуг для взрослых</p>
+          </div>
+          <div class="result-card">
+            <!-- Иконка для спрайта имеет порядковый номер -->
+            <img src="./assets/images/icons/result-icon-2.svg" alt="Стоматология Факел: г. Воронеж, ул. Маршака, д. 8" />
+            <p>
+              Качественные сертифицированные материалы от проверенных
+              поставщиков
+            </p>
+          </div>
+          <div class="result-card">
+            <!-- Иконка для спрайта имеет порядковый номер -->
+            <img src="./assets/images/icons/result-icon-3.svg" alt="Стоматология Факел: г. Воронеж, ул. Маршака, д. 8" />
+            <p>Доброжелательное и внимательное отношение к пациентам</p>
+          </div>
+          <div class="result-card">
+            <!-- Иконка для спрайта имеет порядковый номер -->
+            <img src="./assets/images/icons/result-icon-4.svg" alt="Стоматология Факел: г. Воронеж, ул. Маршака, д. 8" />
+            <p>
+              Инновационные технологии в диагностике и лечении зубов –
+              гарантии ХХ лет
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section consulatation -->
+    <section class="section-consult">
+      <div class="container">
+        <h2 class="section-title">Получить консультацию</h2>
+        <form class="consult-form" action="?">
+          <select class="input input-select" name="doctor" id="">
+            <option disabled selected>Выберите услугу</option>
+            <option value="1">Терапия</option>
+            <option value="2">Ортопедия</option>
+            <option value="3">Хирургия</option>
+            <option value="4">Имплантация</option>
+            <option value="5">Отбеливание</option>
+            <option value="6">Гигиена</option>
+            <option value="7">Парадонтология</option>
+            <option value="8">Ортодонтия </option>
+            <option value="9">Скайсы на зубы</option>
+            <option value="10">Детская стоматология</option>
+          </select>
+          <input class="input" type="text" name="patient" placeholder="Имя" />
+          <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+          <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
+            readonly />
+          <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
+            placeholder="Телефон *" required />
+          <div class="consult-form-submit">
+            <div class="consult-form-agree">
+              <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
+              <label for="agree">Согласен на обработку
+                <a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
+                  target="_blank">персональных&nbsp;данных</a></label>
+            </div>
+            <button class="btn btn-light" type="submit">Записаться</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -430,42 +462,7 @@
       </div>
     </section>
 
-    <!-- section consulatation -->
-    <section class="section-consult">
-      <div class="container">
-        <h2 class="section-title">Получить консультацию</h2>
-        <form class="consult-form" action="?">
-          <select class="input input-select" name="doctor" id="">
-            <option disabled selected>Выберите услугу</option>
-            <option value="1">Терапия</option>
-            <option value="2">Ортопедия</option>
-            <option value="3">Хирургия</option>
-            <option value="4">Имплантация</option>
-            <option value="5">Отбеливание</option>
-            <option value="6">Гигиена</option>
-            <option value="7">Парадонтология</option>
-            <option value="8">Ортодонтия </option>
-            <option value="9">Скайсы на зубы</option>
-            <option value="10">Детская стоматология</option>
-          </select>
-          <input class="input" type="text" name="patient" placeholder="Имя" />
-          <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
-          <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
-            readonly />
-          <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
-            placeholder="Телефон *" required />
-          <div class="consult-form-submit">
-            <div class="consult-form-agree">
-              <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
-              <label for="agree">Согласен на обработку
-                <a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
-                  target="_blank">персональных&nbsp;данных</a></label>
-            </div>
-            <button class="btn btn-light" type="submit">Записаться</button>
-          </div>
-        </form>
-      </div>
-    </section>
+    
 
     <!-- section map -->
     <section class="section-map" id="map">
