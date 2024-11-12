@@ -79,9 +79,10 @@
   &-phone {
     display: flex;
     align-items: center;
-    color: #585a60;
-    font-size: 32px;
     font-weight: bold;
+    font-size: 32px;
+    line-height: 1;
+    color: #585a60;
     column-gap: 9px;
     padding: 11px 12px;
     text-decoration: none;
@@ -263,9 +264,7 @@
       margin-left: 0;
       border-radius: 0 10px 10px 0;
       transform: translate(0, 28px);
-      transition:
-        all 0.4s ease,
-        0.2s background 0.2s ease;
+      transition: all 0.4s ease, 0.2s background 0.2s ease;
       & div {
         display: none;
       }

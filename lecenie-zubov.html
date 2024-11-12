@@ -119,13 +119,11 @@
           <div class="card-title">
             Лечение зубов
           </div>
-          <p>
-            Лечение зубов в Воронеже предлагает стоматологическая клиника «Факел». У нас вы получите помощь
-            квалифицированных
-            специалистов, сможете избавиться от зубной боли, убрать воспалительный процесс в тканях зуба, вылечить
-            зубные каналы,
-            периодонтит и пульпит.
-          </p>
+          <ul>
+            <li>Это круто!</li>
+            <li>Это классно!</li>
+            <li>Это мощно!</li>
+          </ul>
         </div>
 
       </div>
@@ -146,7 +144,7 @@
             периодонтит и пульпит.
           </p>
         </div>
-        <table>
+        <table id="pricelist">
           <tr>
             <td><a href="#" title="Подробнее о лечении кариеса">Лечение кариеса</a></td>
             <td>4000 Р</td>
@@ -202,9 +200,9 @@
     <!-- section consulatation -->
     <section class="section-consult">
       <div class="container">
-        <h2 class="section-title">Получить консультацию</h2>
+        <h2 class="section-title">Запись на прием</h2>
         <form class="consult-form" action="?">
-          <select class="input input-select" name="doctor" id="">
+          <select class="input input-select" name="service" id="">
             <option disabled selected>Выберите услугу</option>
             <option value="1">Терапия</option>
             <option value="2">Ортопедия</option>
@@ -239,7 +237,7 @@
     <!-- section doctors -->
     <section class="section-doctors">
       <div class="container">
-        <h2 class="section-title">Ведущие врачи клиники</h2>
+        <h2 class="section-title">Прием ведут ведущие стоматологи</h2>
         <div class="swiper-container swiper-doctors">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -545,7 +543,7 @@
         <div class="container">
           <h2 class="section-title">Запись на прием</h2>
           <form class="consult-form" action="?">
-            <select class="input input-select" name="modal-doctor" id="">
+            <select class="input input-select" name="modal-service" id="">
               <option disabled selected>Выберите услугу</option>
               <option value="1">Терапия</option>
               <option value="2">Ортопедия</option>
@@ -584,8 +582,7 @@
   <script src="./src/js/vendor/datepicker.js"></script>
   <script type="module" src="./src/js/vendor/scroller.js"></script>
   <script defer src="./src/js/vendor/before&after.js"></script>
-  <script src="./src/js/custom.js"></script>
-  <script src="./src/js/reviews.js"></script>
+  <script src="./src/js/services.js"></script>
 </body>
 
 </html>

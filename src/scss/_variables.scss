@@ -198,35 +198,21 @@
   }
 }
 
-// H1 48->30; H2 32-24, H3 24->20; p.big16->15; p14->13; p.small 13->12
-
 h1 {
   font-size: 24px;
 
   @media (min-width: 1200px) {
-    font-size: 36px;
-    // 32px
+    font-size: 32px;
   }
 }
 
 h2 {
-  // 20px
-  font-size: 14px;
-
-  @media (min-width: 1200px) {
-    // 20px
-    font-size: 24px;
-  }
+  font-size: 20px;
 }
 
 h3 {
-  // 20px
   font-size: 20px;
-
-  @media (min-width: 1200px) {
-    // 20px
-    font-size: 24px;
-  }
+  color: var(--blue);
 }
 
 p {
@@ -263,7 +249,7 @@ p.smaller {
   margin: 0;
 
   @media (min-width: 1200px) {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1;
   }
 }
