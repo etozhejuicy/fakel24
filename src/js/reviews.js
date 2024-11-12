@@ -1,106 +1,228 @@
-const reviews = [];
+// header script
+const logo = document.querySelector('.header-logo');
+const mainMenu = document.querySelector('.menu');
+const headerTop = document.querySelector('.header-top');
+const header = document.querySelector('header');
+const headerModalBtn = document.querySelector('.header-modal-btn');
 
-// model of items
-const itemsModel = [reviews];
+window.addEventListener('scroll', setFixedHeader);
+window.addEventListener('resize', setFixedHeader);
+window.addEventListener('DOMContentLoaded', setFixedHeader);
 
-// flat array of items
-const items = itemsModel.flat();
+function setFixedHeader() {
+    if (window.innerWidth >= 1200) {
+        if (window.scrollY >= 1) {
+            logo.classList.add('scroll');
+            mainMenu.classList.add('scroll');
+            headerModalBtn.classList.add('scroll');
+        } else {
+            logo.classList.remove('scroll');
+            mainMenu.classList.remove('scroll');
+            headerModalBtn.classList.remove('scroll');
+        }
+    } else {
+        logo.classList.remove('scroll');
+        mainMenu.classList.remove('scroll');
+        headerModalBtn.classList.remove('scroll');
+    }
+}
 
-const tabs = document.querySelectorAll("[tabs-list] [swiper-item-type]");
+// fix header script classList before load
+window.addEventListener('DOMContentLoaded', () => {
+    logo.classList.remove('scroll');
+    mainMenu.classList.remove('scroll');
+    headerModalBtn.classList.remove('scroll');
+});
+
+// for dropdown menu icon
+const dropdownItem = document.querySelectorAll('.menu-dropdown');
+
+function dropdownMenu() {
+    if (window.innerWidth >= 1200) {
+        dropdownItem.forEach((item) => {
+            item.addEventListener('mouseenter', () => {
+                if (item.classList.contains('opened')) {
+                    item.classList.remove('opened');
+                } else {
+                    item.classList.add('opened');
+                }
+            });
+            item.addEventListener('mouseleave', () => {
+                if (item.classList.contains('opened')) {
+                    item.classList.remove('opened');
+                } else {
+                    item.classList.add('opened');
+                }
+            });
+        });
+    }
+}
+
+window.addEventListener('DOMContentLoaded', dropdownMenu);
+window.addEventListener('resize', dropdownMenu);
+
+// mobile-menu
+const menuOpenElems = document.querySelectorAll('[data-menu-open]');
+const menuCloseElems = document.querySelectorAll('[data-menu-close]');
+
+// mobile-menu
+function mobileMenu() {
+    if (window.innerWidth <= 1200) {
+        menuOpenElems.forEach((menuOpenElem) => {
+            menuOpenElem.addEventListener('click', () => {
+                openMenu();
+            });
+        });
+
+        menuCloseElems.forEach((menuCloseElem) => {
+            menuCloseElem.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+    }
+}
+
+function openMenu() {
+    mainMenu.classList.add('menu-show');
+    document.documentElement.classList.add('menu-open');
+}
+
+function closeMenu() {
+    mainMenu.classList.remove('menu-show');
+    document.documentElement.classList.remove('menu-open');
+}
+
+window.addEventListener('DOMContentLoaded', mobileMenu);
+window.addEventListener('scroll', mobileMenu);
+window.addEventListener('resize', mobileMenu);
+
+// service button fix
+const serviceButton = document.querySelectorAll('[data-appointment-type]');
+
+// предотвращает переход по ссылке для всех сервисных карточек с кнопкой
+serviceButton.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        console.log('Кнопка нажата, переход по ссылке предотвращен.');
+    });
+});
+
+// modals logic
+const openModalButtons = document.querySelectorAll('[data-modal-open]');
+const closeButtons = document.querySelectorAll('[btn-close-modal]');
+
+openModalButtons.forEach((button) => {
+    button.addEventListener('click', function(e) {
+        const modalKey = e.currentTarget.getAttribute('data-modal-open');
+        const modal = document.querySelector('[data-modal-id="' + modalKey + '"]');
+        if (modal) {
+            modal.classList.add('show');
+            document.documentElement.classList.add('modal-open');
+        }
+    });
+});
+
+closeButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        const modal = button.closest('.modal');
+        if (modal) {
+            modal.classList.remove('show');
+            document.documentElement.classList.remove('modal-open');
+        }
+    });
+});
+
+window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach((modal) => {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+            document.documentElement.classList.remove('modal-open');
+        }
+    });
+});
+
+// datepicker
+const currentDate = new Date();
+currentDate.setHours(0, 0, 0, 0);
+
+const datepickers = document.querySelectorAll('[data-input-type="datepicker"]');
+
+datepickers.forEach((picker) => {
+    new Datepicker(picker, {
+        i18n: {
+            months: [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь',
+            ],
+            weekdays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        },
+        weekStart: 1,
+        min: currentDate,
+    });
+});
+
+
+// map logic
+document.getElementById('map-preview').addEventListener('click', (e) => {
+    e.preventDefault();
+    // Скрыть скриншот и показать контейнер для карты
+    document.getElementById('map').classList.remove('preview');
+    document.getElementById('map-preview').style.display = 'none';
+    document.getElementById('map-source').style.display = 'block';
+
+    // Подгрузка скрипта карты
+    const script = document.createElement('script');
+    script.src =
+        'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac96fd1d6812b0862b53f34e6337afe3a3353a9c02a4a2d3592090f83a5e4040d&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=disable';
+    script.defer = true;
+    document.getElementById('map-source').appendChild(script);
+});
+
+// reviews logic
+const tabs = document.querySelectorAll("[tabs-list] [review-tab-type]");
 
 // go to first slide on tab
 tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    let category = tab.getAttribute("swiper-item-type");
+    tab.addEventListener("click", () => {
+        let category = tab.getAttribute("review-tab-type");
 
-    goToFirstSlide(category);
-  });
+        showActiveReviews(category);
+        setActiveTab(tab);
+    });
 });
 
-function activeTab() {
-  let activeSlide = swiperReviews.slides[swiperReviews.activeIndex],
-    category = activeSlide.getAttribute("swiper-slide-type");
+function showActiveReviews(category) {
+    const items = document.querySelectorAll('[review-item-type]'); // Исправлено на '[review-item-type]'
 
-  tabs.forEach((tab) => {
-    if (tab.getAttribute("swiper-item-type") == category) {
-      tab.classList.add("active");
-    } else {
-      tab.classList.remove("active");
-    }
-  });
+    items.forEach((item) => {
+        if (category === 'all') {
+            item.style.display = 'flex';
+        } else {
+            if (item.getAttribute("review-item-type") === category) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    });
 }
 
-function goToFirstSlide(category) {
-  const slides = swiperReviews.slides;
+function setActiveTab(activeTab) {
+    tabs.forEach((tab) => {
+        tab.classList.remove('active'); // Убедитесь, что класс называется 'active'
+    });
 
-  let firstSlideIndex = -1;
-
-  for (let i = 0; i < slides.length; i++) {
-    const slide = slides[i];
-
-    if (slide.getAttribute("swiper-slide-type") == category) {
-      firstSlideIndex = i;
-
-      break;
-    } else {
-      swiperReviews.slideTo(firstSlideIndex);
-    }
-  }
-
-  if (firstSlideIndex !== -1) {
-    swiperReviews.slideTo(firstSlideIndex);
-  }
-}
-
-// swiper reviews init
-if (document.getElementsByClassName("section-reviews").length) {
-  var swiperReviews = new Swiper(".swiper-reviews", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    grid: {
-      rows: 1,
-      fill: "row",
-    },
-    breakpoints: {
-      0: {
-        centeredSlides: true,
-      },
-      1200: {
-        slidesPerView: "auto",
-        centeredSlides: false,
-      },
-    },
-    scrollbar: {
-      enabled: false,
-    },
-    pagination: {
-      el: ".swiper-reviews [swiper-pagination]",
-      clickable: true,
-    },
-    navigation: {
-      enabled: false,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-    on: {
-      slideChange: function () {
-        let activeSlide = swiperReviews.slides[swiperReviews.activeIndex],
-          category = activeSlide.getAttribute("swiper-slide-type");
-
-        tabs.forEach((tab) => {
-          if (tab.getAttribute("swiper-item-type") == category) {
-            tab.classList.add("active");
-          } else {
-            tab.classList.remove("active");
-          }
-        });
-      },
-    },
-  });
-
-  setTimeout(function () {
-    if (swiperReviews.update) {
-      swiperReviews.update();
-    }
-  }, 500);
+    activeTab.classList.add('active');
 }
