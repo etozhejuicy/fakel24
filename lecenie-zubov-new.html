@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./dist/css/app.min.css" />
 
   <!-- pages styles -->
-  <link rel="stylesheet" href="./dist/css/services.min.css" />
+  <link rel="stylesheet" href="./dist/css/services-new.min.css" />
 
   <title>Стоматология в Воронеже – стоматологическая клиника Факел</title>
 </head>
@@ -134,9 +134,40 @@
 
   <!-- main part -->
   <main class="content">
-    <!-- section-result -->
-    <section class="section-result">
+
+    <!-- results and prices for the new connected section -->
+    <section class="section-connection">
       <div class="container">
+        <div>
+          <h1 class="section-title">Лечение зубов</h1>
+          <p>
+            Лечение зубов в Воронеже предлагает стоматологическая клиника «Факел». У нас вы получите помощь квалифицированных
+            специалистов, сможете избавиться от зубной боли, убрать воспалительный процесс в тканях зуба, вылечить зубные каналы,
+            периодонтит и пульпит.
+          </p>
+        </div>
+        <table>
+          <tr>
+            <td><a href="#" title="Подробнее о лечении кариеса">Лечение кариеса</a></td>
+            <td>4000 Р</td>
+          </tr>
+          <tr>
+            <td><a href="#" title="Подробнее о лечении клиновидного дефекта">Лечение клиновидного дефекта</a></td>
+            <td>5000 Р</td>
+          </tr>
+          <tr>
+            <td><a href="#" title="Подробнее о лечении пульпита">Лечение пульпита</a></td>
+            <td>6500 Р</td>
+          </tr>
+          <tr>
+            <td><a href="#" title="Подробнее о лечении периодонтита">Лечение периодонтита</a></td>
+            <td>4000 Р</td>
+          </tr>
+          <tr>
+            <td><a href="#" title="Подробнее о лечении подвижности зубов">Лечение подвижности зубов</a></td>
+            <td>8000 Р</td>
+          </tr>
+        </table>
         <div class="result-list">
           <div class="result-card">
             <!-- Иконка для спрайта имеет порядковый номер -->
@@ -176,31 +207,40 @@
       </div>
     </section>
 
-    <!-- section prices -->
-    <section class="section-prices">
+    <!-- section consulatation -->
+    <section class="section-consult">
       <div class="container">
-        <table>
-          <tr>
-            <td><a href="#" title="Подробнее о лечении кариеса">Лечение кариеса</a></td>
-            <td>4000 Р</td>
-          </tr>
-          <tr>
-            <td><a href="#" title="Подробнее о лечении клиновидного дефекта">Лечение клиновидного дефекта</a></td>
-            <td>5000 Р</td>
-          </tr>
-          <tr>
-            <td><a href="#" title="Подробнее о лечении пульпита">Лечение пульпита</a></td>
-            <td>6500 Р</td>
-          </tr>
-          <tr>
-            <td><a href="#" title="Подробнее о лечении периодонтита">Лечение периодонтита</a></td>
-            <td>4000 Р</td>
-          </tr>
-          <tr>
-            <td><a href="#" title="Подробнее о лечении подвижности зубов">Лечение подвижности зубов</a></td>
-            <td>8000 Р</td>
-          </tr>
-        </table>
+        <h2 class="section-title">Получить консультацию</h2>
+        <form class="consult-form" action="?">
+          <select class="input input-select" name="doctor" id="">
+            <option disabled selected>Выберите услугу</option>
+            <option value="1">Терапия</option>
+            <option value="2">Ортопедия</option>
+            <option value="3">Хирургия</option>
+            <option value="4">Имплантация</option>
+            <option value="5">Отбеливание</option>
+            <option value="6">Гигиена</option>
+            <option value="7">Парадонтология</option>
+            <option value="8">Ортодонтия </option>
+            <option value="9">Скайсы на зубы</option>
+            <option value="10">Детская стоматология</option>
+          </select>
+          <input class="input" type="text" name="patient" placeholder="Имя" />
+          <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+          <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
+            readonly />
+          <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
+            placeholder="Телефон *" required />
+          <div class="consult-form-submit">
+            <div class="consult-form-agree">
+              <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
+              <label for="agree">Согласен на обработку
+                <a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
+                  target="_blank">персональных&nbsp;данных</a></label>
+            </div>
+            <button class="btn btn-light" type="submit">Записаться</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -430,42 +470,7 @@
       </div>
     </section>
 
-    <!-- section consulatation -->
-    <section class="section-consult">
-      <div class="container">
-        <h2 class="section-title">Получить консультацию</h2>
-        <form class="consult-form" action="?">
-          <select class="input input-select" name="doctor" id="">
-            <option disabled selected>Выберите услугу</option>
-            <option value="1">Терапия</option>
-            <option value="2">Ортопедия</option>
-            <option value="3">Хирургия</option>
-            <option value="4">Имплантация</option>
-            <option value="5">Отбеливание</option>
-            <option value="6">Гигиена</option>
-            <option value="7">Парадонтология</option>
-            <option value="8">Ортодонтия </option>
-            <option value="9">Скайсы на зубы</option>
-            <option value="10">Детская стоматология</option>
-          </select>
-          <input class="input" type="text" name="patient" placeholder="Имя" />
-          <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
-          <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
-            readonly />
-          <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
-            placeholder="Телефон *" required />
-          <div class="consult-form-submit">
-            <div class="consult-form-agree">
-              <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
-              <label for="agree">Согласен на обработку
-                <a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
-                  target="_blank">персональных&nbsp;данных</a></label>
-            </div>
-            <button class="btn btn-light" type="submit">Записаться</button>
-          </div>
-        </form>
-      </div>
-    </section>
+    
 
     <!-- section map -->
     <section class="section-map" id="map">
