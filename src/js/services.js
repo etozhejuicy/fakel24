@@ -171,34 +171,45 @@ window.addEventListener('DOMContentLoaded', mobileMenu);
 window.addEventListener('scroll', mobileMenu);
 window.addEventListener('resize', mobileMenu);
 
-// form logic
+// // form logic
+// let formSelects = document.querySelectorAll('.consult-form select');
+
+// formSelects.forEach((select) => {
+//   let firstOption = select.querySelector('option[disabled][selected]'),
+//     options = select.querySelectorAll('option');
+
+//   options.forEach((option) => {
+//     if (option !== firstOption) {
+//       option.remove();
+//     }
+//   });
+
+//   let tableRows = document.querySelectorAll('#pricelist tbody tr');
+
+//   // Создаем новые пункты option на основе данных из таблицы
+//   tableRows.forEach((row, index) => {
+//     const serviceName = row.cells[0].textContent;
+//     const serviceId = index + 1;
+//     const newOption = document.createElement('option');
+
+//     newOption.value = serviceId;
+
+//     newOption.textContent = serviceName;
+
+//     select.appendChild(newOption);
+//   });
+// });
+
+// new form logic
 let formSelects = document.querySelectorAll('.consult-form select');
 
 formSelects.forEach((select) => {
-  let firstOption = select.querySelector('option[disabled][selected]'),
-    options = select.querySelectorAll('option');
+  let options = select.querySelectorAll('option');
 
   options.forEach((option) => {
-    if (option !== firstOption) {
-      option.remove();
+    if (document.querySelector('h1').value == option.value) {
+      option.selected = true;
     }
-  });
-
-  let tableRows = document.querySelectorAll('#pricelist tbody tr');
-
-  // Создаем новые пункты option на основе данных из таблицы
-  tableRows.forEach((row, index) => {
-    const serviceName = row.cells[0].textContent;
-
-    const serviceId = index + 1;
-
-    const newOption = document.createElement('option');
-
-    newOption.value = serviceId;
-
-    newOption.textContent = serviceName;
-
-    select.appendChild(newOption);
   });
 });
 
@@ -279,4 +290,20 @@ datepickers.forEach((picker) => {
     weekStart: 1,
     min: currentDate,
   });
+});
+
+// map logic
+document.getElementById('map-preview').addEventListener('click', (e) => {
+  e.preventDefault();
+  // Скрыть скриншот и показать контейнер для карты
+  document.getElementById('map-preview').classList.remove('preview');
+  document.getElementById('map-preview').style.display = 'none';
+  document.getElementById('map-source').style.display = 'block';
+
+  // Подгрузка скрипта карты
+  const script = document.createElement('script');
+  script.src =
+    'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac96fd1d6812b0862b53f34e6337afe3a3353a9c02a4a2d3592090f83a5e4040d&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=disable';
+  script.defer = true;
+  document.getElementById('map-source').appendChild(script);
 });

@@ -1798,5 +1798,42 @@
     }
   }
 }
-
 // section consult part end
+
+// section-map part start
+.section-map {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  &.preview {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+      background: rgba(17, 118, 234, 0.125);
+      pointer-events: none;
+      transition: 0.4s ease;
+    }
+    &:hover {
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+// section-map part end

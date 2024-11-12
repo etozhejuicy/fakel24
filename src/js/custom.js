@@ -1,10 +1,10 @@
 // heroCard init
-const heroCard = document.querySelector("[data-card-hero]");
-const techCard = document.querySelector("[data-card-tech]");
+const heroCard = document.querySelector('[data-card-hero]');
+const techCard = document.querySelector('[data-card-tech]');
 
 // swiper hero init
-if (document.getElementsByClassName("section-hero-swiper").length) {
-  var swiperHero = new Swiper(".swiper-hero", {
+if (document.getElementsByClassName('section-hero-swiper').length) {
+  var swiperHero = new Swiper('.swiper-hero', {
     slidesPerView: 1,
     spaceBetween: 20,
     speed: 400,
@@ -14,7 +14,7 @@ if (document.getElementsByClassName("section-hero-swiper").length) {
       enabled: false,
     },
     pagination: {
-      el: ".swiper-hero [swiper-pagination]",
+      el: '.swiper-hero [swiper-pagination]',
       clickable: true,
     },
     navigation: {
@@ -28,41 +28,41 @@ if (document.getElementsByClassName("section-hero-swiper").length) {
 
         activeSlide = activeSlide + 1;
 
-        heroCard.classList.add("fadeEffect");
+        heroCard.classList.add('fadeEffect');
 
         setTimeout(() => {
-          heroCard.classList.remove("fadeEffect");
+          heroCard.classList.remove('fadeEffect');
         }, 500);
 
         if (activeSlide == 1) {
-          heroCard.querySelector(".card-title").innerText =
-            "Профессиональная гигиена всей полости рта";
-          heroCard.querySelector(".card-body p").innerHTML =
-            "Скидка первичным пациентам 900 руб!";
+          heroCard.querySelector('.card-title').innerText =
+            'Профессиональная гигиена всей полости рта';
+          heroCard.querySelector('.card-body p').innerHTML =
+            'Скидка первичным пациентам 900 руб!';
           heroCard
-            .querySelector(".card-footer a")
-            .setAttribute("href", "/gigiena-zubov");
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/gigiena-zubov');
         } else if (activeSlide == 2) {
-          heroCard.querySelector(".card-title").innerText = "Имплантация ";
-          heroCard.querySelector(".card-body p").innerHTML =
-            "Установка Имплантатов SuperLine по выгодной цене за 24000 руб!";
+          heroCard.querySelector('.card-title').innerText = 'Имплантация ';
+          heroCard.querySelector('.card-body p').innerHTML =
+            'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
           heroCard
-            .querySelector(".card-footer a")
-            .setAttribute("href", "/implantacia-zubov");
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/implantacia-zubov');
         } else if (activeSlide == 3) {
-          heroCard.querySelector(".card-title").innerText = "Плазмолифтинг";
-          heroCard.querySelector(".card-body p").innerHTML =
-            "Здоровые дёсна - залог красивой улыбки";
+          heroCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
+          heroCard.querySelector('.card-body p').innerHTML =
+            'Здоровые дёсна - залог красивой улыбки';
           heroCard
-            .querySelector(".card-footer a")
-            .setAttribute("href", "/lecenie-desen");
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/lecenie-desen');
         } else if (activeSlide == 4) {
-          heroCard.querySelector(".card-title").innerText = "ПРОТЕЗИРОВАНИЕ";
-          heroCard.querySelector(".card-body p").innerHTML =
-            "Изготовление безметалловых коронок по цене от 16500 руб!";
+          heroCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
+          heroCard.querySelector('.card-body p').innerHTML =
+            'Изготовление безметалловых коронок по цене от 16500 руб!';
           heroCard
-            .querySelector(".card-footer a")
-            .setAttribute("href", "/ortopedia-ili-protezirovanie-zubov");
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/ortopedia-ili-protezirovanie-zubov');
         }
       },
     },
@@ -76,9 +76,9 @@ if (document.getElementsByClassName("section-hero-swiper").length) {
 }
 
 // swiper doctor init
-if (document.getElementsByClassName("section-doctors").length) {
-  var swiperDoctors = new Swiper(".swiper-doctors", {
-    slidesPerView: "auto",
+if (document.getElementsByClassName('section-doctors').length) {
+  var swiperDoctors = new Swiper('.swiper-doctors', {
+    slidesPerView: 'auto',
     spaceBetween: 20,
     speed: 400,
     breakpoints: {
@@ -97,7 +97,7 @@ if (document.getElementsByClassName("section-doctors").length) {
       enabled: false,
     },
     pagination: {
-      el: ".swiper-doctors [swiper-pagination]",
+      el: '.swiper-doctors [swiper-pagination]',
       clickable: true,
     },
     navigation: {
@@ -115,8 +115,8 @@ if (document.getElementsByClassName("section-doctors").length) {
 }
 
 // swiper technologies
-if (document.getElementsByClassName("section-technologies").length) {
-  var swiperTechnologies = new Swiper(".swiper-technologies", {
+if (document.getElementsByClassName('section-technologies').length) {
+  var swiperTechnologies = new Swiper('.swiper-technologies', {
     slidesPerView: 1,
     spaceBetween: 20,
     speed: 400,
@@ -126,7 +126,7 @@ if (document.getElementsByClassName("section-technologies").length) {
       enabled: false,
     },
     pagination: {
-      el: ".swiper-technologies [swiper-pagination]",
+      el: '.swiper-technologies [swiper-pagination]',
       clickable: true,
     },
     navigation: {
@@ -140,25 +140,25 @@ if (document.getElementsByClassName("section-technologies").length) {
 
         activeSlide = activeSlide + 1;
 
-        techCard.classList.add("fadeEffect");
+        techCard.classList.add('fadeEffect');
 
         setTimeout(() => {
-          techCard.classList.remove("fadeEffect");
+          techCard.classList.remove('fadeEffect');
         }, 500);
 
         if (activeSlide == 1) {
-          techCard.querySelector(".card-title").innerText = "ФИЗИОДИСПЕНСЕР";
-          techCard.querySelector("p").innerText =
-            "В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.";
+          techCard.querySelector('.card-title').innerText = 'ФИЗИОДИСПЕНСЕР';
+          techCard.querySelector('p').innerText =
+            'В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.';
         } else if (activeSlide == 2) {
-          techCard.querySelector(".card-title").innerText =
-            "Оборудованный кабинет ";
-          techCard.querySelector("p").innerText =
-            "Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.";
+          techCard.querySelector('.card-title').innerText =
+            'Оборудованный кабинет ';
+          techCard.querySelector('p').innerText =
+            'Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.';
         } else if (activeSlide == 3) {
-          techCard.querySelector(".card-title").innerText = "СИСТЕМА AIR FLOW";
-          techCard.querySelector("p").innerText =
-            "Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).";
+          techCard.querySelector('.card-title').innerText = 'СИСТЕМА AIR FLOW';
+          techCard.querySelector('p').innerText =
+            'Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).';
         }
       },
     },
@@ -172,17 +172,17 @@ if (document.getElementsByClassName("section-technologies").length) {
 }
 
 // swiper smiles init
-if (document.getElementsByClassName("section-smile").length) {
-  var swiperSmiles = new Swiper(".swiper-smiles", {
-    slidesPerView: "auto",
+if (document.getElementsByClassName('section-smile').length) {
+  var swiperSmiles = new Swiper('.swiper-smiles', {
+    slidesPerView: 'auto',
     spaceBetween: 20,
-    noSwipingSelector: ".swiper-smiles .smile-images",
+    noSwipingSelector: '.swiper-smiles .smile-images',
     breakpoints: {
       0: {
         centeredSlides: true,
       },
       1200: {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         centeredSlides: false,
       },
     },
@@ -190,7 +190,7 @@ if (document.getElementsByClassName("section-smile").length) {
       enabled: false,
     },
     pagination: {
-      el: ".swiper-smiles [swiper-pagination]",
+      el: '.swiper-smiles [swiper-pagination]',
       clickable: true,
     },
     navigation: {
@@ -208,15 +208,15 @@ if (document.getElementsByClassName("section-smile").length) {
 }
 
 // swiper result init
-if (document.getElementsByClassName("section-result").length) {
-  var swiperResult = new Swiper(".swiper-result", {
+if (document.getElementsByClassName('section-result').length) {
+  var swiperResult = new Swiper('.swiper-result', {
     breakpoints: {
       0: {
         slidesPerView: 2,
         spaceBetween: 4,
         grid: {
           rows: 1,
-          fill: "row",
+          fill: 'row',
         },
       },
       720: {
@@ -224,7 +224,7 @@ if (document.getElementsByClassName("section-result").length) {
         spaceBetween: 12,
         grid: {
           rows: 3,
-          fill: "row",
+          fill: 'row',
         },
       },
       992: {
@@ -232,7 +232,7 @@ if (document.getElementsByClassName("section-result").length) {
         spaceBetween: 12,
         grid: {
           rows: 2,
-          fill: "row",
+          fill: 'row',
         },
       },
     },
@@ -240,7 +240,7 @@ if (document.getElementsByClassName("section-result").length) {
       enabled: false,
     },
     pagination: {
-      el: ".swiper-result [swiper-pagination]",
+      el: '.swiper-result [swiper-pagination]',
       clickable: true,
     },
     navigation: {
@@ -258,83 +258,83 @@ if (document.getElementsByClassName("section-result").length) {
 }
 
 // header script
-const logo = document.querySelector(".header-logo");
-const mainMenu = document.querySelector(".menu");
-const headerTop = document.querySelector(".header-top");
-const header = document.querySelector("header");
-const headerModalBtn = document.querySelector(".header-modal-btn");
+const logo = document.querySelector('.header-logo');
+const mainMenu = document.querySelector('.menu');
+const headerTop = document.querySelector('.header-top');
+const header = document.querySelector('header');
+const headerModalBtn = document.querySelector('.header-modal-btn');
 
-window.addEventListener("scroll", setFixedHeader);
-window.addEventListener("resize", setFixedHeader);
-window.addEventListener("DOMContentLoaded", setFixedHeader);
+window.addEventListener('scroll', setFixedHeader);
+window.addEventListener('resize', setFixedHeader);
+window.addEventListener('DOMContentLoaded', setFixedHeader);
 
 function setFixedHeader() {
   if (window.innerWidth >= 1200) {
     if (window.scrollY >= 1) {
-      logo.classList.add("scroll");
-      mainMenu.classList.add("scroll");
-      headerModalBtn.classList.add("scroll");
+      logo.classList.add('scroll');
+      mainMenu.classList.add('scroll');
+      headerModalBtn.classList.add('scroll');
     } else {
-      logo.classList.remove("scroll");
-      mainMenu.classList.remove("scroll");
-      headerModalBtn.classList.remove("scroll");
+      logo.classList.remove('scroll');
+      mainMenu.classList.remove('scroll');
+      headerModalBtn.classList.remove('scroll');
     }
   } else {
-    logo.classList.remove("scroll");
-    mainMenu.classList.remove("scroll");
-    headerModalBtn.classList.remove("scroll");
+    logo.classList.remove('scroll');
+    mainMenu.classList.remove('scroll');
+    headerModalBtn.classList.remove('scroll');
   }
 }
 
 // fix header script classList before load
-window.addEventListener("DOMContentLoaded", () => {
-  logo.classList.remove("scroll");
-  mainMenu.classList.remove("scroll");
-  headerModalBtn.classList.remove("scroll");
+window.addEventListener('DOMContentLoaded', () => {
+  logo.classList.remove('scroll');
+  mainMenu.classList.remove('scroll');
+  headerModalBtn.classList.remove('scroll');
 });
 
 // for dropdown menu icon
-const dropdownItem = document.querySelectorAll(".menu-dropdown");
+const dropdownItem = document.querySelectorAll('.menu-dropdown');
 
 function dropdownMenu() {
   if (window.innerWidth >= 1200) {
     dropdownItem.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        if (item.classList.contains("opened")) {
-          item.classList.remove("opened");
+      item.addEventListener('mouseenter', () => {
+        if (item.classList.contains('opened')) {
+          item.classList.remove('opened');
         } else {
-          item.classList.add("opened");
+          item.classList.add('opened');
         }
       });
-      item.addEventListener("mouseleave", () => {
-        if (item.classList.contains("opened")) {
-          item.classList.remove("opened");
+      item.addEventListener('mouseleave', () => {
+        if (item.classList.contains('opened')) {
+          item.classList.remove('opened');
         } else {
-          item.classList.add("opened");
+          item.classList.add('opened');
         }
       });
     });
   }
 }
 
-window.addEventListener("DOMContentLoaded", dropdownMenu);
-window.addEventListener("resize", dropdownMenu);
+window.addEventListener('DOMContentLoaded', dropdownMenu);
+window.addEventListener('resize', dropdownMenu);
 
 // mobile-menu
-const menuOpenElems = document.querySelectorAll("[data-menu-open]");
-const menuCloseElems = document.querySelectorAll("[data-menu-close]");
+const menuOpenElems = document.querySelectorAll('[data-menu-open]');
+const menuCloseElems = document.querySelectorAll('[data-menu-close]');
 
 // mobile-menu
 function mobileMenu() {
   if (window.innerWidth <= 1200) {
     menuOpenElems.forEach((menuOpenElem) => {
-      menuOpenElem.addEventListener("click", () => {
+      menuOpenElem.addEventListener('click', () => {
         openMenu();
       });
     });
 
     menuCloseElems.forEach((menuCloseElem) => {
-      menuCloseElem.addEventListener("click", () => {
+      menuCloseElem.addEventListener('click', () => {
         closeMenu();
       });
     });
@@ -342,53 +342,53 @@ function mobileMenu() {
 }
 
 function openMenu() {
-  mainMenu.classList.add("menu-show");
-  document.documentElement.classList.add("menu-open");
+  mainMenu.classList.add('menu-show');
+  document.documentElement.classList.add('menu-open');
 }
 
 function closeMenu() {
-  mainMenu.classList.remove("menu-show");
-  document.documentElement.classList.remove("menu-open");
+  mainMenu.classList.remove('menu-show');
+  document.documentElement.classList.remove('menu-open');
 }
 
-window.addEventListener("DOMContentLoaded", mobileMenu);
-window.addEventListener("scroll", mobileMenu);
-window.addEventListener("resize", mobileMenu);
+window.addEventListener('DOMContentLoaded', mobileMenu);
+window.addEventListener('scroll', mobileMenu);
+window.addEventListener('resize', mobileMenu);
 
 // service button fix
-const serviceButton = document.querySelectorAll("[data-appointment-type]");
+const serviceButton = document.querySelectorAll('[data-appointment-type]');
 
 // предотвращает переход по ссылке для всех сервисных карточек с кнопкой
 serviceButton.forEach((button) => {
-  button.addEventListener("click", (e) => {
+  button.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log("Кнопка нажата, переход по ссылке предотвращен.");
+    console.log('Кнопка нажата, переход по ссылке предотвращен.');
   });
 });
 
 // modals logic
-const openModalButtons = document.querySelectorAll("[data-modal-open]");
-const closeButtons = document.querySelectorAll("[btn-close-modal]");
+const openModalButtons = document.querySelectorAll('[data-modal-open]');
+const closeButtons = document.querySelectorAll('[btn-close-modal]');
 
 openModalButtons.forEach((button) => {
-  button.addEventListener("click", function (e) {
-    const modalKey = e.currentTarget.getAttribute("data-modal-open");
+  button.addEventListener('click', function (e) {
+    const modalKey = e.currentTarget.getAttribute('data-modal-open');
     const modal = document.querySelector('[data-modal-id="' + modalKey + '"]');
     if (modal) {
-      modal.classList.add("show");
-      document.documentElement.classList.add("modal-open");
+      modal.classList.add('show');
+      document.documentElement.classList.add('modal-open');
 
       // Из кнопки приходит ключ услуги
-      if (e.currentTarget.getAttribute("data-appointment-type")) {
-        let selectItems = modal.querySelectorAll("select option");
+      if (e.currentTarget.getAttribute('data-appointment-type')) {
+        let selectItems = modal.querySelectorAll('select option');
 
         selectItems.forEach((item) => {
           if (
-            e.currentTarget.getAttribute("data-appointment-type") ==
-            item.getAttribute("value")
+            e.currentTarget.getAttribute('data-appointment-type') ==
+            item.getAttribute('value')
           ) {
-            item.setAttribute("selected", true);
+            item.setAttribute('selected', true);
           }
         });
       }
@@ -397,21 +397,21 @@ openModalButtons.forEach((button) => {
 });
 
 closeButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const modal = button.closest(".modal");
+  button.addEventListener('click', function () {
+    const modal = button.closest('.modal');
     if (modal) {
-      modal.classList.remove("show");
-      document.documentElement.classList.remove("modal-open");
+      modal.classList.remove('show');
+      document.documentElement.classList.remove('modal-open');
     }
   });
 });
 
-window.addEventListener("click", function (event) {
-  const modals = document.querySelectorAll(".modal");
+window.addEventListener('click', function (event) {
+  const modals = document.querySelectorAll('.modal');
   modals.forEach((modal) => {
     if (event.target === modal) {
-      modal.classList.remove("show");
-      document.documentElement.classList.remove("modal-open");
+      modal.classList.remove('show');
+      document.documentElement.classList.remove('modal-open');
     }
   });
 });
@@ -426,22 +426,38 @@ datepickers.forEach((picker) => {
   new Datepicker(picker, {
     i18n: {
       months: [
-        "Январь",
-        "Февраль",
-        "Март",
-        "Апрель",
-        "Май",
-        "Июнь",
-        "Июль",
-        "Август",
-        "Сентябрь",
-        "Октябрь",
-        "Ноябрь",
-        "Декабрь",
+        'Январь',
+        'Февраль',
+        'Март',
+        'Апрель',
+        'Май',
+        'Июнь',
+        'Июль',
+        'Август',
+        'Сентябрь',
+        'Октябрь',
+        'Ноябрь',
+        'Декабрь',
       ],
-      weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+      weekdays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     },
     weekStart: 1,
     min: currentDate,
   });
+});
+
+// map logic
+document.getElementById('map-preview').addEventListener('click', (e) => {
+  e.preventDefault();
+  // Скрыть скриншот и показать контейнер для карты
+  document.getElementById('map-preview').classList.remove('preview');
+  document.getElementById('map-preview').style.display = 'none';
+  document.getElementById('map-source').style.display = 'block';
+
+  // Подгрузка скрипта карты
+  const script = document.createElement('script');
+  script.src =
+    'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac96fd1d6812b0862b53f34e6337afe3a3353a9c02a4a2d3592090f83a5e4040d&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=disable';
+  script.defer = true;
+  document.getElementById('map-source').appendChild(script);
 });
