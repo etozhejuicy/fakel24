@@ -530,8 +530,8 @@ p.smaller {
   pointer-events: all;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 1.25;
   color: #ffffff;
 }
 .breadcrumbs > a {
@@ -540,6 +540,12 @@ p.smaller {
 }
 .breadcrumbs > a:hover {
   text-decoration: underline;
+}
+
+.lightcase-open {
+  position: static;
+  touch-action: none;
+  overflow: hidden;
 }
 
 .header {

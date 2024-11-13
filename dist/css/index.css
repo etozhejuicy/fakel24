@@ -956,7 +956,7 @@
   z-index: 1;
   display: block;
   height: 100%;
-  width: 94vw;
+  width: 90vw;
 }
 @media (min-width: 720px) {
   .smile-card {
@@ -1047,8 +1047,8 @@
 .smile-card .smile-doctor {
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 1.25;
   color: #585a60;
   margin-top: 18px;
 }
@@ -1549,8 +1549,8 @@
 .section-about-content {
   padding: 0 16px;
   font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 1.25;
   color: #585a60;
 }
 @media (min-width: 720px) {

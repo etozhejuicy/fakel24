@@ -95,7 +95,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   row-gap: 8px;
   column-gap: 8px;
   width: 100%;
@@ -185,7 +185,7 @@
   margin: unset;
 }
 
-.section-contacts {
+.section-information {
   position: relative;
   z-index: 1;
   display: block;
@@ -194,25 +194,25 @@
   overflow: hidden;
 }
 @media (min-width: 720px) {
-  .section-contacts {
+  .section-information {
     padding: 80px 0;
   }
 }
 @media (min-width: 1200px) {
-  .section-contacts {
+  .section-information {
     padding: 100px 0;
   }
 }
-.section-contacts .section-title {
+.section-information .section-title {
   margin-bottom: 20px;
 }
 @media (min-width: 1200px) {
-  .section-contacts .section-title {
+  .section-information .section-title {
     margin-bottom: 35px;
   }
 }
 
-.contacts-layout {
+.information-layout {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -220,28 +220,67 @@
   column-gap: 20px;
 }
 @media (min-width: 992px) {
-  .contacts-layout {
+  .information-layout {
     grid-template-columns: repeat(2, calc(50% - 10px));
   }
 }
-.contacts-layout ul {
+.information-layout ul {
   list-style-type: none;
   font-size: 14px;
   padding: 0;
   margin: 0;
 }
 @media (min-width: 720px) {
-  .contacts-layout ul {
+  .information-layout ul {
     font-size: 16px;
   }
 }
-.contacts-layout ul li {
+.information-layout ul li {
   padding: 10px 0;
 }
 @media (min-width: 720px) {
-  .contacts-layout ul li {
+  .information-layout ul li {
     padding: 20px 0;
   }
+}
+
+.section-about {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 5px));
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 100%;
+}
+@media (min-width: 720px) {
+  .about-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33% - 10px));
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+}
+
+.about-image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.about-image > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section-consult {
@@ -432,4 +471,4 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}/*# sourceMappingURL=contacts.css.map */
+}/*# sourceMappingURL=o-klinike.css.map */

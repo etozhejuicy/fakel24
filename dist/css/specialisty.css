@@ -115,6 +115,7 @@
     justify-content: flex-start;
     row-gap: 10px;
     column-gap: 10px;
+    min-height: 265px;
   }
 }
 @media (min-width: 1200px) {
@@ -185,63 +186,146 @@
   margin: unset;
 }
 
-.section-contacts {
+.section-doctors {
   position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
+  background-color: rgba(17, 118, 234, 0.07);
   overflow: hidden;
 }
 @media (min-width: 720px) {
-  .section-contacts {
-    padding: 80px 0;
+  .section-doctors {
+    padding: 63px 0 42px;
   }
 }
 @media (min-width: 1200px) {
-  .section-contacts {
-    padding: 100px 0;
-  }
-}
-.section-contacts .section-title {
-  margin-bottom: 20px;
-}
-@media (min-width: 1200px) {
-  .section-contacts .section-title {
-    margin-bottom: 35px;
+  .section-doctors {
+    padding: 68px 0 73px;
   }
 }
 
-.contacts-layout {
+.doctors-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 20px;
   column-gap: 20px;
+  margin-top: 20px;
 }
-@media (min-width: 992px) {
-  .contacts-layout {
+@media (min-width: 576px) {
+  .doctors-list {
     grid-template-columns: repeat(2, calc(50% - 10px));
   }
 }
-.contacts-layout ul {
-  list-style-type: none;
-  font-size: 14px;
-  padding: 0;
+@media (min-width: 720px) {
+  .doctors-list {
+    padding: 0 10%;
+    margin-top: 35px;
+  }
+}
+@media (min-width: 992px) {
+  .doctors-list {
+    grid-template-columns: repeat(3, calc(33.333333% - 10px));
+    padding: 0 5%;
+  }
+}
+@media (min-width: 1400px) {
+  .doctors-list {
+    grid-template-columns: repeat(4, calc(25% - 10px));
+    padding: 0;
+  }
+}
+
+.card-doctor {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  text-decoration: none;
+}
+@media (min-width: 720px) {
+  .card-doctor {
+    padding-bottom: 17px;
+  }
+}
+.card-doctor-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1.25;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-doctor-image > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-doctor p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--blue);
   margin: 0;
+  padding: 25px 20px 0 20px;
 }
 @media (min-width: 720px) {
-  .contacts-layout ul {
+  .card-doctor p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-doctor p {
+    font-size: 22px;
+    line-height: 27.5px;
+    padding: 30px 20px 0 20px;
+  }
+}
+.card-doctor-meo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #585a60;
+  padding: 4px 20px 0 20px;
+}
+@media (min-width: 720px) {
+  .card-doctor-meo {
     font-size: 16px;
+    line-height: 20px;
   }
 }
-.contacts-layout ul li {
-  padding: 10px 0;
+.card-doctor-experience {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--blue);
+  padding: 18px 20px 0 20px;
 }
 @media (min-width: 720px) {
-  .contacts-layout ul li {
-    padding: 20px 0;
+  .card-doctor-experience {
+    font-size: 18px;
+    line-height: 22.5px;
   }
+}
+.card-doctor:hover {
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+}
+.card-doctor:hover p {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-decoration-skip: 10px;
 }
 
 .section-consult {
@@ -432,4 +516,4 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}/*# sourceMappingURL=contacts.css.map */
+}/*# sourceMappingURL=specialisty.css.map */
