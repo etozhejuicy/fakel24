@@ -158,8 +158,11 @@
       position: relative;
       margin: 0 0 25px 0;
       padding-left: 35px;
-      font-size: initial;
-      line-height: initial;
+      font-size: 14px;
+      line-height: 1.25;
+      @media (min-width: 1200px) {
+        font-size: 16px;
+      }
 
       &::before {
         content: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 0C10.8756 0 9.55882 1.31684 9.55882 2.94118V9.55882H2.94118C1.31684 9.55882 0 10.8756 0 12.5C0 14.1244 1.31684 15.4412 2.94118 15.4412H9.55882V22.0588C9.55882 23.6832 10.8756 25 12.5 25C14.1244 25 15.4412 23.6832 15.4412 22.0588V15.4412H22.0588C23.6832 15.4412 25 14.1244 25 12.5C25 10.8756 23.6832 9.55882 22.0588 9.55882H15.4412V2.94118C15.4412 1.31684 14.1244 0 12.5 0Z" fill="%233981F1" /></svg>');
