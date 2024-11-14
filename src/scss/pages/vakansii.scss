@@ -93,7 +93,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   row-gap: 8px;
   column-gap: 8px;
   width: 100%;
@@ -160,7 +160,6 @@
       padding-left: 35px;
       font-size: 14px;
       line-height: 1.25;
-
       @media (min-width: 1200px) {
         font-size: 16px;
       }
@@ -185,124 +184,8 @@
 
 // hero part end
 
-// section contacts part start
-.section-information {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  padding: 50px 0 25px;
-  overflow: hidden;
-
-  @media (min-width: 720px) {
-    padding: 80px 0 40px;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 100px 0 50px;
-  }
-
-  & .section-title {
-    margin-bottom: 20px;
-
-    @media (min-width: 1200px) {
-      margin-bottom: 35px;
-    }
-  }
-}
-
-.information-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  row-gap: 20px;
-  column-gap: 20px;
-
-  @media (min-width: 992px) {
-    grid-template-columns: repeat(2, calc(50% - 10px));
-  }
-
-  & ul {
-    list-style-type: none;
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-
-    @media (min-width: 720px) {
-      font-size: 16px;
-    }
-
-    & li {
-      padding: 10px 0;
-
-      @media (min-width: 720px) {
-        padding: 20px 0;
-      }
-    }
-  }
-}
-
-// section contacts part end
-
-// section about part start
-.section-about {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  & > .container {
-    & .about-gallery {
-      margin: 0 auto 25px;
-      @media (min-width: 720px) {
-        margin: 0 auto 50px;
-      }
-      &:last-of-type {
-        margin: 25px auto 0;
-        @media (min-width: 720px) {
-          margin: 50px auto 0;
-        }
-      }
-    }
-  }
-}
-
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, calc(50% - 5px));
-  row-gap: 10px;
-  column-gap: 10px;
-  width: 100%;
-
-  @media (min-width: 720px) {
-    display: grid;
-    grid-template-columns: repeat(3, calc(33% - 10px));
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
-  }
-}
-
-.about-image {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 10;
-  cursor: pointer;
-
-  & > * {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-// section about part end
-
-// section description part start
-.section-description {
+// section vacancies part start
+.section-vacancies {
   position: relative;
   z-index: 1;
   display: block;
@@ -312,36 +195,18 @@
   @media (min-width: 720px) {
     padding: 80px 0;
   }
-
   @media (min-width: 1200px) {
     padding: 100px 0;
   }
   & .section-title {
     margin-bottom: 20px;
-    @media (min-width: 720px) {
+    @media (min-width: 1200px) {
       margin-bottom: 35px;
     }
   }
-  & .about-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    margin: 25px auto 0;
-    @media (min-width: 720px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media (min-width: 1200px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    @media (min-width: 1400px) {
-      grid-template-columns: repeat(5, 1fr);
-    }
-  }
-
-  & .about-image {
-    aspect-ratio: 11 / 16;
-  }
 }
-// section description part end
+
+// section contacts part end
 
 // section consult part start
 .section-consult {
