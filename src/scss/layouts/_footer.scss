@@ -127,6 +127,9 @@
         line-height: 22.5px;
       }
       @media (min-width: 1200px) {
+        padding: 2px 15px 2px 40px;
+      }
+      @media (min-width: 1400px) {
         padding: 2px 68px;
       }
       &:hover {
