@@ -190,14 +190,14 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 50px 0;
+  padding: 35px 0;
 
   @media (min-width: 720px) {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   & > .container {
@@ -216,7 +216,10 @@
     & > div {
       &:nth-child(1) {
         & h1 {
-          margin-bottom: 20px;
+          text-align: center;
+          @media (min-width: 720px) {
+            text-align: left;
+          }
         }
 
         @media (min-width: 992px) {
@@ -224,10 +227,6 @@
             margin: 0 auto;
             max-width: 80%;
             text-align: left;
-          }
-
-          & h1 {
-            margin-bottom: 26px;
           }
         }
 
@@ -239,6 +238,11 @@
             margin: 0 auto;
             max-width: 60%;
           }
+        }
+      }
+      &:nth-child(2) {
+        & p {
+          margin: unset;
         }
       }
     }
@@ -471,14 +475,14 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 50px 0 0 0;
+  padding: 35px 0 0 0;
 
   @media (min-width: 720px) {
-    padding: 80px 0 0 0;
+    padding: 40px 0 0 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 120px 0 0 0;
+    padding: 50px 0 0 0;
   }
 
   & .section-title {
@@ -567,14 +571,14 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 50px 0;
+  padding: 35px 0;
 
   @media (min-width: 720px) {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 120px 0;
+    padding: 50px 0;
   }
 
   & .section-title {
@@ -673,16 +677,16 @@
 // section doctors part start
 .section-doctors {
   position: relative;
-  padding: 40px 0;
+  padding: 30px 0;
   background-color: rgba(17, 118, 234, 0.07);
   overflow: hidden;
 
   @media (min-width: 720px) {
-    padding: 63px 0 42px;
+    padding: 40px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 68px 0 73px;
+    padding: 50px 0;
   }
 
   & .swiper-doctors {
@@ -874,14 +878,14 @@
 .section-smile {
   position: relative;
   z-index: 1;
-  padding: 25px 0 50px;
+  padding: 25px 0;
 
   @media (min-width: 720px) {
-    padding: 40px 0 80px;
+    padding: 40px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0 100px;
+    padding: 50px 0;
   }
 
   overflow: hidden;
@@ -915,14 +919,6 @@
 
   & .swiper-smiles {
     margin-top: 16px;
-
-    @media (min-width: 720px) {
-      margin-top: 34px;
-    }
-
-    @media (min-width: 1200px) {
-      margin-top: 40px;
-    }
 
     & .swiper-wrapper {
       width: fit-content;
