@@ -252,16 +252,6 @@
     column-gap: 20px;
     margin-top: 45px;
   }
-
-  & > * {
-    &:last-of-type {
-      display: flex;
-
-      @media (min-width: 576px) {
-        display: none;
-      }
-    }
-  }
 }
 
 .card-service {
