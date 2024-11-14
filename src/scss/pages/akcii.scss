@@ -112,6 +112,7 @@
     justify-content: flex-start;
     row-gap: 10px;
     column-gap: 10px;
+    min-height: 265px;
   }
 
   @media (min-width: 1200px) {
@@ -160,7 +161,6 @@
       padding-left: 35px;
       font-size: 14px;
       line-height: 1.25;
-
       @media (min-width: 1200px) {
         font-size: 16px;
       }
@@ -182,10 +182,11 @@
     }
   }
 }
+
 // hero part end
 
-// section prices part start
-.section-prices {
+// section contra part start
+.section-loyalty {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -196,107 +197,113 @@
   }
 
   @media (min-width: 1200px) {
-    padding: 100px 0;
+    padding: 120px 0;
   }
 
-  & table {
-    width: 100%;
-    border-collapse: collapse;
+  & .section-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
 
-    & thead {
-      & tr {
-        background-color: var(--blue);
-        color: #ffffff;
+.loyalty-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  column-gap: 25px;
+  @media (min-width: 720px) {
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+  & > * {
+    &:nth-child(even) {
+      @media (min-width: 992px) {
+        grid-template-columns: 50% auto;
+        grid-template-rows: 1fr;
       }
-      & th {
-        padding: 17px 10px 17px 20px;
 
-        @media (min-width: 720px) {
-          padding: 17px 10px 17px 50px;
-        }
-
-        @media (min-width: 1200px) {
-          padding: 17px 10px 17px 84px;
-        }
-        &:last-of-type {
-          padding: 17px 20px 17px 10px;
-
-          @media (min-width: 720px) {
-            padding: 17px 50px 17px 10px;
-          }
-
-          @media (min-width: 1200px) {
-            padding: 17px 84px 17px 10px;
-          }
-        }
-        text-align: left;
-        &:last-of-type {
-          text-align: right;
-        }
+      @media (min-width: 1200px) {
+        grid-template-columns: 60% auto;
+        column-gap: 70px;
       }
-    }
-
-    & tbody {
-      & tr {
-        transition: 0.4s ease;
-
-        &:nth-child(odd) {
-          background-color: #eef5fe;
-        }
-
-        &:nth-child(even) {
-          background-color: #ffffff;
-        }
-
-        &:hover {
-          background-color: #dadcdf;
-
-          & a {
-            text-decoration: none;
-          }
-        }
-
-        & td {
-          color: #585a60;
-          padding: 17px 10px 17px 20px;
-
-          @media (min-width: 720px) {
-            padding: 17px 10px 17px 50px;
-          }
-
-          @media (min-width: 1200px) {
-            padding: 17px 10px 17px 84px;
-          }
-          &:last-of-type {
-            padding: 17px 20px 17px 10px;
-
-            @media (min-width: 720px) {
-              padding: 17px 50px 17px 10px;
-            }
-
-            @media (min-width: 1200px) {
-              padding: 17px 84px 17px 10px;
-            }
-          }
-
-          & a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            color: inherit;
-          }
-
-          &:last-of-type {
-            text-align: right;
-            white-space: nowrap;
-          }
-        }
+      & > .loyalty-content {
+        order: -1;
       }
     }
   }
 }
 
-// section prices part end
+.loyalty {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+
+  @media (min-width: 992px) {
+    grid-template-columns: auto 50%;
+    grid-template-rows: 1fr;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: auto 60%;
+    column-gap: 70px;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    @media (min-width: 992px) {
+      order: -1;
+    }
+  }
+
+  & ul {
+    padding: 0;
+    margin: 25px 0;
+    list-style-type: none;
+
+    @media (min-width: 1200px) {
+      margin-top: 45px;
+    }
+
+    & li {
+      position: relative;
+      padding: 0 46px;
+      font-size: 14px;
+
+      @media (min-width: 1200px) {
+        padding: 0 60px;
+        font-size: 16px;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+
+        @media (min-width: 1200px) {
+          margin-top: 27px;
+        }
+      }
+
+      & div {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+
+        @media (min-width: 1200px) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+// section contra part end
 
 // section consult part start
 .section-consult {

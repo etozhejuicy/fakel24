@@ -207,8 +207,10 @@
     column-gap: 20px;
 
     @media (min-width: 1200px) {
-      grid-template-columns: repeat(2, calc(50% - 10px));
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(auto, 100%);
+      row-gap: 20px;
+      column-gap: 40px;
     }
 
     & > div {
@@ -267,14 +269,25 @@
 
       & td {
         color: #585a60;
-        padding: 17px 20px;
+        padding: 17px 10px 17px 20px;
 
         @media (min-width: 720px) {
-          padding: 17px 50px;
+          padding: 17px 10px 17px 50px;
         }
 
         @media (min-width: 1200px) {
-          padding: 17px 84px;
+          padding: 17px 10px 17px 84px;
+        }
+        &:last-of-type {
+          padding: 17px 20px 17px 10px;
+
+          @media (min-width: 720px) {
+            padding: 17px 50px 17px 10px;
+          }
+
+          @media (min-width: 1200px) {
+            padding: 17px 84px 17px 10px;
+          }
         }
 
         & a {
@@ -299,11 +312,13 @@
     row-gap: 8px;
     column-gap: 8px;
     height: fit-content;
+    margin-top: 16px;
 
     @media (min-width: 720px) {
       row-gap: 20px;
       column-gap: 20px;
       grid-template-columns: repeat(2, calc(50% - 10px));
+      margin-top: 32px;
     }
 
     // @media (min-width: 992px) {
