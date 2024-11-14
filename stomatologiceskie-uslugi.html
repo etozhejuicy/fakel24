@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no" />
+	<meta name="description"
+		content="Стоматологические услуги в клинике Факел в Воронеже это: ортопедия, пародонтология, хирургия, имплантация зубов, гигиена полости рта, отбеливание зубов." />
+	<!-- primary styles -->
+	<link rel="stylesheet" href="./dist/css/app.min.css" />
+
+	<!-- pages styles -->
+	<link rel="stylesheet" href="./dist/css/uslugi.min.css" />
+
+	<title>Стоматологические услуги в Воронеже - стоматология Факел</title>
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container">
+			<div class="header-top">
+				<a class="header-logo" href="./" title="Стоматологическая клиника в Воронеже">
+					<div>стоматология</div>
+					<div>Факел</div>
+					<img src="./assets/images/logo.svg" alt="Стоматология Факел" />
+				</a>
+				<div class="header-contacts">
+					<button class="btn btn-grey header-contacts-btn" data-modal-open="appointment">
+						Запись на прием
+					</button>
+					<a class="link header-address" href="#map" title="Посмотреть на карте">
+						<i class="icon-location"></i>
+						<span>г. Воронеж, ул. Маршака, д. 8</span>
+					</a>
+					<a class="link header-phone" href="tel:+7 (473) 201-63-64" title="Позвонить по номеру">
+						<i class="icon-phone"></i>
+						<span>+7 (473) 201-63-64</span>
+					</a>
+					<button class="header-burger" data-menu-open="">
+						<i class="icon-burger"></i>
+					</button>
+				</div>
+			</div>
+
+			<!-- При прокрутке схлопывается эта навигация -->
+			<nav class="menu">
+				<!-- В мобильном меню отображаются элементы управления меню -->
+				<div class="menu-nav">
+					<a href="tel:+7 (473) 201-63-64" class="btn menu-btn">
+						<i class="icon-phone"></i>
+					</a>
+					<button type="button" class="btn menu-btn" data-modal-open="appointment" data-menu-close="">
+						Записаться на прием
+					</button>
+					<button type="button" class="btn menu-btn" data-menu-close>
+						<i class="icon-close"></i>
+					</button>
+				</div>
+				<!-- Ссылка скрывается в десктоп-версии -->
+				<a href="./" class="menu-link hidden">Главная</a>
+				<!-- Выпадающий список -->
+				<div class="menu-dropdown">
+					<a href="./stomatologiceskie-uslugi.html" class="menu-link" dropdown>
+						Услуги
+						<i class="icon-arrow-down"></i>
+					</a>
+					<div class="menu-list">
+						<a href="./lecenie-zubov.html">Лечение зубов</a>
+						<a href="/ortopedia-ili-protezirovanie-zubov">Протезирование зубов</a>
+						<a href="/hirurgiceskaa-stomatologia">Удаление зубов</a>
+						<a href="/implantacia-zubov">Имплантация зубов</a>
+						<a href="/otbelivanie-zubov">Отбеливание зубов</a>
+						<a href="/gigiena-zubov">Гигиена зубов</a>
+						<a href="/lecenie-desen">Лечение десен</a>
+						<a href="/ortodontia">Ортодонтия</a>
+						<a href="#">Скайсы на зубы</a>
+						<a href="#">Детская стоматология</a>
+					</div>
+				</div>
+				<a href="/ceny-na-stomatologiceskie-uslugi" class="menu-link">Прайс</a>
+				<a href="/akcii" class="menu-link">Акции</a>
+				<a href="./specialisty.html" class="menu-link">Стоматологи</a>
+				<a href="/vopros-otvet" class="menu-link">Пациентам</a>
+				<a href="/our-work" class="menu-link">Наши работы</a>
+				<a href="./reviews.html" class="menu-link">Отзывы</a>
+				<a href="./kontakty.html" class="menu-link">Контакты</a>
+
+				<!-- Ссылка скрывается в десктоп-версии -->
+				<a class="menu-link hidden" href="#map" title="Посмотреть на карте" data-menu-close>
+					<i class="icon-location"></i>
+					<span>г. Воронеж, ул. Маршака, д. 8</span>
+				</a>
+			</nav>
+
+			<!-- При прокрутке появляется кнопка: записаться на прием -->
+			<button class="header-modal-btn btn scroll" data-modal-open="appointment">
+				<i class="icon-list"></i>
+				<span>Записаться на прием</span>
+			</button>
+		</div>
+	</header>
+
+	<!-- hero section -->
+	<section class="section-hero">
+		<!-- content into swiper-hero -->
+		<div class="section-hero-content">
+			<!-- Это фон секции -->
+			<img src="./assets/images/pages/services/bg.jpg" />
+			<div class="container">
+				<div class="breadcrumbs">
+					<a href="./">Главная</a>
+					<span> > </span>
+					<a href="./stomatologiceskie-uslugi.html">Услуги</a>
+				</div>
+				<div class="card-advantage">
+					<div class="card-title">
+						Услуги
+					</div>
+					<p>
+						Мы подберём оптимальную программу лечения и поможем забыть о неприятных ощущениях. Современное оборудование и высокий
+						уровень квалификации врачей позволяет предоставлять полный перечень услуг любой сложности — от профессиональной гигиены
+						полости рта до имплантации зубов при адентии.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- main part -->
+	<main class="content">
+
+		<!-- services section -->
+		<section class="section-services">
+			<div class="container">
+				<h1>Стоматологические услуги&nbsp;в Воронеже</h1>
+				<p>
+					Платные стоматологические услуги — это отсутствие очередей, экономия вашего времени, а также максимальный уровень
+					внимания к проблеме пациента. Мы подберём оптимальную программу лечения и поможем забыть о неприятных ощущениях.
+					Современное оборудование и высокий уровень квалификации врачей позволяет предоставлять полный перечень услуг любой
+					сложности — от профессиональной гигиены полости рта до имплантации зубов при адентии.
+				</p>
+				<!-- Список карточек -->
+				<div class="services-list">
+					<a href="./lecenie-zubov.html" class="card-service">
+						<div class="card-title">
+							<div>Терапия</div>
+							<div>Лечение зубов без боли</div>
+						</div>
+						<!-- Иконка из спрайта имеет порядковый номер -->
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_1"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 4500 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="1">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/ortopedia-ili-protezirovanie-zubov" class="card-service">
+						<div class="card-title">
+							<div>Ортопедия</div>
+							<div>Протезирование зубов</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_2"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 4300 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="2">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/hirurgiceskaa-stomatologia" class="card-service">
+						<div class="card-title">
+							<div>Хирургия</div>
+							<div>Удаление больных зубов</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_3"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 1800 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="3">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/implantacia-zubov" class="card-service">
+						<div class="card-title">
+							<div>Имплантация</div>
+							<div>Восстановление зубов</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_4"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 21000 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="4">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/otbelivanie-zubov" class="card-service">
+						<div class="card-title">
+							<div>Отбеливание</div>
+							<div>Белоснежные зубы</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_5"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 13500 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="5">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/gigiena-zubov" class="card-service">
+						<div class="card-title">
+							<div>Гигиена</div>
+							<div>Профилактика здоровья зубов</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_6"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 3500 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="6">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/lecenie-desen" class="card-service">
+						<div class="card-title">
+							<div>Парадонтология</div>
+							<div>Лечение десён</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_7"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 2200 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="7">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="/ortodontia" class="card-service">
+						<div class="card-title">
+							<div>Ортодонтия </div>
+							<div>Установка брекетов</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_8"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 10000 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="8">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="#link" class="card-service">
+						<div class="card-title">
+							<div>Скайсы на зубы</div>
+							<div>Миниатюрное украшение</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_9"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 5500 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="9">
+								Записаться
+							</button>
+						</div>
+					</a>
+					<a href="#link" class="card-service">
+						<div class="card-title">
+							<div>Детская стоматология</div>
+							<div>Услуги для детей</div>
+						</div>
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#service_icon_10"></use>
+						</svg>
+						<div class="card-footer">
+							<div>от 4500 ₽</div>
+							<button type="button" class="btn btn-grey" data-modal-open="appointment" data-appointment-type="10">
+								Записаться
+							</button>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- section consulatation -->
+		<section class="section-consult">
+			<div class="container">
+				<h2 class="section-title">Получить консультацию</h2>
+				<form class="consult-form" action="?">
+					<select class="input input-select" name="service" id="">
+						<option disabled selected>Выберите услугу</option>
+						<option value="1">Терапия</option>
+						<option value="2">Ортопедия</option>
+						<option value="3">Хирургия</option>
+						<option value="4">Имплантация</option>
+						<option value="5">Отбеливание</option>
+						<option value="6">Гигиена</option>
+						<option value="7">Парадонтология</option>
+						<option value="8">Ортодонтия </option>
+						<option value="9">Скайсы на зубы</option>
+						<option value="10">Детская стоматология</option>
+					</select>
+					<input class="input" type="text" name="patient" placeholder="Имя" />
+					<textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+					<input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
+						readonly />
+					<input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
+						placeholder="Телефон *" required />
+					<div class="consult-form-submit">
+						<div class="consult-form-agree">
+							<input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
+							<label for="agree">Согласен на обработку
+								<a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
+									target="_blank">персональных&nbsp;данных</a></label>
+						</div>
+						<button class="btn btn-light" type="submit">Записаться</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- section map -->
+		<section class="section-map preview" id="map">
+			<img id="map-preview" src="./assets/images/map.jpg" alt="Map preview"
+				style="width: 100%; cursor: pointer;" />
+			<div id="map-source" style="display: none; width: 100%; height: 100%;"></div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-address">
+				<div>
+					<p>Стоматология ФАКЕЛ</p>
+					<address>г. Воронеж, ул. Маршака, д. 8</address>
+					<a href="tel:+74732016364" title="Позвонить по номеру">+7 (473) 201-63-64</a>
+				</div>
+				<span>&COPY; Стоматология "Факел" 2009-2024</span>
+			</div>
+			<div class="footer-services">
+				<!-- Главный пункт меню -->
+				<a href="./stomatologiceskie-uslugi.html">Услуги Стоматологии</a>
+				<!-- Остальные пункты меню -->
+				<a href="./lecenie-zubov.html">Лечение зубов</a>
+				<a href="/ortopedia-ili-protezirovanie-zubov">Протезирование зубов</a>
+				<a href="/hirurgiceskaa-stomatologia">Удаление зубов</a>
+				<a href="/implantacia-zubov">Имплантация зубов</a>
+				<a href="/otbelivanie-zubov">Отбеливание зубов</a>
+				<a href="/gigiena-zubov">Гигиена зубов</a>
+				<a href="/lecenie-desen">Лечение десен</a>
+				<a href="/ortodontia">Ортодонтия</a>
+				<a href="#">Скайсы на зубы</a>
+				<a href="#">Детская стоматология</a>
+			</div>
+			<div class="footer-links">
+				<a href="./reviews.html">Отзывы</a>
+				<a href="/vopros-otvet">Консультации</a>
+				<a href="./vakansii.html">Вакансии</a>
+				<a href="/ceny-na-stomatologiceskie-uslugi">Цены</a>
+				<a href="/our-work">Наши работы</a>
+				<a href="./o-klinike.html">О клинике</a>
+				<a href="./kontakty.html">Контакты</a>
+				<a href="./specialisty.html">Специалисты</a>
+			</div>
+			<div class="footer-info">
+				<div>
+					<a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия
+						№
+						ЛО-41-01136-36/00325800 от 30 июля 2018 г.</a>
+					<p>
+						Данный сайт носит информационный характер и не является публичной офертой, согласно положению
+						ст. 437 (2) ГК РФ.
+					</p>
+				</div>
+				<div>
+					<!-- ссылка на вк-группу -->
+					<a class="social" href="https://vk.com/club69686194" target="_blank">
+						<!-- Иконка ВК -->
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#icon-vk"></use>
+						</svg>
+					</a>
+					<a class="intrid" href="https://intrid.ru/" target="_blank">
+						<div class="intrid-circle">
+							<span class="intrid-circle--in"></span>
+						</div>
+						made in <span class="fintrid-fat">INTRID</span>
+					</a>
+					<!-- дубликат копирайта для мобильной версии -->
+					<span>&COPY; Стоматология "Факел" 2009-2024</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- modals -->
+	<div class="modal modal-consult" data-modal-id="appointment">
+		<div class="modal-dialog">
+			<button class="btn btn-close" btn-close-modal>
+				<i class="icon-close"></i>
+			</button>
+			<div class="modal-content">
+				<div class="container">
+					<h2 class="section-title">Запись на прием</h2>
+					<form class="consult-form" action="?">
+						<select class="input input-select" name="modal-service" id="">
+							<option disabled selected>Выберите услугу</option>
+							<option value="1">Терапия</option>
+							<option value="2">Ортопедия</option>
+							<option value="3">Хирургия</option>
+							<option value="4">Имплантация</option>
+							<option value="5">Отбеливание</option>
+							<option value="6">Гигиена</option>
+							<option value="7">Парадонтология</option>
+							<option value="8">Ортодонтия </option>
+							<option value="9">Скайсы на зубы</option>
+							<option value="10">Детская стоматология</option>
+						</select>
+						<input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+							name="date" readonly />
+						<input class="input" type="text" name="patient" placeholder="Имя" />
+						<input class="input" name="modal-phone" type="text"
+							oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *"
+							required />
+						<textarea class="input input-textarea" rows="3" name="modal-comment"
+							placeholder="Комментарий"></textarea>
+						<div class="consult-form-submit">
+							<div class="consult-form-agree">
+								<input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree"
+									required />
+								<label for="modal-agree">Согласен на обработку
+									<a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
+										target="_blank">персональных&nbsp;данных</a></label>
+							</div>
+							<button class="btn btn-light" type="submit">Записаться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- js part -->
+	<script src="./src/js/vendor/datepicker.js"></script>
+	<script type="module" src="./src/js/vendor/scroller.js"></script>
+	<script src="./src/js/uslugi.js"></script>
+</body>
+
+</html>
