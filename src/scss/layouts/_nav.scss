@@ -104,10 +104,13 @@
     }
     & > .menu-link {
       & i {
-        display: flex;
+        display: none;
         padding: 0 0 0 8px;
         transform-origin: center;
         transform: rotate(0deg);
+        @media (min-width: 1200px) {
+          display: flex;
+        }
         &::before {
           font-size: 100%;
           line-height: 1.25;
@@ -149,7 +152,7 @@
       padding: 6px 22px;
       text-decoration: none;
       &::before {
-        content: "•";
+        content: '•';
         position: absolute;
         top: 50%;
         left: 0;
