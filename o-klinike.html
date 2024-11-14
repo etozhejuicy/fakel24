@@ -158,10 +158,10 @@
                     </div>
                     <div>
                         <p>ООО Стоматология "Факел", 394051, <br />г.Воронеж, ул. Маршака, д. 8</p>
-                        <p><a href="tel:+ 7 (473) 201-63-64">+ 7 (473) 201-63-64</a></p>
-                        <p><a href="#" title="Посмотреть документ" target="_blank">Лицензия № ЛО-41-01136-36/00325800 от 30.07.2018г.</a></p>
+                        <p><a href="tel:+ 7 (473) 201-63-64" class="text-link">+ 7 (473) 201-63-64</a></p>
+                        <p><a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия № ЛО-41-01136-36/00325800 от 30.07.2018г.</a></p>
                         <p>ИНН 3664056461 ОГРН 1043600002160</p>
-                        <p><a href="#" title="Посмотреть документ" target="_blank">Выписка из ЕГРЮЛ 36 №003191685</a></p>
+                        <p><a href="./files/egrn.pdf" class="text-link" title="Посмотреть документ" target="_blank">Выписка из ЕГРЮЛ 36 №003191685</a></p>
                     </div>
                 </div>
             </div>
@@ -297,6 +297,61 @@
                 <p>
                     <a href="./files/new_prilojenie_o_garantii.pdf" class="text-link" target="_blank">Наши гарантии</a>
                 </p>
+
+                <div class="about-gallery">
+                    <div class="about-image" href="./assets/images/license/1.jpg" data-rel="lightcase:fa-1">
+                        <img src="./assets/images/license/1.jpg" />
+                    </div>
+                    <div class="about-image" href="./assets/images/license/2.jpg" data-rel="lightcase:fa-1">
+                        <img src="./assets/images/license/2.jpg" />
+                    </div>
+                    <div class="about-image" href="./assets/images/license/3.jpg" data-rel="lightcase:fa-1">
+                        <img src="./assets/images/license/3.jpg" />
+                    </div>
+                    <div class="about-image" href="./assets/images/license/lic1.jpg" data-rel="lightcase:fa-1">
+                        <img src="./assets/images/license/lic1.jpg" />
+                    </div>
+                    <div class="about-image" href="./assets/images/license/lic2.jpg" data-rel="lightcase:fa-1">
+                        <img src="./assets/images/license/lic2.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section consulatation -->
+        <section class="section-consult">
+            <div class="container">
+                <h2 class="section-title">Получить консультацию</h2>
+                <form class="consult-form" action="?">
+                    <select class="input input-select" name="service" id="">
+                        <option disabled selected>Выберите услугу</option>
+                        <option value="1">Терапия</option>
+                        <option value="2">Ортопедия</option>
+                        <option value="3">Хирургия</option>
+                        <option value="4">Имплантация</option>
+                        <option value="5">Отбеливание</option>
+                        <option value="6">Гигиена</option>
+                        <option value="7">Парадонтология</option>
+                        <option value="8">Ортодонтия </option>
+                        <option value="9">Скайсы на зубы</option>
+                        <option value="10">Детская стоматология</option>
+                    </select>
+                    <input class="input" type="text" name="patient" placeholder="Имя" />
+                    <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
+                        readonly />
+                    <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
+                        placeholder="Телефон *" required />
+                    <div class="consult-form-submit">
+                        <div class="consult-form-agree">
+                            <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
+                            <label for="agree">Согласен на обработку
+                                <a class="consult-form-link" href="https://stomatfakel.ru/files/polit.pdf"
+                                    target="_blank">персональных&nbsp;данных</a></label>
+                        </div>
+                        <button class="btn btn-light" type="submit">Записаться</button>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -344,10 +399,9 @@
             </div>
             <div class="footer-info">
                 <div>
-                    <p>Лицензия № ЛО-41-01136-36/00325800 от 30 июля 2018 г.</p>
+                    <a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия № ЛО-41-01136-36/00325800 от 30 июля 2018 г.</a>
                     <p>
-                        Данный сайт носит информационный характер и не является публичной
-                        офертой, определяемой положениями Статьи 437 (2) ГК РФ.
+                        Данный сайт носит информационный характер и не является публичной офертой, согласно положению ст. 437 (2) ГК РФ.
                     </p>
                 </div>
                 <div>
