@@ -316,10 +316,10 @@
   }
   & .about-gallery {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     margin: 25px auto;
     @media (min-width: 720px) {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
     }
     @media (min-width: 1200px) {
       grid-template-columns: repeat(4, 1fr);
