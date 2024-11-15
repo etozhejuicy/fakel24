@@ -321,12 +321,18 @@
   }
 
   & > * {
-    &:last-of-type {
+    &:nth-last-of-type(2) {
       display: flex;
-
       @media (min-width: 576px) {
         display: none;
       }
+    }
+    &:last-of-type {
+      display: flex;
+
+      // @media (min-width: 576px) {
+      //   display: none;
+      // }
     }
   }
 }
