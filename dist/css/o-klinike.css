@@ -43,7 +43,8 @@
   flex: 1;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1200px) {
   .section-hero-content > img {
@@ -97,14 +98,16 @@
   justify-content: center;
   flex-wrap: nowrap;
   row-gap: 8px;
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   width: 100%;
   height: auto;
   min-height: 200px;
   padding: 24px;
   opacity: 1;
   background-color: #eef5fe;
-  backdrop-filter: blur(7.95px);
+  -webkit-backdrop-filter: blur(7.95px);
+          backdrop-filter: blur(7.95px);
   border: 1px solid #eef5fe;
   pointer-events: all;
   transition: opacity 0.4s ease;
@@ -114,7 +117,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     row-gap: 10px;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 @media (min-width: 1200px) {
@@ -190,17 +194,17 @@
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 25px;
   overflow: hidden;
 }
 @media (min-width: 720px) {
   .section-information {
-    padding: 80px 0;
+    padding: 80px 0 40px;
   }
 }
 @media (min-width: 1200px) {
   .section-information {
-    padding: 100px 0;
+    padding: 100px 0 50px;
   }
 }
 .section-information .section-title {
@@ -217,7 +221,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 20px;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 @media (min-width: 992px) {
   .information-layout {
@@ -251,12 +256,29 @@
   width: 100%;
   overflow: hidden;
 }
+.section-about > .container .about-gallery {
+  margin: 0 auto 25px;
+}
+@media (min-width: 720px) {
+  .section-about > .container .about-gallery {
+    margin: 0 auto 50px;
+  }
+}
+.section-about > .container .about-gallery:last-of-type {
+  margin: 25px auto 0;
+}
+@media (min-width: 720px) {
+  .section-about > .container .about-gallery:last-of-type {
+    margin: 50px auto 0;
+  }
+}
 
 .about-gallery {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 5px));
   row-gap: 10px;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   width: 100%;
 }
 @media (min-width: 720px) {
@@ -265,7 +287,8 @@
     grid-template-columns: repeat(3, calc(33% - 10px));
     grid-template-rows: repeat(2, 1fr);
     row-gap: 20px;
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 
@@ -275,17 +298,69 @@
   display: flex;
   width: 100%;
   height: 100%;
+  aspect-ratio: 16/10;
   cursor: pointer;
 }
 .about-image > * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-description {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+}
+@media (min-width: 720px) {
+  .section-description {
+    padding: 80px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .section-description {
+    padding: 100px 0;
+  }
+}
+.section-description .section-title {
+  margin-bottom: 20px;
+}
+@media (min-width: 720px) {
+  .section-description .section-title {
+    margin-bottom: 35px;
+  }
+}
+.section-description .about-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  margin: 25px auto 0;
+}
+@media (min-width: 720px) {
+  .section-description .about-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .section-description .about-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .section-description .about-gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.section-description .about-image {
+  aspect-ratio: 11/16;
 }
 
 .section-consult {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 40px 0;
   background: linear-gradient(180deg, #1176ea 0%, rgba(17, 118, 234, 0.8) 100%);
 }
@@ -343,13 +418,15 @@
 .consult-form {
   display: flex;
   flex-direction: column;
-  column-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
   row-gap: 5px;
   margin-top: 24px;
 }
 @media (min-width: 720px) {
   .consult-form {
-    column-gap: 12px;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
     row-gap: 12px;
     margin-top: 40px;
   }
@@ -359,7 +436,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    column-gap: 8px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
     row-gap: 8px;
   }
   .consult-form > *:nth-child(1) {
@@ -394,12 +472,14 @@
 }
 .consult-form-link {
   text-decoration: underline;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 .consult-form-link:hover {
   text-decoration: none;
 }
 .consult-form .btn {
+  width: -moz-fit-content;
   width: fit-content;
   padding: 16px 23%;
   margin: auto;
@@ -419,13 +499,15 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  column-gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
   row-gap: 15px;
   margin-top: 15px;
 }
 @media (min-width: 720px) {
   .consult-form-submit {
-    column-gap: 35px;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
     row-gap: 35px;
     margin-top: 7px;
   }
@@ -435,7 +517,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    column-gap: 24px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
     row-gap: 24px;
     margin-top: 16px;
   }
@@ -469,6 +552,8 @@
 .section-map img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=o-klinike.css.map */
