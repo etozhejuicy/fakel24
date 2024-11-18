@@ -221,9 +221,11 @@ formSelects.forEach((select) => {
   let options = select.querySelectorAll('option');
 
   options.forEach((option) => {
+    // Сравнение атрибута [data-service-value] у хлебных крошек и текста у опции списка в форме
     if (
-      document.querySelector('.breadcrumbs > *:last-of-type').value ==
-      option.value
+      document
+        .querySelector('[data-service-value]')
+        .getAttribute('data-service-value') == option.innerText
     ) {
       option.selected = true;
     }
