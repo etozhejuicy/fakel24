@@ -336,16 +336,13 @@
     margin-top: 45px;
   }
 }
-.services-list > *:nth-last-of-type(2) {
+.services-list > *:last-of-type {
   display: flex;
 }
 @media (min-width: 576px) {
-  .services-list > *:nth-last-of-type(2) {
+  .services-list > *:last-of-type {
     display: none;
   }
-}
-.services-list > *:last-of-type {
-  display: flex;
 }
 
 .card-service {
