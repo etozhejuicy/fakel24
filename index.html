@@ -1158,7 +1158,7 @@
                     <input class="input" type="text" name="patient" placeholder="Имя" />
                     <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
                     <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
-                    <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *" required />
+                    <input class="input" name="phone" type="tel" placeholder="Телефон *" required />
                     <div class="consult-form-submit">
                         <div class="consult-form-agree">
                             <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
@@ -1267,7 +1267,7 @@
                         </select>
                         <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
                         <input class="input" type="text" name="patient" placeholder="Имя" />
-                        <input class="input" name="modal-phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *" required />
+                        <input class="input" name="modal-phone" type="tel" placeholder="Телефон *" required />
                         <textarea class="input input-textarea" rows="3" name="modal-comment" placeholder="Комментарий"></textarea>
                         <div class="consult-form-submit">
                             <div class="consult-form-agree">
@@ -1283,9 +1283,26 @@
         </div>
     </div>
 
+    <div class="modal modal-notify" data-modal-id="success">
+        <div class="modal-dialog">
+            <button class="btn btn-close" btn-close-modal>
+                <i class="icon-close"></i>
+            </button>
+            <div class="modal-content">
+                <div class="container">
+                    <p>
+                        Заявка успешно отправлена!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- js part -->
+    <script src="./src/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="./src/js/vendor/swiper-bundle.min.js"></script>
     <script src="./src/js/vendor/datepicker.js"></script>
+    <script src="./src/js/vendor/jquery.inputmask.bundle.js"></script>
     <script type="module" src="./src/js/vendor/scroller.js"></script>
     <script defer src="./src/js/vendor/before&after.js"></script>
     <script src="./src/js/custom.js"></script>

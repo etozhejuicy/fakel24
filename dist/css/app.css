@@ -1742,6 +1742,25 @@ p.smaller {
     flex-direction: column;
   }
 }
+.modal-notify {
+  color: #ffffff;
+}
+.modal-notify .modal-dialog {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 60px 12px;
+}
+@media (min-width: 720px) {
+  .modal-notify .modal-dialog {
+    padding: 60px;
+  }
+}
+.modal-notify p {
+  text-align: center;
+  font-size: 20px;
+}
 
 *,
 *::before,
