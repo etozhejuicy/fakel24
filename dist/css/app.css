@@ -267,9 +267,7 @@ p.smaller {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   text-transform: none;
   border: 1px solid #ffffff;
   border-radius: 5px;
@@ -384,9 +382,6 @@ p.smaller {
     font-size: 18px;
     line-height: 22.5px;
   }
-}
-.input::-moz-placeholder {
-  color: #585a60;
 }
 .input::placeholder {
   color: #585a60;
@@ -531,8 +526,7 @@ p.smaller {
   flex-direction: row;
   align-items: center;
   row-gap: 3px;
-  -moz-column-gap: 3px;
-       column-gap: 3px;
+  column-gap: 3px;
   pointer-events: all;
   font-style: normal;
   font-weight: 400;
@@ -575,8 +569,7 @@ p.smaller {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
 }
 .header-top .btn-black {
   padding: 15px 60px;
@@ -585,8 +578,7 @@ p.smaller {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 13px;
-       column-gap: 13px;
+  column-gap: 13px;
   margin-right: 65px;
 }
 @media (min-width: 720px) and (max-width: 1199.98px) {
@@ -602,8 +594,7 @@ p.smaller {
 }
 @media (min-width: 1200px) {
   .header-contacts {
-    -moz-column-gap: 16px;
-         column-gap: 16px;
+    column-gap: 16px;
     margin-right: unset;
     margin-left: auto;
   }
@@ -621,8 +612,7 @@ p.smaller {
   display: none;
   align-items: center;
   color: #ffffff;
-  -moz-column-gap: 9px;
-       column-gap: 9px;
+  column-gap: 9px;
   text-decoration: none !important;
 }
 @media (min-width: 1200px) {
@@ -650,8 +640,7 @@ p.smaller {
   font-size: 32px;
   line-height: 1;
   color: #585a60;
-  -moz-column-gap: 9px;
-       column-gap: 9px;
+  column-gap: 9px;
   padding: 11px 12px;
   text-decoration: none;
   transition: 0.4s ease;
@@ -699,17 +688,14 @@ p.smaller {
 }
 .header-phone:hover span {
   text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 .header-burger {
   position: fixed;
   z-index: 1;
   top: 15px;
   right: 12px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   display: inline;
   background-color: #ffffff;
   box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
@@ -753,7 +739,6 @@ p.smaller {
   position: relative;
   z-index: 1;
   display: block;
-  width: -moz-max-content;
   width: max-content;
   border-radius: 10px;
   padding-left: 52px;
@@ -883,9 +868,7 @@ p.smaller {
   align-items: center;
   justify-content: center;
   row-gap: 24px;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-  width: -moz-fit-content;
+  column-gap: 24px;
   width: fit-content;
   height: 64px;
   padding: 0 12px;
@@ -1065,7 +1048,6 @@ p.smaller {
 }
 @media (min-width: 1200px) {
   .menu-list {
-    width: -moz-max-content;
     width: max-content;
     position: absolute;
     top: 50px;
@@ -1377,8 +1359,7 @@ p.smaller {
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 12px;
-  -moz-column-gap: 100px;
-       column-gap: 100px;
+  column-gap: 100px;
   width: 100%;
   margin-top: 30px;
 }
@@ -1393,11 +1374,9 @@ p.smaller {
   .footer-links {
     grid-area: 1/3/2/4;
     row-gap: 15px;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
     flex: 1 0 auto;
     max-height: 195px;
-    max-width: -moz-max-content;
     max-width: max-content;
     margin-top: 38px;
   }
@@ -1446,8 +1425,7 @@ p.smaller {
   align-items: stretch;
   flex-wrap: wrap;
   row-gap: 5px;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
   color: #ffffff;
   font-weight: 300;
   padding: 0 24px;
@@ -1463,8 +1441,7 @@ p.smaller {
     grid-area: 2/3/3/4;
     align-items: flex-end;
     flex-wrap: nowrap;
-    -moz-column-gap: 50px;
-         column-gap: 50px;
+    column-gap: 50px;
     padding: 0 0 32px 24px;
     margin: unset;
   }
@@ -1527,8 +1504,7 @@ p.smaller {
 @media (min-width: 1200px) {
   .footer-info > div:nth-child(2) {
     row-gap: 23px;
-    -moz-column-gap: 23px;
-         column-gap: 23px;
+    column-gap: 23px;
   }
 }
 .footer-info > div:nth-child(2) > span {
@@ -1567,8 +1543,7 @@ p.smaller {
 .footer .social > svg {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .intrid {
@@ -1579,7 +1554,6 @@ p.smaller {
   font: 10pt/20px Arial;
   background: #ffffff;
   padding: 0 9px 0 4px;
-  width: -moz-fit-content;
   width: fit-content;
   height: 24px;
   gap: 5px;
@@ -1746,9 +1720,7 @@ p.smaller {
   color: #ffffff;
 }
 .modal-notify .modal-dialog {
-  max-width: -moz-fit-content;
   max-width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 60px 12px;
 }
