@@ -1169,27 +1169,6 @@
 
 // section result part end
 
-// section editor part start
-.section-editor {
-  position: relative;
-  z-index: 1;
-  padding: 25px 0;
-
-  @media (min-width: 720px) {
-    padding: 40px 0;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 50px 0;
-  }
-  & img {
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-}
-// section editor part end
-
 // section consult part start
 .section-consult {
   position: relative;
