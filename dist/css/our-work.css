@@ -191,17 +191,17 @@
 .section-smile {
   position: relative;
   z-index: 1;
-  padding: 50px 0;
+  padding: 35px 0;
   overflow: hidden;
 }
 @media (min-width: 720px) {
   .section-smile {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 @media (min-width: 1200px) {
   .section-smile {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 }
 .section-smile .container {
@@ -241,10 +241,12 @@
   row-gap: 20px;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .smile-list {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 35px;
   }
 }
 @media (min-width: 1200px) {
