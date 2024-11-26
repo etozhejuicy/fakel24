@@ -2,6 +2,7 @@
 @import '../../src/scss/vendor/swiper-bundle.min.css';
 @import '../../src/scss/vendor/normalize.css';
 @import '../../src/scss/vendor/datepicker.minimal.css';
+@import '/dist/css/lightcase.css';
 :root {
   --blue: #267cdf;
   --blue-rgb: 38, 124, 223;
