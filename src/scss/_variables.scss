@@ -622,6 +622,15 @@ p.smaller {
   }
 }
 
+.nothing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: large;
+}
+
 // section editor part start
 .section-editor {
   position: relative;

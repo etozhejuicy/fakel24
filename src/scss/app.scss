@@ -1336,6 +1336,19 @@ body {
       grid-template-columns: repeat(2, calc(50% - 10px));
       margin-top: 40px;
     }
+    & .nothing {
+      padding: 40px 0;
+      @media (min-width: 720px) {
+        padding: 50px 0;
+      }
+      @media (min-width: 992px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      @media (min-width: 1200px) {
+        padding: 60px 0;
+      }
+    }
   }
 
   &-btn {

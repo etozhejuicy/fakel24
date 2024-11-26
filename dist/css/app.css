@@ -566,6 +566,15 @@ p.smaller {
   overflow: hidden;
 }
 
+.nothing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: large;
+}
+
 .section-editor {
   position: relative;
   z-index: 1;
@@ -3131,6 +3140,25 @@ body {
   .reviews-list {
     grid-template-columns: repeat(2, calc(50% - 10px));
     margin-top: 40px;
+  }
+}
+.reviews-list .nothing {
+  padding: 40px 0;
+}
+@media (min-width: 720px) {
+  .reviews-list .nothing {
+    padding: 50px 0;
+  }
+}
+@media (min-width: 992px) {
+  .reviews-list .nothing {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews-list .nothing {
+    padding: 60px 0;
   }
 }
 .reviews-btn {
