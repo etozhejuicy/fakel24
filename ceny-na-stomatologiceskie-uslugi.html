@@ -10,12 +10,13 @@
 	<link rel="stylesheet" href="./dist/css/app.min.css" />
 
 	<!-- pages styles -->
-	<link rel="stylesheet" href="./dist/css/prices.min.css" />
+	<link rel="stylesheet" href="./dist/css/index.min.css" />
 
 	<title>Цены в стоматологии в Воронеже - прайс-лист на стоматологические услуги Факел</title>
 </head>
 
-<body>
+<!-- Селектор prices-page отвечает за надстройки стилей на странице: услуги -->
+<body class="prices-page">
 	<!-- header -->
 	<header class="header">
 		<div class="container">
@@ -105,8 +106,8 @@
 	<section class="section-hero">
 		<!-- content into swiper-hero -->
 		<div class="section-hero-content">
-			<!-- Это фон секции -->
-			<img src="./assets/images/pages/services/bg.jpg" />
+			<!-- Это фон секции: background-image регулируется ссылкой на изображение -->
+			<div class="section-hero-bg"></div>
 			<div class="container">
 				<div class="breadcrumbs">
 					<a href="./">Главная</a>
@@ -131,8 +132,8 @@
 	<!-- main part -->
 	<main class="content">
 
-		<!-- section prices -->
-		<section class="section-prices">
+		<!-- section cost -->
+		<section class="section-cost">
 			<div class="container">
 				<table>
 					<thead>
@@ -495,7 +496,7 @@
 		<!-- section consulatation -->
 		<section class="section-consult">
 			<div class="container">
-				<h2 class="section-title">Получить консультацию</h2>
+				<h2>Получить консультацию</h2>
 				<form class="consult-form" action="?">
 					<select class="input input-select" name="service" id="">
 						<option disabled selected>Выберите услугу</option>
@@ -611,7 +612,7 @@
 			</button>
 			<div class="modal-content">
 				<div class="container">
-					<h2 class="section-title">Запись на прием</h2>
+					<h2>Запись на прием</h2>
 					<form class="consult-form" action="?">
 						<select class="input input-select" name="modal-service" id="">
 							<option disabled selected>Выберите услугу</option>

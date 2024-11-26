@@ -1,10 +1,10 @@
-// heroCard init
-const heroCard = document.querySelector('[data-card-hero]');
+// mainCard init
+const mainCard = document.querySelector('[data-card-main]');
 const techCard = document.querySelector('[data-card-tech]');
 
-// swiper hero init
-if (document.getElementsByClassName('section-hero-swiper').length) {
-  var swiperHero = new Swiper('.swiper-hero', {
+// swiper main init
+if (document.getElementsByClassName('section-main-swiper').length) {
+  var swiperMain = new Swiper('.swiper-main', {
     slidesPerView: 1,
     spaceBetween: 20,
     speed: 400,
@@ -14,7 +14,7 @@ if (document.getElementsByClassName('section-hero-swiper').length) {
       enabled: false,
     },
     pagination: {
-      el: '.swiper-hero [swiper-pagination]',
+      el: '.swiper-main [swiper-pagination]',
       clickable: true,
     },
     navigation: {
@@ -24,43 +24,43 @@ if (document.getElementsByClassName('section-hero-swiper').length) {
     grabCursor: true,
     on: {
       slideChange: function () {
-        let activeSlide = swiperHero.activeIndex;
+        let activeSlide = swiperMain.activeIndex;
 
         activeSlide = activeSlide + 1;
 
-        heroCard.classList.add('fadeEffect');
+        mainCard.classList.add('fadeEffect');
 
         setTimeout(() => {
-          heroCard.classList.remove('fadeEffect');
+          mainCard.classList.remove('fadeEffect');
         }, 500);
 
         if (activeSlide == 1) {
-          heroCard.querySelector('.card-title').innerText =
+          mainCard.querySelector('.card-title').innerText =
             'Профессиональная гигиена всей полости рта';
-          heroCard.querySelector('.card-body p').innerHTML =
+          mainCard.querySelector('.card-body p').innerHTML =
             'Скидка первичным пациентам 900 руб!';
-          heroCard
+          mainCard
             .querySelector('.card-footer a')
             .setAttribute('href', '/gigiena-zubov');
         } else if (activeSlide == 2) {
-          heroCard.querySelector('.card-title').innerText = 'Имплантация ';
-          heroCard.querySelector('.card-body p').innerHTML =
+          mainCard.querySelector('.card-title').innerText = 'Имплантация ';
+          mainCard.querySelector('.card-body p').innerHTML =
             'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
-          heroCard
+          mainCard
             .querySelector('.card-footer a')
             .setAttribute('href', '/implantacia-zubov');
         } else if (activeSlide == 3) {
-          heroCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
-          heroCard.querySelector('.card-body p').innerHTML =
+          mainCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
+          mainCard.querySelector('.card-body p').innerHTML =
             'Здоровые дёсна - залог красивой улыбки';
-          heroCard
+          mainCard
             .querySelector('.card-footer a')
             .setAttribute('href', '/lecenie-desen');
         } else if (activeSlide == 4) {
-          heroCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
-          heroCard.querySelector('.card-body p').innerHTML =
+          mainCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
+          mainCard.querySelector('.card-body p').innerHTML =
             'Изготовление безметалловых коронок по цене от 16500 руб!';
-          heroCard
+          mainCard
             .querySelector('.card-footer a')
             .setAttribute('href', '/ortopedia-ili-protezirovanie-zubov');
         }
@@ -69,25 +69,56 @@ if (document.getElementsByClassName('section-hero-swiper').length) {
   });
 
   setTimeout(function () {
-    if (swiperHero.update) {
-      swiperHero.update();
+    if (swiperMain.update) {
+      swiperMain.update();
     }
   }, 500);
 }
 
 // swiper doctor init
-if (document.getElementsByClassName('section-doctors').length) {
+if (document.getElementsByClassName('section-doctors')) {
   var swiperDoctors = new Swiper('.swiper-doctors', {
-    slidesPerView: 'auto',
     spaceBetween: 20,
     speed: 400,
     breakpoints: {
       0: {
+        slidesPerView: 1.25,
         centeredSlides: true,
         loop: true,
         loopedSlides: 2,
       },
+      576: {
+        slidesPerView: 1.85,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      720: {
+        slidesPerView: 2.25,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      800: {
+        slidesPerView: 2.65,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 3,
+      },
       1200: {
+        slidesPerView: 3.65,
+        centeredSlides: false,
+        loop: false,
+        loopedSlides: 0,
+      },
+      1400: {
+        slidesPerView: 4,
         centeredSlides: false,
         loop: false,
         loopedSlides: 0,
@@ -115,7 +146,7 @@ if (document.getElementsByClassName('section-doctors').length) {
 }
 
 // swiper technologies
-if (document.getElementsByClassName('section-technologies').length) {
+if (document.getElementsByClassName('section-technologies')) {
   var swiperTechnologies = new Swiper('.swiper-technologies', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -172,17 +203,23 @@ if (document.getElementsByClassName('section-technologies').length) {
 }
 
 // swiper smiles init
-if (document.getElementsByClassName('section-smile').length) {
+if (document.getElementsByClassName('section-smile')) {
   var swiperSmiles = new Swiper('.swiper-smiles', {
-    slidesPerView: 'auto',
     spaceBetween: 20,
     noSwipingSelector: '.swiper-smiles .smile-images',
     breakpoints: {
       0: {
+        slidesPerView: 1,
         centeredSlides: true,
       },
+      720: {
+        slidesPerView: 1.75,
+      },
+      992: {
+        slidesPerView: 2.5,
+      },
       1200: {
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         centeredSlides: false,
       },
     },
@@ -518,9 +555,8 @@ function goToFirstSlide(category) {
 }
 
 // swiper reviews init
-if (document.getElementsByClassName('section-reviews').length) {
+if (document.getElementsByClassName('section-reviews')) {
   var swiperReviews = new Swiper('.swiper-reviews', {
-    slidesPerView: 'auto',
     spaceBetween: 20,
     grid: {
       rows: 1,
@@ -528,10 +564,19 @@ if (document.getElementsByClassName('section-reviews').length) {
     },
     breakpoints: {
       0: {
+        slidesPerView: 1,
+        centeredSlides: true,
+      },
+      720: {
+        slidesPerView: 1.75,
+        centeredSlides: true,
+      },
+      992: {
+        slidesPerView: 2.5,
         centeredSlides: true,
       },
       1200: {
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         centeredSlides: false,
       },
     },

@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="./dist/css/app.min.css" />
 
     <!-- pages styles -->
-    <link rel="stylesheet" href="./dist/css/reviews.min.css" />
+    <link rel="stylesheet" href="./dist/css/index.min.css" />
 
     <title>Отзывы о стоматологии Факел в Воронеже</title>
 </head>
 
-<body>
+<!-- Селектор reviews-page отвечает за надстройки стилей на странице: Отзывы -->
+<body class="reviews-page">
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -104,13 +105,13 @@
     <section class="section-hero">
         <!-- content into swiper-hero -->
         <div class="section-hero-content">
-            <!-- Это фон секции -->
-            <img src="./assets/images/pages/services/bg.jpg" />
+            <!-- Это фон секции: background-image регулируется ссылкой на изображение -->
+            <div class="section-hero-bg"></div>
             <div class="container">
                 <div class="breadcrumbs">
                     <a href="./">Главная</a>
                     <span> > </span>
-                    <a href="./reviews.html">Отзывы</a>
+                    Отзывы
                 </div>
                 <div class="card-advantage">
                     <div class="card-title">
@@ -133,7 +134,7 @@
         <!-- section-reviews -->
         <section class="section-reviews">
             <div class="container">
-                <h3 class="section-title">Отзывы пациентов</h3>
+                <h2>Отзывы пациентов</h2>
                 <div class="reviews-filters" tabs-list="">
                     <button class="reviews-btn active" review-tab-type="all">
                         Все отзывы
@@ -608,7 +609,7 @@
         <!-- section consulatation -->
         <section class="section-consult">
             <div class="container">
-                <h2 class="section-title">Получить консультацию</h2>
+                <h2>Получить консультацию</h2>
                 <form class="consult-form" action="?">
                     <select class="input input-select" name="service" id="">
                         <option disabled selected>Выберите услугу</option>
@@ -718,7 +719,7 @@
             </button>
             <div class="modal-content">
                 <div class="container">
-                    <h2 class="section-title">Запись на прием</h2>
+                    <h2>Запись на прием</h2>
                     <form class="consult-form" action="?">
                         <select class="input input-select" name="modal-service" id="">
                             <option disabled selected>Выберите услугу</option>

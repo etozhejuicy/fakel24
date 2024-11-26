@@ -14,7 +14,8 @@
     <title>Стоматология в Воронеже – стоматологическая клиника Факел</title>
 </head>
 
-<body>
+<!-- Селектор main-page отвечает за надстройки стилей на странице: Главная -->
+<body class="main-page">
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -100,10 +101,10 @@
         </div>
     </header>
 
-    <!-- hero section -->
-    <section class="section-hero">
-        <div class="section-hero-swiper">
-            <div class="swiper-container swiper-hero">
+    <!-- main section -->
+    <section class="section-main">
+        <div class="section-main-swiper">
+            <div class="swiper-container swiper-main">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./assets/images/h-slide_1.jpg" />
@@ -120,15 +121,15 @@
                 </div>
                 <div class="swiper-pagination" swiper-pagination></div>
 
-                <!-- content into swiper-hero -->
-                <div class="section-hero-content">
+                <!-- content into swiper-main -->
+                <div class="section-main-content">
                     <div class="container">
                         <!-- Кнопка появляется, когда просматриваем сайт с планшета или мобилы -->
                         <button class="btn btn-white" data-modal-open="appointment">
                             Запись на прием
                         </button>
 
-                        <div class="card-advantage" data-card-hero="1">
+                        <div class="card-advantage" data-card-main="1">
                             <div class="card-title">
                                 Профессиональная гигиена всей полости рта
                             </div>
@@ -332,7 +333,7 @@
         <!-- section doctors -->
         <section class="section-doctors">
             <div class="container">
-                <h2 class="section-title">Ведущие врачи клиники</h2>
+                <h2>Ведущие врачи клиники</h2>
                 <div class="swiper-container swiper-doctors">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -406,7 +407,7 @@
 
         <!-- section techologies -->
         <section class="section-technologies">
-            <h2 class="section-title">Технологии и оснащение</h2>
+            <h2>Технологии и оснащение</h2>
             <div class="swiper-container swiper-technologies">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" title="ФИЗИОДИСПЕНСЕР. В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.">
@@ -444,7 +445,7 @@
         <!-- section smile -->
         <section class="section-smile">
             <div class="container">
-                <h2 class="section-title">
+                <h2>
                     Посмотрите как преображаются улыбки пациенты после процедур
                 </h2>
                 <!-- Список сравнения до/после -->
@@ -513,7 +514,7 @@
         <!-- section-reviews -->
         <section class="section-reviews">
             <div class="container">
-                <h2 class="section-title">Отзывы пациентов</h2>
+                <h2>Отзывы пациентов</h2>
                 <div class="reviews-filters" tabs-list="">
                     <button class="reviews-btn active" swiper-item-type="all">
                         Все отзывы
@@ -1032,7 +1033,7 @@
         <!-- section result -->
         <section class="section-result">
             <div class="container">
-                <h2 class="section-title">
+                <h2>
                     Работаем на результат, чтобы вы не стеснялись улыбаться!
                 </h2>
                 <div class="section-result-content">
@@ -1106,7 +1107,7 @@
             <div class="section-about-image">
                 <img src="./assets/images/front.jpg" alt="Стоматологическая клиника Факел" />
             </div>
-            <h2 class="section-title">Стоматологическая клиника в Воронеже</h2>
+            <h2>Стоматологическая клиника в Воронеже</h2>
             <div class="section-about-content">
                 <p>
                     Вот уже более 15 лет стоматология Факел — гарантия здоровых зубов и
@@ -1140,7 +1141,7 @@
         <!-- section consulatation -->
         <section class="section-consult">
             <div class="container">
-                <h2 class="section-title">Получить консультацию</h2>
+                <h2>Получить консультацию</h2>
                 <form class="consult-form" action="?">
                     <select class="input input-select" name="service" id="">
                         <option disabled selected>Выберите услугу</option>
@@ -1250,7 +1251,7 @@
             </button>
             <div class="modal-content">
                 <div class="container">
-                    <h2 class="section-title">Запись на прием</h2>
+                    <h2>Запись на прием</h2>
                     <form class="consult-form" action="?">
                         <select class="input input-select" name="modal-service" id="">
                             <option disabled selected>Выберите услугу</option>

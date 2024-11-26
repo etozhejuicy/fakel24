@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./dist/css/lightcase.css" />
 
     <!-- pages styles -->
-    <link rel="stylesheet" href="./dist/css/o-klinike.min.css" />
+    <link rel="stylesheet" href="./dist/css/index.min.css" />
 
     <title>Стоматологическая зубная клиника в Воронеже – клиника Факел</title>
 </head>
 
-<body>
+<!-- Селектор about-page отвечает за надстройки стилей на странице: Наши работы -->
+<body class="about-page">
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -105,8 +106,8 @@
     <section class="section-hero">
         <!-- content into swiper-hero -->
         <div class="section-hero-content">
-            <!-- Это фон секции -->
-            <img src="./assets/images/pages/services/bg.jpg" />
+            <!-- Это фон секции: background-image регулируется ссылкой на изображение -->
+            <div class="section-hero-bg"></div>
             <div class="container">
                 <div class="breadcrumbs">
                     <a href="./">Главная</a>
@@ -143,7 +144,7 @@
         <!-- section contacts -->
         <section class="section-information">
             <div class="container">
-                <h2 class="section-title">Стоматологическая зубная клиника Факел</h2>
+                <h2>Стоматологическая зубная клиника Факел</h2>
                 <div class="information-layout">
                     <div>
                         <p>
@@ -171,8 +172,8 @@
             </div>
         </section>
 
-        <!-- section about -->
-        <section class="section-about">
+        <!-- section company -->
+        <section class="section-company">
             <div class="container">
                 <div class="about-gallery">
                     <div class="about-image" href="./assets/images/about/photo-1.jpg" data-rel="lightcase:fa-1">
@@ -251,7 +252,7 @@
         <!-- section description -->
         <section class="section-description">
             <div class="container">
-                <h2 class="section-title">
+                <h2>
                     Мы заботимся о здоровье и безопасности наших пациентов!
                 </h2>
                 <p>
@@ -321,7 +322,7 @@
         <!-- section consulatation -->
         <section class="section-consult">
             <div class="container">
-                <h2 class="section-title">Получить консультацию</h2>
+                <h2>Получить консультацию</h2>
                 <form class="consult-form" action="?">
                     <select class="input input-select" name="service" id="">
                         <option disabled selected>Выберите услугу</option>
@@ -433,7 +434,7 @@
             </button>
             <div class="modal-content">
                 <div class="container">
-                    <h2 class="section-title">Запись на прием</h2>
+                    <h2>Запись на прием</h2>
                     <form class="consult-form" action="?">
                         <select class="input input-select" name="modal-service" id="">
                             <option disabled selected>Выберите услугу</option>

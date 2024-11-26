@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./dist/css/lightcase.css" />
 
     <!-- pages styles -->
-    <link rel="stylesheet" href="./dist/css/our-work.min.css" />
+    <link rel="stylesheet" href="./dist/css/index.min.css" />
 
     <title>Стоматологическая зубная клиника в Воронеже – клиника Факел</title>
 </head>
 
-<body>
+<!-- Селектор our-works-page отвечает за надстройки стилей на странице: Наши работы -->
+<body class="our-works-page">
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -105,8 +106,8 @@
     <section class="section-hero">
         <!-- content into swiper-hero -->
         <div class="section-hero-content">
-            <!-- Это фон секции -->
-            <img src="./assets/images/pages/services/bg.jpg" />
+            <!-- Это фон секции: background-image регулируется ссылкой на изображение -->
+            <div class="section-hero-bg"></div>
             <div class="container">
                 <div class="breadcrumbs">
                     <a href="./">Главная</a>
@@ -143,7 +144,7 @@
         <!-- section smile -->
         <section class="section-smile">
             <div class="container">
-                <h2 class="section-title">
+                <h2>
                     Посмотрите как преображаются улыбки пациенты после процедур
                 </h2>
                 <!-- Список сравнения до/после -->
@@ -201,7 +202,7 @@
         <!-- section consulatation -->
         <section class="section-consult">
             <div class="container">
-                <h2 class="section-title">Получить консультацию</h2>
+                <h2>Получить консультацию</h2>
                 <form class="consult-form" action="?">
                     <select class="input input-select" name="service" id="">
                         <option disabled selected>Выберите услугу</option>
@@ -312,7 +313,7 @@
             </button>
             <div class="modal-content">
                 <div class="container">
-                    <h2 class="section-title">Запись на прием</h2>
+                    <h2>Запись на прием</h2>
                     <form class="consult-form" action="?">
                         <select class="input input-select" name="modal-service" id="">
                             <option disabled selected>Выберите услугу</option>

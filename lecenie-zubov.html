@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="./dist/css/app.min.css" />
 
     <!-- pages styles -->
-    <link rel="stylesheet" href="./dist/css/services.min.css" />
+    <link rel="stylesheet" href="./dist/css/index.min.css" />
 
     <title>Лечение зубов в Воронеже – Стоматология «Факел»</title>
 </head>
 
-<body>
+<!-- Селектор service-page отвечает за надстройки стилей на странице: конкретной услуги -->
+<body class="service-page">
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -104,8 +105,8 @@
     <section class="section-hero">
         <!-- content into swiper-hero -->
         <div class="section-hero-content">
-            <!-- Это фон секции -->
-            <img src="./assets/images/pages/services/bg.jpg" />
+            <!-- Это фон секции: background-image регулируется ссылкой на изображение -->
+            <div class="section-hero-bg"></div>
             <div class="container">
                 <div class="breadcrumbs">
                     <a href="./">Главная</a>
@@ -142,7 +143,7 @@
         <section class="section-connection">
             <div class="container">
                 <div>
-                    <h1 class="section-title">Лечение зубов в стоматологии «Факел»</h1>
+                    <h1>Лечение зубов в стоматологии «Факел»</h1>
                 </div>
                 <div>
                     <p>
@@ -238,7 +239,7 @@
         <!-- section consulatation -->
         <section class="section-consult">
             <div class="container">
-                <h2 class="section-title">Запись на прием</h2>
+                <h2>Запись на прием</h2>
                 <form class="consult-form" action="?">
                     <select class="input input-select" name="service" id="">
                         <option disabled selected>Выберите услугу</option>
@@ -273,7 +274,7 @@
         <section class="section-recovery">
             <div class="container">
                 <div class="section-contra-content">
-                    <h2 class="section-title">Как мы восстанавливаем зубы</h2>
+                    <h2>Как мы восстанавливаем зубы</h2>
                     <p>
                         Способ восстановления анатомии и эстетики выбирается индивидуально, в зависимости от объема разрушения
                     </p>
@@ -312,7 +313,7 @@
         <section class="section-contra">
             <div class="container">
                 <div class="section-contra-content">
-                    <h2 class="section-title">Показания и противопоказания к лечению зубов</h2>
+                    <h2>Показания и противопоказания к лечению зубов</h2>
                     <p>
                         Все показания являются относительными, лечение будет выполнено после нормализации состояния
                     </p>
@@ -346,7 +347,7 @@
         <!-- section doctors -->
         <section class="section-doctors">
             <div class="container">
-                <h2 class="section-title">Прием ведут ведущие стоматологи</h2>
+                <h2>Прием ведут ведущие стоматологи</h2>
                 <div class="swiper-container swiper-doctors">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -421,7 +422,7 @@
         <!-- section smile -->
         <section class="section-smile">
             <div class="container">
-                <h2 class="section-title">
+                <h2>
                     Посмотрите как преображаются улыбки пациенты после процедур
                 </h2>
                 <!-- Список сравнения до/после -->
@@ -567,7 +568,7 @@
             </button>
             <div class="modal-content">
                 <div class="container">
-                    <h2 class="section-title">Запись на прием</h2>
+                    <h2>Запись на прием</h2>
                     <form class="consult-form" action="?">
                         <select class="input input-select" name="modal-service" id="">
                             <option disabled selected>Выберите услугу</option>
