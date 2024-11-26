@@ -589,8 +589,9 @@ body {
 
     & svg {
       color: #ffffff;
-      & > * {
+      & * {
         fill: currentColor;
+        stroke: currentColor;
       }
     }
 

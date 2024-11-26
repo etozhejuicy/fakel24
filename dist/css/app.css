@@ -2386,8 +2386,9 @@ body {
 .card-service:hover svg {
   color: #ffffff;
 }
-.card-service:hover svg > * {
+.card-service:hover svg * {
   fill: currentColor;
+  stroke: currentColor;
 }
 .card-service:hover .card-title div, .card-service:hover .card-footer div {
   color: #ffffff;
