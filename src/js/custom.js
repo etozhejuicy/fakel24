@@ -2,6 +2,8 @@
 const mainCard = document.querySelector('[data-card-main]');
 const techCard = document.querySelector('[data-card-tech]');
 
+
+
 // header script
 const logo = document.querySelector('.header-logo');
 const mainMenu = document.querySelector('.menu');
@@ -344,10 +346,16 @@ if (document.querySelector('.swiper-container')) {
       allowTouchMove: true,
       grabCursor: true,
       on: {
+        init: function () {
+          mainCard.querySelector('.card-title').innerText = mainCardData[0].title;
+          mainCard.querySelector('.card-body p').innerHTML = mainCardData[0].desc;
+          mainCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', mainCardData[0].url);
+        },
         slideChange: function () {
           let activeSlide = swiperMain.activeIndex;
 
-          activeSlide = activeSlide + 1;
 
           mainCard.classList.add('fadeEffect');
 
@@ -355,36 +363,11 @@ if (document.querySelector('.swiper-container')) {
             mainCard.classList.remove('fadeEffect');
           }, 500);
 
-          if (activeSlide == 1) {
-            mainCard.querySelector('.card-title').innerText =
-              'Профессиональная гигиена всей полости рта';
-            mainCard.querySelector('.card-body p').innerHTML =
-              'Скидка первичным пациентам 900 руб!';
-            mainCard
-              .querySelector('.card-footer a')
-              .setAttribute('href', '/gigiena-zubov');
-          } else if (activeSlide == 2) {
-            mainCard.querySelector('.card-title').innerText = 'Имплантация ';
-            mainCard.querySelector('.card-body p').innerHTML =
-              'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
-            mainCard
-              .querySelector('.card-footer a')
-              .setAttribute('href', '/implantacia-zubov');
-          } else if (activeSlide == 3) {
-            mainCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
-            mainCard.querySelector('.card-body p').innerHTML =
-              'Здоровые дёсна - залог красивой улыбки';
-            mainCard
-              .querySelector('.card-footer a')
-              .setAttribute('href', '/lecenie-desen');
-          } else if (activeSlide == 4) {
-            mainCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
-            mainCard.querySelector('.card-body p').innerHTML =
-              'Изготовление безметалловых коронок по цене от 16500 руб!';
-            mainCard
-              .querySelector('.card-footer a')
-              .setAttribute('href', '/ortopedia-ili-protezirovanie-zubov');
-          }
+          mainCard.querySelector('.card-title').innerText = mainCardData[activeSlide].title;
+          mainCard.querySelector('.card-body p').innerHTML = mainCardData[activeSlide].desc;
+          mainCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', mainCardData[activeSlide].url);
         },
       },
     });
