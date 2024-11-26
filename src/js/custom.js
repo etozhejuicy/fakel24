@@ -2,298 +2,6 @@
 const mainCard = document.querySelector('[data-card-main]');
 const techCard = document.querySelector('[data-card-tech]');
 
-// swiper main init
-if (document.getElementsByClassName('section-main-swiper').length) {
-  var swiperMain = new Swiper('.swiper-main', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    speed: 400,
-    autoplay: true,
-    rewind: true,
-    scrollbar: {
-      enabled: false,
-    },
-    pagination: {
-      el: '.swiper-main [swiper-pagination]',
-      clickable: true,
-    },
-    navigation: {
-      enabled: false,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-    on: {
-      slideChange: function () {
-        let activeSlide = swiperMain.activeIndex;
-
-        activeSlide = activeSlide + 1;
-
-        mainCard.classList.add('fadeEffect');
-
-        setTimeout(() => {
-          mainCard.classList.remove('fadeEffect');
-        }, 500);
-
-        if (activeSlide == 1) {
-          mainCard.querySelector('.card-title').innerText =
-            'Профессиональная гигиена всей полости рта';
-          mainCard.querySelector('.card-body p').innerHTML =
-            'Скидка первичным пациентам 900 руб!';
-          mainCard
-            .querySelector('.card-footer a')
-            .setAttribute('href', '/gigiena-zubov');
-        } else if (activeSlide == 2) {
-          mainCard.querySelector('.card-title').innerText = 'Имплантация ';
-          mainCard.querySelector('.card-body p').innerHTML =
-            'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
-          mainCard
-            .querySelector('.card-footer a')
-            .setAttribute('href', '/implantacia-zubov');
-        } else if (activeSlide == 3) {
-          mainCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
-          mainCard.querySelector('.card-body p').innerHTML =
-            'Здоровые дёсна - залог красивой улыбки';
-          mainCard
-            .querySelector('.card-footer a')
-            .setAttribute('href', '/lecenie-desen');
-        } else if (activeSlide == 4) {
-          mainCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
-          mainCard.querySelector('.card-body p').innerHTML =
-            'Изготовление безметалловых коронок по цене от 16500 руб!';
-          mainCard
-            .querySelector('.card-footer a')
-            .setAttribute('href', '/ortopedia-ili-protezirovanie-zubov');
-        }
-      },
-    },
-  });
-
-  setTimeout(function () {
-    if (swiperMain.update) {
-      swiperMain.update();
-    }
-  }, 500);
-}
-
-// swiper doctor init
-if (document.getElementsByClassName('section-doctors')) {
-  var swiperDoctors = new Swiper('.swiper-doctors', {
-    spaceBetween: 20,
-    speed: 400,
-    breakpoints: {
-      0: {
-        slidesPerView: 1.25,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 2,
-      },
-      576: {
-        slidesPerView: 1.85,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 2,
-      },
-      720: {
-        slidesPerView: 2.25,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 2,
-      },
-      800: {
-        slidesPerView: 2.65,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 2,
-      },
-      992: {
-        slidesPerView: 3,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 3,
-      },
-      1200: {
-        slidesPerView: 3.65,
-        centeredSlides: false,
-        loop: false,
-        loopedSlides: 0,
-      },
-      1400: {
-        slidesPerView: 4,
-        centeredSlides: false,
-        loop: false,
-        loopedSlides: 0,
-      },
-    },
-    scrollbar: {
-      enabled: false,
-    },
-    pagination: {
-      el: '.swiper-doctors [swiper-pagination]',
-      clickable: true,
-    },
-    navigation: {
-      enabled: false,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-  });
-
-  setTimeout(function () {
-    if (swiperDoctors.update) {
-      swiperDoctors.update();
-    }
-  }, 500);
-}
-
-// swiper technologies
-if (document.getElementsByClassName('section-technologies')) {
-  var swiperTechnologies = new Swiper('.swiper-technologies', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    speed: 400,
-    autoplay: true,
-    rewind: true,
-    scrollbar: {
-      enabled: false,
-    },
-    pagination: {
-      el: '.swiper-technologies [swiper-pagination]',
-      clickable: true,
-    },
-    navigation: {
-      enabled: false,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-    on: {
-      slideChange: function () {
-        let activeSlide = swiperTechnologies.activeIndex;
-
-        activeSlide = activeSlide + 1;
-
-        techCard.classList.add('fadeEffect');
-
-        setTimeout(() => {
-          techCard.classList.remove('fadeEffect');
-        }, 500);
-
-        if (activeSlide == 1) {
-          techCard.querySelector('.card-title').innerText = 'ФИЗИОДИСПЕНСЕР';
-          techCard.querySelector('p').innerText =
-            'В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.';
-        } else if (activeSlide == 2) {
-          techCard.querySelector('.card-title').innerText =
-            'Оборудованный кабинет ';
-          techCard.querySelector('p').innerText =
-            'Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.';
-        } else if (activeSlide == 3) {
-          techCard.querySelector('.card-title').innerText = 'СИСТЕМА AIR FLOW';
-          techCard.querySelector('p').innerText =
-            'Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).';
-        }
-      },
-    },
-  });
-
-  setTimeout(function () {
-    if (swiperTechnologies.update) {
-      swiperTechnologies.update();
-    }
-  }, 500);
-}
-
-// swiper smiles init
-if (document.getElementsByClassName('section-smile')) {
-  var swiperSmiles = new Swiper('.swiper-smiles', {
-    spaceBetween: 20,
-    noSwipingSelector: '.swiper-smiles .smile-images',
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        centeredSlides: true,
-      },
-      720: {
-        slidesPerView: 1.75,
-      },
-      992: {
-        slidesPerView: 2.5,
-      },
-      1200: {
-        slidesPerView: 3,
-        centeredSlides: false,
-      },
-    },
-    scrollbar: {
-      enabled: false,
-    },
-    pagination: {
-      el: '.swiper-smiles [swiper-pagination]',
-      clickable: true,
-    },
-    navigation: {
-      enabled: false,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-  });
-
-  setTimeout(function () {
-    if (swiperSmiles.update) {
-      swiperSmiles.update();
-    }
-  }, 500);
-}
-
-// swiper result init
-if (document.getElementsByClassName('section-result').length) {
-  var swiperResult = new Swiper('.swiper-result', {
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        spaceBetween: 4,
-        grid: {
-          rows: 1,
-          fill: 'row',
-        },
-      },
-      720: {
-        slidesPerView: 2,
-        spaceBetween: 12,
-        grid: {
-          rows: 3,
-          fill: 'row',
-        },
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 12,
-        grid: {
-          rows: 2,
-          fill: 'row',
-        },
-      },
-    },
-    scrollbar: {
-      enabled: false,
-    },
-    pagination: {
-      el: '.swiper-result [swiper-pagination]',
-      clickable: true,
-    },
-    navigation: {
-      enabled: false,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-  });
-
-  setTimeout(function () {
-    if (swiperResult.update) {
-      swiperResult.update();
-    }
-  }, 500);
-}
-
 // header script
 const logo = document.querySelector('.header-logo');
 const mainMenu = document.querySelector('.menu');
@@ -552,6 +260,298 @@ function goToFirstSlide(category) {
   if (firstSlideIndex !== -1) {
     swiperReviews.slideTo(firstSlideIndex);
   }
+}
+
+// swiper main init
+if (document.getElementsByClassName('section-main-swiper')) {
+  var swiperMain = new Swiper('.swiper-main', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 400,
+    autoplay: true,
+    rewind: true,
+    scrollbar: {
+      enabled: false,
+    },
+    pagination: {
+      el: '.swiper-main [swiper-pagination]',
+      clickable: true,
+    },
+    navigation: {
+      enabled: false,
+    },
+    allowTouchMove: true,
+    grabCursor: true,
+    on: {
+      slideChange: function () {
+        let activeSlide = swiperMain.activeIndex;
+
+        activeSlide = activeSlide + 1;
+
+        mainCard.classList.add('fadeEffect');
+
+        setTimeout(() => {
+          mainCard.classList.remove('fadeEffect');
+        }, 500);
+
+        if (activeSlide == 1) {
+          mainCard.querySelector('.card-title').innerText =
+            'Профессиональная гигиена всей полости рта';
+          mainCard.querySelector('.card-body p').innerHTML =
+            'Скидка первичным пациентам 900 руб!';
+          mainCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/gigiena-zubov');
+        } else if (activeSlide == 2) {
+          mainCard.querySelector('.card-title').innerText = 'Имплантация ';
+          mainCard.querySelector('.card-body p').innerHTML =
+            'Установка Имплантатов SuperLine по выгодной цене за 24000 руб!';
+          mainCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/implantacia-zubov');
+        } else if (activeSlide == 3) {
+          mainCard.querySelector('.card-title').innerText = 'Плазмолифтинг';
+          mainCard.querySelector('.card-body p').innerHTML =
+            'Здоровые дёсна - залог красивой улыбки';
+          mainCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/lecenie-desen');
+        } else if (activeSlide == 4) {
+          mainCard.querySelector('.card-title').innerText = 'ПРОТЕЗИРОВАНИЕ';
+          mainCard.querySelector('.card-body p').innerHTML =
+            'Изготовление безметалловых коронок по цене от 16500 руб!';
+          mainCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', '/ortopedia-ili-protezirovanie-zubov');
+        }
+      },
+    },
+  });
+
+  setTimeout(function () {
+    if (swiperMain.update) {
+      swiperMain.update();
+    }
+  }, 500);
+}
+
+// swiper doctor init
+if (document.getElementsByClassName('section-doctors')) {
+  var swiperDoctors = new Swiper('.swiper-doctors', {
+    spaceBetween: 20,
+    speed: 400,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.25,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      576: {
+        slidesPerView: 1.85,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      720: {
+        slidesPerView: 2.25,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      800: {
+        slidesPerView: 2.65,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 3,
+      },
+      1200: {
+        slidesPerView: 3.65,
+        centeredSlides: false,
+        loop: false,
+        loopedSlides: 0,
+      },
+      1400: {
+        slidesPerView: 4,
+        centeredSlides: false,
+        loop: false,
+        loopedSlides: 0,
+      },
+    },
+    scrollbar: {
+      enabled: false,
+    },
+    pagination: {
+      el: '.swiper-doctors [swiper-pagination]',
+      clickable: true,
+    },
+    navigation: {
+      enabled: false,
+    },
+    allowTouchMove: true,
+    grabCursor: true,
+  });
+
+  setTimeout(function () {
+    if (swiperDoctors.update) {
+      swiperDoctors.update();
+    }
+  }, 500);
+}
+
+// swiper technologies
+if (document.getElementsByClassName('section-technologies')) {
+  var swiperTechnologies = new Swiper('.swiper-technologies', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 400,
+    autoplay: true,
+    rewind: true,
+    scrollbar: {
+      enabled: false,
+    },
+    pagination: {
+      el: '.swiper-technologies [swiper-pagination]',
+      clickable: true,
+    },
+    navigation: {
+      enabled: false,
+    },
+    allowTouchMove: true,
+    grabCursor: true,
+    on: {
+      slideChange: function () {
+        let activeSlide = swiperTechnologies.activeIndex;
+
+        activeSlide = activeSlide + 1;
+
+        techCard.classList.add('fadeEffect');
+
+        setTimeout(() => {
+          techCard.classList.remove('fadeEffect');
+        }, 500);
+
+        if (activeSlide == 1) {
+          techCard.querySelector('.card-title').innerText = 'ФИЗИОДИСПЕНСЕР';
+          techCard.querySelector('p').innerText =
+            'В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.';
+        } else if (activeSlide == 2) {
+          techCard.querySelector('.card-title').innerText =
+            'Оборудованный кабинет ';
+          techCard.querySelector('p').innerText =
+            'Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.';
+        } else if (activeSlide == 3) {
+          techCard.querySelector('.card-title').innerText = 'СИСТЕМА AIR FLOW';
+          techCard.querySelector('p').innerText =
+            'Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).';
+        }
+      },
+    },
+  });
+
+  setTimeout(function () {
+    if (swiperTechnologies.update) {
+      swiperTechnologies.update();
+    }
+  }, 500);
+}
+
+// swiper smiles init
+if (document.getElementsByClassName('section-smile')) {
+  var swiperSmiles = new Swiper('.swiper-smiles', {
+    spaceBetween: 20,
+    noSwipingSelector: '.swiper-smiles .smile-images',
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        centeredSlides: true,
+      },
+      720: {
+        slidesPerView: 1.75,
+      },
+      992: {
+        slidesPerView: 2.5,
+      },
+      1200: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+    },
+    scrollbar: {
+      enabled: false,
+    },
+    pagination: {
+      el: '.swiper-smiles [swiper-pagination]',
+      clickable: true,
+    },
+    navigation: {
+      enabled: false,
+    },
+    allowTouchMove: true,
+    grabCursor: true,
+  });
+
+  setTimeout(function () {
+    if (swiperSmiles.update) {
+      swiperSmiles.update();
+    }
+  }, 500);
+}
+
+// swiper result init
+if (document.getElementsByClassName('section-result')) {
+  var swiperResult = new Swiper('.swiper-result', {
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 4,
+        grid: {
+          rows: 1,
+          fill: 'row',
+        },
+      },
+      720: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        grid: {
+          rows: 3,
+          fill: 'row',
+        },
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
+      },
+    },
+    scrollbar: {
+      enabled: false,
+    },
+    pagination: {
+      el: '.swiper-result [swiper-pagination]',
+      clickable: true,
+    },
+    navigation: {
+      enabled: false,
+    },
+    allowTouchMove: true,
+    grabCursor: true,
+  });
+
+  setTimeout(function () {
+    if (swiperResult.update) {
+      swiperResult.update();
+    }
+  }, 500);
 }
 
 // swiper reviews init
