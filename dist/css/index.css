@@ -924,23 +924,26 @@
 }
 .section-smile .container .btn {
   width: 100%;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto 0;
 }
 @media (min-width: 576px) {
   .section-smile .container .btn {
-    width: 390px;
+    width: 52.5vw;
   }
 }
 @media (min-width: 720px) {
   .section-smile .container .btn {
-    margin-top: 55px;
+    margin: 55px auto 0;
+  }
+}
+@media (min-width: 992px) {
+  .section-smile .container .btn {
+    width: 37vw;
   }
 }
 @media (min-width: 1200px) {
   .section-smile .container .btn {
-    width: 31vw;
+    width: 30.5vw;
   }
 }
 @media (min-width: 1680px) {
@@ -1159,7 +1162,7 @@
 }
 @media (min-width: 576px) {
   .section-reviews .swiper-reviews ~ .btn {
-    width: 340px;
+    width: 52.5vw;
   }
 }
 @media (min-width: 720px) {
@@ -1167,13 +1170,47 @@
     margin: 55px auto 0;
   }
 }
+@media (min-width: 992px) {
+  .section-reviews .swiper-reviews ~ .btn {
+    width: 37vw;
+  }
+}
 @media (min-width: 1200px) {
   .section-reviews .swiper-reviews ~ .btn {
-    width: 31vw;
+    width: 30.5vw;
   }
 }
 @media (min-width: 1680px) {
   .section-reviews .swiper-reviews ~ .btn {
+    width: 517px;
+  }
+}
+.section-reviews .btn {
+  width: 100%;
+  margin: 50px auto 0;
+}
+@media (min-width: 576px) {
+  .section-reviews .btn {
+    width: 52.5vw;
+  }
+}
+@media (min-width: 720px) {
+  .section-reviews .btn {
+    margin: 55px auto 0;
+  }
+}
+@media (min-width: 992px) {
+  .section-reviews .btn {
+    width: 37vw;
+  }
+}
+@media (min-width: 1200px) {
+  .section-reviews .btn {
+    width: 30.5vw;
+  }
+}
+@media (min-width: 1680px) {
+  .section-reviews .btn {
     width: 517px;
   }
 }
