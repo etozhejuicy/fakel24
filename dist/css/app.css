@@ -440,18 +440,18 @@ p.smaller {
 }
 .input-checkbox + label {
   position: relative;
+  display: block;
   padding-left: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.5;
   cursor: pointer;
 }
 @media (min-width: 720px) {
   .input-checkbox + label {
     padding-left: 35px;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
   }
 }
 .input-checkbox + label::before {
@@ -3677,6 +3677,7 @@ body {
 @media (min-width: 720px) {
   .consult-form .btn {
     padding: 20px 20%;
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {

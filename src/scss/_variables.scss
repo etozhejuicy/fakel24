@@ -477,17 +477,17 @@ p.smaller {
 
     & + label {
       position: relative;
+      display: block;
       padding-left: 30px;
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
-      line-height: 15px;
+      line-height: 1.5;
       cursor: pointer;
 
       @media (min-width: 720px) {
         padding-left: 35px;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
       }
 
       &::before {
