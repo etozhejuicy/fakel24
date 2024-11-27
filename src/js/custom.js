@@ -2,7 +2,20 @@
 const mainCard = document.querySelector('[data-card-main]');
 const techCard = document.querySelector('[data-card-tech]');
 
-
+const techCardData = [
+  {
+    title: 'ФИЗИОДИСПЕНСЕР',
+    desc: 'В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.',
+  },
+  {
+    title: 'Оборудованный кабинет ',
+    desc: 'Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.',
+  },
+  {
+    title: 'СИСТЕМА AIR FLOW',
+    desc: 'Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).',
+  },
+];
 
 // header script
 const logo = document.querySelector('.header-logo');
@@ -347,8 +360,10 @@ if (document.querySelector('.swiper-container')) {
       grabCursor: true,
       on: {
         init: function () {
-          mainCard.querySelector('.card-title').innerText = mainCardData[0].title;
-          mainCard.querySelector('.card-body p').innerHTML = mainCardData[0].desc;
+          mainCard.querySelector('.card-title').innerText =
+            mainCardData[0].title;
+          mainCard.querySelector('.card-body p').innerHTML =
+            mainCardData[0].desc;
           mainCard
             .querySelector('.card-footer a')
             .setAttribute('href', mainCardData[0].url);
@@ -356,15 +371,16 @@ if (document.querySelector('.swiper-container')) {
         slideChange: function () {
           let activeSlide = swiperMain.activeIndex;
 
-
           mainCard.classList.add('fadeEffect');
 
           setTimeout(() => {
             mainCard.classList.remove('fadeEffect');
           }, 500);
 
-          mainCard.querySelector('.card-title').innerText = mainCardData[activeSlide].title;
-          mainCard.querySelector('.card-body p').innerHTML = mainCardData[activeSlide].desc;
+          mainCard.querySelector('.card-title').innerText =
+            mainCardData[activeSlide].title;
+          mainCard.querySelector('.card-body p').innerHTML =
+            mainCardData[activeSlide].desc;
           mainCard
             .querySelector('.card-footer a')
             .setAttribute('href', mainCardData[activeSlide].url);
@@ -472,29 +488,19 @@ if (document.querySelector('.swiper-container')) {
         slideChange: function () {
           let activeSlide = swiperTechnologies.activeIndex;
 
-          activeSlide = activeSlide + 1;
-
           techCard.classList.add('fadeEffect');
 
           setTimeout(() => {
             techCard.classList.remove('fadeEffect');
           }, 500);
 
-          if (activeSlide == 1) {
-            techCard.querySelector('.card-title').innerText = 'ФИЗИОДИСПЕНСЕР';
-            techCard.querySelector('p').innerText =
-              'В клинике проводятся имплантация зубов с последующим протезированием и сложные зубо-сохраняющие операции с использованием проверенного и качественного оборудования фирмы NSK (физиодиспенсора). Лечение корневых каналов зубов проводится при помощи машинных, а не ручных инструментов под контролем апекслокаторов и рентгендиагностики, что значительно сокращает время проведения необходимых процедур, повышает качество и способствует долгосрочности результата.';
-          } else if (activeSlide == 2) {
-            techCard.querySelector('.card-title').innerText =
-              'Оборудованный кабинет ';
-            techCard.querySelector('p').innerText =
-              'Каждый кабинет оборудован по самым современным медицинским стандартам для удобства и комфорта пациента. Специалисты используют только сертифицированные и качественные светоотверждаемые пломбировочные материалы для лечения.';
-          } else if (activeSlide == 3) {
-            techCard.querySelector('.card-title').innerText =
-              'СИСТЕМА AIR FLOW';
-            techCard.querySelector('p').innerText =
-              'Для повышения эффективности проводимых манипуляций и отбеливание в нашей клинике осуществляется в «четыре руки» - с непосредственным участием ассистента врача стоматолога. Профессиональная гигиена полости рта – самая комфортная и эффективная процедура для профилактики заболеваний зубов и десен, рекомендуемая в нашей клинике всем пациентам. Для повышения качества её проведения обязательным является использование системы Air Flow (дословно - воздушного потока).';
-          }
+          techCard.querySelector('.card-title').innerText =
+            techCardData[activeSlide].title;
+          techCard.querySelector('.card-body p').innerHTML =
+            techCardData[activeSlide].desc;
+          techCard
+            .querySelector('.card-footer a')
+            .setAttribute('href', techCardData[activeSlide].url);
         },
       },
     });
