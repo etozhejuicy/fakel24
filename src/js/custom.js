@@ -2,7 +2,6 @@
 const mainCard = document.querySelector('[data-card-main]');
 const techCard = document.querySelector('[data-card-tech]');
 
-
 // header script
 const logo = document.querySelector('.header-logo');
 const mainMenu = document.querySelector('.menu');
@@ -33,11 +32,11 @@ function setFixedHeader() {
 }
 
 // fix header script classList before load
-window.addEventListener('DOMContentLoaded', () => {
-  logo.classList.remove('scroll');
-  mainMenu.classList.remove('scroll');
-  headerModalBtn.classList.remove('scroll');
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//   logo.classList.remove('scroll');
+//   mainMenu.classList.remove('scroll');
+//   headerModalBtn.classList.remove('scroll');
+// });
 
 // for dropdown menu icon
 const dropdownItem = document.querySelectorAll('.menu-dropdown');
@@ -471,6 +470,12 @@ if (document.querySelector('.swiper-container')) {
       allowTouchMove: true,
       grabCursor: true,
       on: {
+        init: function () {
+          techCard.querySelector('.card-title').innerText =
+            techCardData[0].title;
+          techCard.querySelector('[data-card-tech] p').innerHTML =
+            techCardData[0].desc;
+        },
         slideChange: function () {
           let activeSlide = swiperTechnologies.activeIndex;
 
@@ -482,11 +487,8 @@ if (document.querySelector('.swiper-container')) {
 
           techCard.querySelector('.card-title').innerText =
             techCardData[activeSlide].title;
-          techCard.querySelector('.card-body p').innerHTML =
+          techCard.querySelector('[data-card-tech] p').innerHTML =
             techCardData[activeSlide].desc;
-          techCard
-            .querySelector('.card-footer a')
-            .setAttribute('href', techCardData[activeSlide].url);
         },
       },
     });
