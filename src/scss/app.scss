@@ -1,17 +1,17 @@
 // vendor
-@import '../../src/scss/vendor/swiper-bundle.min.css';
-@import '../../src/scss/vendor/normalize.css';
-@import '../../src/scss/vendor/datepicker.minimal.css';
-@import '/dist/css/lightcase.css';
+@import "../../src/scss/vendor/swiper-bundle.min.css";
+@import "../../src/scss/vendor/normalize.css";
+@import "../../src/scss/vendor/datepicker.minimal.css";
+@import "/dist/css/lightcase.css";
 
 // vars
-@import './variables';
+@import "./variables";
 
 // layouts
-@import './layouts/header';
-@import './layouts/nav';
-@import './layouts/footer';
-@import './layouts/modal';
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/footer";
+@import "./layouts/modal";
 
 *,
 *::before,
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Geologica', sans-serif;
+  font-family: "Geologica", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -1105,7 +1105,7 @@ body {
       outline: none;
       border: 0;
 
-      & [slot='second'] {
+      & [slot="second"] {
         display: none;
       }
 
@@ -1114,14 +1114,14 @@ body {
         width: 100%;
         height: 100%;
 
-        & [slot='first'],
-        & [slot='second'] {
+        & [slot="first"],
+        & [slot="second"] {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
 
-        & [slot='second'] {
+        & [slot="second"] {
           display: unset;
         }
       }
@@ -1969,7 +1969,7 @@ body {
 
   &.preview {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -2040,7 +2040,10 @@ body {
     background-size: cover;
     pointer-events: none;
     user-select: none;
-    aspect-ratio: 21 / 10;
+    aspect-ratio: 21 / 16;
+    @media (min-width: 720px) {
+      aspect-ratio: 21 / 10;
+    }
     @media (min-width: 1200px) {
       position: absolute;
       top: 0;
@@ -3422,7 +3425,7 @@ body {
     color: var(--blue);
     padding-left: 30px;
     &::before {
-      content: '?';
+      content: "?";
       position: absolute;
       top: 2px;
       left: 0;
@@ -3527,7 +3530,7 @@ body {
         margin: 34px 0;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: -1px;
           left: 0;
@@ -3577,7 +3580,7 @@ body {
             }
 
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               top: 0;
               left: 0;
@@ -3624,7 +3627,7 @@ body {
         margin: 34px 0;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: -1px;
           left: 0;
@@ -3674,7 +3677,7 @@ body {
             }
 
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               top: 0;
               left: 0;
@@ -3726,7 +3729,7 @@ body {
         margin: 34px 0;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: -1px;
           left: 0;
@@ -3781,7 +3784,10 @@ body {
 // для страницы: Конкретной услуги
 .service-page {
   .section-hero-bg {
-    background-image: url('../../assets/images/pages/bg/service.jpg');
+    background-image: url("../../assets/images/pages/bg/service-xs.webp");
+    @media (min-width: 720px) {
+      background-image: url("../../assets/images/pages/bg/service.webp");
+    }
   }
 
   .section-smile {
@@ -3800,21 +3806,21 @@ body {
 // для страницы: Цены
 .prices-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Акции
 .loyalty-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Наши работы
 .our-works-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 
   .section-smile {
@@ -3834,14 +3840,17 @@ body {
 // для страницы: Контакты
 .contacts-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Услуги
 .services-page {
   .section-hero-bg {
-    background-image: url('../../assets/images/pages/bg/uslugi.jpg');
+    background-image: url("../../assets/images/pages/bg/uslugi-xs.webp");
+    @media (min-width: 720px) {
+      background-image: url("../../assets/images/pages/bg/uslugi.webp");
+    }
   }
 
   .section-services {
@@ -3860,42 +3869,42 @@ body {
 // для страницы: О компании
 .about-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Вакансии
 .vacancies-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Вопросы и ответы
 .question-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Специалисты
 .specialists-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Конкретного специалиста
 .specialist-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 
 // для страницы: Отзывы
 .reviews-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 
   .section-reviews {
@@ -3906,7 +3915,7 @@ body {
 // для страницы: Новой созданной
 .blank-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url("/assets/images/pages/services/bg.jpg");
   }
 }
 // config for main page
