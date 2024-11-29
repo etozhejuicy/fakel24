@@ -4218,7 +4218,6 @@ body {
 .section-connection .result-list {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 4px));
-  grid-template-rows: repeat(2, 1fr);
   row-gap: 8px;
   -moz-column-gap: 8px;
        column-gap: 8px;
