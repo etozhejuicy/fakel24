@@ -376,7 +376,7 @@ p.smaller {
     &-light {
       background-color: transparent;
       border-color: #eef5fe;
-      color: #eef5fe;
+      color: var(--blue);
 
       &:hover {
         background-color: #eef5fe;

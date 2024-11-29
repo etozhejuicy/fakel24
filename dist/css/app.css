@@ -349,7 +349,7 @@ p.smaller {
 .btn-outline-light {
   background-color: transparent;
   border-color: #eef5fe;
-  color: #eef5fe;
+  color: var(--blue);
 }
 .btn-outline-light:hover {
   background-color: #eef5fe;
