@@ -65,6 +65,56 @@ function dropdownMenu() {
 window.addEventListener('DOMContentLoaded', dropdownMenu);
 window.addEventListener('resize', dropdownMenu);
 
+// for low-level dropdown
+const linkDropdownItems = document.querySelectorAll('.link-dropdown');
+
+function downDropdownMenu() {
+  if (window.innerWidth >= 1200) {
+    linkDropdownItems.forEach((item) => {
+      const linkDropdownList = item.nextElementSibling;
+
+      // Открываем меню при наведении на элемент
+      item.addEventListener('mouseenter', (e) => {
+        if (e.currentTarget.nextElementSibling) {
+          item.classList.add('opened');
+          e.currentTarget.nextElementSibling.classList.add('opened');
+        }
+      });
+
+      // Закрываем меню, если курсор уходит с элемента и с dropdown
+
+      item.addEventListener('mouseleave', (e) => {
+        if (linkDropdownList) {
+          setTimeout(() => {
+            if (
+              !linkDropdownList.matches(':hover') &&
+              !item.matches(':hover')
+            ) {
+              linkDropdownList.classList.remove('opened');
+            }
+          }, 100); // Небольшая задержка для предотвращения закрытия при быстром наведении
+        }
+      });
+
+      // Дополнительный обработчик для dropdown
+
+      if (linkDropdownList) {
+        linkDropdownList.addEventListener('mouseenter', () => {
+          linkDropdownList.classList.add('opened'); // Оставляем dropdown открытым
+        });
+
+        linkDropdownList.addEventListener('mouseleave', () => {
+          item.classList.remove('opened');
+          linkDropdownList.classList.remove('opened'); // Закрываем dropdown при уходе курсора
+        });
+      }
+    });
+  }
+}
+
+window.addEventListener('DOMContentLoaded', downDropdownMenu);
+window.addEventListener('resize', downDropdownMenu);
+
 // mobile-menu
 const menuOpenElems = document.querySelectorAll('[data-menu-open]');
 const menuCloseElems = document.querySelectorAll('[data-menu-close]');
