@@ -61,7 +61,7 @@
   &-link {
     display: flex;
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     font-weight: 300;
     font-size: 16px;
     color: #585a60;
@@ -160,10 +160,10 @@
     }
     & a {
       position: relative;
-      z-index: 1;
+      // z-index: 1;
       font-weight: 300;
       color: #585a60;
-      padding: 6px 22px;
+      padding: 8px 22px;
       text-decoration: none;
       &::before {
         content: '•';
@@ -195,21 +195,37 @@
         width: 100%;
         @media (min-width: 1200px) {
           padding-right: 30px;
-          &.opened {
+        }
+        &.opened {
+          @media (min-width: 1200px) {
             background-color: rgba(38, 124, 223, 0.2);
           }
-          &:not(.opened) {
+          & i {
+            transform: translate(0, -50%) rotate(-180deg);
+          }
+        }
+        &:not(.opened) {
+          @media (min-width: 1200px) {
             background-color: transparent;
           }
         }
         & i {
-          display: none;
+          position: absolute;
+          top: 50%;
+          right: -5px;
+          z-index: 1000;
+          display: flex;
+          padding: 10px;
+          pointer-events: all;
+          transform: translate(0, -50%);
+          @media screen and (max-width: 1199.98px) {
+            background-color: var(--grey);
+            color: var(--black);
+            border-radius: 5px;
+          }
           @media (min-width: 1200px) {
-            position: absolute;
-            top: 50%;
             right: 14px;
-            z-index: 1;
-            display: flex;
+            padding: 0;
             transform: translate(0, -50%) rotate(-90deg);
           }
         }
@@ -224,33 +240,40 @@
     min-width: 280px;
     border-radius: 5px;
     background: #ffffff;
-    padding: 20px 0;
+    padding: 0 20px;
     margin: 0;
+    opacity: 0;
+    visibility: hidden;
     list-style: none;
     background: #ffffff;
     transition: all 0.3s;
+    @media screen and (max-width: 1199.98px) {
+      max-height: 0;
+    }
     @media (min-width: 1200px) {
       position: absolute;
       top: 0;
       right: 0;
       z-index: -1;
-      opacity: 0;
-      visibility: hidden;
+      padding: 20px 0;
       box-shadow: 0 0 12px 0 rgba(34, 68, 105, 0.63);
       transform: translate(90%, -10%);
     }
     &.opened {
       display: flex;
-      z-index: 10;
+      z-index: 50;
       opacity: 1;
       visibility: visible;
+      @media screen and (max-width: 1199.98px) {
+        max-height: 100%;
+      }
     }
     & > a {
       position: relative;
       z-index: 1;
       font-weight: 300;
       color: #585a60;
-      padding: 6px 22px;
+      padding: 8px 22px;
       text-decoration: none;
       @media (min-width: 1200px) {
         font-weight: 400;

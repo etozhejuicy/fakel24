@@ -1030,7 +1030,7 @@ p.smaller {
 .menu-link {
   display: flex;
   width: 100%;
-  padding: 6px;
+  padding: 8px;
   font-weight: 300;
   font-size: 16px;
   color: #585a60;
@@ -1130,10 +1130,9 @@ p.smaller {
 }
 .menu-list a {
   position: relative;
-  z-index: 1;
   font-weight: 300;
   color: #585a60;
-  padding: 6px 22px;
+  padding: 8px 22px;
   text-decoration: none;
 }
 .menu-list a::before {
@@ -1172,23 +1171,41 @@ p.smaller {
   .menu-list a.link-dropdown {
     padding-right: 30px;
   }
+}
+@media (min-width: 1200px) {
   .menu-list a.link-dropdown.opened {
     background-color: rgba(38, 124, 223, 0.2);
   }
+}
+.menu-list a.link-dropdown.opened i {
+  transform: translate(0, -50%) rotate(-180deg);
+}
+@media (min-width: 1200px) {
   .menu-list a.link-dropdown:not(.opened) {
     background-color: transparent;
   }
 }
 .menu-list a.link-dropdown i {
-  display: none;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  z-index: 1000;
+  display: flex;
+  padding: 10px;
+  pointer-events: all;
+  transform: translate(0, -50%);
+}
+@media screen and (max-width: 1199.98px) {
+  .menu-list a.link-dropdown i {
+    background-color: var(--grey);
+    color: var(--black);
+    border-radius: 5px;
+  }
 }
 @media (min-width: 1200px) {
   .menu-list a.link-dropdown i {
-    position: absolute;
-    top: 50%;
     right: 14px;
-    z-index: 1;
-    display: flex;
+    padding: 0;
     transform: translate(0, -50%) rotate(-90deg);
   }
 }
@@ -1199,11 +1216,18 @@ p.smaller {
   min-width: 280px;
   border-radius: 5px;
   background: #ffffff;
-  padding: 20px 0;
+  padding: 0 20px;
   margin: 0;
+  opacity: 0;
+  visibility: hidden;
   list-style: none;
   background: #ffffff;
   transition: all 0.3s;
+}
+@media screen and (max-width: 1199.98px) {
+  .menu .list-dropdown {
+    max-height: 0;
+  }
 }
 @media (min-width: 1200px) {
   .menu .list-dropdown {
@@ -1211,24 +1235,28 @@ p.smaller {
     top: 0;
     right: 0;
     z-index: -1;
-    opacity: 0;
-    visibility: hidden;
+    padding: 20px 0;
     box-shadow: 0 0 12px 0 rgba(34, 68, 105, 0.63);
     transform: translate(90%, -10%);
   }
 }
 .menu .list-dropdown.opened {
   display: flex;
-  z-index: 10;
+  z-index: 50;
   opacity: 1;
   visibility: visible;
+}
+@media screen and (max-width: 1199.98px) {
+  .menu .list-dropdown.opened {
+    max-height: 100%;
+  }
 }
 .menu .list-dropdown > a {
   position: relative;
   z-index: 1;
   font-weight: 300;
   color: #585a60;
-  padding: 6px 22px;
+  padding: 8px 22px;
   text-decoration: none;
 }
 @media (min-width: 1200px) {

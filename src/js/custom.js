@@ -69,46 +69,108 @@ window.addEventListener('resize', dropdownMenu);
 const linkDropdownItems = document.querySelectorAll('.link-dropdown');
 
 function downDropdownMenu() {
+  linkDropdownItems.forEach((item) => {
+    const linkDropdownList = item.nextElementSibling;
+
+    item.removeEventListener('mouseenter', handleMouseEnter);
+    item.removeEventListener('mouseleave', handleMouseLeave);
+    item.removeEventListener('click', handleClick);
+    item.querySelector('i').removeEventListener('click', handleIconClick);
+
+    if (window.innerWidth >= 1200) {
+      item.addEventListener('mouseenter', handleMouseEnter);
+      item.addEventListener('mouseleave', handleMouseLeave);
+    } else {
+      item.addEventListener('click', handleClick);
+
+      const icon = item.querySelector('i');
+      if (icon) {
+        icon.addEventListener('click', handleIconClick);
+      }
+    }
+
+    if (linkDropdownList) {
+      linkDropdownList.addEventListener('mouseenter', () => {
+        linkDropdownList.classList.add('opened');
+      });
+
+      linkDropdownList.addEventListener('mouseleave', () => {
+        item.classList.remove('opened');
+        linkDropdownList.classList.remove('opened');
+      });
+    }
+  });
+}
+
+function handleMouseEnter(e) {
+  const linkDropdownList = e.currentTarget.nextElementSibling;
+
+  if (linkDropdownList) {
+    e.currentTarget.classList.add('opened');
+    linkDropdownList.classList.add('opened');
+  }
+}
+
+function handleMouseLeave(e) {
+  const linkDropdownList = e.currentTarget.nextElementSibling;
+
+  if (linkDropdownList) {
+    setTimeout(() => {
+      if (
+        !linkDropdownList.matches(':hover') &&
+        !e.currentTarget.matches(':hover')
+      ) {
+        linkDropdownList.classList.remove('opened');
+      }
+    }, 100);
+  }
+}
+
+function handleClick(e) {
+  const linkDropdownList = e.currentTarget.nextElementSibling;
+
   if (window.innerWidth >= 1200) {
-    linkDropdownItems.forEach((item) => {
-      const linkDropdownList = item.nextElementSibling;
+    if (linkDropdownList) {
+      const isOpened = linkDropdownList.classList.contains('opened');
 
-      // Открываем меню при наведении на элемент
-      item.addEventListener('mouseenter', (e) => {
-        if (e.currentTarget.nextElementSibling) {
-          item.classList.add('opened');
-          e.currentTarget.nextElementSibling.classList.add('opened');
-        }
-      });
-
-      // Закрываем меню, если курсор уходит с элемента и с dropdown
-
-      item.addEventListener('mouseleave', (e) => {
-        if (linkDropdownList) {
-          setTimeout(() => {
-            if (
-              !linkDropdownList.matches(':hover') &&
-              !item.matches(':hover')
-            ) {
-              linkDropdownList.classList.remove('opened');
-            }
-          }, 100); // Небольшая задержка для предотвращения закрытия при быстром наведении
-        }
-      });
-
-      // Дополнительный обработчик для dropdown
-
-      if (linkDropdownList) {
-        linkDropdownList.addEventListener('mouseenter', () => {
-          linkDropdownList.classList.add('opened'); // Оставляем dropdown открытым
-        });
-
-        linkDropdownList.addEventListener('mouseleave', () => {
+      linkDropdownItems.forEach((item) => {
+        const dropdownList = item.nextElementSibling;
+        if (dropdownList) {
+          dropdownList.classList.remove('opened');
           item.classList.remove('opened');
-          linkDropdownList.classList.remove('opened'); // Закрываем dropdown при уходе курсора
-        });
+        }
+      });
+
+      if (!isOpened) {
+        e.currentTarget.classList.add('opened');
+        linkDropdownList.classList.add('opened');
+      }
+    }
+  }
+}
+
+function handleIconClick(e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  const linkDropdownList =
+    e.currentTarget.closest('.link-dropdown').nextElementSibling;
+
+  if (linkDropdownList) {
+    const isOpened = linkDropdownList.classList.contains('opened');
+
+    linkDropdownItems.forEach((item) => {
+      const dropdownList = item.nextElementSibling;
+      if (dropdownList) {
+        dropdownList.classList.remove('opened');
+        item.classList.remove('opened');
       }
     });
+
+    if (!isOpened) {
+      e.currentTarget.closest('.link-dropdown').classList.add('opened');
+      linkDropdownList.classList.add('opened');
+    }
   }
 }
 
