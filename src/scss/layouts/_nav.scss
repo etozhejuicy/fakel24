@@ -197,11 +197,14 @@
           padding-right: 30px;
         }
         &.opened {
-          @media (min-width: 1200px) {
-            background-color: rgba(38, 124, 223, 0.2);
-          }
           & i {
             transform: translate(0, -50%) rotate(-180deg);
+          }
+          @media (min-width: 1200px) {
+            background-color: rgba(38, 124, 223, 0.2);
+            & i {
+              transform: translate(0, -50%) rotate(-90deg);
+            }
           }
         }
         &:not(.opened) {
@@ -257,7 +260,7 @@
       z-index: -1;
       padding: 20px 0;
       box-shadow: 0 0 12px 0 rgba(34, 68, 105, 0.63);
-      transform: translate(90%, -10%);
+      transform: translate(95%, -10%);
     }
     &.opened {
       display: flex;
