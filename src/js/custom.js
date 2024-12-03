@@ -115,14 +115,18 @@ function handleMouseLeave(e) {
   const linkDropdownList = e.currentTarget.nextElementSibling;
 
   if (linkDropdownList) {
-    setTimeout(() => {
-      if (
-        !linkDropdownList.matches(':hover') &&
-        !e.currentTarget.matches(':hover')
-      ) {
-        linkDropdownList.classList.remove('opened');
-      }
-    }, 100);
+    // setTimeout(() => {
+    //   if (
+    //     !linkDropdownList.matches(':hover') &&
+    //     !e.currentTarget.matches(':hover')
+    //   ) {
+    //     linkDropdownList.classList.remove('opened');
+    //   }
+    // }, 100);
+    if (!linkDropdownList.matches(':hover')) {
+      e.currentTarget.classList.remove('opened');
+    }
+    linkDropdownList.classList.remove('opened');
   }
 }
 
