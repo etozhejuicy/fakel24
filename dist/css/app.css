@@ -4634,11 +4634,18 @@ body {
          column-gap: 40px;
   }
 }
-@media (min-width: 720px) {
+@media (min-width: 992px) {
   .section-wysivig > .container {
     row-gap: 50px;
     -moz-column-gap: 50px;
          column-gap: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-wysivig > .container {
+    row-gap: 70px;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
   }
 }
 
