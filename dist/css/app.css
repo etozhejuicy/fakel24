@@ -4950,26 +4950,10 @@ body {
          column-gap: 50px;
   }
 }
-@media (min-width: 992px) {
-  .loyalty-list > *:nth-child(even) {
-    grid-template-columns: 50% auto;
-    grid-template-rows: 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .loyalty-list > *:nth-child(even) {
-    grid-template-columns: 60% auto;
-    -moz-column-gap: 70px;
-         column-gap: 70px;
-  }
-}
-.loyalty-list > *:nth-child(even) > .loyalty-content {
-  order: -1;
-}
 
 .loyalty {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   row-gap: 20px;
   -moz-column-gap: 20px;
        column-gap: 20px;
