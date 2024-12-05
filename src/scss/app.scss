@@ -3792,6 +3792,63 @@ body {
 }
 // section-specialist part end
 
+// error part start
+.equipment-intro {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  @media (min-width: 720px) {
+    padding: 60px 0;
+  }
+  @media (min-width: 1200px) {
+    padding: 80px 0;
+  }
+
+  & .preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 85vh;
+    min-height: 85svh;
+    @media (min-width: 1200px) {
+      min-height: 65vh;
+      min-height: 65svh;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      & > h1 {
+        font-weight: 700;
+        color: var(--blue);
+        margin: 0;
+      }
+      & > h3 {
+        color: var(--black);
+        margin: 0;
+      }
+      & > * {
+        text-align: center;
+      }
+      & > .btn {
+        margin: 20px auto 0;
+        @media (min-width: 720px) {
+          margin: 60px auto 0;
+        }
+      }
+    }
+  }
+}
+// error part end
+
 // this config are created, because we need change same styles for identical blocks & elements
 // для страницы: Главная
 .main-page {
@@ -3970,5 +4027,9 @@ body {
   .section-hero-bg {
     background-image: url('/assets/images/pages/services/bg.jpg');
   }
+}
+
+// для страницы: 404
+.error-page {
 }
 // config for main page
