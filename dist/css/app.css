@@ -2828,6 +2828,14 @@ body {
   -o-object-position: bottom;
      object-position: bottom;
 }
+.section-technologies .swiper-slide > * * {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
 .section-technologies-content {
   position: relative;
   z-index: 1;
@@ -5783,15 +5791,30 @@ body {
 }
 
 .prices-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .prices-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .loyalty-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .loyalty-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .our-works-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .our-works-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 .our-works-page .section-smile {
   padding: 35px 0;
@@ -5809,15 +5832,20 @@ body {
 }
 
 .contacts-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
-}
-
-.services-page .section-hero-bg {
   background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
 }
 @media (min-width: 720px) {
-  .services-page .section-hero-bg {
+  .contacts-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
+}
+
+.services-page .section-hero-bg {
+  background-image: url("/assets/images/pages/bg/service-xs.webp");
+}
+@media (min-width: 720px) {
+  .services-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/service.webp");
   }
 }
 .services-page .section-services {
@@ -5848,32 +5876,67 @@ body {
 }
 
 .about-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .about-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .vacancies-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .vacancies-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .question-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .question-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .specialists-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .specialists-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .specialist-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .specialist-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 
 .reviews-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .reviews-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }
 .reviews-page .section-reviews {
   margin-top: 0;
 }
 
 .blank-page .section-hero-bg {
-  background-image: url("/assets/images/pages/services/bg.jpg");
+  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+}
+@media (min-width: 720px) {
+  .blank-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
 }/*# sourceMappingURL=app.css.map */

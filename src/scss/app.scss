@@ -903,6 +903,12 @@ body {
       height: 100%;
       object-fit: cover;
       object-position: bottom;
+      & * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
     }
   }
 
@@ -3924,21 +3930,30 @@ body {
 // для страницы: Цены
 .prices-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Акции
 .loyalty-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Наши работы
 .our-works-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 
   .section-smile {
@@ -3958,16 +3973,19 @@ body {
 // для страницы: Контакты
 .contacts-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Услуги
 .services-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    background-image: url('/assets/images/pages/bg/service-xs.webp');
     @media (min-width: 720px) {
-      background-image: url('/assets/images/pages/bg/uslugi.webp');
+      background-image: url('/assets/images/pages/bg/service.webp');
     }
   }
 
@@ -3999,42 +4017,60 @@ body {
 // для страницы: О компании
 .about-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Вакансии
 .vacancies-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Вопросы и ответы
 .question-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Специалисты
 .specialists-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Конкретного специалиста
 .specialist-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
 // для страницы: Отзывы
 .reviews-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 
   .section-reviews {
@@ -4045,7 +4081,10 @@ body {
 // для страницы: Новой созданной
 .blank-page {
   .section-hero-bg {
-    background-image: url('/assets/images/pages/services/bg.jpg');
+    background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
+    @media (min-width: 720px) {
+      background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
   }
 }
 
