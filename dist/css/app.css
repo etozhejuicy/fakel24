@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import '../../src/scss/vendor/swiper-bundle.min.css';
-@import '../../src/scss/vendor/normalize.css';
-@import '../../src/scss/vendor/datepicker.minimal.css';
-@import '/dist/css/lightcase.css';
+@import "../../src/scss/vendor/swiper-bundle.min.css";
+@import "../../src/scss/vendor/normalize.css";
+@import "../../src/scss/vendor/datepicker.minimal.css";
+@import "/dist/css/lightcase.css";
 :root {
   --blue: #267cdf;
   --blue-rgb: 38, 124, 223;
@@ -5561,6 +5561,77 @@ body {
   padding: 5px 7px;
 }
 .specialist-skills > ul > li > p {
+  margin: unset;
+}
+
+.documents-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  column-gap: 16px;
+  margin: 24px 0;
+}
+@media (min-width: 720px) {
+  .documents-list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .documents-list {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 20px;
+  }
+}
+
+.document-file {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-left: 26px;
+  color: var(--black);
+  text-decoration: none;
+}
+@media (min-width: 720px) {
+  .document-file {
+    gap: 12px;
+    padding-left: 34px;
+  }
+}
+.document-file:hover div {
+  text-decoration: underline;
+}
+.document-file div {
+  font-size: 20px;
+  color: var(--blue);
+}
+.document-file div::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/icons/download.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 720px) {
+  .document-file div::before {
+    width: 24px;
+    height: 24px;
+  }
+}
+.document-file p {
+  flex: 1;
+  width: 100%;
   margin: unset;
 }
 
