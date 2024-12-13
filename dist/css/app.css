@@ -1728,6 +1728,7 @@ p.smaller {
   color: #585a60;
   text-wrap: nowrap;
   text-decoration: none;
+  white-space: nowrap;
 }
 .intrid:hover {
   background: #ffffff;
