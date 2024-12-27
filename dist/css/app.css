@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import "../../src/scss/vendor/swiper-bundle.min.css";
-@import "../../src/scss/vendor/normalize.css";
-@import "../../src/scss/vendor/datepicker.minimal.css";
-@import "/dist/css/lightcase.css";
+@import '../../src/scss/vendor/swiper-bundle.min.css';
+@import '../../src/scss/vendor/normalize.css';
+@import '../../src/scss/vendor/datepicker.minimal.css';
+@import '/dist/css/lightcase.css';
 :root {
   --blue: #267cdf;
   --blue-rgb: 38, 124, 223;
@@ -4762,13 +4762,17 @@ body {
   font-size: 14px;
   padding-left: 10px;
 }
+@media (min-width: 1200px) {
+  .wysivig-block ol li {
+    font-size: 16px;
+  }
+}
 .wysivig-block ol li:not(:first-of-type) {
   margin-top: 20px;
 }
 @media (min-width: 1200px) {
   .wysivig-block ol li:not(:first-of-type) {
     margin-top: 38px;
-    font-size: 16px;
   }
 }
 .wysivig-block ol li::marker {
