@@ -55,7 +55,7 @@ function dropdownMenu() {
         if (item.classList.contains('opened')) {
           item.classList.remove('opened');
         } else {
-          item.classList.add('opened');
+          item.classList.remove('opened');
         }
       });
     });
