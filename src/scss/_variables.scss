@@ -270,6 +270,18 @@ p.smaller {
   }
 }
 
+.text {
+  &-center {
+    text-align: center !important;
+  }
+  &-left {
+    text-align: left !important;
+  }
+  &-right {
+    text-align: right !important;
+  }
+}
+
 // container options
 .container {
   max-width: 100%;

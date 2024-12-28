@@ -3555,12 +3555,21 @@ body {
   & > img {
     position: relative;
     z-index: 1;
-    width: 100%;
+    // width: 100%;
+    width: auto;
+    max-width: 100%;
     height: fit-content;
+    max-height: 340px;
     aspect-ratio: 9 / 16;
     object-fit: cover;
     object-position: top center;
     border-radius: 15px;
+
+    @media (min-width: 992px) {
+      width: 100%;
+      max-width: 100%;
+      max-height: unset;
+    }
   }
 
   &-info {
@@ -4599,6 +4608,22 @@ body {
     background-image: url('/assets/images/pages/bg/uslugi-xs.webp');
     @media (min-width: 720px) {
       background-image: url('/assets/images/pages/bg/uslugi.webp');
+    }
+  }
+
+  .section-services {
+    & .container {
+      & > h2 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        color: var(--blue);
+        text-align: left !important;
+
+        @media (min-width: 1200px) {
+          font-size: 32px;
+        }
+      }
     }
   }
 }

@@ -254,6 +254,16 @@ p.smaller {
   }
 }
 
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
 .container {
   max-width: 100%;
   width: 100%;
@@ -5473,15 +5483,24 @@ body {
 .specialist > img {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  max-height: 340px;
   aspect-ratio: 9/16;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top center;
      object-position: top center;
   border-radius: 15px;
+}
+@media (min-width: 992px) {
+  .specialist > img {
+    width: 100%;
+    max-width: 100%;
+    max-height: unset;
+  }
 }
 .specialist-info {
   display: flex;
@@ -6469,6 +6488,18 @@ body {
 @media (min-width: 720px) {
   .specialist-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
+  }
+}
+.specialist-page .section-services .container > h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--blue);
+  text-align: left !important;
+}
+@media (min-width: 1200px) {
+  .specialist-page .section-services .container > h2 {
+    font-size: 32px;
   }
 }
 
