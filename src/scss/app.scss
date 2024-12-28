@@ -3236,6 +3236,16 @@ body {
       margin-bottom: 35px;
     }
   }
+
+  & > .container {
+    & > h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      @media (min-width: 1200px) {
+        margin-bottom: 35px;
+      }
+    }
+  }
 }
 
 .contacts-layout {

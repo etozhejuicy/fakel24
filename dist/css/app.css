@@ -5133,6 +5133,15 @@ body {
     margin-bottom: 35px;
   }
 }
+.section-contacts > .container > h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .section-contacts > .container > h1 {
+    margin-bottom: 35px;
+  }
+}
 
 .contacts-layout {
   display: grid;
