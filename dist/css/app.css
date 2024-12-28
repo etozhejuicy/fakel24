@@ -185,6 +185,7 @@ h1 {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
+  color: var(--blue);
 }
 @media (min-width: 1200px) {
   h1 {
@@ -1523,7 +1524,7 @@ p.smaller {
 @media (min-width: 720px) {
   .footer-services a {
     padding: 2px 45px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22.5px;
   }
 }
@@ -1597,7 +1598,7 @@ p.smaller {
 }
 @media (min-width: 720px) {
   .footer-links a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
   }
 }
@@ -2575,7 +2576,7 @@ body {
     padding: 68px 0 73px;
   }
 }
-.section-doctors > .container > h2 {
+.section-doctors > .container > h1, .section-doctors > .container > h2 {
   margin: 0 auto;
   text-align: center;
 }
@@ -3144,7 +3145,7 @@ body {
   flex-direction: column;
   align-items: stretch;
 }
-.section-reviews .container > h2 {
+.section-reviews .container > h1, .section-reviews .container > h2 {
   text-align: center;
   margin: 0 0 40px 0;
 }
@@ -5003,6 +5004,11 @@ body {
     padding: 120px 0;
   }
 }
+.section-loyalty > .container > h1 {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 .section-loyalty .section-title {
   text-align: left;
   margin-bottom: 20px;
@@ -5393,6 +5399,10 @@ body {
     padding: 100px 0;
   }
 }
+.section-question > .container .qa-list > h1 {
+  margin: 0;
+  text-align: left;
+}
 
 .qa-list {
   display: flex;
@@ -5465,6 +5475,14 @@ body {
 @media (min-width: 1200px) {
   .section-specialist {
     padding: 50px 0;
+  }
+}
+.section-specialist > .container > h1 {
+  margin: 0 0 20px 0;
+}
+@media (min-width: 720px) {
+  .section-specialist > .container > h1 {
+    margin: 0 0 40px 0;
   }
 }
 
@@ -6171,6 +6189,10 @@ body {
   .our-works-page .section-smile {
     padding: 50px 0;
   }
+}
+.our-works-page .section-smile > .container > h1 {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .contacts-page .section-hero-bg {
