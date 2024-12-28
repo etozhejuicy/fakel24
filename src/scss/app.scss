@@ -2051,7 +2051,7 @@ body {
     margin-bottom: 0px;
     aspect-ratio: unset;
     max-height: 100%;
-    min-height: 600px;
+    min-height: 300px;
     // aspect-ratio: 21/9;
     // min-height: 584px;
     // max-height: 70vh;
@@ -2059,7 +2059,7 @@ body {
 
   @media (min-width: 1400px) {
     margin-top: -160px;
-    min-height: 700px;
+    min-height: 280px;
   }
 
   &-bg {
@@ -2067,15 +2067,22 @@ body {
     z-index: -1;
     width: 100%;
     height: 100%;
+    min-height: 170px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
     user-select: none;
-    aspect-ratio: 21 / 16;
+    aspect-ratio: 21 / 9;
+
     @media (min-width: 720px) {
-      aspect-ratio: 21 / 10;
+      aspect-ratio: 21 / 6;
     }
+
+    @media (min-width: 992px) {
+      aspect-ratio: 21 / 5;
+    }
+
     @media (min-width: 1200px) {
       position: absolute;
       top: 0;
@@ -3986,6 +3993,233 @@ body {
   //     }
   //   }
   // }
+
+  // На этой странице свои стили для section-hero
+  .section-hero {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    // max-height: 70vh;
+    margin-top: -70px;
+    margin-bottom: 0px;
+    // aspect-ratio: 9/21;
+    overflow: hidden;
+
+    @media (min-width: 720px) {
+      margin-bottom: -16px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: -150px;
+      margin-bottom: 0px;
+      aspect-ratio: unset;
+      max-height: 100%;
+      min-height: 600px;
+      // aspect-ratio: 21/9;
+      // min-height: 584px;
+      // max-height: 70vh;
+    }
+
+    @media (min-width: 1400px) {
+      margin-top: -160px;
+      min-height: 700px;
+    }
+
+    &-bg {
+      position: relative;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      pointer-events: none;
+      user-select: none;
+      aspect-ratio: 21 / 16;
+      @media (min-width: 720px) {
+        aspect-ratio: 21 / 10;
+      }
+      @media (min-width: 1200px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        aspect-ratio: 21 / 8;
+      }
+    }
+
+    &-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      pointer-events: none;
+
+      @media (min-width: 720px) and (max-width: 1199.98px) {
+        margin-top: -16px;
+      }
+
+      @media (min-width: 1200px) {
+        min-height: inherit;
+        justify-content: flex-start;
+      }
+
+      & > .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 15px;
+        padding: 0;
+
+        @media (min-width: 1200px) {
+          height: 100%;
+          padding: 180px 0 20px;
+        }
+
+        & > .breadcrumbs {
+          // display: none;
+
+          position: absolute;
+          top: 0;
+          width: 100%;
+          flex-wrap: wrap;
+          padding: 32px 26px;
+          transform: translate(0, -100%);
+
+          @media (min-width: 1200px) {
+            display: flex;
+            position: relative;
+            top: unset;
+            padding: 0;
+            transform: translate(0, 0);
+          }
+        }
+
+        & > .btn {
+          position: absolute;
+          top: -170px;
+          left: 50%;
+          white-space: nowrap;
+          pointer-events: all;
+          transform: translate(-50%, 100%);
+
+          @media (min-width: 720px) {
+            display: none;
+          }
+        }
+      }
+    }
+    & .card-advantage {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: nowrap;
+      row-gap: 8px;
+      column-gap: 8px;
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      padding: 24px;
+      opacity: 1;
+      background-color: #eef5fe;
+      backdrop-filter: blur(7.95px);
+      border: 1px solid #eef5fe;
+      pointer-events: all;
+      transition: opacity 0.4s ease;
+
+      @media (min-width: 720px) {
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 10px;
+        column-gap: 10px;
+        min-height: 265px;
+      }
+
+      @media (min-width: 1200px) {
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        max-width: 45%;
+        min-height: 235px;
+        border-radius: 10px;
+      }
+
+      @media (min-width: 1400px) {
+        padding: 50px 40px;
+      }
+
+      & h1 {
+        margin: 0;
+        color: var(--blue);
+        text-align: left;
+      }
+
+      & .card-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        color: var(--blue);
+
+        @media (min-width: 720px) {
+          font-size: 32px;
+          text-align: left;
+        }
+      }
+
+      & ul {
+        font-style: normal;
+        font-weight: 300;
+        text-align: left;
+        flex: 1;
+
+        @media (min-width: 720px) {
+          text-align: left;
+        }
+      }
+
+      & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+          position: relative;
+          margin: 0 0 25px 0;
+          padding-left: 35px;
+          font-size: 14px;
+          line-height: 1.25;
+          text-wrap: balance;
+          @media (min-width: 1200px) {
+            font-size: 16px;
+          }
+
+          &::before {
+            content: url('/assets/images/icons/plus.svg');
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            transform: translate(0, 0);
+          }
+
+          &:last-of-type {
+            margin: unset;
+          }
+        }
+      }
+    }
+  }
+
   .section-hero-bg {
     background-image: url('/assets/images/pages/bg/service-xs.webp');
     @media (min-width: 720px) {
@@ -4061,6 +4295,232 @@ body {
 
 // для страницы: Услуги
 .services-page {
+  // На этой странице свои стили для section-hero
+  .section-hero {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    // max-height: 70vh;
+    margin-top: -70px;
+    margin-bottom: 0px;
+    // aspect-ratio: 9/21;
+    overflow: hidden;
+
+    @media (min-width: 720px) {
+      margin-bottom: -16px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: -150px;
+      margin-bottom: 0px;
+      aspect-ratio: unset;
+      max-height: 100%;
+      min-height: 600px;
+      // aspect-ratio: 21/9;
+      // min-height: 584px;
+      // max-height: 70vh;
+    }
+
+    @media (min-width: 1400px) {
+      margin-top: -160px;
+      min-height: 700px;
+    }
+
+    &-bg {
+      position: relative;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      pointer-events: none;
+      user-select: none;
+      aspect-ratio: 21 / 16;
+      @media (min-width: 720px) {
+        aspect-ratio: 21 / 10;
+      }
+      @media (min-width: 1200px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        aspect-ratio: 21 / 8;
+      }
+    }
+
+    &-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      pointer-events: none;
+
+      @media (min-width: 720px) and (max-width: 1199.98px) {
+        margin-top: -16px;
+      }
+
+      @media (min-width: 1200px) {
+        min-height: inherit;
+        justify-content: flex-start;
+      }
+
+      & > .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 15px;
+        padding: 0;
+
+        @media (min-width: 1200px) {
+          height: 100%;
+          padding: 180px 0 20px;
+        }
+
+        & > .breadcrumbs {
+          // display: none;
+
+          position: absolute;
+          top: 0;
+          width: 100%;
+          flex-wrap: wrap;
+          padding: 32px 26px;
+          transform: translate(0, -100%);
+
+          @media (min-width: 1200px) {
+            display: flex;
+            position: relative;
+            top: unset;
+            padding: 0;
+            transform: translate(0, 0);
+          }
+        }
+
+        & > .btn {
+          position: absolute;
+          top: -170px;
+          left: 50%;
+          white-space: nowrap;
+          pointer-events: all;
+          transform: translate(-50%, 100%);
+
+          @media (min-width: 720px) {
+            display: none;
+          }
+        }
+      }
+    }
+    & .card-advantage {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: nowrap;
+      row-gap: 8px;
+      column-gap: 8px;
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      padding: 24px;
+      opacity: 1;
+      background-color: #eef5fe;
+      backdrop-filter: blur(7.95px);
+      border: 1px solid #eef5fe;
+      pointer-events: all;
+      transition: opacity 0.4s ease;
+
+      @media (min-width: 720px) {
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 10px;
+        column-gap: 10px;
+        min-height: 265px;
+      }
+
+      @media (min-width: 1200px) {
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        max-width: 45%;
+        min-height: 235px;
+        border-radius: 10px;
+      }
+
+      @media (min-width: 1400px) {
+        padding: 50px 40px;
+      }
+
+      & h1 {
+        margin: 0;
+        color: var(--blue);
+        text-align: left;
+      }
+
+      & .card-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        color: var(--blue);
+
+        @media (min-width: 720px) {
+          font-size: 32px;
+          text-align: left;
+        }
+      }
+
+      & ul {
+        font-style: normal;
+        font-weight: 300;
+        text-align: left;
+        flex: 1;
+
+        @media (min-width: 720px) {
+          text-align: left;
+        }
+      }
+
+      & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+          position: relative;
+          margin: 0 0 25px 0;
+          padding-left: 35px;
+          font-size: 14px;
+          line-height: 1.25;
+          text-wrap: balance;
+          @media (min-width: 1200px) {
+            font-size: 16px;
+          }
+
+          &::before {
+            content: url('/assets/images/icons/plus.svg');
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            transform: translate(0, 0);
+          }
+
+          &:last-of-type {
+            margin: unset;
+          }
+        }
+      }
+    }
+  }
+
   .section-hero-bg {
     background-image: url('/assets/images/pages/bg/service-xs.webp');
     @media (min-width: 720px) {
