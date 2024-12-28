@@ -293,6 +293,16 @@ if (document.querySelector('.service-page')) {
       ) {
         option.selected = true;
       }
+
+      if (
+        document
+          .querySelector('.modal .consult-form select option')
+          .getAttribute('value-id') ==
+        document.querySelector('.section-consult .consult-form select option')
+      ) {
+        console.log(1);
+        option.selected = true;
+      }
     });
   });
 }
