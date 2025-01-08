@@ -105,7 +105,7 @@ body {
       order: 0;
     }
 
-    & .swiper-hero {
+    & .swiper-main {
       display: flex;
       flex-direction: column;
     }
@@ -149,8 +149,9 @@ body {
       }
 
       @media (min-width: 1200px) {
-        top: -30px;
-        margin-top: 0;
+        // top: -30px;
+        top: unset;
+        margin-top: -30px;
         background-color: transparent;
       }
     }
@@ -341,14 +342,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 38px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 100px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   & h1,
@@ -632,18 +633,18 @@ body {
   overflow: hidden;
 
   @media (min-width: 720px) {
-    padding: 63px 0 42px;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 68px 0 73px;
+    padding: 80px 0;
   }
 
   & > .container {
     & > h1,
     & > h2 {
       margin: 0 auto;
-      text-align: center;
+      // text-align: center;
     }
   }
 
@@ -835,17 +836,18 @@ body {
   z-index: 1;
   width: 100%;
   overflow: hidden;
-  padding: 38px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 58px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 82px 0;
+    padding: 80px 0;
   }
 
   & > h2 {
+    margin-top: 0;
     text-align: center;
   }
 
@@ -953,7 +955,8 @@ body {
   flex-direction: column;
   opacity: 1;
   width: 100%;
-  height: 496px;
+  // height: 496px;
+  height: 380px;
   padding: 30px 18px;
   background-color: #ffffff;
   overflow: hidden;
@@ -999,7 +1002,16 @@ body {
 .section-smile {
   position: relative;
   z-index: 1;
+  padding: 40px 0;
   overflow: hidden;
+
+  @media (min-width: 720px) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 80px 0;
+  }
 
   & .container {
     display: flex;
@@ -1008,7 +1020,7 @@ body {
 
     & > h2 {
       margin: 0;
-      text-align: center;
+      // text-align: center;
     }
 
     & .btn {
@@ -1084,6 +1096,10 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+
+  & > p {
+    margin-top: 0;
+  }
 
   & .smile-title {
     font-style: normal;
@@ -1188,18 +1204,16 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  margin-top: 50px;
-  padding: 50px 0 74px;
+  padding: 40px 0;
   background-color: rgba(38, 124, 223, 0.07);
   overflow: hidden;
 
   @media (min-width: 720px) {
-    margin-top: 65px;
+    padding-top: 60px;
   }
 
   @media (min-width: 1200px) {
-    margin-top: 100px;
-    padding: 60px 0 70px;
+    padding: 80px 0;
   }
 
   & .container {
@@ -1209,17 +1223,17 @@ body {
 
     & > h1,
     & > h2 {
-      text-align: center;
+      // text-align: center;
       margin: 0 0 40px 0;
     }
   }
 
   & .swiper-reviews {
-    margin-top: 20px;
+    // margin-top: 20px;
 
-    @media (min-width: 720px) {
-      margin-top: 32px;
-    }
+    // @media (min-width: 720px) {
+    //   margin-top: 32px;
+    // }
 
     @media (min-width: 1200px) {
       max-width: 100%;
@@ -1557,19 +1571,20 @@ body {
   position: relative;
   z-index: 1;
   display: block;
-  padding: 67px 0 37px;
+  padding: 40px 0;
   overflow: hidden;
 
   @media (min-width: 720px) {
-    padding: 70px 0 60px;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 70px 0 80px;
+    padding: 80px 0;
   }
 
   & > .container {
     & > h2 {
+      margin-top: 0;
       text-align: center;
     }
   }
@@ -1817,6 +1832,7 @@ body {
   }
 
   & h2 {
+    margin-top: 0;
     text-align: center;
     color: #ffffff;
   }
@@ -2045,17 +2061,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -70px;
-  margin-bottom: 0px;
+  // margin-bottom: 0px;
   // aspect-ratio: 9/21;
   overflow: hidden;
 
-  @media (min-width: 720px) {
-    margin-bottom: -16px;
-  }
+  // @media (min-width: 720px) {
+  //   margin-bottom: -16px;
+  // }
 
   @media (min-width: 1200px) {
     margin-top: -150px;
-    margin-bottom: 0px;
+    // margin-bottom: 0px;
     // aspect-ratio: unset;
     // max-height: 100%;
     // min-height: 300px;
@@ -2289,14 +2305,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 35px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   & > .container {
@@ -2318,10 +2334,7 @@ body {
       }
       &:nth-child(1) {
         & h1 {
-          text-align: center;
-          @media (min-width: 720px) {
-            text-align: left;
-          }
+          margin-top: 0;
         }
 
         @media (min-width: 992px) {
@@ -2576,14 +2589,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 35px 0 0 0;
+  padding: 40px 0 0 0;
 
   @media (min-width: 720px) {
-    padding: 40px 0 0 0;
+    padding: 60px 0 0 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0 0 0;
+    padding: 80px 0 0 0;
   }
 
   & h2 {
@@ -2671,14 +2684,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 35px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   & h2 {
@@ -2779,14 +2792,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 35px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   & h2 {
@@ -2987,14 +3000,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 35px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   & table {
@@ -3102,14 +3115,14 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
 
   @media (min-width: 720px) {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 120px 0;
+    padding: 80px 0;
   }
 
   & > .container {
@@ -3240,13 +3253,13 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
   overflow: hidden;
   @media (min-width: 720px) {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   @media (min-width: 1200px) {
-    padding: 100px 0;
+    padding: 80px 0;
   }
   & .section-title {
     margin-bottom: 20px;
@@ -3316,15 +3329,15 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 25px 0 25px;
+  padding: 40px 0;
   overflow: hidden;
 
   @media (min-width: 720px) {
-    padding: 40px 0 40px;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 60px 0 50px;
+    padding: 80px 0;
   }
 
   & .section-title {
@@ -3362,6 +3375,17 @@ body {
 
       @media (min-width: 720px) {
         padding: 20px 0;
+      }
+    }
+  }
+
+  & > div {
+    & > * {
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
@@ -3433,19 +3457,19 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
   overflow: hidden;
   @media (min-width: 720px) {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 100px 0;
+    padding: 80px 0;
   }
-  & .section-title {
-    margin-bottom: 20px;
+  & h2 {
+    margin: 0 0 20px 0;
     @media (min-width: 720px) {
-      margin-bottom: 35px;
+      margin: 0 0 35px 0;
     }
   }
   & .about-gallery {
@@ -3500,13 +3524,13 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
   overflow: hidden;
   @media (min-width: 720px) {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   @media (min-width: 1200px) {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   & > .container {
@@ -3596,15 +3620,15 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 35px 0;
+  padding: 40px 0;
   overflow: hidden;
 
   @media (min-width: 720px) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   & > .container {
@@ -4091,6 +4115,56 @@ body {
       }
     }
   }
+
+  .section-services {
+    & > .container {
+      & h1,
+      & h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  .section-doctors {
+    & > .container {
+      & h1,
+      & h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  .section-technologies {
+    & + * {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  .section-smile {
+    & > .container {
+      & h1,
+      & h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  .section-reviews {
+    // margin-top: 50px;
+    // @media (min-width: 720px) {
+    //   margin-top: 65px;
+    // }
+    // @media (min-width: 1200px) {
+    //   margin-top: 100px;
+    // }
+    & > .container {
+      & h1,
+      & h2 {
+        text-align: center;
+      }
+    }
+  }
 }
 
 // для страницы: Конкретной услуги
@@ -4342,18 +4416,6 @@ body {
       background-image: url("/assets/images/pages/bg/service.webp");
     }
   }
-
-  .section-smile {
-    padding: 25px 0;
-    overflow: hidden;
-    @media (min-width: 720px) {
-      padding: 40px 0;
-    }
-
-    @media (min-width: 1200px) {
-      padding: 50px 0;
-    }
-  }
 }
 
 // для страницы: Цены
@@ -4386,16 +4448,16 @@ body {
   }
 
   .section-smile {
-    padding: 35px 0;
+    // padding: 35px 0;
     overflow: hidden;
 
-    @media (min-width: 720px) {
-      padding: 40px 0;
-    }
+    // @media (min-width: 720px) {
+    //   padding: 40px 0;
+    // }
 
-    @media (min-width: 1200px) {
-      padding: 50px 0;
-    }
+    // @media (min-width: 1200px) {
+    //   padding: 50px 0;
+    // }
 
     & .smile-list {
       margin-top: 0;
@@ -4403,7 +4465,7 @@ body {
 
     & > .container {
       & > h1 {
-        text-align: center;
+        // text-align: center;
         margin: 0 auto;
       }
     }
@@ -4434,9 +4496,9 @@ body {
     // aspect-ratio: 9/21;
     overflow: hidden;
 
-    @media (min-width: 720px) {
-      margin-bottom: -16px;
-    }
+    // @media (min-width: 720px) {
+    //   margin-bottom: -16px;
+    // }
 
     @media (min-width: 1200px) {
       margin-top: -150px;
@@ -4656,21 +4718,21 @@ body {
   }
 
   .section-services {
-    padding: 35px 0;
+    // padding: 35px 0;
 
-    @media (min-width: 720px) {
-      padding: 40px 0;
-    }
+    // @media (min-width: 720px) {
+    //   padding: 40px 0;
+    // }
 
-    @media (min-width: 1200px) {
-      padding: 50px 0;
-    }
+    // @media (min-width: 1200px) {
+    //   padding: 50px 0;
+    // }
 
     & h2 {
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
-      text-align: center;
+      text-align: left;
       color: var(--blue);
       margin: 0;
       @media (min-width: 1200px) {
@@ -4757,6 +4819,12 @@ body {
 
   .section-reviews {
     margin-top: 0;
+  }
+
+  .reviews-list {
+    @media screen and (max-width: 1200px) {
+      margin-top: 0;
+    }
   }
 }
 
