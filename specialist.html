@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Стоматологическая клиника Факел осуществляет диагностику и лечение зубов по доступным ценам. Современное оборудование, ведущие стоматологи" />
+    <meta name="description"
+        content="Стоматологическая клиника Факел осуществляет диагностику и лечение зубов по доступным ценам. Современное оборудование, ведущие стоматологи" />
     <!-- primary styles -->
     <link rel="stylesheet" href="./dist/css/app.min.css" />
 
@@ -12,6 +13,7 @@
 </head>
 
 <!-- Селектор specialist-page отвечает за надстройки стилей на странице: Конкретного специалиста -->
+
 <body class="specialist-page">
     <!-- header -->
     <header class="header">
@@ -79,7 +81,7 @@
                 <a href="./akcii.html" class="menu-link">Акции</a>
                 <a href="./specialisty.html" class="menu-link">Стоматологи</a>
                 <a href="./vopros-otvet.html" class="menu-link">Пациентам</a>
-                <a href="/our-work" class="menu-link">Наши работы</a>
+                <a href="/our-work.html" class="menu-link">Наши работы</a>
                 <a href="./reviews.html" class="menu-link">Отзывы</a>
                 <a href="./kontakty.html" class="menu-link">Контакты</a>
 
@@ -112,13 +114,14 @@
                     <span> > </span>
                     <span>ФИО специалиста</span>
                 </div>
-                <div class="card-advantage">
-                    <div class="card-title">
-                        Врач-стоматолог
-                    </div>
-                    <p>
-                        Записывайтесь к "ФИО специалиста" и у вас всё будет афигенно! Можете записаться ко врачу по номеру телефона или как-то так
-                    </p>
+                <div class="card-advantage card-advantage--min">
+                    <h1>
+                        Стоматолог Алабовский Дмитрий Владимирович
+                    </h1>
+                    <!-- <p>
+                        Записывайтесь к "ФИО специалиста" и у вас всё будет афигенно! Можете записаться ко врачу по
+                        номеру телефона или как-то так
+                    </p> -->
                 </div>
 
             </div>
@@ -135,14 +138,18 @@
                     <!-- Фотография специалиста -->
                     <img src="./assets/images/doctor/1.jpg" alt="ФИО специалиста + должность" />
                     <div class="specialist-info">
-                        <strong>
-                            Алабовский Дмитрий Владимирович
-                        </strong>
                         <!-- Блок: о себе заполняется произвольно через параграф -->
                         <div class="specialist-meo">
                             <h3>О себе</h3>
                             <p>
-                                Более 25 лет беспрерывной работы врачом по специальности Стоматология, из которых - 15 лет совмещение с преподавательской деятельностью в одном из ведущих медицинских ВУЗов России. Защита диссертации и получение степени - кандидат медицинских наук, получение высшей врачебной категории по специальности. В клинической работе основное направление - стоматология ортопедическая. Протезирование современными ортопедическими конструкциями: от классических металлокерамических коронок, коронок на основе диоксида циркония и протезирования с опорой на имплантаты, до сложных клинических случаев с приобретёнными деформациями и сложно-челюстными дефектами.
+                                Более 25 лет беспрерывной работы врачом по специальности Стоматология, из которых - 15
+                                лет совмещение с преподавательской деятельностью в одном из ведущих медицинских ВУЗов
+                                России. Защита диссертации и получение степени - кандидат медицинских наук, получение
+                                высшей врачебной категории по специальности. В клинической работе основное направление -
+                                стоматология ортопедическая. Протезирование современными ортопедическими конструкциями:
+                                от классических металлокерамических коронок, коронок на основе диоксида циркония и
+                                протезирования с опорой на имплантаты, до сложных клинических случаев с приобретёнными
+                                деформациями и сложно-челюстными дефектами.
                             </p>
                         </div>
                         <!-- Список опыта работы по датам -->
@@ -274,7 +281,8 @@
                                     <span>2007</span>
                                     <!-- Описание повышения квалификации (что делал(а)?), где проходило повышение квалификации -->
                                     <p>
-                                        «Организация здравоохранения и общественное здоровье», ИПМО ГОУ ВПО ВГМА им.Н.Н.Бурденко
+                                        «Организация здравоохранения и общественное здоровье», ИПМО ГОУ ВПО ВГМА
+                                        им.Н.Н.Бурденко
                                     </p>
                                 </li>
                                 <li>
@@ -320,13 +328,15 @@
                     </select>
                     <input class="input" type="text" name="patient" placeholder="Имя" />
                     <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
-                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
+                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                        name="date" readonly />
                     <input class="input" name="phone" type="tel" placeholder="Телефон *" required />
                     <div class="consult-form-submit">
                         <div class="consult-form-agree">
                             <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
                             <label for="agree">Согласен на обработку
-                                <a class="consult-form-link" href="./files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+                                <a class="consult-form-link" href="./files/polit.pdf"
+                                    target="_blank">персональных&nbsp;данных</a></label>
                         </div>
                         <button class="btn btn-light" type="submit">Записаться</button>
                     </div>
@@ -336,7 +346,8 @@
 
         <!-- section map -->
         <section class="section-map preview" id="map">
-            <img id="map-preview" src="./assets/images/map.jpg" alt="Map preview" style="width: 100%; cursor: pointer;" />
+            <img id="map-preview" src="./assets/images/map.jpg" alt="Map preview"
+                style="width: 100%; cursor: pointer;" />
             <div id="map-source" style="display: none; width: 100%; height: 100%;"></div>
         </section>
     </main>
@@ -429,15 +440,21 @@
                             <option value="9">Скайсы на зубы</option>
                             <option value="10">Детская стоматология</option>
                         </select>
-                        <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
+                        <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                            name="date" readonly />
                         <input class="input" type="text" name="patient" placeholder="Имя" />
-                        <input class="input" name="modal-phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *" required />
-                        <textarea class="input input-textarea" rows="3" name="modal-comment" placeholder="Комментарий"></textarea>
+                        <input class="input" name="modal-phone" type="text"
+                            oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *"
+                            required />
+                        <textarea class="input input-textarea" rows="3" name="modal-comment"
+                            placeholder="Комментарий"></textarea>
                         <div class="consult-form-submit">
                             <div class="consult-form-agree">
-                                <input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree" required />
+                                <input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree"
+                                    required />
                                 <label for="modal-agree">Согласен на обработку
-                                    <a class="consult-form-link" href="./files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+                                    <a class="consult-form-link" href="./files/polit.pdf"
+                                        target="_blank">персональных&nbsp;данных</a></label>
                             </div>
                             <button class="btn btn-light" type="submit">Записаться</button>
                         </div>

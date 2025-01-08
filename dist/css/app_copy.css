@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import "../../src/scss/vendor/swiper-bundle.min.css";
-@import "../../src/scss/vendor/normalize.css";
-@import "../../src/scss/vendor/datepicker.minimal.css";
-@import "/dist/css/lightcase.css";
+@import '../../src/scss/vendor/swiper-bundle.min.css';
+@import '../../src/scss/vendor/normalize.css';
+@import '../../src/scss/vendor/datepicker.minimal.css';
+@import '/dist/css/lightcase.css';
 :root {
   --blue: #267cdf;
   --blue-rgb: 38, 124, 223;
@@ -1967,6 +1967,8 @@ body {
   flex-direction: column;
   width: 100%;
   flex: 1;
+  padding: calc(var(--header-height) + var(--header-padding-y) * 2) 0;
+  margin-top: calc(-1 * var(--header-height) * 2);
 }
 
 .section {
@@ -2322,6 +2324,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  row-gap: 14px;
+  column-gap: 14px;
   min-width: 48%;
   min-height: 135px;
   border: 1px solid rgba(44, 53, 109, 0.3);
@@ -2338,6 +2342,8 @@ body {
 @media (min-width: 1400px) {
   .card-service {
     padding: 23px 28px;
+    row-gap: 40px;
+    column-gap: 40px;
   }
 }
 .card-service .stretched-link {
@@ -2361,41 +2367,45 @@ body {
 }
 @media (min-width: 1200px) {
   .card-service .card-title {
-    flex: 1 0 65%;
+    flex: 1;
   }
 }
 .card-service .card-title div:first-of-type {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.25;
+  line-height: 22px;
   color: var(--blue);
 }
 @media (min-width: 1200px) {
   .card-service .card-title div:first-of-type {
-    font-size: 20px;
+    font-size: 26px;
+    line-height: 32px;
   }
 }
 @media (min-width: 1400px) {
   .card-service .card-title div:first-of-type {
-    font-size: 24px;
+    font-size: 30px;
+    line-height: 37.5px;
   }
 }
 .card-service .card-title div:last-of-type {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  line-height: 1.25;
+  line-height: 18px;
   color: #585a60;
 }
 @media (min-width: 1200px) {
   .card-service .card-title div:last-of-type {
     font-size: 16px;
+    line-height: 20px;
   }
 }
 @media (min-width: 1400px) {
   .card-service .card-title div:last-of-type {
     font-size: 20px;
+    line-height: 25px;
   }
 }
 .card-service svg {
@@ -2411,7 +2421,6 @@ body {
 @media (min-width: 720px) {
   .card-service svg {
     align-self: flex-start;
-    margin-left: auto;
   }
 }
 @media (min-width: 1200px) {
@@ -2441,11 +2450,6 @@ body {
   flex: 1;
   align-self: flex-end;
   pointer-events: all;
-}
-@media (min-width: 720px) {
-  .card-service .card-footer {
-    padding-top: 5px;
-  }
 }
 .card-service .card-footer div {
   font-style: normal;
@@ -2584,6 +2588,7 @@ body {
   grid-template-rows: auto;
   row-gap: 20px;
   column-gap: 20px;
+  margin-top: 20px;
 }
 @media (min-width: 576px) {
   .doctors-list {
@@ -2593,6 +2598,7 @@ body {
 @media (min-width: 720px) {
   .doctors-list {
     padding: 0 10%;
+    margin-top: 35px;
   }
 }
 @media (min-width: 992px) {
@@ -3868,13 +3874,8 @@ body {
 .section-hero {
   position: relative;
   z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: block;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   margin-top: -70px;
   margin-bottom: 0px;
   overflow: hidden;
@@ -3888,11 +3889,15 @@ body {
   .section-hero {
     margin-top: -150px;
     margin-bottom: 0px;
+    aspect-ratio: unset;
+    max-height: 100%;
+    min-height: 300px;
   }
 }
 @media (min-width: 1400px) {
   .section-hero {
     margin-top: -160px;
+    min-height: 280px;
   }
 }
 .section-hero-bg {
@@ -3906,6 +3911,17 @@ body {
   background-size: cover;
   pointer-events: none;
   user-select: none;
+  aspect-ratio: 21/9;
+}
+@media (min-width: 720px) {
+  .section-hero-bg {
+    aspect-ratio: 21/6;
+  }
+}
+@media (min-width: 992px) {
+  .section-hero-bg {
+    aspect-ratio: 21/5;
+  }
 }
 @media (min-width: 1200px) {
   .section-hero-bg {
@@ -3913,6 +3929,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    aspect-ratio: 21/8;
   }
 }
 .section-hero-content {
@@ -3925,8 +3942,14 @@ body {
   justify-content: flex-end;
   pointer-events: none;
 }
+@media (min-width: 720px) and (max-width: 1199.98px) {
+  .section-hero-content {
+    margin-top: -16px;
+  }
+}
 @media (min-width: 1200px) {
   .section-hero-content {
+    min-height: inherit;
     justify-content: flex-start;
   }
 }
@@ -3987,6 +4010,7 @@ body {
   column-gap: 8px;
   width: 100%;
   height: auto;
+  min-height: 200px;
   padding: 24px;
   opacity: 1;
   background-color: #eef5fe;
@@ -4001,32 +4025,21 @@ body {
     justify-content: flex-start;
     row-gap: 10px;
     column-gap: 10px;
+    min-height: 265px;
   }
 }
 @media (min-width: 1200px) {
   .section-hero .card-advantage {
     background-color: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.85);
-    max-width: 60%;
+    max-width: 45%;
+    min-height: 235px;
     border-radius: 10px;
   }
 }
 @media (min-width: 1400px) {
   .section-hero .card-advantage {
     padding: 50px 40px;
-  }
-}
-.section-hero .card-advantage--min {
-  padding: 20px 24px;
-}
-@media (min-width: 1200px) {
-  .section-hero .card-advantage--min {
-    padding: 20px;
-  }
-}
-@media (min-width: 1400px) {
-  .section-hero .card-advantage--min {
-    padding: 20px 30px;
   }
 }
 .section-hero .card-advantage h1 {
@@ -5065,17 +5078,17 @@ body {
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 25px 0 25px;
+  padding: 50px 0 25px;
   overflow: hidden;
 }
 @media (min-width: 720px) {
   .section-information {
-    padding: 40px 0 40px;
+    padding: 80px 0 40px;
   }
 }
 @media (min-width: 1200px) {
   .section-information {
-    padding: 60px 0 50px;
+    padding: 100px 0 50px;
   }
 }
 .section-information .section-title {
@@ -5272,25 +5285,9 @@ body {
     padding: 100px 0;
   }
 }
-.section-question > .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-@media (min-width: 1200px) {
-  .section-question > .container {
-    grid-template-columns: 2fr 1fr;
-  }
-}
 .section-question > .container .qa-list > h1 {
   margin: 0;
   text-align: left;
-}
-.section-question > .container .qa-documents .document-links {
-  margin-top: 20px;
-}
-.section-question h1, .section-question h2, .section-question h3 {
-  margin-top: 0;
 }
 
 .qa-list {
@@ -5303,6 +5300,7 @@ body {
   .qa-list {
     row-gap: 30px;
     column-gap: 30px;
+    padding: 0 15%;
   }
 }
 
@@ -5651,25 +5649,6 @@ body {
     column-gap: 20px;
   }
 }
-.documents-list--questions {
-  grid-template-columns: 1fr;
-  margin: 0;
-}
-@media (min-width: 720px) {
-  .documents-list--questions {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 992px) {
-  .documents-list--questions {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  .documents-list--questions {
-    grid-template-columns: 1fr;
-  }
-}
 
 .document-file {
   position: relative;
@@ -5678,27 +5657,22 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
-  padding-left: 30px;
+  padding-left: 26px;
   color: var(--black);
   text-decoration: none;
 }
 @media (min-width: 720px) {
   .document-file {
     gap: 12px;
+    padding-left: 34px;
   }
 }
 .document-file:hover div {
   text-decoration: underline;
 }
 .document-file div {
-  font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   color: var(--blue);
-}
-@media (min-width: 1200px) {
-  .document-file div {
-    font-size: 16px;
-  }
 }
 .document-file div::before {
   content: "";
@@ -5723,15 +5697,6 @@ body {
   flex: 1;
   width: 100%;
   margin: unset;
-}
-
-.document-links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.document-links > p {
-  margin: 0;
 }
 
 .equipment-intro {
@@ -6092,9 +6057,6 @@ body {
     padding: 50px 0;
   }
 }
-.our-works-page .section-smile .smile-list {
-  margin-top: 0;
-}
 .our-works-page .section-smile > .container > h1 {
   text-align: center;
   margin: 0 auto;
@@ -6444,4 +6406,4 @@ body {
   .blank-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
-}/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app_copy.css.map */

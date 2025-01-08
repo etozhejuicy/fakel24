@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Все контакты, в том числе телефон, адрес и график работы Вы найдёте на сайте стоматологии Факел. По любым вопросам обращайтесь к нашим специалистам" />
+    <meta name="description"
+        content="Все контакты, в том числе телефон, адрес и график работы Вы найдёте на сайте стоматологии Факел. По любым вопросам обращайтесь к нашим специалистам" />
     <!-- primary styles -->
     <link rel="stylesheet" href="./dist/css/app.min.css" />
 
@@ -12,6 +13,7 @@
 </head>
 
 <!-- Селектор contacts-page отвечает за надстройки стилей на странице: контактов -->
+
 <body class="contacts-page">
     <!-- header -->
     <header class="header">
@@ -79,7 +81,7 @@
                 <a href="./akcii.html" class="menu-link">Акции</a>
                 <a href="./specialisty.html" class="menu-link">Стоматологи</a>
                 <a href="./vopros-otvet.html" class="menu-link">Пациентам</a>
-                <a href="/our-work" class="menu-link">Наши работы</a>
+                <a href="/our-work.html" class="menu-link">Наши работы</a>
                 <a href="./reviews.html" class="menu-link">Отзывы</a>
                 <a href="./kontakty.html" class="menu-link">Контакты</a>
 
@@ -110,14 +112,15 @@
                     <span> > </span>
                     <a href="./kontakty.html">Контакты</a>
                 </div>
-                <div class="card-advantage">
-                    <div class="card-title">
-                        Контакты
-                    </div>
-                    <p>
-                        Стоматология «ФАКЕЛ» - Это 10 лет успешной работы по оказанию стоматологических услуг. Удобное расположение напротив
+                <div class="card-advantage card-advantage--min">
+                    <h1>
+                        Юридическая информация
+                    </h1>
+                    <!-- <p>
+                        Стоматология «ФАКЕЛ» - Это 10 лет успешной работы по оказанию стоматологических услуг. Удобное
+                        расположение напротив
                         стадиона Факел в центре Юго-Западного района, высокий профессионализм врачей.
-                    </p>
+                    </p> -->
                 </div>
 
             </div>
@@ -130,7 +133,6 @@
         <!-- section contacts -->
         <section class="section-contacts">
             <div class="container">
-                <h2>Юридическая информация</h2>
                 <div class="contacts-layout">
                     <ul>
                         <li>
@@ -140,26 +142,30 @@
                             <b>Время работы:</b> пн.- пт. с 08:00 до 20:00, сб. с 08:00 до 15:00, вс. - выходной
                         </li>
                         <li>
-                            <b>Телефон:</b> <a href="tel:+7 (473) 201-63-64" title="Позвонить по номеру" class="text-link">+7 (473) 201-63-64</a>
+                            <b>Телефон:</b> <a href="tel:+7 (473) 201-63-64" title="Позвонить по номеру"
+                                class="text-link">+7 (473) 201-63-64</a>
                         </li>
                         <li>
-                            <b>E-mail:</b> <a href="mailto:stomatfakel@mail.ru" title="Написать на почту" class="text-link">stomatfakel@mail.ru</a>
+                            <b>E-mail:</b> <a href="mailto:stomatfakel@mail.ru" title="Написать на почту"
+                                class="text-link">stomatfakel@mail.ru</a>
                         </li>
                     </ul>
                     <ul>
 
                         <li>
-                            <b>ИНН</b> 3664056461
+                            <b>ИНН:</b> 3664056461
                         </li>
                         <li>
-                            <b>ОГРН</b> № 1043600002160
+                            <b>ОГРН:</b> 1043600002160
                         </li>
                         <li>
-                            <b>Свидетельство о внесении записи в ЕГРЮЛ</b> 36 № 003191685 выдано 22.10.2009 МИФНС № 12 по Воронежской области
+                            <b>Свидетельство о внесении записи в ЕГРЮЛ</b> 36 № 003191685 выдано 22.10.2009 МИФНС № 12
+                            по Воронежской области
                         </li>
                         <li>
-                        <a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия №
-                            ЛО-41-01136-36/00325800 от 30.07.2018г.</a>, бессрочно
+                            <a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ"
+                                target="_blank">Лицензия №
+                                ЛО-41-01136-36/00325800 от 30.07.2018г.</a>, бессрочно
                         </li>
 
                     </ul>
@@ -187,10 +193,10 @@
                     </select>
                     <input class="input" type="text" name="patient" placeholder="Имя" />
                     <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
-                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date"
-                        readonly />
-                    <input class="input" name="phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');"
-                        placeholder="Телефон *" required />
+                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                        name="date" readonly />
+                    <input class="input" name="phone" type="text"
+                        oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *" required />
                     <div class="consult-form-submit">
                         <div class="consult-form-agree">
                             <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
@@ -206,7 +212,8 @@
 
         <!-- section map -->
         <section class="section-map preview" id="map">
-            <img id="map-preview" src="./assets/images/map.jpg" alt="Map preview" style="width: 100%; cursor: pointer;" />
+            <img id="map-preview" src="./assets/images/map.jpg" alt="Map preview"
+                style="width: 100%; cursor: pointer;" />
             <div id="map-source" style="display: none; width: 100%; height: 100%;"></div>
         </section>
     </main>
@@ -248,10 +255,12 @@
             </div>
             <div class="footer-info">
                 <div>
-                    <a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия №
+                    <a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия
+                        №
                         ЛО-41-01136-36/00325800 от 30 июля 2018 г.</a>
                     <p>
-                        Данный сайт носит информационный характер и не является публичной офертой, согласно положению ст. 437 (2) ГК РФ.
+                        Данный сайт носит информационный характер и не является публичной офертой, согласно положению
+                        ст. 437 (2) ГК РФ.
                     </p>
                 </div>
                 <div>
@@ -298,15 +307,21 @@
                             <option value="9">Скайсы на зубы</option>
                             <option value="10">Детская стоматология</option>
                         </select>
-                        <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
+                        <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                            name="date" readonly />
                         <input class="input" type="text" name="patient" placeholder="Имя" />
-                        <input class="input" name="modal-phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *" required />
-                        <textarea class="input input-textarea" rows="3" name="modal-comment" placeholder="Комментарий"></textarea>
+                        <input class="input" name="modal-phone" type="text"
+                            oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *"
+                            required />
+                        <textarea class="input input-textarea" rows="3" name="modal-comment"
+                            placeholder="Комментарий"></textarea>
                         <div class="consult-form-submit">
                             <div class="consult-form-agree">
-                                <input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree" required />
+                                <input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree"
+                                    required />
                                 <label for="modal-agree">Согласен на обработку
-                                    <a class="consult-form-link" href="./files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+                                    <a class="consult-form-link" href="./files/polit.pdf"
+                                        target="_blank">персональных&nbsp;данных</a></label>
                             </div>
                             <button class="btn btn-light" type="submit">Записаться</button>
                         </div>

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="В стоматологии Факел в Воронеже действует система скидок. Актуальные акции смотрите на сайте." />
+    <meta name="description"
+        content="В стоматологии Факел в Воронеже действует система скидок. Актуальные акции смотрите на сайте." />
     <!-- primary styles -->
     <link rel="stylesheet" href="./dist/css/app.min.css" />
 
@@ -12,6 +13,7 @@
 </head>
 
 <!-- Селектор loyalty-page отвечает за надстройки стилей на странице: акции -->
+
 <body class="loyalty-page">
     <!-- header -->
     <header class="header">
@@ -79,7 +81,7 @@
                 <a href="./akcii.html" class="menu-link">Акции</a>
                 <a href="./specialisty.html" class="menu-link">Стоматологи</a>
                 <a href="./vopros-otvet.html" class="menu-link">Пациентам</a>
-                <a href="/our-work" class="menu-link">Наши работы</a>
+                <a href="/our-work.html" class="menu-link">Наши работы</a>
                 <a href="./reviews.html" class="menu-link">Отзывы</a>
                 <a href="./kontakty.html" class="menu-link">Контакты</a>
 
@@ -110,13 +112,13 @@
                     <span> > </span>
                     <a href="./akcii.html">Акции</a>
                 </div>
-                <div class="card-advantage">
-                    <div class="card-title">
+                <div class="card-advantage card-advantage--min">
+                    <h1>
                         Акции
-                    </div>
-                    <p>
+                    </h1>
+                    <!-- <p>
                         В стоматологии Факел в Воронеже действует система скидок. Актуальные акции смотрите на сайте.
-                    </p>
+                    </p> -->
                 </div>
 
             </div>
@@ -143,7 +145,8 @@
                         <div class="loyalty-content">
                             <h2>Скидка в День Рождения</h2>
                             <p>
-                                Имениннику и его близким в честь дня рождения скидка на профессиональную гигиену всей полости рта - 900 руб!***
+                                Имениннику и его близким в честь дня рождения скидка на профессиональную гигиену всей
+                                полости рта - 900 руб!***
                             </p>
                         </div>
                         <img src="./assets/images/pages/services/contra-1.jpg" alt="" />
@@ -172,13 +175,15 @@
                     </select>
                     <input class="input" type="text" name="patient" placeholder="Имя" />
                     <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
-                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
+                    <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                        name="date" readonly />
                     <input class="input" name="phone" type="tel" placeholder="Телефон *" required />
                     <div class="consult-form-submit">
                         <div class="consult-form-agree">
                             <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
                             <label for="agree">Согласен на обработку
-                                <a class="consult-form-link" href="./files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+                                <a class="consult-form-link" href="./files/polit.pdf"
+                                    target="_blank">персональных&nbsp;данных</a></label>
                         </div>
                         <button class="btn btn-light" type="submit">Записаться</button>
                     </div>
@@ -188,7 +193,8 @@
 
         <!-- section map -->
         <section class="section-map preview" id="map">
-            <img id="map-preview" src="./assets/images/map.jpg" alt="Map preview" style="width: 100%; cursor: pointer;" />
+            <img id="map-preview" src="./assets/images/map.jpg" alt="Map preview"
+                style="width: 100%; cursor: pointer;" />
             <div id="map-source" style="display: none; width: 100%; height: 100%;"></div>
         </section>
     </main>
@@ -282,15 +288,21 @@
                             <option value="9">Скайсы на зубы</option>
                             <option value="10">Детская стоматология</option>
                         </select>
-                        <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
+                        <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                            name="date" readonly />
                         <input class="input" type="text" name="patient" placeholder="Имя" />
-                        <input class="input" name="modal-phone" type="text" oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *" required />
-                        <textarea class="input input-textarea" rows="3" name="modal-comment" placeholder="Комментарий"></textarea>
+                        <input class="input" name="modal-phone" type="text"
+                            oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *"
+                            required />
+                        <textarea class="input input-textarea" rows="3" name="modal-comment"
+                            placeholder="Комментарий"></textarea>
                         <div class="consult-form-submit">
                             <div class="consult-form-agree">
-                                <input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree" required />
+                                <input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree"
+                                    required />
                                 <label for="modal-agree">Согласен на обработку
-                                    <a class="consult-form-link" href="./files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+                                    <a class="consult-form-link" href="./files/polit.pdf"
+                                        target="_blank">персональных&nbsp;данных</a></label>
                             </div>
                             <button class="btn btn-light" type="submit">Записаться</button>
                         </div>
