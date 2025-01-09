@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Платная стоматология Факел – стоматологическая клиника для взрослых в Воронеже. У нас всегда доступные цены на все услуги: удаление зубов, лечение кариеса, отбеливание, протезирование, имплантация. Наша миссия сформировать в сознание людей, что посещение стоматологического кабинета больше не связно со страхом и болью." />
+    <meta name="description"
+        content="Платная стоматология Факел – стоматологическая клиника для взрослых в Воронеже. У нас всегда доступные цены на все услуги: удаление зубов, лечение кариеса, отбеливание, протезирование, имплантация. Наша миссия сформировать в сознание людей, что посещение стоматологического кабинета больше не связно со страхом и болью." />
     <!-- primary styles -->
     <link rel="stylesheet" href="./dist/css/app.min.css" />
 
@@ -39,6 +40,7 @@
     <main>
         <section style="padding: 40px 0;">
             <div class="container" style="display: flex;flex-direction: column;gap: 20px;">
+
                 <!-- Цвета -->
                 <div>
                     <h3>Цвета</h3>
@@ -80,16 +82,29 @@
                     </p>
                 </div>
 
-                <!-- Кнопки -->
+                <!-- Заголовки -->
                 <div>
-                    <h3>Кнопки</h3>
+                    <h3>Заголовки</h3>
 
-                    <div style="display:flex;flex-direction:row;align-items:flex-start;gap:10px;flex-wrap:wrap;">
-                        <button class="btn btn-blue">Кнопка</button>
-                        <button class="btn btn-grey">Кнопка</button>
-                        <button class="btn btn-light">Кнопка</button>
-                        <button class="btn btn-outline-primary">Кнопка</button>
-                    </div>
+                    <h1>Заголовок H1 - 32px->24px</h1>
+                    <h2>Заголовок H2 - 32px->24px</h2>
+                    <h3>Заголовок H3 - 20px</h3>
+                </div>
+
+                <!-- Параграфы -->
+                <div>
+                    <h3>Параграфы</h3>
+                    <p>
+                        Обычный параграф p: 16px -> 14px
+                    </p>
+
+                    <p class="small">
+                        Параграф поменьше p.small: 14px -> 13px
+                    </p>
+
+                    <p class="smaller">
+                        Параграф маленький p.smaller: 13px -> 12px
+                    </p>
                 </div>
 
                 <!-- Ссылки -->
@@ -97,24 +112,9 @@
                     <h3>Ссылки</h3>
                     <div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex-wrap:wrap;">
                         <a href="#">Ссылка</a>
+                        <a href="#" class="text-underlined">Ссылка</a>
                         <a href="javascript://" data-modal-open="success">Вызвать popup</a>
                     </div>
-                </div>
-
-                <!-- Параграфы -->
-                <div>
-                    <h3>Параграфы</h3>
-                    <p>
-                        Обычный параграф: 16px -> 14px
-                    </p>
-
-                    <p class="small">
-                        Параграф поменьше: 14px -> 13px
-                    </p>
-
-                    <p class="smaller">
-                        Параграф маленький: 13px -> 12px
-                    </p>
                 </div>
 
                 <!-- Другой текст -->
@@ -144,13 +144,16 @@
                     </div>
                 </div>
 
-                <!-- Заголовки -->
+                <!-- Кнопки -->
                 <div>
-                    <h3>Заголовки</h3>
+                    <h3>Кнопки</h3>
 
-                    <h1>Лечение зубов: 32px -> 24px</h1>
-                    <h2>Лечение зубов: 32px -> 24px</h2>
-                    <h3>Лечение зубов: 20px</h3>
+                    <div style="display:flex;flex-direction:row;align-items:flex-start;gap:10px;flex-wrap:wrap;">
+                        <button class="btn btn-blue">Кнопка</button>
+                        <button class="btn btn-grey">Кнопка</button>
+                        <button class="btn btn-light">Кнопка</button>
+                        <button class="btn btn-outline-primary">Кнопка</button>
+                    </div>
                 </div>
 
                 <!-- Табоица -->
@@ -167,12 +170,14 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#price" title="Подробнее о ...">Прием (осмотр, консультация)
+                                    <td><a href="/lecenie-zubov#price" title="Подробнее о ...">Прием (осмотр,
+                                            консультация)
                                             врача-стоматолога-терапевта</a></td>
                                     <td>350&nbsp;₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#price" title="Подробнее о ...">Прием (осмотр, консультация)
+                                    <td><a href="/lecenie-zubov#price" title="Подробнее о ...">Прием (осмотр,
+                                            консультация)
                                             врача-стоматолога-терапевта с составлением
                                             плана лечения</a></td>
                                     <td>500&nbsp;₽</td>
@@ -182,40 +187,48 @@
                                     <td>от 5150 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#pulpit" title="Подробнее о ...">Лечение пульпита</a></td>
+                                    <td><a href="/lecenie-zubov#pulpit" title="Подробнее о ...">Лечение пульпита</a>
+                                    </td>
                                     <td>от 7150 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#pereodontit" title="Подробнее о ...">Лечение периодонтита</a>
+                                    <td><a href="/lecenie-zubov#pereodontit" title="Подробнее о ...">Лечение
+                                            периодонтита</a>
                                     </td>
                                     <td>от 8200 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#perelechivanie" title="Подробнее о ...">Эстетическая реставрация
+                                    <td><a href="/lecenie-zubov#perelechivanie" title="Подробнее о ...">Эстетическая
+                                            реставрация
                                             в одно посещение с использованием
                                             материалов светового отверждения</a></td>
                                     <td>от 8800 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#vosstanovlenie-razrushennogo-zuba" title="Подробнее о ...">Восстановление разрушенного зуба, в том числе
+                                    <td><a href="/lecenie-zubov#vosstanovlenie-razrushennogo-zuba"
+                                            title="Подробнее о ...">Восстановление разрушенного зуба, в том числе
                                             на стекловолоконных штифтах</a></td>
                                     <td>от 5900 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#rentgenograficheskaya-diagnostika" title="Подробнее о ...">Рентгенографическая диагностика</a></td>
+                                    <td><a href="/lecenie-zubov#rentgenograficheskaya-diagnostika"
+                                            title="Подробнее о ...">Рентгенографическая диагностика</a></td>
                                     <td>от 350 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#infiltracionnaya-anesteziya" title="Подробнее о ...">Инфильтрационная Анестезия</a></td>
+                                    <td><a href="/lecenie-zubov#infiltracionnaya-anesteziya"
+                                            title="Подробнее о ...">Инфильтрационная Анестезия</a></td>
                                     <td>от 650 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#germetizaciya-fissur" title="Подробнее о ...">Герметизация
+                                    <td><a href="/lecenie-zubov#germetizaciya-fissur"
+                                            title="Подробнее о ...">Герметизация
                                             фиссур</a></td>
                                     <td>от 2000 ₽</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/lecenie-zubov#otlozhenij" title="Подробнее о ...">Снятие зубных отложений с
+                                    <td><a href="/lecenie-zubov#otlozhenij" title="Подробнее о ...">Снятие зубных
+                                            отложений с
                                             использованием ультразвуковой
                                             аппаратуры</a></td>
                                     <td>от 3600 ₽</td>
@@ -228,7 +241,8 @@
                     <div>
                         <h3>Ввод данных</h3>
 
-                        <div style="display:flex;flex-direction:row;align-items:flex-start;gap:10px;flex-wrap:wrap;background:var(--blue);padding:10px;border-radius:15px;">
+                        <div
+                            style="display:flex;flex-direction:row;align-items:flex-start;gap:10px;flex-wrap:wrap;background:var(--blue);padding:10px;border-radius:15px;">
                             <input class="input" type="text" name="patient" placeholder="Имя" />
 
                             <select class="input input-select" name="service" id="">
@@ -245,16 +259,19 @@
                                 <option value="10">Детская стоматология</option>
                             </select>
 
-                            <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+                            <textarea class="input input-textarea" rows="3" name="comment"
+                                placeholder="Комментарий"></textarea>
 
-                            <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата" name="date" readonly />
+                            <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+                                name="date" readonly />
 
                             <input class="input" name="phone" type="tel" placeholder="Телефон *" required />
 
                             <div class="consult-form-agree">
                                 <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
                                 <label for="agree">Согласен на обработку
-                                    <a class="consult-form-link" href="./files/polit.pdf" target="_blank">персональных&nbsp;данных</a></label>
+                                    <a class="consult-form-link" href="./files/polit.pdf"
+                                        target="_blank">персональных&nbsp;данных</a></label>
                             </div>
                         </div>
                     </div>
@@ -279,11 +296,16 @@
                         <h3>Пагинация</h3>
 
                         <div style="position:relative;background:#eef5fe; padding: 15px 10px;border-radius:15px;">
-                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal" swiper-pagination="">
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+                                swiper-pagination="">
+                                <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 1"></span>
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                    role="button" aria-label="Go to slide 2" aria-current="true"></span>
+                                <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 3"></span>
+                                <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 4"></span>
                             </div>
                         </div>
                     </div>
