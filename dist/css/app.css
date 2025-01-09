@@ -6367,36 +6367,55 @@ body {
 }
 
 .vacancies-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .vacancies-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
   .vacancies-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
 }
 
 .question-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .question-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .question-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
 }
 
 .specialists-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .specialists-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .specialists-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
 }
 
 .specialist-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .specialist-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .specialist-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
@@ -6415,9 +6434,14 @@ body {
 }
 
 .reviews-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .reviews-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .reviews-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
@@ -6432,9 +6456,14 @@ body {
 }
 
 .blank-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .blank-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .blank-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
