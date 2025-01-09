@@ -6374,6 +6374,7 @@ body {
     background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
   }
 }
+@media (min-width: 1200px) {
   .vacancies-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
