@@ -1079,6 +1079,14 @@ p.smaller {
     display: none;
   }
 }
+.menu-link-hidden {
+  display: flex;
+}
+@media (min-width: 1200px) {
+  .menu-link-hidden {
+    display: none;
+  }
+}
 .menu-dropdown {
   position: relative;
 }
