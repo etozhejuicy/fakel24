@@ -6353,9 +6353,14 @@ body {
 }
 
 .about-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .about-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .about-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }

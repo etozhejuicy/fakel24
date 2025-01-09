@@ -115,7 +115,7 @@ body {
                 max-height: 792px;
             }
 
-            &>* {
+            & > * {
                 flex: 1;
                 width: 100%;
                 height: 100%;
@@ -247,7 +247,7 @@ body {
             height: calc(100% - 24px);
         }
 
-        &>.container {
+        & > .container {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -261,7 +261,7 @@ body {
                 padding: 30px 0 34px;
             }
 
-            &>.btn {
+            & > .btn {
                 position: absolute;
                 top: -170px;
                 left: 50%;
@@ -637,10 +637,9 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
-
-        &>h1,
-        &>h2 {
+    & > .container {
+        & > h1,
+        & > h2 {
             margin: 0 auto;
             // text-align: center;
         }
@@ -753,7 +752,7 @@ body {
         border-radius: 10px;
         overflow: hidden;
 
-        &>* {
+        & > * {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -849,7 +848,7 @@ body {
         padding: 80px 0;
     }
 
-    &>h2 {
+    & > h2 {
         margin-top: 0;
         text-align: center;
     }
@@ -902,7 +901,7 @@ body {
             max-height: 585px;
         }
 
-        &>* {
+        & > * {
             flex: 1;
             width: 100%;
             height: 100%;
@@ -936,7 +935,7 @@ body {
             left: 0;
         }
 
-        &>.container {
+        & > .container {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -1023,7 +1022,7 @@ body {
         flex-direction: column;
         align-items: stretch;
 
-        &>h2 {
+        & > h2 {
             margin: 0;
             // text-align: center;
         }
@@ -1102,7 +1101,7 @@ body {
     width: 100%;
     height: 100%;
 
-    &>p {
+    & > p {
         margin-top: 0;
     }
 
@@ -1227,8 +1226,8 @@ body {
         flex-direction: column;
         align-items: stretch;
 
-        &>h1,
-        &>h2 {
+        & > h1,
+        & > h2 {
             // text-align: center;
             margin: 0 0 40px 0;
         }
@@ -1273,7 +1272,7 @@ body {
             }
         }
 
-        &~.btn {
+        & ~ .btn {
             width: 100%;
             margin: 50px auto 0;
 
@@ -1593,8 +1592,8 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
-        &>h2 {
+    & > .container {
+        & > h2 {
             margin-top: 0;
             text-align: center;
         }
@@ -1667,7 +1666,7 @@ body {
         flex-direction: column;
     }
 
-    &>* {
+    & > * {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1766,7 +1765,7 @@ body {
             grid-area: 1 / 1 / 6 / 2;
         }
 
-        &>picture {
+        & > picture {
             width: 100%;
             height: 100%;
 
@@ -1855,7 +1854,7 @@ body {
         padding: 0 8.335%;
 
         @media screen and (max-width: 1199.98px) {
-            &>* {
+            & > * {
                 &:nth-child(1) {
                     order: -1;
                 }
@@ -1916,7 +1915,7 @@ body {
         column-gap: 8px;
         row-gap: 8px;
 
-        &>* {
+        & > * {
             &:nth-child(1) {
                 grid-area: 1 / 1 / 2 / 2;
             }
@@ -2041,7 +2040,7 @@ body {
         }
     }
 
-    &>picture {
+    & > picture {
         width: 100%;
         height: 100%;
 
@@ -2152,7 +2151,7 @@ body {
             justify-content: flex-start;
         }
 
-        &>.container {
+        & > .container {
             position: relative;
             z-index: 2;
             display: flex;
@@ -2167,7 +2166,7 @@ body {
                 padding: 180px 0 20px;
             }
 
-            &>.breadcrumbs {
+            & > .breadcrumbs {
                 // display: none;
 
                 position: absolute;
@@ -2186,7 +2185,7 @@ body {
                 }
             }
 
-            &>.btn {
+            & > .btn {
                 position: absolute;
                 top: -170px;
                 left: 50%;
@@ -2335,7 +2334,7 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
+    & > .container {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
@@ -2348,8 +2347,8 @@ body {
             column-gap: 40px;
         }
 
-        &>div {
-            &>h1 {
+        & > div {
+            & > h1 {
                 color: var(--blue);
             }
 
@@ -2486,7 +2485,7 @@ body {
             flex-direction: column;
         }
 
-        &>* {
+        & > * {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -2629,7 +2628,7 @@ body {
         margin-bottom: 26px;
     }
 
-    &>.container {
+    & > .container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
@@ -2645,7 +2644,7 @@ body {
             column-gap: 60px;
         }
 
-        &>img {
+        & > img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -2725,7 +2724,7 @@ body {
         margin-bottom: 20px;
     }
 
-    &>.container {
+    & > .container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
@@ -2741,7 +2740,7 @@ body {
             column-gap: 70px;
         }
 
-        &>img {
+        & > img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -2834,7 +2833,7 @@ body {
         margin: 0 0 20px 0;
     }
 
-    &>.container {
+    & > .container {
         display: flex;
         flex-direction: column;
         row-gap: 35px;
@@ -2874,7 +2873,7 @@ body {
         column-gap: 70px;
     }
 
-    &>img {
+    & > img {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover;
@@ -2905,7 +2904,7 @@ body {
             column-gap: 60px;
         }
 
-        &>img {
+        & > img {
             order: -1;
 
             @media (min-width: 992px) {
@@ -2951,7 +2950,7 @@ body {
                 }
             }
 
-            &>p {
+            & > p {
                 &:first-of-type {
                     font-style: normal;
                     font-weight: 400;
@@ -3007,7 +3006,7 @@ body {
                 background-size: 38px 43px;
             }
 
-            &>p {
+            & > p {
                 font-style: normal;
                 font-weight: 400;
                 font-size: 20px;
@@ -3160,8 +3159,8 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
-        &>h1 {
+    & > .container {
+        & > h1 {
             text-align: left;
             margin-top: 0;
             margin-bottom: 20px;
@@ -3224,7 +3223,7 @@ body {
         column-gap: 70px;
     }
 
-    &>img {
+    & > img {
         width: 100%;
         height: 100% !important;
         max-width: 100%;
@@ -3310,8 +3309,8 @@ body {
         }
     }
 
-    &>.container {
-        &>h1 {
+    & > .container {
+        & > h1 {
             margin-top: 0;
             margin-bottom: 20px;
 
@@ -3427,8 +3426,8 @@ body {
         }
     }
 
-    &>div {
-        &>* {
+    & > div {
+        & > * {
             &:first-of-type {
                 margin-top: 0;
             }
@@ -3450,7 +3449,7 @@ body {
     width: 100%;
     overflow: hidden;
 
-    &>.container {
+    & > .container {
         & .about-gallery {
             margin: 0 auto 25px;
 
@@ -3496,7 +3495,7 @@ body {
     cursor: pointer;
     overflow: hidden;
 
-    &>* {
+    & > * {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -3573,8 +3572,8 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
-        &>p {
+    & > .container {
+        & > p {
             &:first-of-type {
                 margin-top: 0;
             }
@@ -3606,7 +3605,7 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
+    & > .container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 40px;
@@ -3616,7 +3615,7 @@ body {
         }
 
         & .qa-list {
-            &>h1 {
+            & > h1 {
                 margin: 0;
                 text-align: left;
             }
@@ -3710,8 +3709,8 @@ body {
         padding: 80px 0;
     }
 
-    &>.container {
-        &>h1 {
+    & > .container {
+        & > h1 {
             margin: 0 0 20px 0;
 
             @media (min-width: 720px) {
@@ -3731,7 +3730,7 @@ body {
         grid-template-columns: repeat(2, calc(30% - 10px) calc(70% - 10px));
     }
 
-    &>img {
+    & > img {
         position: relative;
         z-index: 1;
         // width: 100%;
@@ -3758,7 +3757,7 @@ body {
         row-gap: 20px;
         column-gap: 20px;
 
-        &>strong {
+        & > strong {
             font-weight: 700;
             font-size: 20px;
 
@@ -3769,21 +3768,21 @@ body {
     }
 
     &-meo {
-        &>h3 {
+        & > h3 {
             margin-top: unset;
         }
     }
 
     &-experience {
-        &>h3 {
+        & > h3 {
             margin-top: unset;
         }
 
-        &>ul {
+        & > ul {
             padding: 0;
             list-style: none;
 
-            &>li {
+            & > li {
                 position: relative;
                 z-index: 1;
                 padding: 0 0 0 34px;
@@ -3810,12 +3809,12 @@ body {
                     margin-bottom: unset;
                 }
 
-                &>ul {
+                & > ul {
                     margin: 20px 0 0 0;
                     padding: 0;
                     list-style: none;
 
-                    &>li {
+                    & > li {
                         position: relative;
                         z-index: 1;
                         display: flex;
@@ -3850,19 +3849,19 @@ body {
                             background-color: #585a60;
                         }
 
-                        &>span {
+                        & > span {
                             background-color: #ffffff;
                             border-radius: 5px;
                             border: 1px solid #585a60;
                             padding: 5px 7px;
                         }
 
-                        &>div {
+                        & > div {
                             font-weight: 500;
                             font-size: 110%;
                         }
 
-                        &>p {
+                        & > p {
                             margin: unset;
                         }
                     }
@@ -3872,15 +3871,15 @@ body {
     }
 
     &-education {
-        &>h3 {
+        & > h3 {
             margin-top: unset;
         }
 
-        &>ul {
+        & > ul {
             padding: 0;
             list-style: none;
 
-            &>li {
+            & > li {
                 position: relative;
                 z-index: 1;
                 padding: 0 0 0 34px;
@@ -3907,12 +3906,12 @@ body {
                     margin-bottom: unset;
                 }
 
-                &>ul {
+                & > ul {
                     margin: 20px 0 0 0;
                     padding: 0;
                     list-style: none;
 
-                    &>li {
+                    & > li {
                         position: relative;
                         z-index: 1;
                         display: flex;
@@ -3947,19 +3946,19 @@ body {
                             background-color: #585a60;
                         }
 
-                        &>span {
+                        & > span {
                             background-color: #ffffff;
                             border-radius: 5px;
                             border: 1px solid #585a60;
                             padding: 5px 7px;
                         }
 
-                        &>div {
+                        & > div {
                             font-weight: 500;
                             font-size: 110%;
                         }
 
-                        &>p {
+                        & > p {
                             margin: unset;
                         }
                     }
@@ -3969,15 +3968,15 @@ body {
     }
 
     &-skills {
-        &>h3 {
+        & > h3 {
             margin-top: unset;
         }
 
-        &>ul {
+        & > ul {
             padding: 0;
             list-style: none;
 
-            &>li {
+            & > li {
                 position: relative;
                 z-index: 1;
                 display: flex;
@@ -4009,14 +4008,14 @@ body {
                     margin-bottom: unset;
                 }
 
-                &>span {
+                & > span {
                     background-color: #ffffff;
                     border-radius: 5px;
                     border: 1px solid #585a60;
                     padding: 5px 7px;
                 }
 
-                &>p {
+                & > p {
                     margin: unset;
                 }
             }
@@ -4126,7 +4125,7 @@ body {
     flex-direction: column;
     gap: 16px;
 
-    &>p {
+    & > p {
         margin: 0;
     }
 }
@@ -4172,22 +4171,22 @@ body {
             justify-content: center;
             gap: 20px;
 
-            &>h1 {
+            & > h1 {
                 font-weight: 700;
                 color: var(--blue);
                 margin: 0;
             }
 
-            &>h3 {
+            & > h3 {
                 color: var(--black);
                 margin: 0;
             }
 
-            &>* {
+            & > * {
                 text-align: center;
             }
 
-            &>.btn {
+            & > .btn {
                 margin: 20px auto 0;
 
                 @media (min-width: 720px) {
@@ -4204,7 +4203,7 @@ body {
 // для страницы: Главная
 .main-page {
     .services-list {
-        &>* {
+        & > * {
             &:last-of-type {
                 display: flex;
 
@@ -4216,8 +4215,7 @@ body {
     }
 
     .section-services {
-        &>.container {
-
+        & > .container {
             & h1,
             & h2 {
                 text-align: center;
@@ -4226,8 +4224,7 @@ body {
     }
 
     .section-doctors {
-        &>.container {
-
+        & > .container {
             & h1,
             & h2 {
                 text-align: center;
@@ -4236,15 +4233,14 @@ body {
     }
 
     .section-technologies {
-        &+* {
+        & + * {
             padding-top: 0;
             margin-top: 0;
         }
     }
 
     .section-smile {
-        &>.container {
-
+        & > .container {
             & h1,
             & h2 {
                 text-align: center;
@@ -4253,7 +4249,6 @@ body {
     }
 
     .section-reviews {
-
         // margin-top: 50px;
         // @media (min-width: 720px) {
         //   margin-top: 65px;
@@ -4261,8 +4256,7 @@ body {
         // @media (min-width: 1200px) {
         //   margin-top: 100px;
         // }
-        &>.container {
-
+        & > .container {
             & h1,
             & h2 {
                 text-align: center;
@@ -4364,7 +4358,7 @@ body {
                 justify-content: flex-start;
             }
 
-            &>.container {
+            & > .container {
                 position: relative;
                 z-index: 2;
                 display: flex;
@@ -4379,7 +4373,7 @@ body {
                     padding: 180px 0 20px;
                 }
 
-                &>.breadcrumbs {
+                & > .breadcrumbs {
                     // display: none;
 
                     position: absolute;
@@ -4398,7 +4392,7 @@ body {
                     }
                 }
 
-                &>.btn {
+                & > .btn {
                     position: absolute;
                     top: -170px;
                     left: 50%;
@@ -4575,8 +4569,8 @@ body {
             margin-top: 0;
         }
 
-        &>.container {
-            &>h1 {
+        & > .container {
+            & > h1 {
                 // text-align: center;
                 margin: 0 auto;
             }
@@ -4597,7 +4591,6 @@ body {
 
 // для страницы: Услуги
 .services-page {
-
     // На этой странице свои стили для section-hero
     .section-hero {
         position: relative;
@@ -4674,7 +4667,7 @@ body {
                 justify-content: flex-start;
             }
 
-            &>.container {
+            & > .container {
                 position: relative;
                 z-index: 2;
                 display: flex;
@@ -4689,7 +4682,7 @@ body {
                     padding: 180px 0 20px;
                 }
 
-                &>.breadcrumbs {
+                & > .breadcrumbs {
                     // display: none;
 
                     position: absolute;
@@ -4708,7 +4701,7 @@ body {
                     }
                 }
 
-                &>.btn {
+                & > .btn {
                     position: absolute;
                     top: -170px;
                     left: 50%;
@@ -4865,9 +4858,13 @@ body {
 // для страницы: О компании
 .about-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4876,9 +4873,13 @@ body {
 // для страницы: Вакансии
 .vacancies-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4887,9 +4888,13 @@ body {
 // для страницы: Вопросы и ответы
 .question-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4898,9 +4903,13 @@ body {
 // для страницы: Специалисты
 .specialists-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4909,16 +4918,20 @@ body {
 // для страницы: Конкретного специалиста
 .specialist-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
 
     .section-services {
         & .container {
-            &>h2 {
+            & > h2 {
                 font-style: normal;
                 font-weight: 400;
                 font-size: 24px;
@@ -4936,9 +4949,13 @@ body {
 // для страницы: Отзывы
 .reviews-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4957,15 +4974,20 @@ body {
 // для страницы: Новой созданной
 .blank-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
 }
 
 // для страницы: 404
-.error-page {}
+.error-page {
+}
 
 // config for main page
