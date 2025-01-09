@@ -769,6 +769,15 @@ if (document.querySelector('.swiper-container')) {
             } else {
               tab.classList.remove('active');
             }
+
+            // Всегда возвращаем на первый таб, если это первый слайд
+            if (swiperReviews.activeIndex == 0) {
+              tab.classList.remove('active');
+
+              if (tab.getAttribute('swiper-item-type') == 'all') {
+                tab.classList.add('active');
+              }
+            }
           });
         },
       },
