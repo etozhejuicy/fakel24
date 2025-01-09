@@ -2244,6 +2244,10 @@ body {
             padding: 20px 24px;
 
             @media (min-width: 1200px) {
+                max-width: fit-content;
+                min-width: 45%;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.35) 100%);
+                border: 1px solid rgba(255, 255, 255, 0.25);
                 padding: 20px;
             }
 
@@ -4524,9 +4528,13 @@ body {
 // для страницы: Цены
 .prices-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4535,9 +4543,13 @@ body {
 // для страницы: Акции
 .loyalty-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4546,9 +4558,13 @@ body {
 // для страницы: Наши работы
 .our-works-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }
@@ -4581,9 +4597,13 @@ body {
 // для страницы: Контакты
 .contacts-page {
     .section-hero-bg {
-        background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 
         @media (min-width: 720px) {
+            background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+        }
+
+        @media (min-width: 1200px) {
             background-image: url("/assets/images/pages/bg/uslugi.webp");
         }
     }

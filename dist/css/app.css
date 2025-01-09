@@ -4034,6 +4034,10 @@ body {
 }
 @media (min-width: 1200px) {
   .section-hero .card-advantage--min {
+    max-width: fit-content;
+    min-width: 45%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.35) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 20px;
   }
 }
@@ -6067,27 +6071,42 @@ body {
 }
 
 .prices-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .prices-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .prices-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
 }
 
 .loyalty-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .loyalty-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .loyalty-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
 }
 
 .our-works-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .our-works-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .our-works-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
@@ -6103,9 +6122,14 @@ body {
 }
 
 .contacts-page .section-hero-bg {
-  background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  background-image: url("/assets/images/pages/bg/uslugi-xxs.webp");
 }
 @media (min-width: 720px) {
+  .contacts-page .section-hero-bg {
+    background-image: url("/assets/images/pages/bg/uslugi-xs.webp");
+  }
+}
+@media (min-width: 1200px) {
   .contacts-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
