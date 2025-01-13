@@ -351,6 +351,8 @@ if (document.querySelector('.reviews-page')) {
 const currentDate = new Date();
 currentDate.setHours(0, 0, 0, 0);
 
+currentDate.setDate(currentDate.getDate() + 1);
+
 const datepickers = document.querySelectorAll('[data-input-type="datepicker"]');
 
 datepickers.forEach((picker) => {
