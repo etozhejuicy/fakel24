@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no" />
+	<meta name="description"
+		content="Здесь вы можете получить ответ от специалистов стоматологической клиники Факел по интересующим вас вопросам." />
+	<!-- primary styles -->
+	<link rel="stylesheet" href="./dist/css/app.min.css" />
+
+	<title>Консультация стоматолога в воронежской стоматологии Факел</title>
+</head>
+
+<!-- Селектор question-page отвечает за надстройки стилей на странице: Вопросы и ответы -->
+
+<body class="question-page">
+	<!-- header -->
+	<header class="header">
+		<div class="container">
+			<div class="header-top">
+				<a class="header-logo" href="./" title="Стоматологическая клиника в Воронеже">
+					<div>стоматология</div>
+					<div>Факел</div>
+					<img src="./assets/images/logo.svg" alt="Стоматология Факел" />
+				</a>
+				<div class="header-contacts">
+					<button class="btn btn-grey header-contacts-btn" data-modal-open="appointment">
+						Запись на прием
+					</button>
+					<a class="link header-address" href="#map" title="Посмотреть на карте">
+						<i class="icon-location"></i>
+						<span>г. Воронеж, ул. Маршака, д. 8</span>
+					</a>
+					<a class="link header-phone" href="tel:+7 (473) 201-63-64" title="Позвонить по номеру">
+						<i class="icon-phone"></i>
+						<span>+7 (473) 201-63-64</span>
+					</a>
+					<button class="header-burger" data-menu-open="">
+						<i class="icon-burger"></i>
+					</button>
+				</div>
+			</div>
+
+			<!-- При прокрутке схлопывается эта навигация -->
+			<nav class="menu">
+				<!-- В мобильном меню отображаются элементы управления меню -->
+				<div class="menu-nav">
+					<a href="tel:+7 (473) 201-63-64" class="btn menu-btn">
+						<i class="icon-phone"></i>
+					</a>
+					<button type="button" class="btn menu-btn" data-modal-open="appointment" data-menu-close="">
+						Записаться на прием
+					</button>
+					<button type="button" class="btn menu-btn" data-menu-close>
+						<i class="icon-close"></i>
+					</button>
+				</div>
+				<!-- Ссылка скрывается в десктоп-версии -->
+				<a href="./" class="menu-link hidden">Главная</a>
+				<!-- Выпадающий список -->
+				<div class="menu-dropdown">
+					<a href="./stomatologiceskie-uslugi.html" class="menu-link" dropdown>
+						Услуги
+						<i class="icon-arrow-down"></i>
+					</a>
+					<div class="menu-list">
+						<a href="./lecenie-zubov.html">Лечение зубов</a>
+						<a href="/ortopedia-ili-protezirovanie-zubov">Протезирование зубов</a>
+						<a href="/hirurgiceskaa-stomatologia">Удаление зубов</a>
+						<a href="/implantacia-zubov">Имплантация зубов</a>
+						<a href="/otbelivanie-zubov">Отбеливание зубов</a>
+						<a href="/gigiena-zubov">Гигиена зубов</a>
+						<a href="/lecenie-desen">Лечение десен</a>
+						<a href="/ortodontia">Ортодонтия</a>
+						<a href="#">Скайсы на зубы</a>
+						<a href="#">Детская стоматология</a>
+					</div>
+				</div>
+				<a href="./ceny-na-stomatologiceskie-uslugi.html" class="menu-link">Прайс</a>
+				<a href="./akcii.html" class="menu-link">Акции</a>
+				<a href="./specialisty.html" class="menu-link">Стоматологи</a>
+				<div class="menu-dropdown">
+					<a href="javascript://" class="menu-link" dropdown>
+						Пациентам
+						<i class="icon-arrow-down"></i>
+					</a>
+					<div class="menu-list">
+						<a href="./pacientam.html">Потребителю</a>
+						<a href="./vopros-otvet.html">Вопросы и ответы</a>
+					</div>
+				</div>
+				<a href="/our-work.html" class="menu-link">Наши работы</a>
+				<a href="./reviews.html" class="menu-link">Отзывы</a>
+				<a href="./kontakty.html" class="menu-link">Контакты</a>
+
+				<!-- Ссылка скрывается в десктоп-версии -->
+				<a class="menu-link hidden" href="#map" title="Посмотреть на карте" data-menu-close>
+					<i class="icon-location"></i>
+					<span>г. Воронеж, ул. Маршака, д. 8</span>
+				</a>
+			</nav>
+
+			<!-- При прокрутке появляется кнопка: записаться на прием -->
+			<button class="header-modal-btn btn scroll" data-modal-open="appointment">
+				<i class="icon-list"></i>
+				<span>Записаться на прием</span>
+			</button>
+		</div>
+	</header>
+
+	<!-- hero section -->
+	<section class="section-hero">
+		<!-- content into swiper-hero -->
+		<div class="section-hero-content">
+			<!-- Это фон секции: background-image регулируется ссылкой на изображение -->
+			<div class="section-hero-bg"></div>
+			<div class="container">
+				<div class="breadcrumbs">
+					<a href="./">Главная</a>
+					<span> > </span>
+					<a href="./vopros-otvet.html">Потребителю</a>
+				</div>
+				<div class="card-advantage card-advantage--min">
+					<h1>
+						Потребителю
+					</h1>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- main part -->
+	<main class="content">
+
+		<!-- section vacancies -->
+		<section class="section-documents">
+			<div class="container">
+
+				<!-- Основная информация -->
+				<div class="section-documents-content">
+					<h2>Полное наименование</h2>
+
+					<p>
+						Общество с ограниченной ответственностью Стоматология «Факел»
+					</p>
+					<p>
+						<b>Сокращённое наименование:</b> ООО Стоматология «Факел»
+					</p>
+					<p>
+						<b>Свидетельство о внесении записи в ЕГРЮЛ</b> 36 №003191685 выдано МИФНС №12 по Воронежской области 22.10.2009, 394006,
+						г.
+						Воронеж, ул. Кирова, д. 28, тел. 8-800-222-2222. Выписку из ЕГРЮЛ вы можете скачать по <a href="#" target="_blank" class="text-link">ссылке</a> или воспользовавшись
+						сервисом ФНС, чтобы самостоятельно получить <a href="https://egrul.nalog.ru/index.html" target="_blank" class="text-link">документ</a> в электронном виде.
+					</p>
+					<p>
+						<b>Адрес места нахождения:</b> 394051, г. Воронеж, ул. Писателя Маршака, д. 8
+					</p>
+					<p>
+						<b>Телефон:</b> <a href="tel:+ 7 (473) 201-63-64" class="text-link" title="Позвонить по номеру">+ 7 (473) 201-63-64</a>
+					</p>
+					<p>
+						<b>E-mail:</b> <a href="mailto:stomatfakel@mail.ru" class="text-link" title="Написать на почту">stomatfakel@mail.ru</a>
+					</p>
+
+					<h2>Банковские реквизиты</h2>
+
+					<p>
+						ОГРН №1043600002160
+					</p>
+					<p>
+						ИНН/КПП 3664056461/366501001
+					</p>
+					<p>
+						РС: 40702810713000035273 в Центрально-Черноземном банке ПАО Сбербанк г. Воронеж
+					</p>
+					<p>
+						КС: 30101810600000000681
+					</p>
+					<p>
+						БИК: 042007681
+					</p>
+					<p>
+						Директор: Алабовский Дмитрий Владимирович, действующий на основании Устава
+					</p>
+
+					<h2>
+						Режим работы:
+					</h2>
+
+					<ul>
+						<li>
+							ПН-ПТ: 8:00-20:00,
+						</li>
+						<li>
+							СБ: 08:00-15:00
+						</li>
+						<li>
+							ВС: выходной
+						</li>
+					</ul>
+
+					<p>
+						График работы специалистов можно скачать по <a href="#" target="_blank" class="text-link">ссылке</a>.
+					</p>
+
+					<br />
+
+					<p>
+						Лицензия <u>№ Л041-01136-36/00325800</u> от 30.07.2018 года, бессрочно, выдана Департаментом здравоохранения Воронежской
+						области: г. Воронеж, ул. Красноармейская, д. 52д, тел. <a href="tel:+7 (473) 212-61-78" class="text-link">+7 (473) 212-61-78</a>:
+					</p>
+
+					<p>
+						При оказании первичной медико-санитарной помощи организуются и выполняются следующие работы (услуги): при оказании
+						первичной доврачебной медико-санитарной помощи в амбулаторных условиях по сестринскому делу; при оказании первичной
+						специализированной медико-санитарной помощи в амбулаторных условиях по организации здравоохранения и общественному
+						здоровью, эпидемиологии, ортодонтии, рентгенологии, стоматологии детской, стоматологии общей практики, стоматологии
+						ортопедической, стоматологии терапевтической, стоматологии хирургической.
+					</p>
+
+					<h2>
+						Порядок и сроки оказания платной медицинской помощи
+					</h2>
+
+					<p>
+						Сроки ожидания оказания платной медицинской услуги зависят от ее вида, количества специалистов в медицинской
+						организации, которые ее оказывают, загруженности по записи пациентов в момент конкретного запроса.
+						Вы можете уточнить срок ожидания (срок, когда медицинская организация объективно готова оказать пациенту соответствующую
+						медицинскую услугу) по телефону <a href="tel:+7 (473) 201-63-64" class="text-link">+7 (473) 201-63-64</a> либо у администраторов клиники.
+					</p>
+					<p>
+						Подробно ознакомиться с <b>Положением о порядке и условиях предоставления платных медицинских услуг в ООО Стоматология
+						"Факел"</b> можно ознакомиться по <a href="#" target="_blank" class="text-link">ссылке</a>.
+					</p>
+
+					<h2>
+						Перечень платных медицинских услуг
+					</h2>
+
+					<p>
+						С перечнем популярных платных медицинских услуг мы можете ознакомиться в разделе <a href="#" target="_blank" class="text-link">Цены</a>.
+					</p>
+					<p>
+						Подробный прейскурант на медицинские услуги по номенклатуре Минздрава России вы можете запросить у администратора или
+						скачать по <a href="#" target="_blank" class="text-link">ссылке</a>.
+					</p>
+
+					<h2>
+						Сведения о медицинских работниках
+					</h2>
+
+					<p>
+						Со сведениями о медицинских работниках, участвующих в предоставлении платных медицинских услуг, об уровне их
+						профессионального образования и квалификации можно ознакомиться в разделе <a href="#" target="_blank" class="text-link">Стоматологи</a>.
+					</p>
+
+					<h2>
+						Информация о надзорных органах
+					</h2>
+
+					<p>
+						Территориальный орган Федеральной службы по надзору в сфере здравоохранения и социального развития по Воронежской
+						области (Управление Росздравнадзора по Воронежской области):
+						<br />
+						<b>Адрес:</b> 394018, г. Воронеж, ул. 9-го Января, 36
+						<br />
+						<b>Тел./факс:</b> <a href="tel:+7 (473) 276-39-27" class="text-link">+7 (473) 276-39-27</a>, <a href="tel:+7 (473) 276-53-99" class="text-link">+7 (473) 276-53-99</a>
+						<br />
+						<b>Ссылка:</b> <a href="http://36reg.roszdravnadzor.ru/about/contacts" target="_blank" class="text-link">http://36reg.roszdravnadzor.ru/about/contacts</a>
+					</p>
+
+					<p>
+						Территориальный орган Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по
+						Воронежской области (Управление Роспотребнадзора по Воронежской области):
+						<br />
+						<b>Адрес:</b> 394038, г. Воронеж, ул. Космонавтов, 21а
+						<br />
+						<b>Тел./факс:</b> <a href="tel:+7 (473) 263-77-27" class="text-link">+7 (473) 263-77-27</a>, <a href="tel:+7 (473) 263-16-28" class="text-link">+7 (473) 263-16-28</a>
+						<br />
+						<b>Ссылка:</b> <a href="http://36.rospotrebnadzor.ru/about-department/contacts" target="_blank" class="text-link">http://36.rospotrebnadzor.ru/about-department/contacts</a>
+					</p>
+
+					<p>
+						Департамент здравоохранения Воронежской области – орган, выдавший лицензию на осуществление медицинской деятельности:
+						<br />
+						<b>Адрес:</b> 394006, г. Воронеж, ул. Красноармейская д. 52д <br />
+						<b>Телефон:</b> <a href="tel:+7 (473) 212-61-78" class="text-link">+7 (473) 212-61-78</a> <br />
+						<b>Ссылка:</b> <a href="http://zdrav36.ru/kontakty" target="_blank" class="text-link">http://zdrav36.ru/kontakty</a>
+					</p>
+
+					<h2>
+						Порядок рассмотрения обращений граждан
+					</h2>
+
+					<p>
+						В случае возникновения претензий относительно качества оказанных медицинских услуг в ООО Стоматология «Факел», нежелания
+						продолжать в дальнейшем лечение в клинике, намерения защищать интересы исходя из норм Закона РФ «О защите прав
+						потребителей», Заказчик имеет право составить официальную претензию.
+					</p>
+					<p>
+						Претензия составляется в письменном виде за личной подписью Заказчика либо отсканированный вариант направляется на
+						электронную почту <a href="mailto:stomatfakel@mail.ru" class="text-link" title="Написать на почту">stomatfakel@mail.ru</a> с указанием конкретных обстоятельств неисполнения клиникой своих обязательств и
+						тех требований, которые предъявляет Заказчик на основе Закона РФ «О защите прав потребителей».
+					<br />
+						Претензия рассматривается в течение 10 календарных дней. Если она содержит требования, предусмотренные в ст. 31 Закона
+						РФ «О защите прав потребителей», результат рассмотрения оформляется в письменном виде.
+					</p>
+					<p>
+						Подробнее с <b>Порядком рассмотрения обращений граждан в ООО Стоматология «Факел»</b> можно ознакомиться по <a href="#" target="_blank" class="text-link">ссылке</a>.
+					</p>
+				</div>
+
+				<!-- Блок документов -->
+				<div class="qa-documents">
+					<div class="document-block">
+						<h2>Документы клиники</h2>
+
+						<div class="documents-list documents-list--questions">
+							<a href="./files/programs2023.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>
+									Программа&nbsp;государственных гарантий
+									бесплатного оказания
+									медицинской помощи гражданам
+								</div>
+							</a>
+							<a href="./files/polojenie.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>
+									Положение&nbsp;о
+									порядке и
+									условиях предоставления
+									платных медицинских
+									услуг в ООО Стоматология "Факел"&nbsp;
+								</div>
+							</a>
+							<a href="./poryadok.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>
+									Порядок&nbsp;рассмотрения
+									обращений
+									граждан в ООО
+									Стоматология
+									«Факел»&nbsp;
+								</div>
+							</a>
+							<a href="./files/politico_personal.pdf" class="document-file" target="_blank"
+								rel="noopener">
+								<div>
+									Политика&nbsp;обработки персональных
+									данных в ООО Стоматологии
+									"Факел"
+								</div>
+							</a>
+							<a href="./files/poryadok/poryadok.pdf" class="document-file" target="_blank"
+								rel="noopener">
+								<div>
+									Порядок
+									получения
+									копий медицинских
+									документов&nbsp;в ООО Стоматологии
+									"Факел"
+								</div>
+							</a>
+							<a href="./files/pravila_pacient.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>
+									Правила
+									поведения
+									пациентов и
+									посетителей&nbsp;ООО
+									Стоматология&nbsp;"Факел"
+								</div>
+							</a>
+							<a href="./files/new_prilojenie_o_garantii.pdf" class="document-file" target="_blank"
+								rel="noopener">
+								<div>
+									Наши
+									гарантии
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="document-block">
+						<h2>Нормативные документы</h2>
+
+						<div class="documents-list documents-list--questions">
+							<a href="/files/documents/1-1.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>Приказ Министерства здравоохранения и Социального развития Российской Федерации от
+									22.11.2004 «Об утверждении стандарта медицинской помощи больным с полным отсутствием
+									зубов
+									(полная вторичная адентия) (МКБ-10: К08.1)</div>
+							</a>
+							<a href="/files/documents/1-2.doc" class="document-file" target="_blank" rel="noopener">
+								<div>Приказ Министерства здравоохранения и Социального развития Российской Федерации от
+									13.01.2006 №17 «Об утверждении стандарта больным с челюстно-лицевыми аномалиями,
+									другими
+									уточненными изменениями зубов и их опорного аппарата и другими болезнями челюстей»
+									(МКБ-10:
+									К07.0; К07.1; К07.8; К07.9; К08.8; К10.8; К10.9)</div>
+							</a>
+							<a href="/files/documents/3.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>Приказ Министерства здравоохранения и Социального развития Российской Федерации от
+									01.06.2006 №445 «Об утверждении стандарта медицинской помощи больным с изменениями
+									зубов
+									и
+									их опорного аппарата» (МКБ-10 :К08.1 ; К 08.2)</div>
+							</a>
+							<a href="/files/documents/4.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>Приказ МЗ РФ от 24.12.2012 №1526н «Об утверждении стандарта медицинской помощи при
+									кариесе
+									дентина и цемента» (МКБ-10: К02.1 ; К02.2)</div>
+							</a>
+							<a href="/files/documents/5.pdf" class="document-file" target="_blank" rel="noopener">
+								<div>Приказ МЗ РФ от 24.12.2012 №1490н «Об утверждении стандарта первичной
+									медико-санитарной
+									помощи при приостановившемся кариесе и кариесе эмали» (МКБ-10: К02.0; К02.3)</div>
+							</a>
+							<a href="/files/documents/6.docx" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе пародонтит. Утверждены Решением Совета
+									Ассоциации
+									общественных объединений «Стоматологическая Ассоциация России» 23 апреля 2013 года с
+									изменениями и дополнениями на основании Постановления №15 Совета Ассоциации
+									общественных
+									объединений «Стоматологическая Ассоциация России» от 30 сентября 2014 года.
+									Актуализированы
+									2 августа 2018 года</div>
+							</a>
+							<a href="/files/documents/7.docx" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе болезни периапикальных тканей. Утверждены
+									Постановлением № 15 Совета Ассоциации общественных объединений «Стоматологическая
+									Ассоциация
+									России» от 30 сентября 2014 года. Актуализированы 2 августа 2018 года</div>
+							</a>
+							<a href="/files/documents/8.doc" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе болезни пульпы зуба. Утверждены
+									Постановлением №
+									15
+									Совета Ассоциации общественных объединений «Стоматологическая Ассоциация России» от
+									30
+									сентября 2014 года. Актуализированы 2 августа 2018 года</div>
+							</a>
+							<a href="/files/documents/9.docx" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе гингивит. Утверждены Постановлением № 15
+									Совета
+									Ассоциации общественных объединений «Стоматологическая Ассоциация России» от 30
+									сентября
+									2014 года. Актуализированы 2 августа 2018 года</div>
+							</a>
+							<a href="/files/documents/10.doc" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе кариес зубов. Утверждены Постановлением № 15
+									Совета
+									Ассоциации общественных объединений «Стоматологическая Ассоциация России» от 30
+									сентября
+									2014 года. Актуализированы 2 августа 2018 года</div>
+							</a>
+							<a href="/files/documents/11.doc" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе полное отсутствие зубов (полная вторичная
+									адентия,
+									потеря зубов вследствие несчастного случая, удаления или локализованного
+									пародонтита).
+									Утверждены Постановлением № 15 Совета Ассоциации общественных объединений
+									«Стоматологическая
+									Ассоциация России» от 30 сентября 2014 года.</div>
+							</a>
+							<a href="/files/documents/12.doc" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе частичное отсутствие зубов (частичная
+									вторичная
+									адентия, потеря зубов вследствие несчастного случая, удаления или локализованного
+									пародонтита). Утверждены Постановлением № 15 Совета Ассоциации общественных
+									объединений
+									«Стоматологическая Ассоциация России» от 30 сентября 2014 года</div>
+							</a>
+							<a href="https://e-stomatology.ru/director/protokols/protokol_perikoronit.php"
+								class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе перикорнит. Утверждены Постановлением № 11
+									Совета
+									Ассоциации общественных объединений «Стоматологическая ассоциация России» от 26
+									сентября
+									2017 года</div>
+							</a>
+							<a href="/files/documents/14.doc" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе периостит. Утверждены Постановлением № 14
+									Совета
+									Ассоциации общественных объединений «Стоматологическая ассоциация России» от 24
+									апреля
+									2018
+									года</div>
+							</a>
+							<a href="/files/documents/15.docx" class="document-file" target="_blank" rel="noopener">
+								<div>Клинические рекомендации при диагнозе альвеолит. Утверждены Постановлением № 8
+									Совета
+									Ассоциации Общественных Объединений «Стоматологическая ассоциация России» от 25
+									сентября
+									2018 года</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- section consulatation -->
+		<section class="section-consult">
+			<div class="container">
+				<h2>Получить консультацию</h2>
+				<form class="consult-form" action="?">
+					<select class="input input-select" name="service" id="">
+						<option disabled selected>Выберите услугу</option>
+						<option value="1">Терапия</option>
+						<option value="2">Ортопедия</option>
+						<option value="3">Хирургия</option>
+						<option value="4">Имплантация</option>
+						<option value="5">Отбеливание</option>
+						<option value="6">Гигиена</option>
+						<option value="7">Парадонтология</option>
+						<option value="8">Ортодонтия </option>
+						<option value="9">Скайсы на зубы</option>
+						<option value="10">Детская стоматология</option>
+					</select>
+					<input class="input" type="text" name="patient" placeholder="Имя" />
+					<textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
+					<input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+						name="date" readonly />
+					<input class="input" name="phone" type="tel" placeholder="Телефон *" required />
+					<div class="consult-form-submit">
+						<div class="consult-form-agree">
+							<input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
+							<label for="agree">Согласен на обработку
+								<a class="consult-form-link" href="./files/polit.pdf"
+									target="_blank">персональных&nbsp;данных</a></label>
+						</div>
+						<button class="btn btn-light" type="submit">Записаться</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- section map -->
+		<section class="section-map preview" id="map">
+			<img id="map-preview" src="./assets/images/map.jpg" alt="Map preview"
+				style="width: 100%; cursor: pointer;" />
+			<div id="map-source" style="display: none; width: 100%; height: 100%;"></div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-address">
+				<div>
+					<p>Стоматология ФАКЕЛ</p>
+					<address>г. Воронеж, ул. Маршака, д. 8</address>
+					<a href="tel:+74732016364" title="Позвонить по номеру">+7 (473) 201-63-64</a>
+				</div>
+				<span>&COPY; Стоматология "Факел" 2009-2024</span>
+			</div>
+			<div class="footer-services">
+				<!-- Главный пункт меню -->
+				<a href="./stomatologiceskie-uslugi.html">Услуги Стоматологии</a>
+				<!-- Остальные пункты меню -->
+				<a href="./lecenie-zubov.html">Лечение зубов</a>
+				<a href="/ortopedia-ili-protezirovanie-zubov">Протезирование зубов</a>
+				<a href="/hirurgiceskaa-stomatologia">Удаление зубов</a>
+				<a href="/implantacia-zubov">Имплантация зубов</a>
+				<a href="/otbelivanie-zubov">Отбеливание зубов</a>
+				<a href="/gigiena-zubov">Гигиена зубов</a>
+				<a href="/lecenie-desen">Лечение десен</a>
+				<a href="/ortodontia">Ортодонтия</a>
+				<a href="#">Скайсы на зубы</a>
+				<a href="#">Детская стоматология</a>
+			</div>
+			<div class="footer-links">
+				<a href="./reviews.html">Отзывы</a>
+				<a href="./vopros-otvet.html">Пациентам</a>
+				<a href="./vakansii.html">Вакансии</a>
+				<a href="./ceny-na-stomatologiceskie-uslugi.html">Прайс</a>
+				<a href="/our-work">Наши работы</a>
+				<a href="./o-klinike.html">О клинике</a>
+				<a href="./kontakty.html">Контакты</a>
+				<a href="./specialisty.html">Стоматологи</a>
+			</div>
+			<div class="footer-info">
+				<div>
+					<a href="./files/reestr.pdf" class="text-link" title="Посмотреть документ" target="_blank">Лицензия
+						№
+						ЛО-41-01136-36/00325800 от 30 июля 2018 г.</a>
+					<p>
+						Данный сайт носит информационный характер и не является публичной офертой, согласно положению
+						ст. 437 (2) ГК РФ.
+					</p>
+				</div>
+				<div>
+					<!-- ссылка на вк-группу -->
+					<a class="social" href="https://vk.com/club69686194" target="_blank">
+						<!-- Иконка ВК -->
+						<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<use xlink:href="./assets/sprite.svg#icon-vk"></use>
+						</svg>
+					</a>
+					<a class="intrid" href="https://intrid.ru/" target="_blank">
+						<div class="intrid-circle">
+							<span class="intrid-circle--in"></span>
+						</div>
+						made in <span class="fintrid-fat">INTRID</span>
+					</a>
+					<!-- дубликат копирайта для мобильной версии -->
+					<span>&COPY; Стоматология "Факел" 2009-2024</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- modals -->
+	<div class="modal modal-consult" data-modal-id="appointment">
+		<div class="modal-dialog">
+			<button class="btn btn-close" btn-close-modal>
+				<i class="icon-close"></i>
+			</button>
+			<div class="modal-content">
+				<div class="container">
+					<h2>Запись на прием</h2>
+					<form class="consult-form" action="?">
+						<select class="input input-select" name="modal-service" id="">
+							<option disabled selected>Выберите услугу</option>
+							<option value="1">Терапия</option>
+							<option value="2">Ортопедия</option>
+							<option value="3">Хирургия</option>
+							<option value="4">Имплантация</option>
+							<option value="5">Отбеливание</option>
+							<option value="6">Гигиена</option>
+							<option value="7">Парадонтология</option>
+							<option value="8">Ортодонтия </option>
+							<option value="9">Скайсы на зубы</option>
+							<option value="10">Детская стоматология</option>
+						</select>
+						<input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
+							name="date" readonly />
+						<input class="input" type="text" name="patient" placeholder="Имя" />
+						<input class="input" name="modal-phone" type="text"
+							oninput="this.value = this.value.replace(/[^0-9+]/g, '');" placeholder="Телефон *"
+							required />
+						<textarea class="input input-textarea" rows="3" name="modal-comment"
+							placeholder="Комментарий"></textarea>
+						<div class="consult-form-submit">
+							<div class="consult-form-agree">
+								<input class="input-checkbox" type="checkbox" name="modal-agreement" id="modal-agree"
+									required />
+								<label for="modal-agree">Согласен на обработку
+									<a class="consult-form-link" href="./files/polit.pdf"
+										target="_blank">персональных&nbsp;данных</a></label>
+							</div>
+							<button class="btn btn-light" type="submit">Записаться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- js part -->
+	<script src="./src/js/vendor/jquery-3.7.1.min.js"></script>
+	<script src="./src/js/vendor/swiper-bundle.min.js"></script>
+	<script src="./src/js/vendor/jquery.inputmask.bundle.js"></script>
+	<script src="./src/js/vendor/datepicker.js"></script>
+	<script type="module" src="./src/js/vendor/scroller.js"></script>
+	<script type="module" src="./src/js/vendor/lightcase.js"></script>
+	<script defer src="./src/js/vendor/before&after.js"></script>
+	<script src="./src/js/custom.js"></script>
+</body>
+
+</html>
