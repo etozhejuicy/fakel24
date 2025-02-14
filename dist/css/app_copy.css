@@ -1476,6 +1476,9 @@ p.smaller {
   font-size: 100%;
   line-height: 1.25;
 }
+.menu-dropdown > .menu-link-nocursor {
+  cursor: default;
+}
 .menu-dropdown.opened > .menu-link i {
   transform: rotate(180deg);
   padding: 0 8px 0 0;

@@ -3723,6 +3723,10 @@ body {
       flex-direction: column;
       row-gap: 40px;
       column-gap: 40px;
+
+      @media (min-width: 1200px) {
+        gap: 55px;
+      }
     }
   }
 
