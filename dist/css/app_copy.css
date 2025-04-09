@@ -1396,6 +1396,12 @@ p.smaller {
 @media (min-width: 1200px) and (min-width: 1200px) {
   .menu.scroll {
     top: 0;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1300px) {
+  .menu.scroll {
+    padding: 0 70px;
   }
 }
 .menu-open body {
@@ -6928,4 +6934,4 @@ body {
   .blank-page .section-hero-bg {
     background-image: url("/assets/images/pages/bg/uslugi.webp");
   }
-}/*# sourceMappingURL=app_copy.css.map */
+}
