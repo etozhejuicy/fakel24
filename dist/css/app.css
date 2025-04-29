@@ -2261,6 +2261,9 @@ p.smaller {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.modal-content > .container > p, .modal-content > .container > .section-title {
+  color: #ffffff;
+}
 .modal .btn-close {
   position: absolute;
   top: 0;

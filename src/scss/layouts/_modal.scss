@@ -65,6 +65,13 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+
+    & > .container {
+      & > p,
+      & > .section-title {
+        color: #ffffff;
+      }
+    }
   }
   & .btn-close {
     position: absolute;
