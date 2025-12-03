@@ -312,79 +312,155 @@ if (document.querySelector(".service-page")) {
 }
 
 // Валидация полей телефона в формах с классом .consult-form
-if (document.querySelector("form.consult-form")) {
+// if (document.querySelector("form.consult-form")) {
+// 	const forms = document.querySelectorAll("form.consult-form");
+
+// 	forms.forEach((form) => {
+// 		const phoneInput = form.querySelector('input[type="tel"]');
+
+// 		// Если поле телефона есть, добавляем обработчики
+// 		if (phoneInput) {
+// 			// Обработчик отправки формы
+// 			form.addEventListener("submit", function (e) {
+// 				if (!isPhoneValid(phoneInput)) {
+// 					e.preventDefault(); // Блокируем отправку
+// 					showError(
+// 						phoneInput,
+// 						"Пожалуйста, введите полный номер телефона"
+// 					);
+// 				}
+// 			});
+
+// 			// Обработчик изменения поля (для мгновенной обратной связи)
+// 			phoneInput.addEventListener("input", () => {
+// 				if (isPhoneValid(phoneInput)) {
+// 					hideError(phoneInput);
+// 				}
+// 			});
+
+// 			// Обработчик фокуса (убираем ошибку при редактировании)
+// 			phoneInput.addEventListener("focus", () => {
+// 				hideError(phoneInput);
+// 			});
+// 		}
+// 	});
+
+// 	// Функция проверки валидности телефона
+// 	function isPhoneValid(input) {
+// 		const value = input.value.trim();
+// 		const maskComplete = input.inputmask?.isComplete?.(); // Проверка маски от inputmask
+
+// 		// Условия валидности:
+// 		// 1. Значение не пустое
+// 		// 2. Маска полностью заполнена (если поддерживается)
+// 		// 3. Либо проверяем по регулярному выражению (если маска не доступна)
+// 		return (
+// 			value !== "" && (maskComplete || /^\+\d{1,3}\d{10,14}$/.test(value))
+// 		);
+// 	}
+
+// 	// Показ ошибки
+// 	function showError(input, message) {
+// 		let errorEl = input.nextElementSibling;
+
+// 		if (!errorEl || !errorEl.classList.contains("error-message")) {
+// 			errorEl = document.createElement("div");
+// 			errorEl.className = "error-message";
+// 			errorEl.style.color = "red";
+// 			errorEl.style.fontSize = "0.875rem";
+// 			errorEl.style.marginTop = "0.25rem";
+// 			input.parentNode.insertBefore(errorEl, input.nextSibling);
+// 		}
+
+// 		errorEl.textContent = message;
+// 		input.style.borderColor = "red";
+// 	}
+
+// 	// Скрытие ошибки
+// 	function hideError(input) {
+// 		const errorEl = input.nextElementSibling;
+// 		if (errorEl && errorEl.classList.contains("error-message")) {
+// 			errorEl.remove();
+// 		}
+// 		input.style.borderColor = "";
+// 	}
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
+	if (!document.querySelector("form.consult-form")) return;
+
 	const forms = document.querySelectorAll("form.consult-form");
 
 	forms.forEach((form) => {
 		const phoneInput = form.querySelector('input[type="tel"]');
 
-		// Если поле телефона есть, добавляем обработчики
-		if (phoneInput) {
-			// Обработчик отправки формы
-			form.addEventListener("submit", function (e) {
-				if (!isPhoneValid(phoneInput)) {
-					e.preventDefault(); // Блокируем отправку
-					showError(
-						phoneInput,
-						"Пожалуйста, введите полный номер телефона"
-					);
-				}
-			});
+		if (!phoneInput) return;
 
-			// Обработчик изменения поля (для мгновенной обратной связи)
-			phoneInput.addEventListener("input", () => {
-				if (isPhoneValid(phoneInput)) {
-					hideError(phoneInput);
-				}
-			});
+		// 1. Инициализируем валидацию при загрузке
+		validatePhone(phoneInput);
 
-			// Обработчик фокуса (убираем ошибку при редактировании)
-			phoneInput.addEventListener("focus", () => {
-				hideError(phoneInput);
-			});
-		}
+		// 2. Обновляем валидность при вводе
+		phoneInput.addEventListener("input", () => {
+			validatePhone(phoneInput);
+		});
+
+		// 3. Обновляем при потере фокуса (важно для Chrome)
+		phoneInput.addEventListener("blur", () => {
+			validatePhone(phoneInput);
+		});
+
+		// 4. Обработчик отправки формы
+		form.addEventListener("submit", (e) => {
+			if (!isPhoneValid(phoneInput)) {
+				e.preventDefault();
+				phoneInput.reportValidity();
+			}
+		});
 	});
 
-	// Функция проверки валидности телефона
+	// Основная функция валидации
+	function validatePhone(input) {
+		const isValid = isPhoneValid(input);
+
+		if (isValid) {
+			input.setCustomValidity(""); // Сбрасываем ошибку
+		} else {
+			const value = input.value.trim();
+			if (value === "") {
+				input.setCustomValidity("Пожалуйста, введите номер телефона");
+			} else {
+				input.setCustomValidity(
+					"Пожалуйста, введите полный номер телефона"
+				);
+			}
+		}
+	}
+
+	// Проверка валидности номера
 	function isPhoneValid(input) {
 		const value = input.value.trim();
-		const maskComplete = input.inputmask?.isComplete?.(); // Проверка маски от inputmask
 
-		// Условия валидности:
-		// 1. Значение не пустое
-		// 2. Маска полностью заполнена (если поддерживается)
-		// 3. Либо проверяем по регулярному выражению (если маска не доступна)
-		return (
-			value !== "" && (maskComplete || /^\+\d{1,3}\d{10,14}$/.test(value))
-		);
-	}
+		// 1. Пустое поле — невалидно
+		if (value === "") return false;
 
-	// Показ ошибки
-	function showError(input, message) {
-		let errorEl = input.nextElementSibling;
-
-		if (!errorEl || !errorEl.classList.contains("error-message")) {
-			errorEl = document.createElement("div");
-			errorEl.className = "error-message";
-			errorEl.style.color = "red";
-			errorEl.style.fontSize = "0.875rem";
-			errorEl.style.marginTop = "0.25rem";
-			input.parentNode.insertBefore(errorEl, input.nextSibling);
+		// 2. Проверяем через inputmask (если плагин загружен)
+		if (
+			input.inputmask &&
+			typeof input.inputmask.isComplete === "function"
+		) {
+			const isComplete = input.inputmask.isComplete();
+			// Если isComplete === undefined — считаем, что маска не готова
+			if (isComplete === false || isComplete === undefined) {
+				return false;
+			}
+			return true; // Маска заполнена
 		}
 
-		errorEl.textContent = message;
-		input.style.borderColor = "red";
+		// 3. Альтернативная проверка: 11 цифр (для РФ)
+		const digitsOnly = value.replace(/\D/g, "");
+		return digitsOnly.length === 11;
 	}
-
-	// Скрытие ошибки
-	function hideError(input) {
-		const errorEl = input.nextElementSibling;
-		if (errorEl && errorEl.classList.contains("error-message")) {
-			errorEl.remove();
-		}
-		input.style.borderColor = "";
-	}
-}
+});
 
 // reviews
 if (document.querySelector(".reviews-page")) {
