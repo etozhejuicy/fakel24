@@ -43,8 +43,7 @@
   flex: 1;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 1200px) {
   .section-hero-content > img {
@@ -98,15 +97,13 @@
   justify-content: center;
   flex-wrap: wrap;
   row-gap: 8px;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   width: 100%;
   height: auto;
   padding: 24px;
   opacity: 1;
   background-color: #ffffff;
-  -webkit-backdrop-filter: blur(7.95px);
-          backdrop-filter: blur(7.95px);
+  backdrop-filter: blur(7.95px);
   border: 1px solid #ffffff;
   pointer-events: all;
   transition: opacity 0.4s ease;
@@ -116,8 +113,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     row-gap: 10px;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
   }
 }
 @media (min-width: 1200px) {
@@ -209,8 +205,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 20px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   margin-top: 20px;
 }
 @media (min-width: 576px) {
@@ -268,10 +263,8 @@
 .card-doctor-image > * {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
+  object-fit: cover;
+  object-position: top center;
 }
 .card-doctor p {
   font-style: normal;
@@ -329,10 +322,8 @@
 .card-doctor:hover p {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  -webkit-text-decoration-skip: 10px;
-          text-decoration-skip: 10px;
+  text-decoration-skip-ink: none;
+  text-decoration-skip: 10px;
 }
 
 .section-consult {
@@ -395,15 +386,13 @@
 .consult-form {
   display: flex;
   flex-direction: column;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
   row-gap: 5px;
   margin-top: 24px;
 }
 @media (min-width: 720px) {
   .consult-form {
-    -moz-column-gap: 12px;
-         column-gap: 12px;
+    column-gap: 12px;
     row-gap: 12px;
     margin-top: 40px;
   }
@@ -413,8 +402,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    -moz-column-gap: 8px;
-         column-gap: 8px;
+    column-gap: 8px;
     row-gap: 8px;
   }
   .consult-form > *:nth-child(1) {
@@ -449,14 +437,12 @@
 }
 .consult-form-link {
   text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 .consult-form-link:hover {
   text-decoration: none;
 }
 .consult-form .btn {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 16px 23%;
   margin: auto;
@@ -476,15 +462,13 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
   row-gap: 15px;
   margin-top: 15px;
 }
 @media (min-width: 720px) {
   .consult-form-submit {
-    -moz-column-gap: 35px;
-         column-gap: 35px;
+    column-gap: 35px;
     row-gap: 35px;
     margin-top: 7px;
   }
@@ -494,8 +478,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    -moz-column-gap: 24px;
-         column-gap: 24px;
+    column-gap: 24px;
     row-gap: 24px;
     margin-top: 16px;
   }
@@ -529,8 +512,6 @@
 .section-map img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }

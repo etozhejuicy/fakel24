@@ -1223,11 +1223,13 @@
                         <option value="9">Скайсы на зубы</option>
                         <option value="10">Детская стоматология</option>
                     </select>
-                    <input class="input" type="text" name="patient" placeholder="Имя" />
+                    <input class="input" type="text" name="patient" placeholder="Имя" required />
                     <textarea class="input input-textarea" rows="3" name="comment" placeholder="Комментарий"></textarea>
                     <input class="input input-date" type="text" data-input-type="datepicker" placeholder="Дата"
                         name="date" readonly />
-                    <input class="input" name="phone" type="tel" placeholder="Телефон *" required />
+                    <div class="position-relative">
+                        <input class="input w-100" name="phone" type="tel" placeholder="Телефон *" required />
+                    </div>
                     <div class="consult-form-submit">
                         <div class="consult-form-agree">
                             <input class="input-checkbox" type="checkbox" name="agreement" id="agree" required />
